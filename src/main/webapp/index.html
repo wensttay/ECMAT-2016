@@ -17,21 +17,23 @@
 
 <body>
     
-    <header>
-        <nav class="menu_principal padding-high">
-            <ul>
-                <li><p>Programação</p></li>
-                <li><p>Inscrição<p></li>
-                <li><p>Submissões<p></li>
-                <li><p>Organização<p></li>
-                <li><a href="#home"><img src="img/logo.png" width="60px"></a></li>
-                <li><p>Contatos<p></li>
-                <li><p>Galeria<p></li>
-                <li><p>Anais<p></li>
-                <li><p>Certificados<p></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="container">
+        <header id="header">
+            <nav class="menu_principal padding-high">
+                <ul>
+                    <li><a href="#sobre">Programação</a></li>
+                    <li>Inscrição</li>
+                    <li>Organização</li>
+                    <li>Anais</li>
+                    <li><a href="#home"><img src="img/logo.png" width="70px"></a></li>
+                    <li>Galeria</li>
+                    <li>Submissões</li>
+                    <li>Certificados</li>
+                    <li>Contato</li>
+                </ul>
+            </nav>
+            <!-- <div class="separador"></div> -->
+        </header>
 
     <!-- <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -114,12 +116,14 @@
     </section>
     
     <footer id="footer">
-        <div class="container">
-            <p class="text-center">
-                Desenvolvido por <strong>Rocinha Corporation</strong>
-            </p>
-        </div>
+        <p class="text-center">
+            Desenvolvido por <strong>Rocinha Corporation</strong>
+        </p>
     </footer>
+
+</div>
+
+    
 
     <script type="text/javascript">
 
@@ -147,6 +151,16 @@
             for (var i = elementosInvisiveis.length - 1; i >= 0; i--) {
                 elementosInvisiveis[i].style.display = 'none';
             };
+
+            var section = document.getElementById('section');
+
+            if($(section).height() < $(window).height()){
+                var section_height = document.getElementById('section').clientHeight;
+
+                document.getElementById('footer').style.marginTop = $(window).height() - (section_height + document.getElementById('footer').clientHeight) + 'px';
+            }else{
+                document.getElementById('footer').style.marginTop = '73px';
+            }  
             
         });
 
@@ -177,7 +191,7 @@
 
                         document.getElementById('footer').style.marginTop = $(window).height() - (section_height + document.getElementById('footer').clientHeight) + 'px';
                     }else{
-                        document.getElementById('footer').style.marginTop = '50px';
+                        document.getElementById('footer').style.marginTop = '73px';
                     }    
                 });
             }
