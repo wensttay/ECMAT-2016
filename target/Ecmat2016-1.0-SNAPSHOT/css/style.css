@@ -1,0 +1,118 @@
+@font-face { font-family: ChalkDust; src: url('../fonts/ChalkDust.ttf');} 
+@font-face { font-family: Rayando; src: url('../fonts/rayando.ttf');} 
+@font-face { font-family: Rudiment; src: url('../fonts/Rudiment.ttf');} 
+@font-face { font-family: ClaireHand; src: url('../fonts/ClaireHandRegular.ttf');} 
+@font-face { font-family: WC_RoughTrad; src: url('../fonts/WC_RoughTrad.ttf');} 
+@font-face { font-family: erasdust; src: url('../fonts/erasdust.ttf');} 
+
+
+
+html,body { 
+	overflow-x: hidden;
+	/*white-space: nowrap; */
+	/*font-family: ChalkDust;*/
+	color: white;
+	font-family: ClaireHand;
+	height: 100%;
+}
+
+h1{
+	/*opacity: 0.8;*/
+}
+
+.titulo-sessao span{
+	/*font-family: ClaireHand;*/
+	padding: 10px 30px 10px 30px;
+	border-style: solid;
+	border-width: 0px 0px 2px 0px;
+	font-size: 28px;
+	opacity: 1 !important;
+	/*color: blue;*/
+}
+
+.conteudo-sessao{
+	/*opacity: 0.1;*/
+}
+
+#sobre{
+	font-size: 19px;
+	/*font-weight: 700;*/
+	font-family: WC_RoughTrad;
+}
+
+#home{
+	/*font-family: ChalkDust;*/
+}
+
+.conteudo-sessao{
+	margin-top: 50px;
+}
+
+.navbar{
+	background-color: rgba(0,0,0,0);
+	border: none;
+}
+
+.navbar-nav li a{
+	color: white !important;
+}
+
+.navbar-nav .active a{
+	background-color: rgba(6,192,9,0.5) !important;
+
+}
+
+.nome-evento{
+	font-size: 165px;
+	font-family: Rayando;
+}
+
+.invisivel{
+	/*display: block;*/
+}
+
+.vermelho{
+	/*background-color: red;*/
+}
+
+.verde{
+	background-color: green;
+}
+
+.azul{
+	background-color: blue;
+}
+
+.container-base{
+	padding-top: 100px;
+	width: 100%;
+	display: absolute;
+	/*display: inline-block;*/
+}
+
+.backgorund{
+	background-image: url('../img/blackboard2.jpg');
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+}
+
+section{
+	/*height: 100%;*/
+	/*min-height: calc(100+900);*/
+  	/*height: auto !important;*/
+  	/*height: calc(200+300);*/
+  	/*500px;*/
+}
+
+footer{
+	margin-top: 123px; 
+	padding: 10px;
+	/*border-style: solid;*/
+	/*border-radius: 2px;*/
+}
