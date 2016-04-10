@@ -122,9 +122,27 @@ header{
 
 nav{
 	/*width: inherit;*/
-	/*margin: 0 auto;	*/
+	display: table;
+	margin: 0 auto;	
 }
 
-ul, li{
+.menu_principal ul li{
 	list-style: none;
+	display: inline-block;
+	font-size: 19px;
+	font-weight: bold;
+	width: 110px;
+	text-align: center;
+}
+
+.menu_principal ul{
+	padding: 0px !important;
+}
+
+.padding-medium{
+	padding: 10px;
+}
+
+.padding-high{
+	padding: 15px;
 }
