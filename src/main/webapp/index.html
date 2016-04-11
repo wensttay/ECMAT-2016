@@ -21,15 +21,15 @@
         <header id="header">
             <nav class="menu_principal padding-high">
                 <ul>
-                    <li><a href="#sobre">Programação</a></li>
-                    <li>Inscrição</li>
-                    <li>Organização</li>
-                    <li>Anais</li>
-                    <li><a href="#home"><img src="img/logo.png" width="70px"></a></li>
-                    <li>Galeria</li>
-                    <li>Submissões</li>
-                    <li>Certificados</li>
-                    <li>Contato</li>
+                    <li id="menu_programacao"><a href="#sobre">Programação</a></li>
+                    <li id="menu_inscricao">Inscrição</li>
+                    <li id="menu_organizacao">Organização</li>
+                    <li id="menu_anais">Anais</li>
+                    <li id="menu_home"><a href="#home"><img src="img/logo.png" width="70px"></a></li>
+                    <li id="menu_galeria">Galeria</li>
+                    <li id="menu_submissoes">Submissões</li>
+                    <li id="menu_certificados">Certificados</li>
+                    <li id="menu_contato">Contato</li>
                 </ul>
             </nav>
             <!-- <div class="separador"></div> -->
@@ -152,15 +152,15 @@
                 elementosInvisiveis[i].style.display = 'none';
             };
 
-            var section = document.getElementById('section');
+            // var section = document.getElementById('section');
 
-            if($(section).height() < $(window).height()){
-                var section_height = document.getElementById('section').clientHeight;
+            // if($(section).height() < $(window).height()){
+            //     var section_height = document.getElementById('section').clientHeight;
 
-                document.getElementById('footer').style.marginTop = $(window).height() - (section_height + document.getElementById('footer').clientHeight) + 'px';
-            }else{
-                document.getElementById('footer').style.marginTop = '73px';
-            }  
+            //     document.getElementById('footer').style.marginTop = $(window).height() - (section_height + document.getElementById('footer').clientHeight) + 'px';
+            // }else{
+            //     document.getElementById('footer').style.marginTop = '73px';
+            // }  
             
         });
 
@@ -184,15 +184,15 @@
                     // $destino.css('display', 'block');
                     $destino.fadeIn(400);
 
-                    var section = document.getElementById('section');
+                    // var section = document.getElementById('section');
 
-                    if($(section).height() < $(window).height()){
-                        var section_height = document.getElementById('section').clientHeight;
+                    // if($(section).height() < $(window).height()){
+                    //     var section_height = document.getElementById('section').clientHeight;
 
-                        document.getElementById('footer').style.marginTop = $(window).height() - (section_height + document.getElementById('footer').clientHeight) + 'px';
-                    }else{
-                        document.getElementById('footer').style.marginTop = '73px';
-                    }    
+                    //     document.getElementById('footer').style.marginTop = $(window).height() - (section_height + document.getElementById('footer').clientHeight) + 'px';
+                    // }else{
+                    //     document.getElementById('footer').style.marginTop = '73px';
+                    // }    
                 });
             }
             

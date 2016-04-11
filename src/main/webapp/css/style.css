@@ -48,20 +48,6 @@ h1{
 	margin-top: 50px;
 }
 
-.navbar{
-	background-color: rgba(0,0,0,0);
-	border: none;
-}
-
-.navbar-nav li a{
-	color: white !important;
-}
-
-.navbar-nav .active a{
-	background-color: rgba(6,192,9,0.5) !important;
-
-}
-
 .nome-evento{
 	font-size: 165px;
 	font-family: Rayando;
@@ -155,10 +141,12 @@ nav{
 	font-weight: bold;
 	width: 110px;
 	text-align: center;
+	vertical-align: center;
 }
 
 .menu_principal ul{
-	padding: 0px !important;
+	padding: 0px;
+	margin: 0px;
 }
 
 .padding-medium{
@@ -187,4 +175,19 @@ nav{
 
 footer p{
 	padding-top: 10px;
+}
+
+a:active, a:link, a:hover, a:visited ,a{
+	text-decoration: none;
+	color: white;
+}
+
+.selecionado{
+	/*color: #337ab7;*/
+	border-color: #337ab7;
+	border-style: solid;
+	border-bottom-width: 3px;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-left-width: 0;
 }
