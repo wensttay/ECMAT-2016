@@ -134,6 +134,7 @@ nav{
 }
 
 .menu_principal ul li{
+    padding: 5px;
     list-style: none;
     display: inline-block;
     font-size: 19px;
@@ -143,7 +144,7 @@ nav{
     height: 37px;
 }
 .menu_principal ul li:nth-child(-n+4):hover, .menu_principal ul li:nth-child(n+6):hover{
-    border-radius: 3px;
+    border-radius: 20px;
     border: 5px solid rgba(255, 255, 255, 0.8);
 }
 
