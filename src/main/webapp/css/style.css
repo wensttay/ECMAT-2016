@@ -140,11 +140,11 @@ nav{
     font-weight: bold;
     width: 120px;
     text-align: center;
-    height: 32px;
+    height: 37px;
 }
 .menu_principal ul li:nth-child(-n+4):hover, .menu_principal ul li:nth-child(n+6):hover{
     border-radius: 3px;
-    border-bottom: 5px  rgba(255, 255, 255, 0.8);
+    border: 5px solid rgba(255, 255, 255, 0.8);
 }
 
 /*.menu_principal ul li:nth-child(-n+4){

@@ -26,26 +26,26 @@
                     <ul>
                         <li><a href="#inicio">Inicio</li>
                         <li>
-                            <p>Evento</p>
+                            <a href="#sobre">Evento</a>
                             <ul hidden>
                                 <li><a href="#sobre">Sobre</a></li>
-                                <li>Programação</li>
-                                <li>Organização</li>
+                                <li><a href="">Programação</a></li>
+                                <li><a href="">Organização</a></li>
                             </ul>
                         </li>
                         
-                        <li>Inscrição</li>
+                        <li><a href="">Inscrição</a></li>
                         <li><a href="#inicio"><img src="img/logo.png" width="75px" height="75px"></a></li>
-                        <li>Galeria</li>
+                        <li><a href="">Galeria</a></li>
                         <li>
-                            <p>Documentos</p>
+                            <a href="">Documentos</a>
                             <ul hidden>
                                 <li>Anais</li>
                                 <li>Certificados</li>
                                 <li>Submissões</li>
                             </ul>
                         </li>
-                        <li>Contato</li>
+                        <li><a href="">Contato</a></li>
                         
                     </ul>
                 </nav>

@@ -9,11 +9,10 @@ $(document).ready(function () {
     var anchorAux = anchor.substring(1, anchor.length);
 
     var anchorElementAux = document.getElementById(anchorAux);
-
+    
     if (anchorElementAux === null) {
-        anchor = '#home';
+        anchor = '#inicio';
     }
-
 
     var elementoVisivel = document.getElementsByClassName('exibindo');
     $(elementoVisivel).addClass('invisivel');
