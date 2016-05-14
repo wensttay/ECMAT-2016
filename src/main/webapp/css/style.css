@@ -171,6 +171,10 @@ nav{
     padding: 15px;
 }
 
+.padding-extra-high{
+    padding: 20px;
+}
+
 .separador{
     /*background-image: url('../img/madeira.jpg');	*/
     background-repeat: no-repeat;
@@ -204,4 +208,18 @@ a:active, a:link, a:hover, a:visited ,a{
     border-top-width: 0;
     border-right-width: 0;
     border-left-width: 0;
+}
+
+.mapa{
+    height: 100%;
+    width: 100%;
+}
+
+.div_mapa{
+    height: 400px;
+}
+
+.dados_contato{
+    font-size: 18px;
+    font-family: WC_RoughTrad;
 }
