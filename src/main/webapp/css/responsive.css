@@ -12,6 +12,26 @@ and open the template in the editor.
     .evento-nome{
         font-size: 100px;
     }
+    .menu-principal-box ul.principal-list li.principal-list-item,
+    ul.drop-menu{
+        font-size: 14px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 820px){
+    #logo-central{
+        display: none;
+    }
+    .menu-principal-box{
+        display: none;
+    }
+    #logo-small{
+        display: block;
+    }
+    #menu-principal-button  {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 580px){

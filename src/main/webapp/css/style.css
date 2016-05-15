@@ -21,12 +21,19 @@ html,body {
     padding:0;
 }
 
-p, h1, h2, h3, span, a, li, .low-transparent{
-    opacity: 0.8 !important;
+p, h1, h2, span, a, li, .low-transparent{
+    opacity: 0.8;
 }
 
 .invisivel{}
 .exibindo{}
+
+.article-title{
+    padding: 10px 30px 10px 30px;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+    font-size: 28px;
+}
 
 .selecionado{
     border-color: #337ab7;
@@ -46,11 +53,11 @@ p, h1, h2, h3, span, a, li, .low-transparent{
 .background{
     height: 100%;
     z-index: -1;
+    width: 100%;
 }
 
 .blackboard-background {
     position: fixed;
-    width: 100%;
     background-image: url('../img/blackboard2.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -74,6 +81,7 @@ footer{
 header{
     padding:10px;
     z-index: 999;
+    width: 100%;
 }
 
 nav{
@@ -81,24 +89,86 @@ nav{
     margin: 0 auto;	
 }
 
-.menu_principal ul{
+.menu-principal-box ul.principal-list{
     height: 80px;
     padding: 0px;
     margin: 0px;
 }
 
-.menu_principal ul li{
+#menu-principal-button{
+    display: none;
+    height: 75px;
+    width: 75px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    float: right;
+    margin: 20px 20px 0 0;
+}
+#menu-principal-button:hover{
+    background: rgba(255, 255, 255, 0.8);
+}
+#logo-central img{
+    height: 75px;
+    width: 75px;
+}
+#logo-small{
+    height: 75px;
+    width: 75px;
+    opacity: 0.8;
+    float: left;
+    margin: 20px 0 0 20px;
+    display: none;
+}
+#logo-small:hover{
+    opacity: 1;
+}
+.menu-principal-box ul.principal-list li.principal-list-item{
     list-style: none;
     display: inline-block;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: bold;
-    width: 120px;
+    width: 130px;
     text-align: center;
-    height: 37px;
+}   
+.menu-principal-box ul.principal-list li.principal-list-item:hover{
+    opacity: 1;
 }
-.menu_principal ul li:nth-child(-n+4):hover, .menu_principal ul li:nth-child(n+6):hover{
+.menu-principal-box ul.principal-list li.item-bordered:hover{
     border-radius: 20px;
-    border: 5px solid rgba(255, 255, 255, 0.8);
+    border: 5px solid rgba(255, 255, 255, 1);
+}
+.menu-principal-box ul.principal-list li.principal-list-item-withsublist{
+    border-radius: 20px 20px 0px 0px !important;
+}
+.menu-principal-box ul.principal-list li.principal-list-item-withsublist:hover{
+    border: 5px dashed rgba(255, 255, 255, 1) !important;
+}
+
+ul.drop-menu{
+    visibility: hidden;
+    margin-left: -5px;
+    width: 130px;
+    list-style: none;
+    border: 5px solid rgba(255, 255, 255, 1);
+    position: fixed;
+    padding: 0px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+ul.drop-menu li.drop-menu-item{
+    /*padding: 10px 0;*/
+    border-bottom: 5px solid rgba(255, 255, 255, 1);
+    list-style: none;
+    display: block !important;
+}
+ul.drop-menu li.drop-menu-item:last-child{
+    border-bottom: none;
+}
+ul.drop-menu li.drop-menu-item:hover{
+    opacity: 1;
 }
 
 #container-fullpage {

@@ -12,7 +12,7 @@
         <div class="row"> 
             <div class="col-md-2"></div>
             <div class="col-md-8 text-justify"> 
-                <p class="text-center sobre-title">Sobre</p>
+                <p class="text-center article-title">Sobre</p>
                 <p class="sobre-paragraph">
                     O Encontro Cajazeirense de Matemática (ECMAT) trata-se de um evento promovido pela Coordenação do Curso de Licenciatura em Matemática do Instituto Federal de Educação, Ciência e Tecnologia da Paraíba – IFPB/Campus Cajazeiras e tem, como um de seus objetivos, a divulgação das atividades desenvolvidas pelos alunos do curso de Licenciatura em Matemática ofertado pelo referido campus.
                 </p>

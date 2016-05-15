@@ -19,6 +19,13 @@ and open the template in the editor.
     margin-bottom: 50px;
 }
 
+.evento-info-box a{
+    opacity: 0.8;
+}
+.evento-info-box a:hover{
+    opacity: 1;
+}
+
 .evento-info-box .evento-info-img{
     width : 150px; 
     height: 150px;

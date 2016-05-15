@@ -8,9 +8,12 @@ and open the template in the editor.
     Author     : Wensttay
 */
 
+.contato{
+    font-family: WC_RoughTrad;
+}
 .dados_contato{
     font-size: 18px;
-    font-family: WC_RoughTrad;
+    text-align: center;
 }
 
 .mapa{
