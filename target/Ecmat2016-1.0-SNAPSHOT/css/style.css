@@ -228,37 +228,6 @@ a:active, a:link, a:hover, a:visited ,a{
     -webkit-transition: all 1s; /* Safari */
     transition: all 1s;
 }
-.div_mapa iframe{
-    z-index: 1;
-}
-
-#map-shadow{
-    
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1000;
-    
-    -webkit-box-shadow: inset 0px 0px 31px 14px rgba(0,0,0,0.7);
-    -moz-box-shadow: inset 0px 0px 31px 14px rgba(0,0,0,0.7);
-    box-shadow: inset 0px 0px 31px 14px rgba(0,0,0,0.7);
-    
-    -o-transition: all 1s; /* Opera */
-    -moz-transition: all 1s; /* Firefox */
-    -webkit-transition: all 1s; /* Safari */
-    transition: all 1s;
-}
-
-#map-shadow:hover{
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    
-    -o-transition: all 1s; /* Opera */
-    -moz-transition: all 1s; /* Firefox */
-    -webkit-transition: all 1s; /* Safari */
-    transition: all 1s;
-}
 
 .div_mapa:hover{
     -webkit-filter: grayscale(0%); /* Chrome 19+ & Safari 6+ */
