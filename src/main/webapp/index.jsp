@@ -15,64 +15,55 @@
         <title>ECMAT 2016</title>
         <!-- Bootstrap core CSS -->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
         <!-- Custom styles for this template -->
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/contato-style.css" rel="stylesheet">
+        <link href="css/inicio-style.css" rel="stylesheet">
+        <link href="css/sobre-style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
     </head>
 
     <body>
-        <div id="container">
-            <header id="header">
-                <nav class="menu_principal padding-high">
-                    <ul>
-                        <li><a href="#inicio">Inicio</li>
-                        <li>
-                            <a href="#sobre">Evento</a>
-                            <ul hidden>
-                                <li><a href="#sobre">Sobre</a></li>
-                                <li><a href="">Programação</a></li>
-                                <li><a href="">Organização</a></li>
+        <div id="container-fullpage">
+            <header id="header" class="blackboard-background">
+                <!--TROCAR IMAGEM POR UM ICONE DE GENTE-->
+                <div id="menu-principal-button" ><br><img src="img/icons/menu-icon.png" width="30px" height="30px"/></div>
+                <a href="#inicio">
+                    <div id="logo-small" >
+                        <img src="img/logo.png" width="75px" height="75px">
+                    </div>
+                </a>
+                <nav class="menu-principal-box padding-high">
+                    <ul class="principal-list">
+                        <li id="close-menu-button"><span>X</span></li>
+                        <li class="principal-list-item page-link item-bordered"><a class="principal-list-item" href="#inicio">Inicio</a></li>
+                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
+                            <a href="#">Evento</a>
+                            <ul class="drop-menu blackboard-background">
+                                <li class="drop-menu-item page-link" ><a href="#sobre">Sobre</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#">Programação</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#">Organização</a></li>
                             </ul>
                         </li>
                         
-                        <li><a href="">Inscrição</a></li>
-                        <li><a href="#inicio"><img src="img/logo.png" width="75px" height="75px"></a></li>
-                        <li><a href="">Galeria</a></li>
-                        <li>
-                            <a href="">Documentos</a>
-                            <ul hidden>
-                                <li>Anais</li>
-                                <li>Certificados</li>
-                                <li>Submissões</li>
+                        <li class="principal-list-item page-link item-bordered" ><a href="#">Inscrição</a></li>
+                        <li class="principal-list-item" id="logo-central" ><a href="#inicio"><img src="img/logo.png"></a></li>
+                        <li class="principal-list-item page-link item-bordered" ><a href="#">Galeria</a></li>
+                        <li class="principal-list-item item-bordered  principal-list-item-withsublist">
+                            <a href="#">Documentos</a>
+                            <ul class="drop-menu blackboard-background">
+                                <li class="drop-menu-item page-link" ><a href="#">Anais</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#">Certificados</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#">Submissões</a></li>
                             </ul>
                         </li>
-                        <li><a href="#contato">Contato</a></li>
-                        
+                        <li class="principal-list-item page-link item-bordered" ><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
-                <!-- <div class="separador"></div> -->
             </header>
 
-            <!-- <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-principal">
-                            <span class="sr-only">Alternar Navegacao</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse" id="navbar-principal">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#home"><img src="img/logo.png" width="60px"></a></li>
-                            <li><a href="#sobre">Sobre</a></li>
-                            <li><a href="#verde">Contato</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav> -->
-
-            <div class="backgorund"></div>
+            <div class="background blackboard-background"></div>
 
             <section id="section">
                 <%@ include file="pages/inicio.jsp" %>

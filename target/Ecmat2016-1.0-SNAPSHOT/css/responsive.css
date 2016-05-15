@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/05/2016, 22:57:40
+    Author     : wensttay
+*/
+
+@media screen and (max-width: 1000px){
+    .evento-nome{
+        font-size: 100px;
+    }
+    .menu-principal-box ul.principal-list li.principal-list-item,
+    ul.drop-menu{
+        font-size: 14px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 820px){
+    #logo-central{
+        display: none;
+    }
+
+    #close-menu-button{
+        display: block;
+    }
+    .menu-principal-box{
+        margin-right: -100%;
+        border-left: 5px solid rgba(255, 255, 255, 1);
+        height: 100%;
+        width: 100%;
+        overflow:hidden;
+        position: absolute;
+        right: 0;
+        position: fixed;
+        background-image: url('../img/blackboard2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        padding-right: 0;
+        padding-left: 0;
+        transition: all 1s;
+    }
+    .menu-principal-box:hover{
+        transition: all 1s;
+        margin-right: 0;
+    }
+
+    .menu-principal-box ul.principal-list li.principal-list-item{
+        list-style: none;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+    }
+    .menu-principal-box ul.principal-list li.principal-list-item:hover,
+    .menu-principal-box ul.principal-list li.principal-list-item-withsublist:hover{
+        border: none !important;
+    }
+
+    ul.drop-menu{
+        display: none;
+        font-size: 24px;
+        visibility: visible;
+        width: 100%;
+        position: inherit;
+        list-style: none;
+        border-width: 5px 0;
+        border-bottom-style: solid;
+        border-bottom-color: white;
+        border-top-style: solid;
+        border-top-color: white;
+        border-radius: 0px;
+        opacity: 0.6;
+    }
+    ul.drop-menu li.drop-menu-item{
+        border-bottom: 0;
+    }
+
+    #logo-small{
+        display: block;
+    }
+    #menu-principal-button  {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .evento-nome{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .evento-nome{
+        font-size: 40px;
+    }
+}
