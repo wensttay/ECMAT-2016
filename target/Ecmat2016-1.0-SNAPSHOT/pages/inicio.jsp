@@ -17,15 +17,15 @@
             </div>
             
             <div class="col-md-12" style="margin-top: 50px;">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-4">
                     <h3>Dias 8 a 20 de Agosto</h3>
                     <img class="low-transparent" src="img/icons/calendario.png" width="150px" height="150px" style="margin-top: 20px;"/>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-4">
                     <h3>IFPB - Campus Cajazeiras</h3>
                     <img class="low-transparent" src="img/icons/posicao.png" width="150px" height="150px" style="margin-top: 20px;"/>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-4">
                     <h3>Inscrições a partir de 1 de Junho</h3>
                     <img class="low-transparent" src="img/icons/inscricao.png" width="150px" height="150px" style="margin-top: 20px;"/>
                 </div>

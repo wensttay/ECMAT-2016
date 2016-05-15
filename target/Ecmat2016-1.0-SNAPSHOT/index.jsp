@@ -17,6 +17,7 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/resp.css" rel="stylesheet">
     </head>
 
     <body>
@@ -49,28 +50,7 @@
                         
                     </ul>
                 </nav>
-                <!-- <div class="separador"></div> -->
             </header>
-
-            <!-- <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-principal">
-                            <span class="sr-only">Alternar Navegacao</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse" id="navbar-principal">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#home"><img src="img/logo.png" width="60px"></a></li>
-                            <li><a href="#sobre">Sobre</a></li>
-                            <li><a href="#verde">Contato</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav> -->
 
             <div class="backgorund"></div>
 

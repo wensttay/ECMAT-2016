@@ -6,9 +6,6 @@
 @font-face { font-family: erasdust; src: url('../fonts/erasdust.ttf');} 
 
 html,body { 
-    /*overflow-x: hidden;*/
-    /*white-space: nowrap; */
-    /*font-family: ChalkDust;*/
     color: white;
     font-family: ClaireHand;
     height: 100%;
@@ -20,31 +17,20 @@ p, h1, h2, h3, span, a, li, .low-transparent{
     opacity: 0.8 !important;
 }
 
-.titulo-sessao span{
-    /*font-family: ClaireHand;*/
+.title-size span{
     padding: 10px 30px 10px 30px;
     border-style: solid;
     border-width: 0px 0px 2px 0px;
     font-size: 28px;
-    /*color: blue;*/
-}
-
-.conteudo-sessao{
-    /*opacity: 0.1;*/
-}
-
-#sobre{
-    font-size: 19px;
-    /*font-weight: 700;*/
-    font-family: WC_RoughTrad;
-}
-
-#home{
-    /*font-family: ChalkDust;*/
 }
 
 .conteudo-sessao{
     margin-top: 50px;
+}
+
+#sobre{
+    font-size: 19px;
+    font-family: WC_RoughTrad;
 }
 
 .nome-evento{
@@ -52,12 +38,10 @@ p, h1, h2, h3, span, a, li, .low-transparent{
     font-family: Rayando;
 }
 
-.invisivel{
-    /*display: block;*/
-}
+.invisivel{}
 
 .vermelho{
-    /*background-color: red;*/
+    background-color: red;
 }
 
 .verde{
@@ -72,7 +56,6 @@ p, h1, h2, h3, span, a, li, .low-transparent{
     padding-top: 150px;
     width: 100%;
     display: absolute;
-    /*display: inline-block;*/
 }
 
 .backgorund{
@@ -90,12 +73,6 @@ p, h1, h2, h3, span, a, li, .low-transparent{
 section{
     padding:10px;
     padding-bottom:60px;   /* Height of the footer */
-    /*height: 100%;*/
-    /*min-height: calc(100+900);*/
-    /*height: auto !important;*/
-    /*height: calc(200+300);*/
-    /*500px;*/
-
 }
 
 footer{
@@ -105,21 +82,13 @@ footer{
     height:60px;
     margin-top: 70px; 
     padding: 10px;
-    /*border-style: solid;*/
-    /*border-radius: 2px;*/
 }
 
 header{
     padding:10px;
     position: fixed;
     width: 100%;
-    /*border-bottom-width: 20px;*/
-    /*border-image: url('../img/madeira.jpg') 15 / 15px repeat;*/
-    /*border-image-source: url('../img/blackboard2.jpg');*/
-    /*border-image-width: 20px;*/
-    /*border-image-repeat: repeat;*/
     background-image: url('../img/blackboard2.png');	
-    /*background-image: url('../img/blackboard.jpg');*/
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -128,7 +97,6 @@ header{
 }
 
 nav{
-    /*width: inherit;*/
     display: table;
     margin: 0 auto;	
 }
@@ -148,18 +116,8 @@ nav{
     border: 5px solid rgba(255, 255, 255, 0.8);
 }
 
-/*.menu_principal ul li:nth-child(-n+4){
-    text-align: left;
-}
-
-.menu_principal ul li:nth-child(n+6){
-    text-align: right;
-}*/
-
 .menu_principal ul{
     height: 80px;
-    /*    border-radius: 15px;
-        border: 2px dashed white;*/
     padding: 0px;
     margin: 0px;
 }
@@ -177,7 +135,6 @@ nav{
 }
 
 .separador{
-    /*background-image: url('../img/madeira.jpg');	*/
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

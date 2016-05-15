@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/05/2016, 22:57:40
+    Author     : wensttay
+*/
+
+@media screen and (max-width: 1000px){
+    .nome-evento{
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .nome-evento{
+        font-size: 40px;
+    }
+}
