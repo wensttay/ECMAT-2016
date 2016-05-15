@@ -65,6 +65,12 @@ p, h1, h2, span, a, li, .low-transparent{
     background-position: center;
 }
 
+header{
+    padding:0 10px 10px 10px;
+    z-index: 999;
+    width: 100%;
+}
+
 section{
     padding:10px;
     padding-bottom: 100px;   /* More that Height of the footer */
@@ -76,12 +82,6 @@ footer{
     width:100%;
     height: 60px;
     padding: 10px;
-}
-
-header{
-    padding:10px;
-    z-index: 999;
-    width: 100%;
 }
 
 nav{
@@ -132,7 +132,18 @@ nav{
     font-weight: bold;
     width: 130px;
     text-align: center;
-}   
+}
+#close-menu-button{
+    display: none;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+}
+#close-menu-button span{
+    cursor: pointer;
+}
 .menu-principal-box ul.principal-list li.principal-list-item:hover{
     opacity: 1;
 }

@@ -27,7 +27,8 @@
     <body>
         <div id="container-fullpage">
             <header id="header" class="blackboard-background">
-                <a href=""><div id="menu-principal-button" ><span>=</span></div></a>
+                <!--TROCAR IMAGEM POR UM ICONE DE GENTE-->
+                <div id="menu-principal-button" ><br><img src="img/icons/menu-icon.png" width="30px" height="30px"/></div>
                 <a href="#inicio">
                     <div id="logo-small" >
                         <img src="img/logo.png" width="75px" height="75px">
@@ -35,28 +36,29 @@
                 </a>
                 <nav class="menu-principal-box padding-high">
                     <ul class="principal-list">
-                        <li class="principal-list-item item-bordered"><a class="principal-list-item" href="#inicio">Inicio</a></li>
+                        <li id="close-menu-button"><span>X</span></li>
+                        <li class="principal-list-item page-link item-bordered"><a class="principal-list-item" href="#inicio">Inicio</a></li>
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
                             <a href="#">Evento</a>
                             <ul class="drop-menu blackboard-background">
-                                <li class="drop-menu-item" ><a href="#sobre">Sobre</a></li>
-                                <li class="drop-menu-item" ><a href="#">Programação</a></li>
-                                <li class="drop-menu-item" ><a href="#">Organização</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#sobre">Sobre</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#">Programação</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#">Organização</a></li>
                             </ul>
                         </li>
                         
-                        <li class="principal-list-item item-bordered" ><a href="#">Inscrição</a></li>
+                        <li class="principal-list-item page-link item-bordered" ><a href="#">Inscrição</a></li>
                         <li class="principal-list-item" id="logo-central" ><a href="#inicio"><img src="img/logo.png"></a></li>
-                        <li class="principal-list-item item-bordered" ><a href="#">Galeria</a></li>
+                        <li class="principal-list-item page-link item-bordered" ><a href="#">Galeria</a></li>
                         <li class="principal-list-item item-bordered  principal-list-item-withsublist">
                             <a href="#">Documentos</a>
                             <ul class="drop-menu blackboard-background">
-                                <li class="drop-menu-item" ><a href="#">Anais</a></li>
-                                <li class="drop-menu-item" ><a href="#">Certificados</a></li>
-                                <li class="drop-menu-item" ><a href="#">Submissões</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#">Anais</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#">Certificados</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#">Submissões</a></li>
                             </ul>
                         </li>
-                        <li class="principal-list-item item-bordered" ><a href="#contato">Contato</a></li>
+                        <li class="principal-list-item page-link item-bordered" ><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
             </header>

@@ -11,7 +11,7 @@ $('a[href^="#"]').bind('click', function (evento) {
     var elementos = document.getElementsByClassName('exibindo');
     var origem = elementos[0], $origem = $(origem);
 
-    if ( $destino.length && !$origem.is($destino)) {
+    if ($destino.length && !$origem.is($destino)) {
         $origem.fadeOut(function () {
 
             $origem.removeClass('exibindo');
@@ -49,10 +49,52 @@ function myFunction() {
     ;
 }
 
-$('li.principal-list-item-withsublist').mouseenter(function () {
-    $(this).find("ul").css("visibility", "visible");
+$(document).ready(function () {
+    menuControl();
 });
 
-$('li.principal-list-item-withsublist').mouseleave(function () {
-    $(this).find("ul").css("visibility", "hidden");
+$(window).resize(function () {
+    menuControl();
 });
+
+var menuControl = function () {
+    var windowSize = $(window).width();
+    if (windowSize >= 805) {
+        $('li.principal-list-item-withsublist').mouseenter(function () {
+            $(this).find("ul").css("visibility", "visible");
+        });
+
+        $('li.principal-list-item-withsublist').mouseleave(function () {
+            $(this).find("ul").css("visibility", "hidden");
+        });
+
+        $('.menu-principal-box').css("margin", '0 auto');
+    } else {
+        
+        $('.page-link a').click(function () {
+            $('.menu-principal-box').animate({"margin-right": '-100%'});
+            $('iframe').css("display", 'block');
+        });
+
+        $('#menu-principal-button').click(function () {
+            $('iframe').css("display", 'none');
+            $('.menu-principal-box').animate({"margin-right": '0px'});
+
+        });
+
+        $('#close-menu-button span').click(function () {
+            $('.menu-principal-box').animate({"margin-right": '-100%'});
+            $('iframe').css("display", 'block');
+        });
+
+        $('li.principal-list-item-withsublist').click(function () {
+            if ($(this).find("ul").css('display') === 'none') {
+                $(this).find("ul").slideDown();
+            } else {
+                $(this).find("ul").slideUp();
+            }
+        });
+    }
+};
+
+
