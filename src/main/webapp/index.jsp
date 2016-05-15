@@ -45,7 +45,7 @@
                                 <li>Submissões</li>
                             </ul>
                         </li>
-                        <li><a href="">Contato</a></li>
+                        <li><a href="#contato">Contato</a></li>
                         
                     </ul>
                 </nav>
@@ -77,6 +77,7 @@
             <section id="section">
                 <%@ include file="pages/inicio.jsp" %>
                 <%@ include file="pages/sobre.jsp" %>
+                <%@ include file="pages/contato.jsp" %>
             </section>
 
             <footer id="footer">

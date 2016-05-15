@@ -16,7 +16,7 @@
                 <!--<h4>De 8 a 20 de Agosto de 2016 no IFPB - Campus Cajazeiras</h4>-->
             </div>
             
-            <div class="col-md-12" style="margin-top: 100px;">
+            <div class="col-md-12" style="margin-top: 50px;">
                 <div class="col-md-4">
                     <h3>Dias 8 a 20 de Agosto</h3>
                     <img class="low-transparent" src="img/icons/calendario.png" width="150px" height="150px" style="margin-top: 20px;"/>
