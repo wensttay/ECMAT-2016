@@ -45,10 +45,6 @@ and open the template in the editor.
         padding-left: 0;
         transition: all 1s;
     }
-    .menu-principal-box:hover{
-        transition: all 1s;
-        margin-right: 0;
-    }
 
     .menu-principal-box ul.principal-list li.principal-list-item{
         list-style: none;
