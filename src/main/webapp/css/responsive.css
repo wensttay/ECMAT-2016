@@ -38,7 +38,7 @@ and open the template in the editor.
         position: fixed;
         background-image: url('../img/blackboard2.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: auto;
         background-attachment: fixed;
         background-position: center;
         padding-right: 0;
