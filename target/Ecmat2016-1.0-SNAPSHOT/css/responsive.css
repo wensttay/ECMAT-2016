@@ -9,13 +9,19 @@ and open the template in the editor.
 */
 
 @media screen and (max-width: 1000px){
-    .nome-evento{
+    .evento-nome{
         font-size: 100px;
     }
 }
 
+@media screen and (max-width: 580px){
+    .evento-nome{
+        font-size: 50px;
+    }
+}
+
 @media screen and (max-width: 420px){
-    .nome-evento{
+    .evento-nome{
         font-size: 40px;
     }
 }

@@ -5,6 +5,14 @@
 @font-face { font-family: WC_RoughTrad; src: url('../fonts/WC_RoughTrad.ttf');} 
 @font-face { font-family: erasdust; src: url('../fonts/erasdust.ttf');} 
 
+.vermelho{background-color: red;}
+.verde{background-color: green;}
+.azul{background-color: blue;}
+
+.padding-medium{padding: 10px;}
+.padding-high{padding: 15px;}
+.padding-extra-high{padding: 20px;}
+
 html,body { 
     color: white;
     font-family: ClaireHand;
@@ -17,39 +25,16 @@ p, h1, h2, h3, span, a, li, .low-transparent{
     opacity: 0.8 !important;
 }
 
-.title-size span{
-    padding: 10px 30px 10px 30px;
-    border-style: solid;
-    border-width: 0px 0px 2px 0px;
-    font-size: 28px;
-}
-
-.conteudo-sessao{
-    margin-top: 50px;
-}
-
-#sobre{
-    font-size: 19px;
-    font-family: WC_RoughTrad;
-}
-
-.nome-evento{
-    font-size: 165px;
-    font-family: Rayando;
-}
-
 .invisivel{}
+.exibindo{}
 
-.vermelho{
-    background-color: red;
-}
-
-.verde{
-    background-color: green;
-}
-
-.azul{
-    background-color: blue;
+.selecionado{
+    border-color: #337ab7;
+    border-style: solid;
+    border-bottom-width: 3px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
 }
 
 .container-base{
@@ -58,41 +43,36 @@ p, h1, h2, h3, span, a, li, .low-transparent{
     display: absolute;
 }
 
-.backgorund{
-    background-image: url('../img/blackboard2.png');
+.background{
+    height: 100%;
+    z-index: -1;
+}
+
+.blackboard-background {
     position: fixed;
     width: 100%;
-    height: 100%;
+    background-image: url('../img/blackboard2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    z-index: -1;
 }
 
 section{
     padding:10px;
-    padding-bottom:60px;   /* Height of the footer */
+    padding-bottom: 100px;   /* More that Height of the footer */
 }
 
 footer{
     position:absolute;
     bottom:0;
     width:100%;
-    height:60px;
-    margin-top: 70px; 
+    height: 60px;
     padding: 10px;
 }
 
 header{
     padding:10px;
-    position: fixed;
-    width: 100%;
-    background-image: url('../img/blackboard2.png');	
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
     z-index: 999;
 }
 
@@ -101,8 +81,13 @@ nav{
     margin: 0 auto;	
 }
 
+.menu_principal ul{
+    height: 80px;
+    padding: 0px;
+    margin: 0px;
+}
+
 .menu_principal ul li{
-    padding: 5px;
     list-style: none;
     display: inline-block;
     font-size: 19px;
@@ -116,35 +101,7 @@ nav{
     border: 5px solid rgba(255, 255, 255, 0.8);
 }
 
-.menu_principal ul{
-    height: 80px;
-    padding: 0px;
-    margin: 0px;
-}
-
-.padding-medium{
-    padding: 10px;
-}
-
-.padding-high{
-    padding: 15px;
-}
-
-.padding-extra-high{
-    padding: 20px;
-}
-
-.separador{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    width: 100%;
-    height: 13px;
-    overflow: auto;
-}
-
-#container {
+#container-fullpage {
     min-height:100%;
     position:relative;
 }
@@ -156,47 +113,4 @@ footer p{
 a:active, a:link, a:hover, a:visited ,a{
     text-decoration: none;
     color: white;
-}
-
-.selecionado{
-    /*color: #337ab7;*/
-    border-color: #337ab7;
-    border-style: solid;
-    border-bottom-width: 3px;
-    border-top-width: 0;
-    border-right-width: 0;
-    border-left-width: 0;
-}
-
-.mapa{
-    height: 100%;
-    width: 100%;
-}
-
-.div_mapa{
-    height: 400px;
-    padding: 0px;
-    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
-
-    -o-transition: all 1s; /* Opera */
-    -moz-transition: all 1s; /* Firefox */
-    -webkit-transition: all 1s; /* Safari */
-    transition: all 1s;
-}
-
-.div_mapa:hover{
-    -webkit-filter: grayscale(0%); /* Chrome 19+ & Safari 6+ */
-    filter: none;
-    
-    -o-transition: all 1s; /* Opera */
-    -moz-transition: all 1s; /* Firefox */
-    -webkit-transition: all 1s; /* Safari */
-    transition: all 1s;
-}
-
-.dados_contato{
-    font-size: 18px;
-    font-family: WC_RoughTrad;
 }

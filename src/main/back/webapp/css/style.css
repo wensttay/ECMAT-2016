@@ -69,7 +69,7 @@ html,body {
     display: absolute;
 }
 
-.backgorund{
+.background{
     background-image: url('../img/blackboard2.jpg');
     position: fixed;
     width: 100%;

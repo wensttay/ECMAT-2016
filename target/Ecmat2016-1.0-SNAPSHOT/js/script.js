@@ -13,7 +13,7 @@ $(document).ready(function () {
     if (anchorElementAux === null) {
         anchor = '#inicio';
     }
-
+    
     var elementoVisivel = document.getElementsByClassName('exibindo');
     $(elementoVisivel).addClass('invisivel');
     $(elementoVisivel).removeClass('exibindo');
@@ -29,9 +29,6 @@ $(document).ready(function () {
 });
 
 $('a[href^="#"]').bind('click', function (evento) {
-    // evento.preventDefault();
-    // var origem = this.hash, $destino = $(origem);
-
     var destino = $(this).attr('href'), $destino = $(destino);
 
     var elementos = document.getElementsByClassName('exibindo');
@@ -45,18 +42,7 @@ $('a[href^="#"]').bind('click', function (evento) {
 
             $destino.removeClass('invisivel');
             $destino.addClass('exibindo');
-            // $destino.css('display', 'block');
             $destino.fadeIn(400);
-
-            // var section = document.getElementById('section');
-
-            // if($(section).height() < $(window).height()){
-            //     var section_height = document.getElementById('section').clientHeight;
-
-            //     document.getElementById('footer').style.marginTop = $(window).height() - (section_height + document.getElementById('footer').clientHeight) + 'px';
-            // }else{
-            //     document.getElementById('footer').style.marginTop = '73px';
-            // }    
         });
     }
 

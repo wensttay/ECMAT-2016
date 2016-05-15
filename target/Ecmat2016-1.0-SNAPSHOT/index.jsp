@@ -15,14 +15,18 @@
         <title>ECMAT 2016</title>
         <!-- Bootstrap core CSS -->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
         <!-- Custom styles for this template -->
         <link href="css/style.css" rel="stylesheet">
-        <link href="css/resp.css" rel="stylesheet">
+        <link href="css/contato-style.css" rel="stylesheet">
+        <link href="css/inicio-style.css" rel="stylesheet">
+        <link href="css/sobre-style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
     </head>
 
     <body>
-        <div id="container">
-            <header id="header">
+        <div id="container-fullpage">
+            <header id="header" class="blackboard-background">
                 <nav class="menu_principal padding-high">
                     <ul>
                         <li><a href="#inicio">Inicio</li>
@@ -52,7 +56,7 @@
                 </nav>
             </header>
 
-            <div class="backgorund"></div>
+            <div class="background blackboard-background"></div>
 
             <section id="section">
                 <%@ include file="pages/inicio.jsp" %>

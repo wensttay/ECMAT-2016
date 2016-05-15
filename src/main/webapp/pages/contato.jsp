@@ -6,7 +6,8 @@
 
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<div class="container-base invisivel " id="contato">
+
+<article class="container-base invisivel " id="contato">
     <div class="container contato">
         <div class="row"> 
             <div class="col-md-6 div_mapa"> 
@@ -19,4 +20,4 @@
             </div>
         </div>
     </div>
-</div>
+</article>
