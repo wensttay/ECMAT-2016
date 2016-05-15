@@ -125,6 +125,9 @@ nav{
 #logo-small:hover{
     opacity: 1;
 }
+li.page-link, li.item-bordered{
+    padding-top: 7px;
+}
 .menu-principal-box ul.principal-list li.principal-list-item{
     list-style: none;
     display: inline-block;
