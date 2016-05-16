@@ -39,7 +39,7 @@
                         <li id="close-menu-button"><span>X</span></li>
                         <li class="principal-list-item page-link item-bordered"><a class="principal-list-item" href="#inicio">Inicio</a></li>
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
-                            <a href="#">Evento</a>
+                            <a href="#" class="list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="drop-menu blackboard-background">
                                 <li class="drop-menu-item page-link" ><a href="#sobre">Sobre</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#">Programação</a></li>
@@ -51,7 +51,7 @@
                         <li class="principal-list-item" id="logo-central" ><a href="#inicio"><img src="img/logo.png"></a></li>
                         <li class="principal-list-item page-link item-bordered" ><a href="#">Galeria</a></li>
                         <li class="principal-list-item item-bordered  principal-list-item-withsublist">
-                            <a href="#">Documentos</a>
+                            <a href="#" class="list-item-withsublist-title">Documentos  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="drop-menu blackboard-background">
                                 <li class="drop-menu-item page-link" ><a href="#">Anais</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#">Certificados</a></li>
