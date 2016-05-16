@@ -10,12 +10,12 @@
     <div class="container">
         <div class="row"> 
             <div class="col-md-12">
-                <p class="text-center padding-medium">Programação do dia 24</p>
+                <p class="text-center padding-extra-high">Programação do dia 24</p>
                 <table border="2" class="table">
                     <thead>
                         <tr>
-                            <th class="col-md-3">Horário</th>
-                            <th class="col-md-9">Evento</th>
+                            <th class="col-md-3 text-center">Horário</th>
+                            <th class="col-md-9 text-center">Evento</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,12 +39,12 @@
                 </table>
             </div>
             <div class="col-md-12">
-                <p class="text-center padding-medium">Programação do dia 25</p>
+                <p class="text-center padding-extra-high">Programação do dia 25</p>
                 <table border="2" class="table">
                     <thead>
                         <tr>
-                            <th class="col-md-3">Horário</th>
-                            <th class="col-md-9">Evento</th>
+                            <th class="col-md-3 text-center">Horário</th>
+                            <th class="col-md-9 text-center">Evento</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,7 +61,7 @@
                             <td>Minicursos e Oficinas</td>
                         </tr>
                         <tr>
-                            <td>19h – 20h20min</td>
+                            <td>19 horas – 20h20min</td>
                             <td>Mesas Redondas</td>
                         </tr>
                         <tr>
@@ -76,12 +76,12 @@
                 </table>
             </div>
             <div class="col-md-12">
-                <p class="text-center padding-medium">Programação do dia 26</p>
+                <p class="text-center padding-extra-high">Programação do dia 26</p>
                 <table border="2" class="table">
                     <thead>
                         <tr>
-                            <th class="col-md-3">Horário</th>
-                            <th class="col-md-9">Evento</th>
+                            <th class="col-md-3 text-center">Horário</th>
+                            <th class="col-md-9 text-center">Evento</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -90,7 +90,7 @@
                             <td>Palestra</td>
                         </tr>
                         <tr>
-                            <td>9h – 9h15min</td>
+                            <td>9 horas – 9h15min</td>
                             <td>Coffee Break</td>
                         </tr>
                         <tr>
@@ -103,7 +103,7 @@ envolvendo Matemática</td>
                             <td>Apresentação de Trabalhos Orais</td>
                         </tr>
                         <tr>
-                            <td>15h – 15h30min</td>
+                            <td>15 horas – 15h30min</td>
                             <td>Apresentação de Pôster</td>
                         </tr>
                         <tr>

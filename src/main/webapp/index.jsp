@@ -36,7 +36,7 @@
                 </a>
                 <nav class="menu-principal-box padding-high">
                     <ul class="principal-list">
-                        <li id="close-menu-button"><span>X</span></li>
+                        <li id="close-menu-button" class="padding-extra-high"><span>X</span></li>
                         <li class="principal-list-item page-link item-bordered"><a class="principal-list-item" href="#inicio">Inicio</a></li>
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
                             <a href="#" class="list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
