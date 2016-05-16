@@ -42,7 +42,7 @@
                             <a href="#" class="list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="drop-menu blackboard-background">
                                 <li class="drop-menu-item page-link" ><a href="#sobre">Sobre</a></li>
-                                <li class="drop-menu-item page-link" ><a href="#">Programação</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#programacao">Programação</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#">Organização</a></li>
                             </ul>
                         </li>
@@ -69,6 +69,7 @@
                 <%@ include file="pages/inicio.jsp" %>
                 <%@ include file="pages/sobre.jsp" %>
                 <%@ include file="pages/contato.jsp" %>
+                <%@ include file="pages/programacao.jsp" %>
             </section>
 
             <footer id="footer">
