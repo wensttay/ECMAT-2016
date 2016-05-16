@@ -73,19 +73,28 @@ function menuSlideRight() {
     $('.menu-principal-box').animate({"margin-right": '-100%'});
     $('iframe').css("display", 'block');
 }
+
 function dropDownSubmenu() {
     if ($(this).find("ul").css('display') === 'none') {
-        $(this).find("ul").css("visibility", "visible");
+        
         $(this).find('.list-item-withsublist-title span.glyphicon').removeClass('glyphicon-triangle-bottom');
         $(this).find('.list-item-withsublist-title span.glyphicon').addClass('glyphicon-triangle-top');
+        $(this).find("ul").css("visibility", "visible");
         $(this).find("ul").slideDown();
         $(this).find("ul").css("display", 'block');
-
+        
+        $('.sublist-isOpen').find("ul").slideUp();
+        $('.sublist-isOpen').find('.list-item-withsublist-title span.glyphicon').addClass('glyphicon-triangle-bottom');
+        $('.sublist-isOpen').find('.list-item-withsublist-title span.glyphicon').removeClass('glyphicon-triangle-top');
+        
+        $('.sublist-isOpen').removeClass('sublist-isOpen');
+        $(this).addClass('sublist-isOpen');
+        
     } else {
+        $(this).removeClass('sublist-isOpen');
         $(this).find('.list-item-withsublist-title span.glyphicon').addClass('glyphicon-triangle-bottom');
         $(this).find('.list-item-withsublist-title span.glyphicon').removeClass('glyphicon-triangle-top');
         $(this).find("ul").slideUp();
-//        $(this).find("ul").css("display", 'none');
     }
 }
 function mouseEnterSumenu() {

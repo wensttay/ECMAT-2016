@@ -28,7 +28,7 @@
         <div id="container-fullpage">
             <header id="header" class="blackboard-background">
                 <!--TROCAR IMAGEM POR UM ICONE DE GENTE-->
-                <div id="menu-principal-button" ><br><img src="img/icons/menu-icon.png" width="30px" height="30px"/></div>
+                <div id="menu-principal-button" ><img src="img/icons/menu-icon.png" width="75px" height="75px"/></div>
                 <a href="#inicio">
                     <div id="logo-small" >
                         <img src="img/logo.png" width="75px" height="75px">

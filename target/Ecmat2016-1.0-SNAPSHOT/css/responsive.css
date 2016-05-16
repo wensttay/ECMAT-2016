@@ -41,16 +41,21 @@ and open the template in the editor.
     }
     .menu-principal-box{
         margin-right: -100%;
-        border: 5px solid rgba(255, 255, 255, 1);
+        border-left: 5px solid rgba(255, 255, 255, 1);
+        border-right: 5px solid rgba(255, 255, 255, 1);
         height: 100%;
         width: 100%;
         overflow:hidden;
         position: absolute;
         right: 0;
         position: fixed;
-        background-image: url('../img/blackboard2.png');
+        
+        background-image: url('../img/blackboard.png');
         background-repeat: no-repeat;
-        background-size: auto;
+        
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
         background-attachment: fixed;
         background-position: center;
         padding-right: 0;

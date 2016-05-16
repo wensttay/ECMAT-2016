@@ -59,7 +59,7 @@ p, h1, h2, span, a, li, .low-transparent{
 
 .blackboard-background {
     position: fixed;
-    background-image: url('../img/blackboard2.png');
+    background-image: url('../img/blackboard.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -100,13 +100,11 @@ nav{
     display: none;
     height: 75px;
     width: 75px;
-    padding: 10px;
     text-align: center;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.5);
-    color: black;
     float: right;
-    margin: 35px;
+    margin: 35px 35px 35px 0;
 }
 #menu-principal-button:hover{
     background: rgba(255, 255, 255, 0.8);
@@ -120,7 +118,7 @@ nav{
     width: 75px;
     opacity: 0.8;
     float: left;
-    margin: 35px;
+    margin: 35px 0 35px 35px;
     display: none;
 }
 #logo-small:hover{
@@ -140,6 +138,7 @@ nav{
 }
 .menu-principal-box ul.principal-list li.principal-list-item:hover{
     opacity: 1;
+    color: rgba(255, 255, 255, 1);
 }
 .menu-principal-box ul.principal-list li.item-bordered:hover{
     border-radius: 20px;
@@ -191,6 +190,7 @@ ul.drop-menu li.drop-menu-item:last-child{
 }
 ul.drop-menu li.drop-menu-item:hover{
     opacity: 1;
+    color: rgba(255, 255, 255, 1);
 }
 
 #container-fullpage {
