@@ -104,20 +104,28 @@ function mouseLeaveSumenu() {
 var menuControl = function () {
     windowSize = $(window).width();
     if (windowSize >= 820) {
+        
         $("li.page-link").unbind("click", menuSlideRight);
-        alert("TO GRANDAO");
         $('li.principal-list-item-withsublist').unbind("click", dropDownSubmenu);
+        
+        $('li.principal-list-item-withsublist').unbind("mouseenter", mouseEnterSumenu);
         $('li.principal-list-item-withsublist').bind("mouseenter", mouseEnterSumenu);
+        
+        $('li.principal-list-item-withsublist').unbind("mouseleave", mouseLeaveSumenu);
         $('li.principal-list-item-withsublist').bind("mouseleave", mouseLeaveSumenu);
+        
         $('.menu-principal-box').css("margin", '0 auto');
     } else {
+        
+        $("li.page-link").unbind("click", menuSlideRight);
         $("li.page-link").bind("click", menuSlideRight);
         
-        if (!$('li.principal-list-item-withsublist').bind("click", dropDownSubmenu)) {
-            $('li.principal-list-item-withsublist').bind("click", dropDownSubmenu);
-        }
+        $('li.principal-list-item-withsublist').unbind("click", dropDownSubmenu);
+        $('li.principal-list-item-withsublist').bind("click", dropDownSubmenu);
+        
         $('li.principal-list-item-withsublist').unbind("mouseenter", mouseEnterSumenu);
         $('li.principal-list-item-withsublist').unbind("mouseleave", mouseLeaveSumenu);
+        
         $('.menu-principal-box').css("margin-right", '-100%');
     }
 };
