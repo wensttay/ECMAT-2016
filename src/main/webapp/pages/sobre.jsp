@@ -17,12 +17,10 @@
                     O Encontro Cajazeirense de Matemática (ECMAT) trata-se de um evento promovido pela Coordenação do Curso de Licenciatura em Matemática do Instituto Federal de Educação, Ciência e Tecnologia da Paraíba – IFPB/Campus Cajazeiras e tem, como um de seus objetivos, a divulgação das atividades desenvolvidas pelos alunos do curso de Licenciatura em Matemática ofertado pelo referido campus.
                 </p>
                 <p class="sobre-paragraph">
-                    Além disso, o evento, que já está em sua segunda edição, visa também estreitar os laços entre alunos e professores da região, buscando cada vez mais incentivar a todos pelo estudo da Matemática e áreas afins de uma forma mais dinâmica e interativa através de palestras, minicursos, exposições e apresentações de artigos.    
+                    Além disso, o evento, que já está em sua terceira edição, visa também estreitar os laços entre alunos e professores da região, buscando cada vez mais incentivar a todos pelo estudo da Matemática e áreas afins de uma forma mais dinâmica e interativa através de palestras, minicursos, exposições e apresentações de artigos.    
                 </p>
                 <p class="sobre-paragraph">
-                    O II ECMAT acontecerá nos dias 6, 7 e 8 de maio de 2015 em comemoração ao Dia Nacional da Matemática – 6 de maio – , criado em homenagem ao escritor e matemático brasileiro Júlio César de Melo e Souza, mais conhecido como Malba Tahan.
-                </p>
-                <p class="sobre-paragraph">
+                    O III ECMAT acontecerá nos dias 24, 25 e 26 de agosto de 2016.
                     Nesse dia, matemáticos ligados à área da educação devem promover dinâmicas, bem como demonstrar que a Matemática é de grande importância para a evolução da sociedade através de atividades variadas que abordem as suas inúmeras utilizações.
                 </p>
                 <p class="sobre-paragraph">

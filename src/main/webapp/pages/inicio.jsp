@@ -19,7 +19,7 @@
             <div class="col-md-12">
                 <div class="evento-info-box low-transparent col-md-4 col-sm-4">
                     <a href="#">
-                        <h3>Dias 8 a 20 de Agosto</h3>
+                        <h3>Dias 24 a 26 de Agosto</h3>
                         <img class="evento-info-img" src="img/icons/calendario.png"/>
                     </a>
                 </div>
