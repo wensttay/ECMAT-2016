@@ -4,14 +4,17 @@
  * and open the template in the editor.
  */
 
-$('#exit-menu-principal-button').click(function () {
-    $('.menu-principal-box').animate({"margin-right": '-100%'});
-    $('iframe').css("display", 'block');
-});
 
 $('#menu-principal-button').click(function () {
     $('iframe').css("display", 'none');
     $('.menu-principal-box').animate({"margin-right": '0px'});
+    $("body").css("overflow", "hidden");
+});
+
+$('#exit-menu-principal-button').click(function () {
+    $('.menu-principal-box').animate({"margin-right": '-100%'});
+    $('iframe').css("display", 'block');
+    $("body").css("overflow", "auto");
 });
 
 var windowSize = $(window).width();

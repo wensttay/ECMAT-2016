@@ -12,7 +12,7 @@
         <div class="row"> 
             <div class="col-md-2"></div>
             <div class="col-md-8 text-justify"> 
-                <div class="text-center article-title"><p>Sobre</p></div>
+                <p class="text-center article-title">Sobre</p>
 
 
                 <div class="sobre-paragraph col-md-12 col-sm-12">
