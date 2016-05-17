@@ -21,22 +21,29 @@
         <link href="css/contato-style.css" rel="stylesheet">
         <link href="css/inicio-style.css" rel="stylesheet">
         <link href="css/sobre-style.css" rel="stylesheet">
+        <link href="css/sobre-responsive.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
     </head>
 
     <body>
         <div id="container-fullpage">
             <header id="header" class="blackboard-background">
-                <!--TROCAR IMAGEM POR UM ICONE DE GENTE-->
-                <div id="menu-principal-button" ><img src="img/icons/menu-icon.png" width="75px" height="75px"/></div>
+
+                <div id="menu-principal-button" class="menu-button-with-img" >
+                    <img src="img/menu/menu-icon.png" />
+                </div>
+                
                 <a href="#inicio">
-                    <div id="logo-small" >
-                        <img src="img/logo.png" width="75px" height="75px">
+                    <div id="logo-small" class="menu-button-with-img">
+                        <img src="img/logo/logo-ecmat2016-75x75.png">
                     </div>
                 </a>
-                <nav class="menu-principal-box padding-high">
+                <nav class="menu-principal-box">
                     <ul class="principal-list">
-                        <li id="close-menu-button" class="padding-extra-high"><span>X</span></li>
+                        <li id="exit-menu-principal-button" class="menu-button-with-img" >
+                            <img src="img/menu/exit-menu-icon.png"/>
+                        </li>
+                        
                         <li class="principal-list-item page-link item-bordered"><a class="principal-list-item" href="#inicio">Inicio</a></li>
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
                             <a href="#" class="list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
@@ -48,7 +55,10 @@
                         </li>
                         
                         <li class="principal-list-item page-link item-bordered" ><a href="#">Inscrição</a></li>
-                        <li class="principal-list-item" id="logo-central" ><a href="#inicio"><img src="img/logo.png"></a></li>
+                        <li class="principal-list-item" id="logo-central" class="menu-button-with-img" ><a href="#inicio">
+                                <img src="img/logo/logo-ecmat2016-75x75.png"></a>
+                        </li>
+                        
                         <li class="principal-list-item page-link item-bordered" ><a href="#">Galeria</a></li>
                         <li class="principal-list-item item-bordered  principal-list-item-withsublist">
                             <a href="#" class="list-item-withsublist-title">Documentos  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
@@ -84,7 +94,8 @@
         <!-- Bootstrap JavaScript -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <!-- Custom Script for this tamplate -->
-        <script src="js/script.js"></script>
+        <script src="js/menu-controll-script.js"></script>
+        <script src="js/page-controll-script.js"></script>
         
     </body>
 </html>

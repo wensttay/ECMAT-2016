@@ -7,40 +7,6 @@
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<style>
-    .responsive-container {
-        position: relative;
-        width: 100%;
-    }
-
-    .dummy {
-        padding-top: 100%; /* forces 1:1 aspect ratio */
-    }
-
-    .container-ajust {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        font: 0/0 a;
-        text-align:center; /* Align center inline elements */
-    }
-
-    .container-ajust:before {
-        display: inline-block;
-        vertical-align: middle;
-        content: ' ';
-        height: 100%;
-    }
-
-    .container-ajust img, .container-ajust p{
-        vertical-align: middle;
-        display: inline-block;
-    }
-
-</style>
-
 <article class="container-base invisivel sobre-font" id="sobre">
     <div class="container">
         <div class="row"> 
@@ -55,21 +21,23 @@
                     </p>
                 </div>
 
-                <div class="sobre-paragraph col-md-6 col-sm-6">
-                    <div class="responsive-container">
-                        <div class="dummy"></div>
-
-                        <div class="container-ajust">
-                            <img src="img/logo-clean.png" width="60%">
+                <div class="sobre-paragraph col-md-12 col-sm-12 doble-colum">
+                    <div class="col-md-6 col-sm-6 colum-left">
+                        <div class="responsive-container">
+                            <div class="dummy"></div>
+                            <div class="container-ajust">
+                                <img src="img/logo/logo-ecmat2016-420x420.png">
+                            </div>
                         </div>
                     </div>
+                    <div class="col-md-6 col-sm-6 colum-right colum-type-text">
+                        <p>
+                            Além disso, o evento, que já está em sua terceira edição, visa também estreitar os laços entre alunos e professores da região, buscando cada vez mais incentivar a todos pelo estudo da Matemática e áreas afins de uma forma mais dinâmica e interativa através de palestras, minicursos, exposições e apresentações de artigos.    
+                        </p>
+                    </div>
                 </div>
-                
-                <div class="sobre-paragraph col-md-6 col-sm-6">
-                    <p>
-                        Além disso, o evento, que já está em sua terceira edição, visa também estreitar os laços entre alunos e professores da região, buscando cada vez mais incentivar a todos pelo estudo da Matemática e áreas afins de uma forma mais dinâmica e interativa através de palestras, minicursos, exposições e apresentações de artigos.    
-                    </p>
-                </div>
+
+
 
                 <div class="sobre-paragraph col-md-12 col-sm-12">
                     <p>

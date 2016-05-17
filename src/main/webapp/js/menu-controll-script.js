@@ -3,54 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$(document).ready(myFunction());
 
-$('a[href^="#"]').bind('click', function (evento) {
-    var destino = $(this).attr('href'), $destino = $(destino);
-
-    var elementos = document.getElementsByClassName('exibindo');
-    var origem = elementos[0], $origem = $(origem);
-
-    if ($destino.length && !$origem.is($destino)) {
-        $origem.fadeOut(function () {
-
-            $origem.removeClass('exibindo');
-            $origem.addClass('invisivel');
-
-            $destino.removeClass('invisivel');
-            $destino.addClass('exibindo');
-            $destino.fadeIn(400);
-            $('html, body').animate({scrollTop: 0}, 'slow');
-        });
-    }
-});
-
-function myFunction() {
-    var anchor = window.top.location.hash;
-    var anchorAux = anchor.substring(1, anchor.length);
-
-    var anchorElementAux = document.getElementById(anchorAux);
-
-    if (anchorElementAux === null) {
-        anchor = '#inicio';
-    }
-
-    var elementoVisivel = document.getElementsByClassName('exibindo');
-    $(elementoVisivel).addClass('invisivel');
-    $(elementoVisivel).removeClass('exibindo');
-
-    $(anchor).removeClass('invisivel');
-    $(anchor).addClass('exibindo');
-
-    var elementosInvisiveis = document.getElementsByClassName('invisivel');
-
-    for (var i = elementosInvisiveis.length - 1; i >= 0; i--) {
-        elementosInvisiveis[i].style.display = 'none';
-    }
-    ;
-}
-
-$('#close-menu-button span').click(function () {
+$('#exit-menu-principal-button').click(function () {
     $('.menu-principal-box').animate({"margin-right": '-100%'});
     $('iframe').css("display", 'block');
 });
@@ -76,20 +30,20 @@ function menuSlideRight() {
 
 function dropDownSubmenu() {
     if ($(this).find("ul").css('display') === 'none') {
-        
+
         $(this).find('.list-item-withsublist-title span.glyphicon').removeClass('glyphicon-triangle-bottom');
         $(this).find('.list-item-withsublist-title span.glyphicon').addClass('glyphicon-triangle-top');
         $(this).find("ul").css("visibility", "visible");
         $(this).find("ul").slideDown();
         $(this).find("ul").css("display", 'block');
-        
+
         $('.sublist-isOpen').find("ul").slideUp();
         $('.sublist-isOpen').find('.list-item-withsublist-title span.glyphicon').addClass('glyphicon-triangle-bottom');
         $('.sublist-isOpen').find('.list-item-withsublist-title span.glyphicon').removeClass('glyphicon-triangle-top');
-        
+
         $('.sublist-isOpen').removeClass('sublist-isOpen');
         $(this).addClass('sublist-isOpen');
-        
+
     } else {
         $(this).removeClass('sublist-isOpen');
         $(this).find('.list-item-withsublist-title span.glyphicon').addClass('glyphicon-triangle-bottom');
@@ -97,12 +51,14 @@ function dropDownSubmenu() {
         $(this).find("ul").slideUp();
     }
 }
+
 function mouseEnterSumenu() {
     $(this).find("ul").css("display", 'block');
     $(this).find("ul").css("visibility", "visible");
     $(this).find('.list-item-withsublist-title span.glyphicon').removeClass('glyphicon-triangle-bottom');
     $(this).find('.list-item-withsublist-title span.glyphicon').addClass('glyphicon-triangle-top');
 }
+
 function mouseLeaveSumenu() {
     $(this).find("ul").css("display", 'none');
     $(this).find("ul").css("visibility", "hidden");
@@ -113,28 +69,28 @@ function mouseLeaveSumenu() {
 var menuControl = function () {
     windowSize = $(window).width();
     if (windowSize >= 820) {
-        
+
         $("li.page-link").unbind("click", menuSlideRight);
         $('li.principal-list-item-withsublist').unbind("click", dropDownSubmenu);
-        
+
         $('li.principal-list-item-withsublist').unbind("mouseenter", mouseEnterSumenu);
         $('li.principal-list-item-withsublist').bind("mouseenter", mouseEnterSumenu);
-        
+
         $('li.principal-list-item-withsublist').unbind("mouseleave", mouseLeaveSumenu);
         $('li.principal-list-item-withsublist').bind("mouseleave", mouseLeaveSumenu);
-        
+
         $('.menu-principal-box').css("margin", '0 auto');
     } else {
-        
+
         $("li.page-link").unbind("click", menuSlideRight);
         $("li.page-link").bind("click", menuSlideRight);
-        
+
         $('li.principal-list-item-withsublist').unbind("click", dropDownSubmenu);
         $('li.principal-list-item-withsublist').bind("click", dropDownSubmenu);
-        
+
         $('li.principal-list-item-withsublist').unbind("mouseenter", mouseEnterSumenu);
         $('li.principal-list-item-withsublist').unbind("mouseleave", mouseLeaveSumenu);
-        
+
         $('.menu-principal-box').css("margin-right", '-100%');
     }
 };

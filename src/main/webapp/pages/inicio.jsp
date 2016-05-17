@@ -18,21 +18,21 @@
 
             <div class="col-md-12">
                 <div class="evento-info-box low-transparent col-md-4 col-sm-4">
-                    <a href="#">
+                    <a href="#programacao">
                         <h3>Dias 24 a 26 de Agosto</h3>
-                        <img class="evento-info-img" src="img/icons/calendario.png"/>
+                        <img class="evento-info-img" src="img/other/calendario.png"/>
                     </a>
                 </div>
                 <div class="evento-info-box low-transparent col-md-4 col-sm-4">
                     <a href="#contato">
                         <h3>IFPB - Campus Cajazeiras</h3>
-                        <img class="evento-info-img" src="img/icons/posicao.png"/>
+                        <img class="evento-info-img" src="img/other/posicao.png"/>
                     </a>
                 </div>
                 <div class="evento-info-box low-transparent col-md-4 col-sm-4">
-                    <a href="#">
+                    <a href="#inscricao">
                         <h3>Inscrições a partir de 1 de Junho</h3>
-                        <img class="evento-info-img" src="img/icons/inscricao.png"/>
+                        <img class="evento-info-img" src="img/other/inscricao.png"/>
                     </a>
                 </div>
             </div>
