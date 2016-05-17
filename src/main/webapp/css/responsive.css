@@ -29,6 +29,11 @@ and open the template in the editor.
 }
 
 @media screen and (max-width: 820px){
+    .programcao-day-box{
+        width: 100% !important;
+        margin: 0 0 35px 0 !important;
+    }
+
     h3{
         font-size: 20px;
     }
@@ -73,7 +78,7 @@ and open the template in the editor.
         width: 100%;
         text-align: center;
     }
-    
+
     .menu-principal-box ul.principal-list li{
         padding: 0 !important;
         margin: 7px 0;
@@ -123,22 +128,7 @@ and open the template in the editor.
     }
 }
 
-@media screen and (max-width: 580px){
-    h3{
-        font-size: 18px;
-    }
-    .evento-nome{
-        font-size: 50px;
-    }
-}
-
-@media screen and (max-width: 420px){
-    .evento-nome{
-        font-size: 40px;
-    }
-}
-
-@media (max-height: 700px){
+@media (max-height: 700px) and (max-width: 820px){
     h3{
         font-size: 16px;
     }
@@ -165,5 +155,38 @@ and open the template in the editor.
 
     .menu-principal-box ul.principal-list li.principal-list-item{
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 820px) and (max-height: 700px) {
+    p{
+        font-size: 16px;
+    }    
+}
+
+@media screen and (max-width: 580px){
+    p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 580px) and (max-height: 700px) {
+    p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 580px){
+    h3{
+        font-size: 18px;
+    }
+    .evento-nome{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .evento-nome{
+        font-size: 40px;
     }
 }

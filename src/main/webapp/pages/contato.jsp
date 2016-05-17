@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8 text-justify"> 
-                <p class="text-center article-title">Contato</p>
+                <p class="text-center article-title col-sm-12">Contato</p>
                 <div class="col-md-12 dados_contato padding-extra-high"> 
                     <p>Endereço: Rua José Antônio da Silva, 300, Bairro Jardim Oásis</p>
                     <p>E-mail: ecmat2016@gmail.com</p>
