@@ -4,26 +4,6 @@
  * and open the template in the editor.
  */
 
-$('a[href^="#"]').bind('click', function (evento) {
-    var destino = $(this).attr('href'), $destino = $(destino);
-
-    var elementos = document.getElementsByClassName('exibindo');
-    var origem = elementos[0], $origem = $(origem);
-
-    if ($destino.length && !$origem.is($destino)) {
-        $origem.fadeOut(function () {
-
-            $origem.removeClass('exibindo');
-            $origem.addClass('invisivel');
-
-            $destino.removeClass('invisivel');
-            $destino.addClass('exibindo');
-            $destino.fadeIn(400);
-            $('html, body').animate({scrollTop: 0}, 'slow');
-        });
-    }
-});
-
 $(document).ready(function myFunction() {
     var anchor = window.top.location.hash;
     var anchorAux = anchor.substring(1, anchor.length);

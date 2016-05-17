@@ -29,12 +29,12 @@
         <div id="container-fullpage">
             <header id="header" class="blackboard-background">
 
-                <div id="menu-principal-button" class="menu-button-with-img" >
+                <div id="menu-principal-button" class="menu-button-with-img low-transparent" >
                     <img src="img/menu/menu-icon.png" />
                 </div>
                 
                 <a href="#inicio">
-                    <div id="logo-small" class="menu-button-with-img">
+                    <div id="logo-small" class="menu-button-with-img low-transparent">
                         <img src="img/logo/logo-ecmat2016-75x75.png">
                     </div>
                 </a>
@@ -55,7 +55,7 @@
                         </li>
                         
                         <li class="principal-list-item page-link item-bordered" ><a href="#">Inscrição</a></li>
-                        <li class="principal-list-item" id="logo-central" class="menu-button-with-img" ><a href="#inicio">
+                        <li class="principal-list-item" id="logo-central" class="menu-button-with-img low-transparent" ><a href="#inicio">
                                 <img src="img/logo/logo-ecmat2016-75x75.png"></a>
                         </li>
                         
