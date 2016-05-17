@@ -22,7 +22,7 @@ html,body {
 }
 
 
-p, span, a, li, .low-transparent{
+p, li, .low-transparent{
     opacity: 0.8;
 }
 
@@ -35,6 +35,7 @@ p, span, a, li, .low-transparent{
     border-width: 0px 0px 5px 0px;
     border-color: rgba(255, 255, 255, 0.8);
     font-size: 28px;
+    margin-bottom: 35px;
 }
 
 .selecionado{
@@ -49,7 +50,8 @@ p, span, a, li, .low-transparent{
 .container-base{
     padding-top: 150px;
     width: 100%;
-    display: absolute;
+    display: none;
+
 }
 
 .background{
@@ -140,6 +142,10 @@ nav{
 }
 .menu-principal-box ul.principal-list li.principal-list-item-withsublist:hover{
     border: 4px dashed rgba(255, 255, 255, 1) !important;
+
+}
+li.page-link:hover{
+    background-color: rgba(255, 255, 255, 0.2);   
 }
 
 li.page-link, li.item-bordered, ul.drop-menu{

@@ -26,4 +26,5 @@ $(document).ready(function myFunction() {
     for (var i = elementosInvisiveis.length - 1; i >= 0; i--) {
         elementosInvisiveis[i].style.display = 'none';
     }
+    $(anchor).fadeIn(1000);
 });

@@ -18,7 +18,7 @@ $('a[href^="#"]').bind('click', function (evento) {
 
             $destino.removeClass('invisivel');
             $destino.addClass('exibindo');
-            $destino.fadeIn(400);
+            $destino.fadeIn(1000);
 
             $('html, body').animate({scrollTop: 0}, 'slow');
         });

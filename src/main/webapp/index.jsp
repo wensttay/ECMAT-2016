@@ -79,7 +79,8 @@
                 <%@ include file="pages/inicio.jsp" %>
                 <%@ include file="pages/sobre.jsp" %>
                 <%@ include file="pages/contato.jsp" %>
-                <%@ include file="pages/programacao.jsp" %>
+                <%--<%@ include file="pages/programacao.jsp" %>--%>
+                <%@ include file="pages/programacao2.jsp" %>
             </section>
 
             <footer id="footer">
