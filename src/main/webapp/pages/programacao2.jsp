@@ -52,10 +52,12 @@
         margin-left: 0;
     }
     .programcao-day-box table tbody tr td{
+        width: calc(100% - 40px);
         margin-top: 5px;
         border: none;
         outline: none;
         margin-left: 20px;
+        margin-right: 20px;
     }
 
 </style>
