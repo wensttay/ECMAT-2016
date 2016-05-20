@@ -23,6 +23,7 @@
         <link href="css/sobre-style.css" rel="stylesheet">
         <link href="css/sobre-responsive.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
+        <link href="css/organizacao-style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
@@ -51,7 +52,7 @@
                             <ul class="drop-menu blackboard-background">
                                 <li class="drop-menu-item page-link" ><a href="#sobre">Sobre</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#programacao">Programação</a></li>
-                                <li class="drop-menu-item page-link" ><a href="#">Organização</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#organizacao">Organização</a></li>
                             </ul>
                         </li>
                         
@@ -82,6 +83,7 @@
                 <%@ include file="pages/contato.jsp" %>
                 <%--<%@ include file="pages/programacao.jsp" %>--%>
                 <%@ include file="pages/programacao2.jsp" %>
+                <%@ include file="pages/organizacao.jsp" %>
             </section>
 
             <footer id="footer">
