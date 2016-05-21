@@ -24,6 +24,7 @@
         <link href="css/sobre-responsive.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
         <link href="css/organizacao-style.css" rel="stylesheet">
+        <link href="css/programacao-style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
@@ -81,8 +82,7 @@
                 <%@ include file="pages/inicio.jsp" %>
                 <%@ include file="pages/sobre.jsp" %>
                 <%@ include file="pages/contato.jsp" %>
-                <%--<%@ include file="pages/programacao.jsp" %>--%>
-                <%@ include file="pages/programacao2.jsp" %>
+                <%@ include file="pages/programacao.jsp" %>
                 <%@ include file="pages/organizacao.jsp" %>
             </section>
 
@@ -100,6 +100,7 @@
         <!-- Custom Script for this tamplate -->
         <script src="js/menu-controll-script.js"></script>
         <script src="js/page-controll-script.js"></script>
+        <script src="js/programacao-table-controll-script.js"></script>
         
     </body>
 </html>

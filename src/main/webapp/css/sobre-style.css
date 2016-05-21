@@ -10,45 +10,10 @@ and open the template in the editor.
 
 .sobre-paragraph{
     margin-bottom: 35px;
-}
-
-.sobre-font{
     font-size: 19px;
     font-family: WC_RoughTrad;
 }
 
-.responsive-container {
-        position: relative;
-        width: 100%;
-    }
-
-    .dummy {
-        padding-top: 100%; /* forces 1:1 aspect ratio */
-    }
-
-    .container-ajust {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        font: 0/0 a;
-        text-align:center; /* Align center inline elements */
-    }
-
-    .container-ajust:before {
-        display: inline-block;
-        vertical-align: middle;
-        content: ' ';
-        height: 100%;
-    }
-    
-    .container-ajust img{
-        vertical-align: middle;
-        display: inline-block;
-        width: 60%;
-    }
-    
-    .doble-colum .colum-type-text{
-        margin-top: 30px;
-    }
+.colum-type-text{
+    margin-top: 30px;
+}

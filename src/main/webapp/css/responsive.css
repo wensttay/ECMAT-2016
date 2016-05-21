@@ -15,16 +15,14 @@ and open the template in the editor.
     .menu-principal-box ul.principal-list li.principal-list-item,
     ul.drop-menu{
         font-size: 14px;
-        width: 120px;
+        width: 130px;
     }
-    
+
     h3{
         font-size: 16px;
     }
-
 }
-
-@media screen and (max-width: 920px){
+@media screen and (max-width: 940px){
     .menu-principal-box ul.principal-list li.principal-list-item,
     ul.drop-menu{
         font-size: 12px;

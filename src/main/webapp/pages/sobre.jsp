@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<article class="container-base invisivel sobre-font" id="sobre">
+<article class="container-base invisivel" id="sobre">
     <div class="container">
         <div class="row"> 
             <div class="col-md-2 col-sm-2"></div>

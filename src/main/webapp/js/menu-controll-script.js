@@ -104,10 +104,10 @@ var menuControl = function () {
 
         $('li.principal-list-item-withsublist').unbind("mouseleave", mouseLeaveSumenu);
         $('li.principal-list-item-withsublist').bind("mouseleave", mouseLeaveSumenu);
-        
-        $('.menu-principal-box').css("margin", '0 auto');
-    } else {
 
+        $('.menu-principal-box').css("margin", '0 auto');
+
+    } else {
         $("li.page-link").unbind("click", menuSlideRight);
         $("li.page-link").bind("click", menuSlideRight);
 
@@ -120,5 +120,3 @@ var menuControl = function () {
         $('.menu-principal-box').css("margin-right", '-100%');
     }
 };
-
-
