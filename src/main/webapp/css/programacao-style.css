@@ -25,6 +25,11 @@ and open the template in the editor.
 
 .program-day-box .img-box .day-img-box img{
     width: 60%;
+    opacity: 0.8;
+}
+
+.program-day-box .img-box{
+    cursor: pointer;
 }
 
 .program-day-box .title{
@@ -46,6 +51,7 @@ and open the template in the editor.
 .program-day-box .hour-box{
     padding: 20px;
     border-bottom: 5px solid rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 .program-day-box .hour-box:last-child{
     border-bottom: none;
@@ -64,8 +70,4 @@ and open the template in the editor.
     font-size: 12px;
     padding-left: 20px;
     padding-right: 20px;
-}
-.program-day-box .img-box{
-    cursor: pointer;
-    opacity: 0.8;
 }

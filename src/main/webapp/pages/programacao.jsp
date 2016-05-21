@@ -41,7 +41,7 @@
                             </div> <!-- Close Hour-Box Event -->
                             <div class="hour-box"> <!-- Open Hour-Box Event -->
                                 <div class="row-box"><span class="glyphicon glyphicon-time"></span> 20:00 até 21:00</div>
-                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Palesdiva de Abertura</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Palestra de Abertura</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="hour-box"> <!-- Open Hour-Box Event -->
                                 <div class="row-box"><span class="glyphicon glyphicon-time"></span> 21:00 até --:--</div>
@@ -114,7 +114,7 @@
                         <div class="hour-box-list" hidden> <!-- Open List box with hours -->
                             <div class="hour-box"> <!-- Open Hour-Box Event -->
                                 <div class="row-box"><span class="glyphicon glyphicon-time"></span> 07:30 até 09:00</div>
-                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Palesdiva</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Palestra</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="hour-box"> <!-- Open Hour-Box Event -->
                                 <div class="row-box"><span class="glyphicon glyphicon-time"></span> 09:00 até 09:15</div>
@@ -124,11 +124,12 @@
                                 <div class="row-box"><span class="glyphicon glyphicon-time"></span> 09:15 até 11:30</div>
                                 <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Minicursos</div>
                                 <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Oficinas</div>
-                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Amosdivas de jogos e oudivas atividades envolvendo Matemática</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Amostras de jogos</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Outras atividades envolvendo Matemática</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="hour-box"> <!-- Open Hour-Box Event -->
                                 <div class="row-box"><span class="glyphicon glyphicon-time"></span> 13:00 até 15:00</div>
-                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Apresentação de divabalhos Orais</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Apresentação de de Trabalhos Orais</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="hour-box"> <!-- Open Hour-Box Event -->
                                 <div class="row-box"><span class="glyphicon glyphicon-time"></span> 15:00 até 15:30</div>
@@ -145,7 +146,7 @@
                             </div> <!-- Close Hour-Box Event -->
                             <div class="hour-box"> <!-- Open Hour-Box Event -->
                                 <div class="row-box"><span class="glyphicon glyphicon-time"></span> 16:15 até 18:00</div>
-                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Palesdiva de Encerramento</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Palestra de Encerramento</div>
                             </div> <!-- Close Hour-Box Event -->
                         </div> <!-- Close List box with hours -->
                     </div> <!-- Close Program-Day-Box -->
