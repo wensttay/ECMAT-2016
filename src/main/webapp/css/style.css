@@ -21,6 +21,10 @@ html,body {
     padding:0;
 }
 
+p{
+    padding: 0;
+    margin: 0;
+}
 
 p, li, .low-transparent{
     opacity: 0.8;

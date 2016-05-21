@@ -33,7 +33,7 @@ and open the template in the editor.
 }
 
 @media screen and (max-width: 820px){
-    .programcao-day-box{
+    .program-day-box{
         width: 100% !important;
         margin: 0 0 35px 0 !important;
     }
