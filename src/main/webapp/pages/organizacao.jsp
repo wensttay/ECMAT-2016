@@ -13,52 +13,33 @@
             <div class="col-sm-12 col-md-12 evento-box">
                 <div class="col-sm-6 col-md-4 padding-medium organizador">
                     <a href="#">
+                        <img class="poraloide" src="img/organizacao/poraloide_1.png">
                         <div class="organizador-foto text-center">
-                            <img src="img/organizacao/victus.jpg">
+                            <img  src="img/organizacao/victus.jpg">
                         </div>
-                        <div class="nome-organizador text-center">
-                            <p class="padding-medium">
-                                Antônia Edivaneide de Sousa Gonzaga
-                            </p>
+                    </a>
+                </div>
+<!--                <div class="col-sm-6 col-md-4 padding-medium organizador">
+                    <a href="#">
+                        <div class="organizador-foto text-center">
+                            <img src="img/organizacao/poraloide_2.png">
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-4 padding-medium organizador">
                     <a href="#">
                         <div class="organizador-foto text-center">
-                            <img src="img/organizacao/wens.jpg">
-                        </div>
-                        <div class="texto-organizador">
-                            <p class="nome-organizador text-center">
-                                Wensttay
-                            </p>
+                            <img src="img/organizacao/poraloide_3.png">
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-6 col-md-4 padding-medium organizador">
                     <a href="#">
                         <div class="organizador-foto text-center">
-                            <img src="img/organizacao/victus.jpg">
-                        </div>
-                        <div class="texto-organizador">
-                            <p class="nome-organizador text-center">
-                                Victor Hugo
-                            </p>
+                            <img src="img/organizacao/poraloide_1.png">
                         </div>
                     </a>
-                </div>
-                <div class="col-sm-6 col-md-4 padding-medium organizador">
-                    <a href="#">
-                        <div class="organizador-foto text-center">
-                            <img src="img/organizacao/wens.jpg">
-                        </div>
-                        <div class="texto-organizador">
-                            <p class="nome-organizador text-center">
-                                Wensttay
-                            </p>
-                        </div>
-                    </a>
-                </div>
+                </div>-->
             </div>
             <div class="col-md-12 text-center padding-extra-high"><p>Comissão Científica</p></div>
             <div class="col-md-12 evento-box">
