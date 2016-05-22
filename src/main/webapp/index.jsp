@@ -15,7 +15,7 @@
         <title>ECMAT 2016</title>
         <!-- Bootstrap core CSS -->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        
+
         <!-- Custom styles for this template -->
         <link href="css/style.css" rel="stylesheet">
         <link href="css/contato-style.css" rel="stylesheet">
@@ -24,6 +24,7 @@
         <link href="css/sobre-responsive.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
         <link href="css/organizacao-style.css" rel="stylesheet">
+        <link href="css/programacao-style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
@@ -34,7 +35,7 @@
                 <div id="menu-principal-button" class="menu-button-with-img low-transparent" >
                     <img src="img/menu/menu-icon.png" />
                 </div>
-                
+
                 <a href="#inicio">
                     <div id="logo-small" class="menu-button-with-img low-transparent">
                         <img src="img/logo/logo-ecmat2016-75x75.png">
@@ -45,7 +46,7 @@
                         <li id="exit-menu-principal-button" class="menu-button-with-img" >
                             <img src="img/menu/exit-menu-icon.png"/>
                         </li>
-                        
+
                         <li class="principal-list-item page-link item-bordered"><a class="principal-list-item" href="#inicio">Inicio</a></li>
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
                             <a href="#" class="list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
@@ -53,21 +54,21 @@
                                 <li class="drop-menu-item page-link" ><a href="#sobre">Sobre</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#programacao">Programação</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#organizacao">Organização</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#">Galeria</a></li>
                             </ul>
                         </li>
-                        
+
                         <li class="principal-list-item page-link item-bordered" ><a href="#">Inscrição</a></li>
-                        <li class="principal-list-item" id="logo-central" class="menu-button-with-img low-transparent" ><a href="#inicio">
+                        <li class="principal-list-item menu-button-with-img low-transparent" id="logo-central" ><a href="#inicio">
                                 <img src="img/logo/logo-ecmat2016-75x75.png"></a>
                         </li>
-                        
-                        <li class="principal-list-item page-link item-bordered" ><a href="#">Galeria</a></li>
+
+                        <li class="principal-list-item page-link item-bordered" ><a href="#">Submissões</a></li>
                         <li class="principal-list-item item-bordered  principal-list-item-withsublist">
                             <a href="#" class="list-item-withsublist-title">Documentos  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="drop-menu blackboard-background">
-                                <li class="drop-menu-item page-link" ><a href="#">Anais</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#anais">Anais</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#">Certificados</a></li>
-                                <li class="drop-menu-item page-link" ><a href="#">Submissões</a></li>
                             </ul>
                         </li>
                         <li class="principal-list-item page-link item-bordered" ><a href="#contato">Contato</a></li>
@@ -81,9 +82,9 @@
                 <%@ include file="pages/inicio.jsp" %>
                 <%@ include file="pages/sobre.jsp" %>
                 <%@ include file="pages/contato.jsp" %>
-                <%--<%@ include file="pages/programacao.jsp" %>--%>
-                <%@ include file="pages/programacao2.jsp" %>
+                <%@ include file="pages/programacao.jsp" %>
                 <%@ include file="pages/organizacao.jsp" %>
+                <%@ include file="pages/anais.jsp" %>
             </section>
 
             <footer id="footer">
@@ -92,7 +93,7 @@
                 </p>
             </footer>
         </div>
-        
+
         <!-- Jquery Script -->
         <script src="js/jquery-2.2.2.min.js"></script>
         <!-- Bootstrap JavaScript -->
@@ -100,7 +101,8 @@
         <!-- Custom Script for this tamplate -->
         <script src="js/menu-controll-script.js"></script>
         <script src="js/page-controll-script.js"></script>
-        
+        <script src="js/programacao-table-controll-script.js"></script>
+
     </body>
 </html>
 

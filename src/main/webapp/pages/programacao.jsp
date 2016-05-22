@@ -1,128 +1,161 @@
 <%-- 
-    Document   : programacao
-    Created on : 16/05/2016, 15:24:27
-    Author     : Victor Hugo
+    Document   : programacao2
+    Created on : 17/05/2016, 03:49:18
+    Author     : Wensttay
 --%>
+
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <article class="container-base invisivel sobre-font" id="programacao">
 
     <div class="container">
-        <div class="row"> 
-            <div class="col-md-12">
-                <p class="text-center padding-extra-high">Programação do dia 24</p>
-                <table border="2" class="table">
-                    <thead>
-                        <tr>
-                            <th class="col-md-3 text-center">Horário</th>
-                            <th class="col-md-9 text-center">Evento</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>18 horas</td>
-                            <td>Credenciamento</td>
-                        </tr>
-                        <tr>
-                            <td>19 horas</td>
-                            <td>Solenidade de abertura</td>
-                        </tr>
-                        <tr>
-                            <td>20 horas </td>
-                            <td>Palestra de Abertura</td>
-                        </tr>
-                        <tr>
-                            <td>21 horas</td>
-                            <td>Coffee Break</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="row">
+
+            <div class="col-lg-1 col-md-1 col-sm-1"></div>
+            <div class="col-lg-10 col-md-10 col-sm-10">
+                <p class="text-center article-title col-sm-12">Programação</p>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 program-conteiner"> <!-- Open Container of Day Box -->
+                    <div class="program-day-box"> <!-- Open Program-Day-Box -->
+                        <p class="text-center title">Dia 24/08</p>
+                        <div class="col-md-12 col-sm-12 img-box">
+                            <div class="responsive-container">
+                                <div class="dummy"></div>
+                                <div class="container-ajust day-img-box">
+                                    <img src="img/other/menos-um-ao-quadrado.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
+                        <!-- Clear to full box Height -->
+                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+
+                        <div class="hour-box-list" hidden> <!-- Open List box with hours -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 18:00 até 19:00</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Credenciamento</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 19:00 até 20:00</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Solenidade de abertura</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 20:00 até 21:00</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Palestra de Abertura</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 21:00 até --:--</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Coffee Break</div>
+                            </div> <!-- Close Hour-Box Event -->
+                        </div> <!-- Close List box with hours -->
+                    </div> <!-- Close Program-Day-Box -->
+                </div> <!-- Close Container of Day Box -->
+
+                <div class="col-lg-4 col-md-4 col-sm-12 program-conteiner"> <!-- Open Container of Day Box -->
+                    <div class="program-day-box"> <!-- Open Program-Day-Box -->
+                        <p class="text-center title">Dia 25/08</p>
+                        <div class="col-md-12 col-sm-12 img-box">
+                            <div class="responsive-container">
+                                <div class="dummy"></div>
+                                <div class="container-ajust day-img-box">
+                                    <img src="img/other/raiz-quadrada-de-quatro.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Clear to full box Height -->
+                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+
+                        <div class="hour-box-list" hidden> <!-- Open List box with hours -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 13:30 até 15:30</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Minicursos</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Oficinas</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 15:30 até 15:45</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Coffee Break</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 15:45 até 17:45</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Minicursos</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Oficinas</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 19:00 até 20:20</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Mesas Redondas</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 20:20 até 20:40</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Coffee Break</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 20:40 até 22:00</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Mesas Redondas</div>
+                            </div> <!-- Close Hour-Box Event -->
+                        </div> <!-- Close List box with hours -->
+                    </div> <!-- Close Program-Day-Box -->
+                </div> <!-- Close Container of Day Box -->
+
+
+                <div class="col-lg-4 col-md-4 col-sm-12 program-conteiner"> <!-- Open Container of Day Box -->
+                    <div class="program-day-box"> <!-- Open Program-Day-Box -->
+                        <p class="text-center title">Dia 26/08</p>
+                        <div class="col-md-12 col-sm-12 img-box">
+                            <div class="responsive-container">
+                                <div class="dummy"></div>
+                                <div class="container-ajust day-img-box">
+                                    <img src="img/other/trinta-dividido-por-dez.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Clear to full box Height -->
+                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+
+                        <div class="hour-box-list" hidden> <!-- Open List box with hours -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 07:30 até 09:00</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Palestra</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 09:00 até 09:15</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Coffee Break</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 09:15 até 11:30</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Minicursos</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Oficinas</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Amostras de jogos</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Outras atividades envolvendo Matemática</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 13:00 até 15:00</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Apresentação de de Trabalhos Orais</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 15:00 até 15:30</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Apresentação de Pôster</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 15:30 até 15:45</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Coffee Break</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 15:45 até 16:15</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Cerimônia de endivega de premiação da Olimpíada Cajazeirense de
+                                    Matemática</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="hour-box"> <!-- Open Hour-Box Event -->
+                                <div class="row-box"><span class="glyphicon glyphicon-time"></span> 16:15 até 18:00</div>
+                                <div class="row-box"><span class="glyphicon glyphicon-minus"></span> Palestra de Encerramento</div>
+                            </div> <!-- Close Hour-Box Event -->
+                        </div> <!-- Close List box with hours -->
+                    </div> <!-- Close Program-Day-Box -->
+                </div> <!-- Close Container of Day Box -->
             </div>
-            <div class="col-md-12">
-                <p class="text-center padding-extra-high">Programação do dia 25</p>
-                <table border="2" class="table">
-                    <thead>
-                        <tr>
-                            <th class="col-md-3 text-center">Horário</th>
-                            <th class="col-md-9 text-center">Evento</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>13h30min – 15h30min</td>
-                            <td>Minicursos e Oficinas</td>
-                        </tr>
-                        <tr>
-                            <td>15h30min – 15:45min</td>
-                            <td>Coffee Break</td>
-                        </tr>
-                        <tr>
-                            <td>15h45min – 17h45min</td>
-                            <td>Minicursos e Oficinas</td>
-                        </tr>
-                        <tr>
-                            <td>19 horas – 20h20min</td>
-                            <td>Mesas Redondas</td>
-                        </tr>
-                        <tr>
-                            <td>20h20min – 20h40min</td>
-                            <td>Coffee Break</td>
-                        </tr>
-                        <tr>
-                            <td>20h40min – 22 horas</td>
-                            <td>Mesas Redondas</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-12">
-                <p class="text-center padding-extra-high">Programação do dia 26</p>
-                <table border="2" class="table">
-                    <thead>
-                        <tr>
-                            <th class="col-md-3 text-center">Horário</th>
-                            <th class="col-md-9 text-center">Evento</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>7h30min – 9 horas</td>
-                            <td>Palestra</td>
-                        </tr>
-                        <tr>
-                            <td>9 horas – 9h15min</td>
-                            <td>Coffee Break</td>
-                        </tr>
-                        <tr>
-                            <td>9h15min - 11h30min</td>
-                            <td>Minicursos e Oficinas / Amostras de jogos e outras atividades
-envolvendo Matemática</td>
-                        </tr>
-                        <tr>
-                            <td>13 horas – 15 horas</td>
-                            <td>Apresentação de Trabalhos Orais</td>
-                        </tr>
-                        <tr>
-                            <td>15 horas – 15h30min</td>
-                            <td>Apresentação de Pôster</td>
-                        </tr>
-                        <tr>
-                            <td>15h30mim – 15h45min</td>
-                            <td>Coffee Break</td>
-                        </tr>
-                        <tr>
-                            <td>15h45min – 16h15min</td>
-                            <td>Cerimônia de entrega de premiação da Olimpíada Cajazeirense de
-Matemática</td>
-                        </tr>
-                        <tr>
-                            <td>16h15min – 18 horas</td>
-                            <td>Palestra de Encerramento</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1"></div>
         </div>
     </div>
 
+
 </article>
+

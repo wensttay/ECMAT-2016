@@ -17,6 +17,11 @@ and open the template in the editor.
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 50px;
+    
+}
+
+.evento-info-box a{
+    opacity: 0.8;
 }
 
 .evento-info-box a:hover{
