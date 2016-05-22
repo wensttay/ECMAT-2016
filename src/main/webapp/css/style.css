@@ -4,6 +4,7 @@
 @font-face { font-family: ClaireHand; src: url('../fonts/ClaireHandRegular.ttf');} 
 @font-face { font-family: WC_RoughTrad; src: url('../fonts/WC_RoughTrad.ttf');} 
 @font-face { font-family: erasdust; src: url('../fonts/erasdust.ttf');} 
+@font-face { font-family: DancingScript; src: url('../fonts/DancingScript-Regular.ttf');} 
 
 .vermelho{background-color: red;}
 .verde{background-color: green;}
