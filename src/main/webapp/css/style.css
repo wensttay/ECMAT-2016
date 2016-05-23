@@ -1,9 +1,7 @@
-@font-face { font-family: ChalkDust; src: url('../fonts/ChalkDust.ttf');} 
-@font-face { font-family: Rayando; src: url('../fonts/rayando.ttf');} 
-@font-face { font-family: Rudiment; src: url('../fonts/Rudiment.ttf');} 
-@font-face { font-family: ClaireHand; src: url('../fonts/ClaireHandRegular.ttf');} 
 @font-face { font-family: WC_RoughTrad; src: url('../fonts/WC_RoughTrad.ttf');} 
-@font-face { font-family: erasdust; src: url('../fonts/erasdust.ttf');} 
+@font-face { font-family: ClaireHand; src: url('../fonts/ClaireHandRegular.ttf');}
+@font-face { font-family: Rayando; src: url('../fonts/rayando.ttf');} 
+@font-face { font-family: DESYREL; src: url('../fonts/DESYREL_.ttf');}
 
 .vermelho{background-color: red;}
 .verde{background-color: green;}
@@ -17,6 +15,14 @@ a:active, a:link, a:hover, a:visited ,a{
     text-decoration: none;
     color: white;
     display: block;
+}
+.disabled{
+    cursor: default !important;
+    opacity: 0.2;
+}
+.disabled:hover{
+    opacity: 0.2;
+    color: rgba(255,255,255, 0.8);
 }
 
 html,body { 

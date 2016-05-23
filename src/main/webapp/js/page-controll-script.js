@@ -28,3 +28,41 @@ $(document).ready(function myFunction() {
     }
     $(anchor).fadeIn(1000);
 });
+
+
+$('.scroll-button-right').click(function () {
+    var leftScroll = $(this).parent().find('.organization-box .organization-list').scrollLeft();
+    var mod = leftScroll % 214;
+    var sizeOfScroll = 214 - mod;
+    
+    $(this).parent().find('.organization-box .organization-list').animate({scrollLeft: '+=' + sizeOfScroll + 'x'}, 500); 
+});
+
+$('.scroll-button-left').click(function () {
+    var leftScroll = $(this).parent().find('.organization-box .organization-list').scrollLeft();
+    var mod = leftScroll % 214;
+    var sizeOfScroll = 214 - mod;
+
+    $(this).parent().find('.organization-box .organization-list').animate({scrollLeft: '-=' + sizeOfScroll + 'x'}, 500);
+});
+
+var lastScrollLeft = 0;
+$('.organization-box .organization-list').scroll(function () {
+    var documentScrollLeft = $(this).scrollLeft();
+    if (lastScrollLeft !== documentScrollLeft) {
+        lastScrollLeft = documentScrollLeft;
+
+        if (documentScrollLeft === $(this).width() / 2) {
+            $(this).parent().parent().find('.scroll-button-right').addClass('disabled');
+        } else {
+            $(this).parent().parent().find('.scroll-button-right').removeClass('disabled');
+        }
+
+        if (documentScrollLeft === 0) {
+            $(this).parent().parent().find('.scroll-button-left').addClass('disabled');
+        } else {
+            $(this).parent().parent().find('.scroll-button-left').removeClass('disabled');
+        }
+
+    }
+});
