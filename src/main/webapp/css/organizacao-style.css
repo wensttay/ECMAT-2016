@@ -7,62 +7,149 @@ and open the template in the editor.
     Created on : 15/05/2016, 01:50:49
     Author     : Wensttay
 */
-/*.organizador{
-    margin-left: 20px;
-    width: 200px;
-    height: 320px;
-    -webkit-filter: grayscale(100%);  Chrome 19+ & Safari 6+ 
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");  Firefox 3.5+ 
-    filter: gray;  IE6-9 
-    -o-transition: all 0.5s;  Opera 
-    -moz-transition: all 0.5s;  Firefox 
-    -webkit-transition: all 0.5s;  Safari 
-    transition: all 0.5s;
+
+.organization{
+    border: 5px dashed rgba(255,255,255,0.8);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 100px;
 }
 
-.poraloide{
-    width: 225px;
-    height: 275px;
+.organization-box{
+    margin: 0 auto;
+    display: table;
 }
 
-.organizador-foto{
-    position: absolute;
+.organization-list,
+.people{
+    margin: 0;
+    padding: 0;
 }
 
-.organizador-foto img{
-    height: 250px;
+.organization-list{
+    display: inline-flex;
+    overflow-x: scroll;
 }
 
-.organizador img{
-    width: 225px;
-    height: 275px;
-    border-radius: 200px;
+.list-size-4{
+    width: calc(210px * 4);
+}
+.list-size-3{
+    width: calc(210px * 3);
+}
+.list-size-2{
+    width: calc(210px * 2);
+}
+.list-size-1{
+    width: calc(210px * 1);
 }
 
-.nome-organizador {
-    width: 120px;
+::-webkit-scrollbar{
+    display: none;
 }
 
-.organizador:hover{
-    -webkit-filter: grayscale(0%);  Chrome 19+ & Safari 6+ 
+.people{
+    height: 240px;
+}
+
+.people-box{
+    display: table-cell;
+    padding: 15px;
+}
+
+.people{
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    box-shadow: 0px 0px 20px black;
+    -webkit-filter: grayscale();
+    filter: grayscale(1);
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.people:hover{
+    -webkit-filter: none;
     filter: none;
-    -o-transition: all 0.5s;  Opera 
-    -moz-transition: all 0.5s;  Firefox 
-    -webkit-transition: all 0.5s;  Safari 
-    transition: all 0.5s;
 }
 
-.organizador:hover .nome-organizador{
-    opacity: 1;
-    transition: opacity 0.3s linear;
+.people .photo-box{
+    max-height: 180px;
+    min-height: 180px;
+    max-width: 180px;
+    min-width: 180px;
+
+    padding: 10px;
+    text-align: center;
 }
 
-.nome-organizador{
-    opacity: 0;
+.people .photo-box img{
+    height: 100%;
+    max-width:100%;
+    max-height:100%;
 }
 
-.nome-organizador p{
-    border-style: dashed;
-    border-top-style: none;
-    border-radius: 0px 0px 20px 20px !important;
-}*/
+.people .name{
+    padding: 0 10px 10px 10px;
+    height: 60px;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: DESYREL;
+}
+
+.scroll-button{
+    height: 80px;
+    font-size: 80px;
+    padding: 1em 0;
+    color: rgba(255,255,255, 0.8);
+    cursor: pointer;
+}
+
+.scroll-button a{
+    padding:0px;
+    margin:0px;
+}
+
+.scroll-button-left{
+    margin-left: 50px;
+    float: left;
+}
+.scroll-button-right{
+    margin-right: 50px;
+    float: right;
+}
+
+/* O container geral define a perspectiva */  
+.flip-container { perspective: 1000; }  	
+
+/* vira os containers frente e verso quando o mouse passa em cima */
+.flip-container:hover .flipper, .flip-container.hover .flipper {  		
+    transform: rotateY(180deg);  	
+}    
+.flip-container, .front, .back {  	
+    width: 180px;
+    height: 240px; 
+}
+
+/* define a velocidade da transição */
+.flipper {  	
+    transition: 0.6s;  	
+    transform-style: preserve-3d;    	
+    position: relative;  
+}
+
+/* esconde o verso durante a animação */
+.front, .back {  	
+    backface-visibility: hidden;    	
+    position: absolute;  	
+    top: 0;  	
+    left: 0;  
+}
+
+/* frente posicionada sobre o verso */
+.front { z-index: 2;  }    
+
+/* verso inicialmente escondido */
+.back { transform: rotateY(180deg); }

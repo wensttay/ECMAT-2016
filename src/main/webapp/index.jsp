@@ -24,8 +24,9 @@
         <link href="css/sobre-responsive.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
         <link href="css/organizacao-style.css" rel="stylesheet">
+        <link href="css/organizacao-responsive.css" rel="stylesheet">
         <link href="css/programacao-style.css" rel="stylesheet">
-        <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
     <body>
@@ -101,8 +102,9 @@
         <!-- Custom Script for this tamplate -->
         <script src="js/menu-controll-script.js"></script>
         <script src="js/page-controll-script.js"></script>
+        <script src="js/organizacao-controll-script.js"></script>
         <script src="js/programacao-table-controll-script.js"></script>
-
+        
     </body>
 </html>
 
