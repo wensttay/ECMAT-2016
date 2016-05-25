@@ -27,6 +27,7 @@
         <link href="css/organizacao-responsive.css" rel="stylesheet">
         <link href="css/programacao-style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/construcao-style.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <body>
@@ -59,7 +60,7 @@
                             </ul>
                         </li>
 
-                        <li class="principal-list-item page-link item-bordered" ><a href="#">Inscrição</a></li>
+                        <li class="principal-list-item page-link item-bordered" ><a href="#construcao">Inscrição</a></li>
                         <li class="principal-list-item menu-button-with-img low-transparent" id="logo-central" ><a href="#inicio">
                                 <img src="img/logo/logo-ecmat2016-75x75.png"></a>
                         </li>
@@ -86,6 +87,7 @@
                 <%@ include file="pages/programacao.jsp" %>
                 <%@ include file="pages/organizacao.jsp" %>
                 <%@ include file="pages/anais.jsp" %>
+                <%@ include file="pages/construcao.jsp" %>
             </section>
 
             <footer id="footer">
