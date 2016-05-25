@@ -22,6 +22,9 @@ and open the template in the editor.
 .evento-info-box a{
     opacity: 0.8;
 }
+.evento-info-box a h3{
+    min-height: 34px;
+}
 
 .evento-info-box a:hover{
     opacity: 1;

@@ -24,4 +24,9 @@ and open the template in the editor.
         padding: 0;
         margin-top: 0;
     }
+
+    .img-right,
+    .before-img-left{
+        margin-bottom: 0;
+    }
 }

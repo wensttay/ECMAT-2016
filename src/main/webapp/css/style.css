@@ -16,10 +16,12 @@ a:active, a:link, a:hover, a:visited ,a{
     color: white;
     display: block;
 }
-.disabled{
-    cursor: default !important;
-    opacity: 0.2;
+.disabled,
+.disabled a{
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
 }
+
 .disabled:hover{
     opacity: 0.2;
     color: rgba(255,255,255, 0.8);

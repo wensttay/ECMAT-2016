@@ -15,18 +15,18 @@
                 <p class="text-center article-title col-sm-12">Sobre</p>
 
 
-                <div class="sobre-paragraph col-md-12 col-sm-12">
+                <div class="sobre-paragraph col-md-12 col-sm-12 before-img-left">
                     <p>
                         O Encontro Cajazeirense de Matemática (ECMAT) trata-se de um evento promovido pela Coordenação do Curso de Licenciatura em Matemática do Instituto Federal de Educação, Ciência e Tecnologia da Paraíba – IFPB/Campus Cajazeiras e tem, como um de seus objetivos, a divulgação das atividades desenvolvidas pelos alunos do curso de Licenciatura em Matemática ofertado pelo referido campus.
                     </p>
                 </div>
 
-                <div class="sobre-paragraph col-md-12 col-sm-12 doble-colum">
+                <div class="sobre-paragraph col-md-12 col-sm-12 doble-colum img-left">
                     <div class="col-md-6 col-sm-6 colum-left">
                         <div class="responsive-container">
                             <div class="dummy"></div>
                             <div class="container-ajust">
-                                <img src="img/logo/logo-ecmat2016-420x420.png">
+                                <img src="img/other/logo-ifpb-white.png">
                             </div>
                         </div>
                     </div>
@@ -37,14 +37,23 @@
                     </div>
                 </div>
 
-
-
-                <div class="sobre-paragraph col-md-12 col-sm-12">
-                    <p>
-                        O III ECMAT acontecerá nos dias 24, 25 e 26 de agosto de 2016.
-                        Nesse dia, matemáticos ligados à área da educação devem promover dinâmicas, bem como demonstrar que a Matemática é de grande importância para a evolução da sociedade através de atividades variadas que abordem as suas inúmeras utilizações.
-                    </p>
+                <div class="sobre-paragraph col-md-12 col-sm-12 doble-colum img-right">
+                    <div class="col-md-6 col-sm-6 colum-right colum-type-text">
+                        <p>
+                            O III ECMAT acontecerá nos dias 24, 25 e 26 de agosto de 2016.
+                            Nesse dia, matemáticos ligados à área da educação devem promover dinâmicas, bem como demonstrar que a Matemática é de grande importância para a evolução da sociedade através de atividades variadas que abordem as suas inúmeras utilizações.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 colum-left">
+                        <div class="responsive-container">
+                            <div class="dummy"></div>
+                            <div class="container-ajust">
+                                <img src="img/logo/logo-ecmat2016-420x420.png">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="sobre-paragraph col-md-12 col-sm-12">
                     <p>
                         Nesse dia, matemáticos ligados à área da educação devem promover dinâmicas, bem como demonstrar que a Matemática é de grande importância para a evolução da sociedade através de atividades variadas que abordem as suas inúmeras utilizações.

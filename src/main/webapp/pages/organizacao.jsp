@@ -23,7 +23,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img src="img/organizacao/wens.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Antônia Edivaneide de Sousa Gonzaga</p>
@@ -33,7 +33,7 @@
                                     <div class="back">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/wens.jpg"/>
+                                                <img src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Antônia Edivaneide de Sousa Gonzaga</p>

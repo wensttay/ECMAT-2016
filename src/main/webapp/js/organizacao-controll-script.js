@@ -46,9 +46,3 @@ $('.organization-box .organization-list').scroll(function () {
 
     }
 });
-
-//$('.people').click(function (){
-//    $(this).css('background-color', 'rgba(0,0,0, 0.2');
-//    $(this).find('.photo-box').slideUp();
-//    $(this).find('.name').css('margin-top', '+= 35px').css('color', 'white');
-//});

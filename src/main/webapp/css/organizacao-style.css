@@ -67,10 +67,10 @@ and open the template in the editor.
     max-width: 180px;
 }
 
-.people:hover{
+/*.people:hover{
     -webkit-filter: none;
     filter: none;
-}
+}*/
 
 .people .photo-box{
     max-height: 180px;
