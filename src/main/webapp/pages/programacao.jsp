@@ -6,7 +6,7 @@
 
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<article class="container-base invisivel sobre-font" id="programacao">
+<article class="container-base invisivel" id="programacao">
 
     <div class="container">
         <div class="row">

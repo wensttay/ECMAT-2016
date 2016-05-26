@@ -6,7 +6,8 @@
 
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<article class="container-base invisivel sobre-font" id="anais">
+
+<article class="container-base invisivel" id="anais">
     <div class="container">
         <div class="row">
             

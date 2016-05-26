@@ -14,6 +14,20 @@ $(document).ready(function myFunction() {
         anchor = '#inicio';
     }
 
+    if (anchor === '#construcao') {
+        var pageConstruct = document.getElementsByClassName('construcao-background');
+
+        for (var i = pageConstruct.length - 1; i >= 0; i--) {
+            pageConstruct[i].style.display = 'block';
+        }
+    } else {
+        var pageConstruct = document.getElementsByClassName('construcao-background');
+
+        for (var i = pageConstruct.length - 1; i >= 0; i--) {
+            pageConstruct[i].style.display = 'none';
+        }
+    }
+
     var elementoVisivel = document.getElementsByClassName('exibindo');
     $(elementoVisivel).addClass('invisivel');
     $(elementoVisivel).removeClass('exibindo');

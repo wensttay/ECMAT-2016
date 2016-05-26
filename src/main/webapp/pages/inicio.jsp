@@ -6,7 +6,6 @@
 
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <article class="container-base  exibindo" id="inicio">
     <div class="container text-center">
         <div class="row">
@@ -29,7 +28,7 @@
                         <img class="evento-info-img" src="img/other/posicao.png"/>
                     </a>
                 </div>
-                <div class="evento-info-box low-transparent col-md-4 col-sm-4">
+                <div class="evento-info-box low-transparent col-md-4 col-sm-4 disabled">
                     <a href="#inscricao">
                         <h3 class="low-transparent">Inscrições a partir de 1 de Junho</h3>
                         <img class="evento-info-img" src="img/other/inscricao.png"/>

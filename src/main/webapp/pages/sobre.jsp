@@ -10,8 +10,8 @@
 <article class="container-base invisivel" id="sobre">
     <div class="container">
         <div class="row"> 
-            <div class="col-md-2 col-sm-2"></div>
-            <div class=" col-lg-8 col-md-8 col-sm-8 text-justify"> 
+            <div class=" col-lg-2 col-md-1 col-sm-2"></div>
+            <div class=" col-lg-8 col-md-10 col-sm-12 text-justify"> 
                 <p class="text-center article-title col-sm-12">Sobre</p>
 
 
@@ -38,13 +38,13 @@
                 </div>
 
                 <div class="sobre-paragraph col-md-12 col-sm-12 doble-colum img-right">
-                    <div class="col-md-6 col-sm-6 colum-right colum-type-text">
+                    <div class="col-md-6 col-sm-6 colum-left colum-type-text">
                         <p>
                             O III ECMAT acontecerá nos dias 24, 25 e 26 de agosto de 2016.
                             Nesse dia, matemáticos ligados à área da educação devem promover dinâmicas, bem como demonstrar que a Matemática é de grande importância para a evolução da sociedade através de atividades variadas que abordem as suas inúmeras utilizações.
                         </p>
                     </div>
-                    <div class="col-md-6 col-sm-6 colum-left">
+                    <div class="col-md-6 col-sm-6 colum-right">
                         <div class="responsive-container">
                             <div class="dummy"></div>
                             <div class="container-ajust">
@@ -60,7 +60,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-2 col-sm-2"></div>
+            <div class=" col-lg-2 col-md-1 col-sm-2"></div>
         </div>
     </div>
 </article>

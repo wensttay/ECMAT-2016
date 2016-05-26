@@ -4,31 +4,27 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 25/05/2016, 15:43:13
-    Author     : Victor Hugo
+    Created on : 26/05/2016, 08:34:10
+    Author     : Wensttay
 */
-.equacao-construcao{
-    padding-top: 50px;
-    font-size: 100px;
-    font-family: Rayando;
+
+.construcao-background{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url('../img/background/construct-page-filter.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
 }
 
-.igualdade{
+.construindo-title-box{
+    z-index: 1;
+    opacity: 0.8;
+    width: 100%;
+    text-align: center;
     font-family: WC_RoughTrad;
-    vertical-align: middle;
-}
-
-.equacao-expoente{
-    font-size: 50px;
-    vertical-align: text-top;
-}
-
-.equacao-descricao{
-    font-size: 18px;
-}
-
-.aviso-construcao{
-    font-weight: bold;
-    font-size: 24px;
-    /*text-decoration: underline;*/
+    font-size: 100px;
 }

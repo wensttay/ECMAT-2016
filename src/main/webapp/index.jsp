@@ -33,7 +33,7 @@
     <body>
         <div id="container-fullpage">
             <header id="header" class="blackboard-background">
-
+                <div class="construcao-background"></div>
                 <div id="menu-principal-button" class="menu-button-with-img low-transparent" >
                     <img src="img/menu/menu-icon.png" />
                 </div>
@@ -56,23 +56,34 @@
                                 <li class="drop-menu-item page-link" ><a href="#sobre">Sobre</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#programacao">Programação</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#organizacao">Organização</a></li>
-                                <li class="drop-menu-item page-link disabled" ><a href="#">Galeria</a></li>
+                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Galeria</a></li>
                             </ul>
                         </li>
-                        <li class="principal-list-item page-link item-bordered disabled" ><a href="#">Inscrição</a></li>
+                        <li class="principal-list-item page-link item-bordered disabled" ><a href="#construcao">Submissões</a></li>
+
+
                         <li class="principal-list-item menu-button-with-img low-transparent" id="logo-central" ><a href="#inicio">
                                 <img src="img/logo/logo-ecmat2016-75x75.png"></a>
                         </li>
-
-                        <li class="principal-list-item page-link item-bordered disabled" ><a href="#">Submissões</a></li>
                         <li class="principal-list-item item-bordered  principal-list-item-withsublist">
                             <a href="#" class="list-item-withsublist-title">Documentos  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="drop-menu blackboard-background">
-                                <li class="drop-menu-item page-link" ><a href="#anais">Anais</a></li>
-                                <li class="drop-menu-item page-link disabled" ><a href="#">Certificados</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#construcao">Anais</a></li>
+                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Certificados</a></li>
                             </ul>
                         </li>
+
                         <li class="principal-list-item page-link item-bordered" ><a href="#contato">Contato</a></li>
+                        <!--<li class="principal-list-item page-link item-bordered disabled" ><a href="#construcao">Inscrição</a></li>-->
+                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
+                            <a href="#" class="list-item-withsublist-title">Inscrição  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                            <ul class="drop-menu blackboard-background">
+                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Entrar</a></li>
+                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Criar Conta</a></li>
+                                <!--                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Minha Conta</a></li>
+                                                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Sair</a></li>-->
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -105,7 +116,7 @@
         <script src="js/page-controll-script.js"></script>
         <script src="js/organizacao-controll-script.js"></script>
         <script src="js/programacao-table-controll-script.js"></script>
-        
+
     </body>
 </html>
 
