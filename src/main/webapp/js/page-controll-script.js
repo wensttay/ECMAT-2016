@@ -1,12 +1,15 @@
 
 $(document).ready(function () {
+    
     $(window).on('hashchange', function() {
         myFunction();
     });
 
-    if(window.location.hash) {
-        myFunction();
+    if(!window.location.hash) {
+        window.location.hash = '#inicio';
     }
+    
+    myFunction();
 });
 
 
@@ -15,10 +18,6 @@ function myFunction() {
     var anchorAux = anchor.substring(1, anchor.length);
 
     var anchorElementAux = document.getElementById(anchorAux);
-
-    if (anchorElementAux === null) {
-        anchor = '#inicio';
-    }
 
     if (anchor === '#construcao') {
         var pageConstruct = document.getElementsByClassName('construcao-background');
