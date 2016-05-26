@@ -17,6 +17,7 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
+        <link href="css/construcao-style.css" rel="stylesheet" type="text/css"/>
         <link href="css/style.css" rel="stylesheet">
         <link href="css/contato-style.css" rel="stylesheet">
         <link href="css/inicio-style.css" rel="stylesheet">
@@ -26,7 +27,7 @@
         <link href="css/organizacao-style.css" rel="stylesheet">
         <link href="css/organizacao-responsive.css" rel="stylesheet">
         <link href="css/programacao-style.css" rel="stylesheet">
-        <link href="css/construcao-style.css" rel="stylesheet" type="text/css"/>
+        
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
