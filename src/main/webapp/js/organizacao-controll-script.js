@@ -1,9 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 $('.scroll-button-right').click(function () {
     var leftScroll = $(this).parent().find('.organization-box .organization-list').scrollLeft();
     var peopleBoxWidth = $(this).parent().find('.organization-box .organization-list .people-box:first-child').width();

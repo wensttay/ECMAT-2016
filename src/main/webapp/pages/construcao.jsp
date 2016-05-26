@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row">
                 <div class="construindo-title-box">
-                    <p class="construindo-title">Página em <br> CONSTRUÇÃO</p>
+                    <p class="construindo-title">Página em <br> Construção</p>
                 </div>
             </div>
         </div>
