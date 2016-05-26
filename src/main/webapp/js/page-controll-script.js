@@ -1,4 +1,16 @@
-$(document).ready(function myFunction() {
+
+$(document).ready(function () {
+    $(window).on('hashchange', function() {
+        myFunction();
+    });
+
+    if(window.location.hash) {
+        myFunction();
+    }
+});
+
+
+function myFunction() {
     var anchor = window.top.location.hash;
     var anchorAux = anchor.substring(1, anchor.length);
 
@@ -35,4 +47,5 @@ $(document).ready(function myFunction() {
         elementosInvisiveis[i].style.display = 'none';
     }
     $(anchor).fadeIn(1000);
-});
+}
+;
