@@ -60,3 +60,13 @@
         margin-right: 50px;
     }
 }
+
+@media screen and (max-width: 400px){
+    .scroll-button-left{
+        margin-left: 20px;
+    }
+
+    .scroll-button-right{
+        margin-right: 20px;
+    }
+}
