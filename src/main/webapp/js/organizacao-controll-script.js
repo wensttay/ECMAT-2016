@@ -17,7 +17,7 @@ $('.scroll-button-left').click(function () {
     var mod = leftScroll % peopleBoxWidth;
     var sizeOfScroll = mod;
     
-    if (mod !== 0) {
+    if (mod === 0) {
         sizeOfScroll = peopleBoxWidth;
     }
     
