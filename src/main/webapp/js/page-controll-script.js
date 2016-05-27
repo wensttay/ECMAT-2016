@@ -6,17 +6,20 @@ $(document).ready(function () {
     myFunction();
 });
 
-
+var oldAnchor = '#inicio';
 function myFunction() {
     var anchor = window.top.location.hash;
     var anchorAux = anchor.substring(1, anchor.length);
-
     var anchorElementAux = document.getElementById(anchorAux);
 
     if (anchorElementAux === null) {
-        anchor = '#inicio';
+        anchor = oldAnchor;
     }
-
+    
+    if (window.top.location.hash !== "") {
+        oldAnchor = window.top.location.hash;
+    }
+    
     if (anchor === '#construcao') {
         var pageConstruct = document.getElementsByClassName('construcao-background');
 

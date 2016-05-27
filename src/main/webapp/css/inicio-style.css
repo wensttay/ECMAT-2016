@@ -18,7 +18,7 @@
     opacity: 0.8;
 }
 .evento-info-box a h3{
-    min-height: 34px;
+    min-height: 52px;
 }
 
 .evento-info-box a:hover{
@@ -28,5 +28,6 @@
 .evento-info-box .evento-info-img{
     width : 150px; 
     height: 150px;
-    margin-top: 20px;
+    margin-top: -10px;
+    margin-bottom: 50px;
 }
