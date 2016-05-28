@@ -23,11 +23,11 @@
         <link href="css/inicio-style.css" rel="stylesheet">
         <link href="css/sobre-style.css" rel="stylesheet">
         <link href="css/sobre-responsive.css" rel="stylesheet">
-        <link href="css/responsive.css" rel="stylesheet">
         <link href="css/organizacao-style.css" rel="stylesheet">
         <link href="css/organizacao-responsive.css" rel="stylesheet">
         <link href="css/programacao-style.css" rel="stylesheet">
-        
+        <link href="css/submissoes-style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/responsive.css" rel="stylesheet">
         <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
     </head>
 
@@ -60,7 +60,7 @@
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Galeria</a></li>
                             </ul>
                         </li>
-                        <li class="principal-list-item page-link item-bordered disabled" ><a href="#construcao">Submissões</a></li>
+                        <li class="principal-list-item page-link item-bordered" ><a href="#submissoes">Submissões</a></li>
 
 
                         <li class="principal-list-item menu-button-with-img low-transparent" id="logo-central" ><a href="#inicio">
@@ -99,6 +99,7 @@
                 <%@ include file="pages/organizacao.jsp" %>
                 <%@ include file="pages/anais.jsp" %>
                 <%@ include file="pages/construcao.jsp" %>
+                <%@ include file="pages/submissoes.jsp" %>
             </section>
 
             <footer id="footer">
