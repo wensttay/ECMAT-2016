@@ -50,6 +50,9 @@
 .people-box{
     width: 210px;
     height: 270px;
+    /*min-width: 210px;*/
+    -o-width: 200px;
+    
     max-width: 210px;
     max-height: 270px;
     display: table-cell;
