@@ -158,6 +158,10 @@
     p{
         font-size: 16px;
     }    
+    
+    .criterios li{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 580px){
@@ -168,6 +172,10 @@
 
 @media screen and (max-width: 580px) and (max-height: 700px) {
     p{
+        font-size: 14px;
+    }
+    
+    .criterios li{
         font-size: 14px;
     }
 }

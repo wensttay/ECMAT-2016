@@ -4,8 +4,8 @@
     Author     : Wensttay
 --%>
 
-<!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 
 <article class="container-base invisivel" id="sobre">
     <div class="container">
