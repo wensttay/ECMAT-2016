@@ -50,8 +50,8 @@
 .people-box{
     width: 210px;
     height: 270px;
-    min-width: 210px;
-    min-height: 270px;
+    max-width: 210px;
+    max-height: 270px;
     display: table-cell;
     padding: 15px;
 }
@@ -59,7 +59,7 @@
 .people{
     background-color: rgba(255, 255, 255, 1);
     cursor: pointer;
-    box-shadow: 0px 0px 20px black;
+    box-shadow: 0px 0px 15px black;
     /*box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);*/
     -webkit-filter: grayscale();
     filter: grayscale(1);
