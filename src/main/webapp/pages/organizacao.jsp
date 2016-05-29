@@ -32,6 +32,9 @@
                                     </div>
                                     <div class="back">
                                         <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/geral/Francisco Aureliano Vidal.jpg"/>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

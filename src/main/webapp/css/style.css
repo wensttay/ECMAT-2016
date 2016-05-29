@@ -166,9 +166,7 @@ nav{
     margin: 35px 0 35px 35px;
     display: none;
 }
-.menu-principal-box a{
-    padding-top: 7px;
-}
+
 .menu-principal-box ul.principal-list li.principal-list-item:hover{
     opacity: 1;
     color: rgba(255, 255, 255, 1);
