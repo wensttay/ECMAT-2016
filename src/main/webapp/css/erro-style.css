@@ -1,0 +1,41 @@
+/* 
+    Created on : 28/05/2016, 19:21:52
+    Author     : wensttay
+*/
+
+.erro-header-box{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    display: table;
+    height: 75px;
+}
+.erro-header-box .erro-header-item{
+    float: left;
+}
+.erro-header-box .erro-header-item .erro-logo{
+    opacity: 0.8;
+    margin: 35px 0 35px 35px;
+}
+.erro-header-box .erro-header-item .erro-logo:hover{
+    opacity: 1;
+}
+.erro-box{
+    font-family: WC_RoughTrad;
+    opacity: 0.8;
+}
+.erro-title{
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+.erro-message{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.erro-img-box .erro-img{
+    max-width: 300px;
+    width: 100%;
+}
+#error-section{
+    padding-top: 180px;
+}

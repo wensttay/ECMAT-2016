@@ -1,0 +1,32 @@
+/* 
+    Created on : 28/05/2016, 19:23:08
+    Author     : wensttay
+*/
+
+@media screen and (max-width: 700px){
+    .erro-img-box .erro-img{
+        max-width: 200px;
+    }
+
+    .erro-message{
+        font-size: 16px;
+    }
+
+    .text-back{
+        font-size: 20px;
+    }
+    .erro-article{
+        margin-top: 40px;
+    }
+}
+
+@media (max-height: 700px) and (max-width: 820px){
+    .erro-header-box .erro-header-item .erro-logo{
+        margin: 20px 0 20px 20px;
+        width: 40px;
+        height: 40px;
+    }
+    #error-section{
+        padding-top: 80px;
+    }
+}

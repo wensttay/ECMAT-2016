@@ -15,10 +15,10 @@ $('.scroll-button-left').click(function () {
     var peopleBoxPadding = $(this).parent().find('.organization-box .organization-list .people-box:first-child').css("padding-right").replace("px", "");
     peopleBoxWidth += (peopleBoxPadding * 2);
     var mod = leftScroll % peopleBoxWidth;
-    var sizeOfScroll = mod;
-    
-    if (mod === 0) {
-        sizeOfScroll = peopleBoxWidth;
+    var sizeOfScroll = peopleBoxWidth;
+   
+    if (mod > 1) {
+        sizeOfScroll = mod;
     }
     
     $(this).parent().find('.organization-box .organization-list').animate({scrollLeft: '-=' + sizeOfScroll + 'px'}, 500);
