@@ -23,7 +23,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Marcos da Silva</p>
@@ -43,7 +43,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Balboíno Sonildo da Nóbrega</p>
@@ -63,7 +63,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Francisco Aureliano Vidal</p>
@@ -83,7 +83,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Nunes Aquino</p>
@@ -118,7 +118,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Nádia Pinheiro Nóbrega</p>
@@ -138,7 +138,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Patrício Luiz de Andrade</p>
@@ -158,7 +158,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Marcos da Silva</p>
@@ -178,7 +178,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Leonardo Ferreira Soares</p>
@@ -198,7 +198,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Thiago Andrade Fernandes</p>
@@ -218,7 +218,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Francisco Aureliano Vidal</p>
@@ -238,7 +238,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Maria José Alves da Silva</p>
@@ -258,7 +258,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Antônia Edivaneide de Sousa Gonzaga</p>
@@ -293,7 +293,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Marcos da Silva</p>
@@ -313,7 +313,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Nunes Aquino</p>
@@ -333,7 +333,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Geraldo Herbetet de Lacerda</p>
@@ -353,7 +353,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Marcos Antonio Petrucci de Assis</p>
@@ -388,7 +388,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Geraldo Herbetet de Lacerda</p>
@@ -408,7 +408,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Baldoíno Sonildo da Nóbrega</p>
@@ -428,7 +428,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Marcos Antonio Petrucci de Assis</p>
@@ -463,7 +463,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Maria José Alves da Silva</p>
@@ -483,7 +483,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Marcos da Silva</p>
@@ -503,7 +503,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Nunes Aquino</p>
@@ -523,7 +523,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Baldoíno Sonildo da Nóbrega</p>
@@ -558,7 +558,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/apoio/wensttay-de-sousa-alencar.jpg"/>
+                                                <img class="off-load" src="img/organizacao/apoio/wensttay-de-sousa-alencar.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Wensttay de Sousa Alencar</p>
@@ -578,7 +578,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/apoio/victor-hugo-da-silva-ribeiro.jpg"/>
+                                                <img class="off-load" src="img/organizacao/apoio/victor-hugo-da-silva-ribeiro.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Victor Hugo da Silva Ribeiro</p>
@@ -598,7 +598,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Daniel Everson da Silva Andrade</p>
@@ -618,7 +618,7 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Diego Ayllo da Silva Simões</p>

@@ -22,7 +22,7 @@
                             <div class="responsive-container">
                                 <div class="dummy"></div>
                                 <div class="container-ajust day-img-box">
-                                    <img src="img/other/menos-um-ao-quadrado.png"/>
+                                    <img class="off-load" src="img/other/menos-um-ao-quadrado.png"/>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                             <div class="responsive-container">
                                 <div class="dummy"></div>
                                 <div class="container-ajust day-img-box">
-                                    <img src="img/other/raiz-quadrada-de-quatro.png"/>
+                                    <img class="off-load" src="img/other/raiz-quadrada-de-quatro.png"/>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                             <div class="responsive-container">
                                 <div class="dummy"></div>
                                 <div class="container-ajust day-img-box">
-                                    <img src="img/other/trinta-dividido-por-dez.png"/>
+                                    <img class="off-load" src="img/other/trinta-dividido-por-dez.png"/>
                                 </div>
                             </div>
                         </div>

@@ -15,11 +15,15 @@ function myFunction() {
     if (anchorElementAux === null) {
         anchor = oldAnchor;
     }
-    
+
     if (window.top.location.hash !== "") {
         oldAnchor = window.top.location.hash;
     }
-    
+
+    $(anchor + ' .off-load').each(function () {
+        $(this).removeClass('off-load');
+    });
+
     if (anchor === '#construcao') {
         var pageConstruct = document.getElementsByClassName('construcao-background');
 

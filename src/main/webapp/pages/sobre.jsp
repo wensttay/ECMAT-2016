@@ -26,7 +26,7 @@
                         <div class="responsive-container">
                             <div class="dummy"></div>
                             <div class="container-ajust">
-                                <img src="img/other/logo-ifpb-white.png">
+                                <img class="off-load" src="img/other/logo-ifpb-white.png">
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                         <div class="responsive-container">
                             <div class="dummy"></div>
                             <div class="container-ajust">
-                                <img src="img/logo/logo-ecmat2016-420x420.png">
+                                <img class="off-load" src="img/logo/logo-ecmat2016-420x420.png">
                             </div>
                         </div>
                     </div>
