@@ -13,15 +13,14 @@
             <div class=" col-lg-8 col-md-10 col-sm-12 text-justify"> 
                 <p class="text-center article-title col-sm-12">Submissões</p>
 
-
-                <div class="sobre-paragraph col-md-12 col-sm-12 before-img-left">
-                    <p>
+                <div>
+                    <p class="criterios">
                         Prezado(a) Autor(a),<br><br>
                         Nas próximas páginas, conheça os critérios definidos pela Comissão Científica do III ECMAT para avaliação dos trabalhos submetidos ao evento. Ao preparar o texto do trabalho, sugerimos que fique atento(a) para os critérios assinalados a seguir, pois eles serão utilizados pelos avaliadores na análise dos trabalhos.
                         <br><br>Atenciosamente,<br><br>
                         Comissão Científica do III ECMAT
                     </p>
-                    <p class="titulo-criterio article-title text-center">
+                    <p class="titulo-criterio article-title col-sm-12 text-center">
                         Critérios para Avaliação de Comunicação Científica
                     </p>
 
@@ -73,10 +72,10 @@
                         <li>Discussão das repercussões esperadas pelo minicurso.</li>
                         <li>O texto está formatado conforme as normas do evento?</li>
                     </ol>
+                    <p class="data-submissao">
+                        * Submissões a partir de 01 de junho de 2016.
+                    </p>
                 </div>
-                <p class="data-submissao">
-                    * Submissões a partir de 01 de junho de 2016.
-                </p>
             </div>
             <div class=" col-lg-2 col-md-1 col-sm-2"></div>
         </div>
