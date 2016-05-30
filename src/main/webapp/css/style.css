@@ -1,167 +1,270 @@
 /* 
-    Created on : 15/05/2016, 01:50:49
+    Created on : 15/05/2016, 01:52:33
     Author     : Wensttay
 */
 
-.organization{
-    border: 5px dashed rgba(255,255,255,0.8);
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 100px;
+@font-face { font-family: WC_RoughTrad; src: url('../fonts/WC_RoughTrad.ttf');} 
+@font-face { font-family: ClaireHand; src: url('../fonts/ClaireHandRegular.ttf');}
+@font-face { font-family: Rayando; src: url('../fonts/rayando.ttf');} 
+@font-face { font-family: DESYREL; src: url('../fonts/DESYREL_.ttf');}
+
+.vermelho{background-color: red;}
+.verde{background-color: green;}
+.azul{background-color: blue;}
+
+.padding-medium{padding: 10px;}
+.padding-high{padding: 15px;}
+.padding-extra-high{padding: 20px;}
+
+a:active, a:link, a:hover, a:visited ,a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.disabled,
+.disabled a{
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
 }
 
-.organization-box{
-    margin: 0 auto;
-    display: table;
+.disabled:hover{
+    opacity: 0.2;
+    color: rgba(255,255,255, 0.8);
 }
 
-.organization-list,
-.people{
-    margin: 0;
+html,body { 
+    color: white;
+    font-family: ClaireHand;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+
+p{
     padding: 0;
+    margin: 0;
 }
 
-.organization-list{
-    display: inline-flex;
-    overflow-x: hidden;
+p, li, .low-transparent{
+    opacity: 0.8;
 }
 
-.list-size-4{
-    width: 840px;
-}
-.list-size-3{
-    width: 630px;
-}
-.list-size-2{
-    width: 420px;
-}
-.list-size-1{
-    width: 210px;
+.invisivel{}
+.exibindo{}
+
+.off-load{
+    display: none !important;
 }
 
-::-webkit-scrollbar{
+.article-title{
+    font-family: WC_RoughTrad;
+    padding: 10px auto;
+    border-style: solid;
+    border-width: 0px 0px 5px 0px;
+    border-color: rgba(255, 255, 255, 0.8);
+    font-size: 28px;
+    margin-bottom: 35px;
+}
+
+.article-title-long{
+    font-family: WC_RoughTrad;
+    padding: 10px auto;
+    border-style: solid;
+    border-width: 0px 0px 5px 0px;
+    border-color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+
+.selecionado{
+    border-color: #337ab7;
+    border-style: solid;
+    border-bottom-width: 3px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+}
+
+.container-base{
+    padding-top: 150px;
+    width: 100%;
+    display: none;
+
+}
+
+.background{
+    height: 100%;
+    z-index: -1;
+    width: 100%;
+}
+
+.blackboard-background {
+    position: fixed;
+    background-image: url('../img/background/blackboard.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header{
+    padding:20px 0;
+    z-index: 999;
+    width: 100%;
+}
+
+section{
+    padding:10px;
+    padding-bottom: 100px;   /* More that Height of the footer */
+}
+
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height: 60px;
+    padding: 10px;
+}
+
+nav{
+    display: table;
+    margin: 0 auto;	
+}
+
+.menu-principal-box ul.principal-list{
+    height: 80px;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.menu-button-with-img{
+    cursor: pointer;
+    height: 75px;
+    width: 75px;
+}
+
+.menu-button-with-img:hover{
+    opacity: 1;
+}
+
+#exit-menu-principal-button{
+    float: left;
+    margin: 35px 0 35px 35px;
     display: none;
 }
 
-.people{
-    height: 240px;
-}
-
-.people-box{
-    width: 210px;
-    height: 270px;
-    max-width: 210px;
-    max-height: 270px;
-    display: table-cell;
-    padding: 15px;
-}
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .people-box{
-        min-width: 210px;
-    }
-}
-
-.people{
-    background-color: rgba(255, 255, 255, 1);
-    cursor: pointer;
-    box-shadow: 0px 0px 15px black;
-    /*box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);*/
-    -webkit-filter: grayscale();
-    filter: grayscale(1);
-    min-width: 180px;
-    max-width: 180px;
-}
-
-/*.people:hover{
-    -webkit-filter: none;
-    filter: none;
-}*/
-
-.people .photo-box{
-    max-height: 180px;
-    min-height: 180px;
-    max-width: 180px;
-    min-width: 180px;
-
-    padding: 10px;
-    text-align: center;
-}
-
-.people .photo-box img{
-    /*height: 100%;*/
-    /*width: 100%;*/
-    max-width: 160px;
-    max-height: 160px;
-}
-
-.people .name{
-    padding: 0 10px 10px 10px;
-    height: 60px;
-    width: 100%;
-    color: black;
-    text-align: center;
-    font-size: 18px;
-    /*font-weight: bold;*/
-    font-family: DESYREL;
-}
-
-.scroll-button{
-    font-size: 80px;
-    padding: 1em 0;
-    color: rgba(255,255,255, 0.8);
-    cursor: pointer;
-}
-
-.scroll-button a{
-    padding:0px;
-    margin:0px;
-}
-
-.scroll-button-left{
-    margin-left: 50px;
-    float: left;
-}
-.scroll-button-right{
-    margin-right: 50px;
+#menu-principal-button{
+    display: none;
     float: right;
+    margin: 35px 35px 35px 0;
+    display: none;
 }
 
-/* continua a declaração de perspectiva para o container geral */
-.flip-container { 
-    perspective: 1000; 
-    transform-style: preserve-3d; 
-}  	
+#logo-small{  
+    float: left;
+    margin: 35px 0 35px 35px;
+    display: none;
+}
+.menu-principal-box a{
+    padding-top: 7px;
+}
+.menu-principal-box ul.principal-list li.principal-list-item:hover{
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+}
+.menu-principal-box ul.principal-list li.item-bordered:hover{
+    border-radius: 20px;
+    border: 4px solid rgba(255, 255, 255, 1);
+}
+.menu-principal-box ul.principal-list li.principal-list-item-withsublist{
+    border-radius: 20px 20px 0px 0px !important;
+}
+.menu-principal-box ul.principal-list li.principal-list-item-withsublist:hover{
+    border: 4px dashed rgba(255, 255, 255, 1) !important;
+}
+li.page-link:hover{
+    background-color: rgba(255, 255, 255, 0.2);   
+}
 
-/*  MODIFICADO! vira os containers frente e verso quando o mouse passa em cima */
-.flip-container:hover .back { transform: rotateY(0deg); }  	
-.flip-container:hover .front { transform: rotateY(180deg); }    
-.flip-container, .front, .back { 
-    width: 180px;
-    height: 240px; 
-}    
+li.page-link, li.item-bordered, ul.drop-menu{
+    padding: 7px;
+}
 
-/* define a velocidade da animação */
-.flipper {  	
-    transition: 0.6s;  	
-    transform-style: preserve-3d;    	
-    position: relative;  
-}    
+ul.drop-menu{
+    visibility: hidden;
+    margin-left: -11px;
+    margin-top: 7px;
+    list-style: none;
+    border: 4px solid rgba(255, 255, 255, 1);
+    position: fixed;
+    padding: 0px;
+    border-radius: 0px 0px 20px 20px;
+}
 
-/* esconde o verso durante a animação */
-.front, .back { 
-    backface-visibility: hidden;  	
-    transition: 0.6s;  	
-    transform-style: preserve-3d;    	
-    position: absolute;  	
-    top: 0;  	
-    left: 0;  
-}    
+ul.drop-menu,
+.menu-principal-box ul.principal-list li.principal-list-item{
+    width: 150px;
+}
 
-/*  MODIFICADO! frente posicionada sobre o fundo */
-.front {  	
-    z-index: 2;  	
-    transform: rotateY(0deg);  
-}    
+.menu-principal-box ul.principal-list li.principal-list-item{
+    list-style: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
 
-/* verso inicialmente escondido */
-.back { transform: rotateY(-180deg); }    
+ul.drop-menu li.drop-menu-item{
+    /*padding: 10px 0;*/
+    border-bottom: 5px solid rgba(255, 255, 255, 1);
+    list-style: none;
+    display: block !important;
+}
+ul.drop-menu li.drop-menu-item:last-child{
+    border-bottom: none;
+}
+ul.drop-menu li.drop-menu-item:hover{
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+}
+
+#container-fullpage {
+    min-height:100%;
+    position:relative;
+}
+
+footer p{
+    padding-top: 10px;
+}
+
+/*
+ * This code make a centralized images Vertically and horizontally
+*/
+.dummy {
+    padding-top: 100%; /* forces 1:1 aspect ratio */
+}
+
+.container-ajust {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font: 0/0 a;
+    text-align:center; /* Align center inline elements */
+}
+
+.container-ajust:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: ' ';
+    height: 100%;
+}
+
+.container-ajust img{
+    vertical-align: middle;
+    display: inline-block;
+    width: 60%;
+}
+/* END */
