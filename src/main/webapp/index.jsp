@@ -28,6 +28,7 @@
         <link href="css/programacao-style.css" rel="stylesheet">
         <link href="css/submissoes-style.css" rel="stylesheet" type="text/css"/>
         <link href="css/responsive.css" rel="stylesheet">
+        <link href="css/anais-style.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
@@ -69,7 +70,7 @@
                         <li class="principal-list-item item-bordered  principal-list-item-withsublist">
                             <a href="#" class="list-item-withsublist-title">Documentos  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="drop-menu blackboard-background">
-                                <li class="drop-menu-item page-link" ><a href="#construcao">Anais</a></li>
+                                <li class="drop-menu-item page-link" ><a href="#anais">Anais</a></li>
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Certificados</a></li>
                             </ul>
                         </li>
@@ -100,6 +101,8 @@
                 <%@ include file="pages/erro.jsp" %>
                 <%@ include file="pages/construcao.jsp" %>
                 <%@ include file="pages/submissoes.jsp" %>
+                <%@ include file="pages/anais.jsp" %>
+                
             </section>
 
             <footer id="footer">
