@@ -23,7 +23,7 @@
 
 .organization-list{
     display: inline-flex;
-    overflow-x: auto;
+    overflow-x: scroll;
 }
 
 .list-size-4{
