@@ -26,15 +26,6 @@
     overflow-x: auto;
 }
 
-::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
-}
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: transparent;
-}
-
 .list-size-4{
     width: 840px;
 }
