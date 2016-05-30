@@ -55,15 +55,10 @@
     display: table-cell;
     padding: 15px;
 }
-
-/* Safari 6.1+ */
-@media screen and (-webkit-min-device-pixel-ratio:0)
-and (min-color-index:0) {
-
+@media screen and (-webkit-min-device-pixel-ratio:0) {
     .people-box{
         min-width: 210px;
     }
-
 }
 
 .people{
@@ -169,4 +164,4 @@ and (min-color-index:0) {
 }    
 
 /* verso inicialmente escondido */
-.back { transform: rotateY(-180deg); }   
+.back { transform: rotateY(-180deg); }    
