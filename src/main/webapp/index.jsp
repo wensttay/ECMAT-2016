@@ -68,9 +68,8 @@
                                 <img src="img/logo/logo-ecmat2016-75x75.png"></a>
                         </li>
                         <li class="principal-list-item item-bordered  principal-list-item-withsublist">
-                            <a href="#" class="list-item-withsublist-title">Documentos  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                            <a href="#anais" class="list-item-withsublist-title">Anais <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="drop-menu blackboard-background">
-                                <li class="drop-menu-item page-link" ><a href="#anais">Anais</a></li>
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Certificados</a></li>
                             </ul>
                         </li>
@@ -88,6 +87,11 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="issn-box">
+                    <div class="issn blackboard-background">
+                        ISSN 58900-000
+                    </div>
+                </div>
             </header>
 
             <div class="background blackboard-background"></div>
@@ -102,7 +106,7 @@
                 <%@ include file="pages/construcao.jsp" %>
                 <%@ include file="pages/submissoes.jsp" %>
                 <%@ include file="pages/anais.jsp" %>
-                
+
             </section>
 
             <footer id="footer">

@@ -108,9 +108,34 @@ p, li, .low-transparent{
 }
 
 header{
-    padding:20px 0;
+    padding: 20px 0;
     z-index: 999;
     width: 100%;
+    border-bottom: 5px solid rgba(255,255,255,0.6);
+}
+
+.issn-box{
+    margin: 0 auto;
+    width: 200px;
+}
+
+.issn{
+    color: rgba(255,255,255, 0.6);
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    
+    border-bottom: 5px solid rgba(255,255,255,0.6);
+    border-left: 5px solid rgba(255,255,255,0.6);
+    /*border-right: 5px solid rgba(255,255,255,0.6);*/
+    right: 0;
+    display: fixed;
+    position: absolute;
+    margin-top: 20px;
+    border-radius: 0 0 0 20px;
+    /*border-radius: 0 0 20px 20px;*/
 }
 
 section{

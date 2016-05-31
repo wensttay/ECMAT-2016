@@ -9,9 +9,6 @@
 <article class="container-base invisivel " id="anais">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-right issn">
-                ISSN 58900-000
-            </div>
             <div class="col-md-12 sumario">
                 <ul>
                     <li>
@@ -69,8 +66,6 @@
                 </div>
 
             </div>
-
-
         </div>
     </div>
 </article>
