@@ -29,7 +29,7 @@
                     </a>
                 </div>
                 <div class="evento-info-box low-transparent col-md-4 col-sm-4 disabled">
-                    <a href="#inscricao">
+                    <a href="#construcao">
                         <h3 class="low-transparent">Inscrições a partir de 1 de Junho</h3>
                         <img class="evento-info-img" src="img/other/inscricao.png"/>
                     </a>

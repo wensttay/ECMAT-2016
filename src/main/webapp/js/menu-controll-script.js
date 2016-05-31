@@ -65,7 +65,6 @@ function menuSlideRight() {
 
 function dropDownSubmenu() {
     if ($(this).find("ul").css('display') === 'none') {
-        $(this).find('.list-item-withsublist-title').css('border-top', '5px solid rgba(255,255,255, 0.8)');
         $(this).find('.list-item-withsublist-title span.glyphicon').removeClass('glyphicon-triangle-bottom');
         $(this).find('.list-item-withsublist-title span.glyphicon').addClass('glyphicon-triangle-top');
         $(this).find("ul").css("visibility", "visible");
@@ -81,7 +80,6 @@ function dropDownSubmenu() {
         $(this).addClass('sublist-isOpen');
 
     } else {
-        $(this).find('.list-item-withsublist-title').css('border-top', 'none');
         $(this).removeClass('sublist-isOpen');
         $(this).find('.list-item-withsublist-title span.glyphicon').addClass('glyphicon-triangle-bottom');
         $(this).find('.list-item-withsublist-title span.glyphicon').removeClass('glyphicon-triangle-top');
