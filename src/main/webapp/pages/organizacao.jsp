@@ -32,9 +32,6 @@
                                     </div>
                                     <div class="back">
                                         <div class="people">
-                                            <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/geral/Francisco Aureliano Vidal.jpg"/>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -296,26 +293,6 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
-                                            </div>
-                                            <div class="name">
-                                                <p>José Marcos da Silva</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="back">
-                                        <div class="people">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="people-box">
-                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <div class="people">
-                                            <div class="photo-box">
                                                 <img class="off-load" src="img/organizacao/geral/Jose Nunes Aquino.jpg"/>
                                             </div>
                                             <div class="name">
@@ -370,7 +347,27 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>José Marcos da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div> 
             </div>
@@ -466,46 +463,6 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
-                                            </div>
-                                            <div class="name">
-                                                <p>Maria José Alves da Silva</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="back">
-                                        <div class="people">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="people-box">
-                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <div class="people">
-                                            <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
-                                            </div>
-                                            <div class="name">
-                                                <p>José Marcos da Silva</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="back">
-                                        <div class="people">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="people-box">
-                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <div class="people">
-                                            <div class="photo-box">
                                                 <img class="off-load" src="img/organizacao/geral/Jose Nunes Aquino.jpg"/>
                                             </div>
                                             <div class="name">
@@ -540,7 +497,47 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Maria José Alves da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>José Marcos da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div> 
             </div>
@@ -601,10 +598,10 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/apoio/Diego Ayllo da Silva Simoes.jpg"/>
                                             </div>
                                             <div class="name">
-                                                <p>Daniel Everson da Silva Andrade</p>
+                                                <p>Diego Ayllo da Silva Simões</p>
                                             </div>
                                         </div>
                                     </div>
@@ -621,10 +618,10 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/apoio/Diego Ayllo da Silva Simoes.jpg"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
-                                                <p>Diego Ayllo da Silva Simões</p>
+                                                <p>Daniel Everson da Silva Andrade</p>
                                             </div>
                                         </div>
                                     </div>
@@ -635,7 +632,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                     </div>
                 </div> 
             </div>

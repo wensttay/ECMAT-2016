@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/05/2016, 17:00:32
+    Author     : Victor Hugo
+*/
+
+.issn{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 60px;
+}
+
+.sumario{
+    font-size: 22px;
+    padding-bottom: 60px;
+}
+
+.numero-edicao{
+    font-weight: bold;
+    font-size: 24px;
+    font-family: ClaireHand;
+    padding-top: 10px;
+    vertical-align: middle;
+}
+
+.container-ano-edicao{
+    height: 200px;
+}
+
+.container-documentos-anais{
+    height: 200px;
+}
+
+.ano-edicao, .documentos-anais{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.ano-edicao{
+    font-family: Rayando;
+    font-size: 90px;
+}
+
+

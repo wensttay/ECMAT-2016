@@ -7,9 +7,14 @@ and open the template in the editor.
     Created on : 28/05/2016, 15:43:46
     Author     : Victor Hugo
 */
+
+.criterios{
+    font-family: WC_RoughTrad;
+    font-size: 19px;
+}
+
 .criterios li{
     margin-bottom: 28px;
-    font-size: 19px;
 }
 
 .titulo-criterio{
