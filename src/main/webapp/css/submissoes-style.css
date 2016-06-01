@@ -11,16 +11,24 @@ and open the template in the editor.
 .criterios{
     font-family: WC_RoughTrad;
     font-size: 19px;
+    padding-left: 12px;
+    padding-right: 12px;
+    list-style-position: inside;
 }
 
 .criterios li{
     margin-bottom: 28px;
+    display: list-item;
 }
 
-.titulo-criterio{
+.criterios a{
+    margin-bottom: 50px;
+}
+
+/*.titulo-criterio{
     margin-top: 80px;
     margin-bottom: 40px;
-}
+}*/
 
 .data-submissao{
     font-size: 20px;
