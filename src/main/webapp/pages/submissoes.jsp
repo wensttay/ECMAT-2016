@@ -38,7 +38,7 @@
 
                 <div class="criterios text-center">
                     <p class="text-center article-title col-sm-12">Documentos Úteis</p>
-                    <a href="documentos/modelo de trabalhos.doc" target="_blank">Clique aqui para acessar o arquivo com o Modelo de Trabalhos</a>
+                    <a href="documentos/modelo de trabalhos.doc" target="_blank">Clique aqui para acessar o arquivo com os Modelos de Trabalhos</a>
                     <a href="documentos/criterios de avaliacao dos trabalhos.docx" target="_blank">Clique aqui para acessar o arquivo com os Critérios de Avaliação dos Trabalhos</a>
                 </div>
 

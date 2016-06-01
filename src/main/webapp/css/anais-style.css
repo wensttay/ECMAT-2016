@@ -41,4 +41,22 @@ and open the template in the editor.
     font-size: 90px;
 }
 
+.tabela-comissoes{
+    margin-left: 20px;
+    margin-top: 15px;
+}
 
+.email-comissoes-anais{
+    font-family: WC_RoughTrad;
+}
+
+.tabela-comissoes td{
+    padding-left: 15px;
+    padding-bottom: 8px;
+}
+
+.titulo-comissoes-anais{
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 40px;
+}
