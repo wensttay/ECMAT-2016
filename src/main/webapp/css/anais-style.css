@@ -14,15 +14,36 @@ and open the template in the editor.
 }
 
 .numero-edicao{
-    font-weight: bold;
+     /*cursor: pointer;*/
+    color: rgba(255, 255, 255, 1);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
     font-size: 24px;
-    font-family: ClaireHand;
-    padding-top: 10px;
-    vertical-align: middle;
 }
 
 .container-ano-edicao{
     height: 200px;
+}
+
+.container-ano-edicao img{
+    height: 100%;
+    padding: 20px;
+    -webkit-filter: grayscale(0.7);
+    filter: grayscale(0.7);
+    transition: all 0.4s;
+}
+
+.container-ano-edicao:hover img{
+    -webkit-filter: grayscale(0.2);
+    filter: grayscale(0.2);
+    transition: all 0.3s;
+}
+
+.img-edicao-box:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
 }
 
 .container-documentos-anais{

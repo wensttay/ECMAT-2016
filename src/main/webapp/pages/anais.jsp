@@ -168,40 +168,50 @@
                 <p class="text-center article-title col-sm-12">Edições</p>
                 <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
                     <div class="program-day-box"> <!-- Open Program-Day-Box -->
-                        <p class="text-center title">Segunda Edição</p>
-                        <div class="col-md-12 col-sm-12 img-box">
-                            <div class="container-ano-edicao">
-                                <p class="ano-edicao">2015</p>
+                        <a class="text-center numero-edicao" href="">
+                            Segunda Edição
+                        </a>
+                        <div class="col-md-12 col-sm-12 img-edicao-box">
+                            <div class="container-ano-edicao text-center">
+                                <!--<p class="ano-edicao">2016</p>-->
+                                <a href="http://www.google.com">
+                                    <img src="img/logo/logo-ecmat2016-420x420.png">
+                                </a>
                             </div>
                         </div>
                         <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
                         <!-- Clear to full box Height -->
                         <span style="clear: both; content: ''; display: block; margin: 0;"></span>
 
-<!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
-                            <div class="documentos-anais">
-                                PDF'S
-                            </div>
-                        </div>  Close List box with hours -->
+                        <!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
+                                                    <div class="documentos-anais">
+                                                        PDF'S
+                                                    </div>
+                                                </div>  Close List box with hours -->
                     </div> 
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
                     <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
-                        <p class="text-center title">Terceira Edição</p>
-                        <div class="col-md-12 col-sm-12 img-box">
-                            <div class="container-ano-edicao">
-                                <p class="ano-edicao">2016</p>
+                        <a class="text-center numero-edicao" href="">
+                            Terceira Edição
+                        </a>
+                        <div class="col-md-12 col-sm-12 img-edicao-box">
+                            <div class="container-ano-edicao text-center">
+                                <!--<p class="ano-edicao">2016</p>-->
+                                <a href="http://www.google.com">
+                                    <img src="img/logo/logo-ecmat2015-420x420.png">
+                                </a>
                             </div>
                         </div>
                         <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
                         <!-- Clear to full box Height -->
                         <span style="clear: both; content: ''; display: block; margin: 0;"></span>
 
-<!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
-                            <div class="documentos-anais">
-                                PDF'S
-                            </div>
-                        </div>  Close List box with hours -->
+                        <!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
+                                                    <div class="documentos-anais">
+                                                        PDF'S
+                                                    </div>
+                                                </div>  Close List box with hours -->
                     </div> 
                 </div>
 
