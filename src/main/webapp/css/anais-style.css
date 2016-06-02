@@ -44,6 +44,7 @@ and open the template in the editor.
 .tabela-comissoes{
     margin-left: 20px;
     margin-top: 15px;
+    margin-bottom: 40px;
 }
 
 .email-comissoes-anais{
@@ -58,5 +59,4 @@ and open the template in the editor.
 .titulo-comissoes-anais{
     font-size: 22px;
     font-weight: bold;
-    padding-top: 40px;
 }

@@ -33,7 +33,7 @@
                             <tr>
                                 <td>Prof. Msc.</td>
                                 <td> <strong>José Marcos da Silva</strong>. </td>
-                                <td>E-mail: <span class="email-comissoes-anais">josemarcos08@yahoo.com.br</span>></td>
+                                <td>E-mail: <span class="email-comissoes-anais">josemarcos08@yahoo.com.br</span></td>
                             </tr>
                             <tr>
                                 <td>Prof. Esp.</td>
@@ -56,13 +56,13 @@
                                 <td>E-mail: <span class="email-comissoes-anais">geraldo.lacerda@ifpb.edu.br</span></td>
                             </tr>
                         </table>
-<!--                        <ul>
-                            <li>Prof. Msc. <strong>José Marcos da Silva</strong>. E-mail: josemarcos08@yahoo.com.br</li>
-                            <li>Prof. Esp. <strong>Balboíno Sonildo da Nóbrega</strong>. E-mail: baldoino.nobrega@ifpb.edu.br</li>
-                            <li>Prof. Esp. <strong>José Nunes Aquino</strong>. E-mail: nuneshaglaene@gmail.com</li>
-                            <li>Prof. Msc. <strong>Francisco Aureliano Vidal</strong>. E-mail: aurelianovidal@hotmail.com</li>
-                            <li>Prof. Msc. <strong>Geraldo Herbetet de Lacerda</strong>. E-mail: geraldo.lacerda@ifpb.edu.br</li>
-                        </ul>-->
+                        <!--                        <ul>
+                                                    <li>Prof. Msc. <strong>José Marcos da Silva</strong>. E-mail: josemarcos08@yahoo.com.br</li>
+                                                    <li>Prof. Esp. <strong>Balboíno Sonildo da Nóbrega</strong>. E-mail: baldoino.nobrega@ifpb.edu.br</li>
+                                                    <li>Prof. Esp. <strong>José Nunes Aquino</strong>. E-mail: nuneshaglaene@gmail.com</li>
+                                                    <li>Prof. Msc. <strong>Francisco Aureliano Vidal</strong>. E-mail: aurelianovidal@hotmail.com</li>
+                                                    <li>Prof. Msc. <strong>Geraldo Herbetet de Lacerda</strong>. E-mail: geraldo.lacerda@ifpb.edu.br</li>
+                                                </ul>-->
                     </li>
                     <li class="titulo-comissoes-anais"> Comitê Científico
                         <table class="tabela-comissoes">
@@ -112,17 +112,17 @@
                                 <td>E-mail: <span class="email-comissoes-anais">valdecir.moreno@ifpb.edu.br</span></td>
                             </tr>
                         </table>
-<!--                        <ul>
-                            <li>Prof. Msc. <strong>Nádia Pinheiro Nóbrega</strong>. E-mail: nadia.nobrega@ifpb.edu.br</li>
-                            <li>Prof. Msc. <strong>Patrício Luiz de Andrade</strong>. E-mail: patricio.luiz.andrade@gmail.com</li>
-                            <li>Prof. Msc. <strong>José Marcos da Silva</strong>. E-mail: josemarcos08@yahoo.com.br</li>
-                            <li>Prof. Msc. <strong>Leonardo Ferreira Soares</strong>. E-mail: leonardo.ferreira@ifpb.edu.br</li>
-                            <li>Prof. Msc. <strong>Thiago Andrade Fernandes</strong>. E-mail: thiago_taf@hotmail.com</li>
-                            <li>Prof. Msc. <strong>Francisco Aureliano Vidal</strong>. E-mail: aurelianovidal@hotmail.com</li>
-                            <li>Prof. Msc. <strong>Antônia Edivaneide de Sousa Gonzaga</strong>. E-mail: edivaneidesousa2012@gmail.com</li>
-                            <li>Prof. Msc. <strong>Reginaldo Amaral Cordeiro Júnior</strong>. E-mail: reginaldoajunior@gmail.com</li>
-                            <li>Prof. Msc. <strong>Valdecir Teófilo Moreno</strong>. E-mail: valdecir.moreno@ifpb.edu.br</li>
-                        </ul>-->
+                        <!--                        <ul>
+                                                    <li>Prof. Msc. <strong>Nádia Pinheiro Nóbrega</strong>. E-mail: nadia.nobrega@ifpb.edu.br</li>
+                                                    <li>Prof. Msc. <strong>Patrício Luiz de Andrade</strong>. E-mail: patricio.luiz.andrade@gmail.com</li>
+                                                    <li>Prof. Msc. <strong>José Marcos da Silva</strong>. E-mail: josemarcos08@yahoo.com.br</li>
+                                                    <li>Prof. Msc. <strong>Leonardo Ferreira Soares</strong>. E-mail: leonardo.ferreira@ifpb.edu.br</li>
+                                                    <li>Prof. Msc. <strong>Thiago Andrade Fernandes</strong>. E-mail: thiago_taf@hotmail.com</li>
+                                                    <li>Prof. Msc. <strong>Francisco Aureliano Vidal</strong>. E-mail: aurelianovidal@hotmail.com</li>
+                                                    <li>Prof. Msc. <strong>Antônia Edivaneide de Sousa Gonzaga</strong>. E-mail: edivaneidesousa2012@gmail.com</li>
+                                                    <li>Prof. Msc. <strong>Reginaldo Amaral Cordeiro Júnior</strong>. E-mail: reginaldoajunior@gmail.com</li>
+                                                    <li>Prof. Msc. <strong>Valdecir Teófilo Moreno</strong>. E-mail: valdecir.moreno@ifpb.edu.br</li>
+                                                </ul>-->
                     </li>
                     <li class="titulo-comissoes-anais">
                         Equipe Técnica/Operacional
@@ -144,66 +144,68 @@
                                 <td><strong>Prof. Baldoino Sonildo da Nóbrega.</strong></td>
                             </tr>
                         </table>
-<!--                        <ul>
-                            <li>Direção Geral do Campus: <strong>Lucrécia Teresa Gonçalves Petrucci</strong>
-                            </li>
-                            <li>
-                                Diretoria de Ensino: <strong>Gastão Coelho de Aquino Filho</strong>  
-                            </li>
-                            <li>
-                                Coordenação de Comunicação: <strong>Lidiane Maria da Silva</strong>
-
-                            </li>
-                            <li>
-                                Coordenação do Curso de Licenciatura em Matemática: <strong>Prof. Baldoino Sonildo da Nóbrega</strong>
-                            </li>
-                        </ul>-->
+                        <!--                        <ul>
+                                                    <li>Direção Geral do Campus: <strong>Lucrécia Teresa Gonçalves Petrucci</strong>
+                                                    </li>
+                                                    <li>
+                                                        Diretoria de Ensino: <strong>Gastão Coelho de Aquino Filho</strong>  
+                                                    </li>
+                                                    <li>
+                                                        Coordenação de Comunicação: <strong>Lidiane Maria da Silva</strong>
+                        
+                                                    </li>
+                                                    <li>
+                                                        Coordenação do Curso de Licenciatura em Matemática: <strong>Prof. Baldoino Sonildo da Nóbrega</strong>
+                                                    </li>
+                                                </ul>-->
                     </li>
                 </ul>
 
             </div>
 
-            <!--            <div class="col-md-12 container-edicoes">
-                            <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
-                                <div class="program-day-box">  Open Program-Day-Box 
-                                    <p class="text-center title">Segunda Edição</p>
-                                    <div class="col-md-12 col-sm-12 img-box">
-                                        <div class="container-ano-edicao">
-                                            <p class="ano-edicao">2015</p>
-                                        </div>
-                                    </div>
-                                    <p style="font-size: 60px; text-align: center; top: ">Dia</p>
-                                     Clear to full box Height 
-                                    <span style="clear: both; content: ''; display: block; margin: 0;"></span>
-            
-                                    <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
-                                        <div class="documentos-anais">
-                                            PDF'S
-                                        </div>
-                                    </div>  Close List box with hours 
-                                </div> 
+
+            <div class="col-md-12 container-edicoes">
+                <p class="text-center article-title col-sm-12">Edições</p>
+                <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
+                    <div class="program-day-box"> <!-- Open Program-Day-Box -->
+                        <p class="text-center title">Segunda Edição</p>
+                        <div class="col-md-12 col-sm-12 img-box">
+                            <div class="container-ano-edicao">
+                                <p class="ano-edicao">2015</p>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
-                                <div class="program-day-box program-conteiner">  Open Program-Day-Box 
-                                    <p class="text-center title">Terceira Edição</p>
-                                    <div class="col-md-12 col-sm-12 img-box">
-                                        <div class="container-ano-edicao">
-                                            <p class="ano-edicao">2016</p>
-                                        </div>
-                                    </div>
-                                    <p style="font-size: 60px; text-align: center; top: ">Dia</p>
-                                     Clear to full box Height 
-                                    <span style="clear: both; content: ''; display: block; margin: 0;"></span>
-            
-                                    <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
-                                        <div class="documentos-anais">
-                                            PDF'S
-                                        </div>
-                                    </div>  Close List box with hours 
-                                </div> 
+                        </div>
+                        <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
+                        <!-- Clear to full box Height -->
+                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+
+<!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
+                            <div class="documentos-anais">
+                                PDF'S
                             </div>
-            
-                        </div>-->
+                        </div>  Close List box with hours -->
+                    </div> 
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
+                    <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
+                        <p class="text-center title">Terceira Edição</p>
+                        <div class="col-md-12 col-sm-12 img-box">
+                            <div class="container-ano-edicao">
+                                <p class="ano-edicao">2016</p>
+                            </div>
+                        </div>
+                        <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
+                        <!-- Clear to full box Height -->
+                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+
+<!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
+                            <div class="documentos-anais">
+                                PDF'S
+                            </div>
+                        </div>  Close List box with hours -->
+                    </div> 
+                </div>
+
+            </div>
         </div>
     </div>
 </article>
