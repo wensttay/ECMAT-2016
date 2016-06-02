@@ -11,7 +11,10 @@
         <div class="row"> 
             <div class=" col-lg-2 col-md-1 col-sm-2"></div>
             <div class=" col-lg-8 col-md-10 col-sm-12 text-justify"> 
-                <p class="text-center article-title col-sm-12">Normas para Publicação (Submissão)</p>
+                <p class="data-submissao">
+                    * Submissões a partir de 15 de junho de 2016.
+                </p>
+                <p class="text-center article-title col-sm-12">Normas para Publicação</p>
 
                 <ol class="criterios">
                     <li>
@@ -36,15 +39,66 @@
                     </li>
                 </ol>
 
-                <div class="criterios text-center">
+<!--                <div class="criterios text-center">
                     <p class="text-center article-title col-sm-12">Documentos Úteis</p>
-                    <a href="documentos/modelo de trabalhos.doc" target="_blank">Clique aqui para acessar o arquivo com os Modelos de Trabalhos</a>
-                    <a href="documentos/criterios de avaliacao dos trabalhos.docx" target="_blank">Clique aqui para acessar o arquivo com os Critérios de Avaliação dos Trabalhos</a>
+                    <a href="https://drive.google.com/file/d/0BwUu8Z81yTeRclFPbnJuUW5GWmM/view?usp=sharing" target="_blank">Clique aqui para acessar o arquivo com os Modelos de Trabalhos</a>
+                    <a href="https://drive.google.com/file/d/0BwUu8Z81yTeROWdGcEJEalNlZTA/view?usp=sharing" target="_blank">Clique aqui para acessar o arquivo com os Critérios de Avaliação dos Trabalhos</a>
+                </div>-->
+                
+                <div class="col-md-12 container-edicoes">
+                <p class="text-center article-title col-sm-12">Documentos Úteis</p>
+                <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
+                    <div class="program-day-box"> <!-- Open Program-Day-Box -->
+                        <a class="text-center numero-edicao" href="https://drive.google.com/file/d/0BwUu8Z81yTeRclFPbnJuUW5GWmM/view?usp=sharing" target="_blank">
+                            Modelos de Trabalhos
+                        </a>
+                        <div class="col-md-12 col-sm-12 img-edicao-box">
+                            <div class="container-ano-edicao text-center">
+                                <!--<p class="ano-edicao">2016</p>-->
+                                <a href="https://drive.google.com/file/d/0BwUu8Z81yTeRclFPbnJuUW5GWmM/view?usp=sharing" target="_blank">
+                                    <img src="img/other/posicao.png">
+                                </a>
+                            </div>
+                        </div>
+                        <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
+                        <!-- Clear to full box Height -->
+                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+
+                        <!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
+                                                    <div class="documentos-anais">
+                                                        PDF'S
+                                                    </div>
+                                                </div>  Close List box with hours -->
+                    </div> 
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
+                    <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
+                        <a class="text-center numero-edicao" href="https://drive.google.com/file/d/0BwUu8Z81yTeROWdGcEJEalNlZTA/view?usp=sharing" target="_blank">
+                            Critérios de Avaliação
+                        </a>
+                        <div class="col-md-12 col-sm-12 img-edicao-box">
+                            <div class="container-ano-edicao text-center">
+                                <!--<p class="ano-edicao">2016</p>-->
+                                <a href="https://drive.google.com/file/d/0BwUu8Z81yTeROWdGcEJEalNlZTA/view?usp=sharing" target="_blank">
+                                    <img src="img/other/posicao.png">
+                                </a>
+                            </div>
+                        </div>
+                        <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
+                        <!-- Clear to full box Height -->
+                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+
+                        <!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
+                                                    <div class="documentos-anais">
+                                                        PDF'S
+                                                    </div>
+                                                </div>  Close List box with hours -->
+                    </div> 
                 </div>
 
-                <p class="data-submissao">
-                    * Submissões a partir de 15 de junho de 2016.
-                </p>
+            </div>
+
+                
             </div>
             <div class=" col-lg-2 col-md-1 col-sm-2"></div>
         </div>
