@@ -37,68 +37,98 @@
                             O texto da modalidade <strong>MINICURSO</strong> enfatiza certo tópico relativo à Educação Matemática, com possibilidade de maior interação e espaço para discussão, organizado/coordenado pelo(s) ministrante(s). Conforme programação, os minicursos terão duração de 4 horas. Alguns serão oferecidos no dia 25 de agosto (quinta-feira) das 13h30 as 17h45 e outros no dia 26 de agosto (sexta-feira) das 7h30 as 11h45, com um intervalo de 15 minutos. Dependendo da quantidade de minicursos aceitos, alguns podem ser repetidos nos dois dias. é importante que o(s) proponente(s) indique(m) a necessidade de utilização de laboratório de informática para que a comissão organizadora verifique a disponibilidade da infraestrutura necessária. Deve ter entre 5 e 7 páginas do título às referências. Cada trabalho deve ter no máximo 4 membros (1 autor e 3 coautores).
                         </p>
                     </li>
+
                 </ol>
 
-<!--                <div class="criterios text-center">
-                    <p class="text-center article-title col-sm-12">Documentos Úteis</p>
-                    <a href="https://drive.google.com/file/d/0BwUu8Z81yTeRclFPbnJuUW5GWmM/view?usp=sharing" target="_blank">Clique aqui para acessar o arquivo com os Modelos de Trabalhos</a>
-                    <a href="https://drive.google.com/file/d/0BwUu8Z81yTeROWdGcEJEalNlZTA/view?usp=sharing" target="_blank">Clique aqui para acessar o arquivo com os Critérios de Avaliação dos Trabalhos</a>
-                </div>-->
-                
+                <div class="col-md-12 submissao">
+                    <p class="text-center article-title col-sm-12">Submissão</p>
+                    <p>
+                        Os autores interessados em submeter trabalhos, deverão enviar um e-mail para <i>ecmat2016@gmail.com</i>, com as seguinte informações: 
+                    </p>
+                    <ul>
+                        <li>
+                            Assunto do e-mail: submissão
+                        </li>
+                        <li>
+                            O e-mail deve conter:
+                            <ul>
+                                <li>
+                                    Título;
+                                </li>
+                                <li>
+                                    Nome da Instituição;
+                                </li>
+                                <li>
+                                    Nome, CPF, telefone e e-mail do autores (até QUATRO), e identificar qual entre os autores citados é o orientador.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Anexar o arquivo de submissão.
+                        </li>
+                    </ul>
+                </div>
+
+                <!--                <div class="criterios text-center">
+                                    <p class="text-center article-title col-sm-12">Documentos Úteis</p>
+                                    <a href="https://drive.google.com/file/d/0BwUu8Z81yTeRclFPbnJuUW5GWmM/view?usp=sharing" target="_blank">Clique aqui para acessar o arquivo com os Modelos de Trabalhos</a>
+                                    <a href="https://drive.google.com/file/d/0BwUu8Z81yTeROWdGcEJEalNlZTA/view?usp=sharing" target="_blank">Clique aqui para acessar o arquivo com os Critérios de Avaliação dos Trabalhos</a>
+                                </div>-->
+
                 <div class="col-md-12 container-edicoes">
-                <p class="text-center article-title col-sm-12">Documentos Úteis</p>
-                <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
-                    <div class="program-day-box"> <!-- Open Program-Day-Box -->
-                        <a class="text-center numero-edicao" href="https://drive.google.com/file/d/0BwUu8Z81yTeRclFPbnJuUW5GWmM/view?usp=sharing" target="_blank">
-                            Modelos de Trabalhos
-                        </a>
-                        <div class="col-md-12 col-sm-12 img-edicao-box">
-                            <div class="container-ano-edicao text-center">
-                                <!--<p class="ano-edicao">2016</p>-->
-                                <a href="https://drive.google.com/file/d/0BwUu8Z81yTeRclFPbnJuUW5GWmM/view?usp=sharing" target="_blank">
-                                    <img src="img/other/posicao.png">
-                                </a>
+                    <p class="text-center article-title col-sm-12">Documentos Úteis</p>
+                    <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
+                        <div class="program-day-box"> <!-- Open Program-Day-Box -->
+                            <a class="text-center numero-edicao" href="https://drive.google.com/file/d/0BwUu8Z81yTeRclFPbnJuUW5GWmM/view?usp=sharing" target="_blank">
+                                Modelos de Trabalhos
+                            </a>
+                            <div class="col-md-12 col-sm-12 img-edicao-box">
+                                <div class="container-ano-edicao text-center">
+                                    <!--<p class="ano-edicao">2016</p>-->
+                                    <a href="https://drive.google.com/file/d/0BwUu8Z81yTeRclFPbnJuUW5GWmM/view?usp=sharing" target="_blank">
+                                        <img src="img/other/posicao.png">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
-                        <!-- Clear to full box Height -->
-                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+                            <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
+                            <!-- Clear to full box Height -->
+                            <span style="clear: both; content: ''; display: block; margin: 0;"></span>
 
-                        <!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
-                                                    <div class="documentos-anais">
-                                                        PDF'S
-                                                    </div>
-                                                </div>  Close List box with hours -->
-                    </div> 
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
-                    <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
-                        <a class="text-center numero-edicao" href="https://drive.google.com/file/d/0BwUu8Z81yTeROWdGcEJEalNlZTA/view?usp=sharing" target="_blank">
-                            Critérios de Avaliação
-                        </a>
-                        <div class="col-md-12 col-sm-12 img-edicao-box">
-                            <div class="container-ano-edicao text-center">
-                                <!--<p class="ano-edicao">2016</p>-->
-                                <a href="https://drive.google.com/file/d/0BwUu8Z81yTeROWdGcEJEalNlZTA/view?usp=sharing" target="_blank">
-                                    <img src="img/other/posicao.png">
-                                </a>
+                            <!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
+                                                        <div class="documentos-anais">
+                                                            PDF'S
+                                                        </div>
+                                                    </div>  Close List box with hours -->
+                        </div> 
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
+                        <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
+                            <a class="text-center numero-edicao" href="https://drive.google.com/file/d/0BwUu8Z81yTeROWdGcEJEalNlZTA/view?usp=sharing" target="_blank">
+                                Critérios de Avaliação
+                            </a>
+                            <div class="col-md-12 col-sm-12 img-edicao-box">
+                                <div class="container-ano-edicao text-center">
+                                    <!--<p class="ano-edicao">2016</p>-->
+                                    <a href="https://drive.google.com/file/d/0BwUu8Z81yTeROWdGcEJEalNlZTA/view?usp=sharing" target="_blank">
+                                        <img src="img/other/posicao.png">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
-                        <!-- Clear to full box Height -->
-                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+                            <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
+                            <!-- Clear to full box Height -->
+                            <span style="clear: both; content: ''; display: block; margin: 0;"></span>
 
-                        <!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
-                                                    <div class="documentos-anais">
-                                                        PDF'S
-                                                    </div>
-                                                </div>  Close List box with hours -->
-                    </div> 
+                            <!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
+                                                        <div class="documentos-anais">
+                                                            PDF'S
+                                                        </div>
+                                                    </div>  Close List box with hours -->
+                        </div> 
+                    </div>
+
                 </div>
 
-            </div>
 
-                
             </div>
             <div class=" col-lg-2 col-md-1 col-sm-2"></div>
         </div>
