@@ -16,18 +16,21 @@ and open the template in the editor.
     font-size: 19px;
     padding-left: 12px;
     padding-right: 12px;
-    list-style-position: inside;
     text-align: justify;
 }
 
-.criterios li{
+.criterios p{
     margin-bottom: 28px;
-    display: list-item;
 }
 
-.criterios a{
+/*.criterios li{
+    margin-bottom: 28px;
+    display: list-item;
+}*/
+
+/*.criterios a{
     margin-bottom: 50px;
-}
+}*/
 
 /*.titulo-criterio{
     margin-top: 80px;
@@ -43,4 +46,9 @@ and open the template in the editor.
 .submissao{
     font-family: WC_RoughTrad;
     font-size: 19px;
+}
+
+.numeracao-criterio{
+    float: left;
+    height: 100px;
 }

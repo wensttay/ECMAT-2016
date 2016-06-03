@@ -34,15 +34,8 @@ and open the template in the editor.
 .container-ano-edicao img{
     height: 100%;
     padding: 20px;
-    -webkit-filter: grayscale(0.7);
-    filter: grayscale(0.7);
-    transition: all 0.4s;
-}
 
-.container-ano-edicao:hover img{
-    -webkit-filter: grayscale(0.2);
-    filter: grayscale(0.2);
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
 .img-edicao-box:hover{
