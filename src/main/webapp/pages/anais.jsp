@@ -27,100 +27,100 @@
             <div class="comissoes-anais-box col-lg-12">
                 <p class="text-center article-title col-lg-12">Sobre</p>
                 <div class="comissoes-anais-list col-lg-12">
-                    <div class="comissoes-anais-item-list col-lg-4">
+                    <div class="comissoes-anais-item-list col-lg-4 col-md-4">
                         <div class="item-list-box">
                             <p class="title">Comissão Organizadora</p>
                             <div class="table-comissoes-box">
                                 <table class="tabela-comissoes">
                                     <tr>
-                                        <td>Prof. Msc. <strong>José Marcos da Silva</strong>. </td>
-                                        <td>E-mail: <span class="email-comissoes-anais">josemarcos08@yahoo.com.br</span></td>
+                                        <td>Prof. Msc. <span class="nome">José Marcos da Silva</span>. </td>
+                                        <td>E-mail: <span class="email">josemarcos08@yahoo.com.br</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>Balboíno Sonildo da Nóbrega.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">baldoino.nobrega@ifpb.edu.br</span></td>
+                                        <td>Prof. Esp. <span class="nome">Balboíno Sonildo da Nóbrega.</span></td>
+                                        <td>E-mail: <span class="email">baldoino.nobrega@ifpb.edu.br</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>José Nunes Aquino.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">nuneshaglaene@gmail.com</span></td>
+                                        <td>Prof. Esp. <span class="nome">José Nunes Aquino.</span></td>
+                                        <td>E-mail: <span class="email">nuneshaglaene@gmail.com</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>Francisco Aureliano Vidal.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">aurelianovidal@hotmail.com</span></td>
+                                        <td>Prof. Esp. <span class="nome">Francisco Aureliano Vidal.</span></td>
+                                        <td>E-mail: <span class="email">aurelianovidal@hotmail.com</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>Geraldo Herbetet de Lacerda.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">geraldo.lacerda@ifpb.edu.br</span></td>
+                                        <td>Prof. Esp. <div class="nome">Geraldo Herbetet de Lacerda.</div></td>
+                                        <td>E-mail: <span class="email">geraldo.lacerda@ifpb.edu.br</span></td>
                                     </tr>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="comissoes-anais-item-list col-lg-4">
+                    <div class="comissoes-anais-item-list col-lg-4 col-md-4">
                         <div class="item-list-box">
                             <p class="title">Comitê Científico</p>
                             <div class="table-comissoes-box">
                                 <table class="tabela-comissoes">
                                     <tr>
-                                        <td>Prof. Msc. <strong>Nádia Pinheiro Nóbrega.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">nadia.nobrega@ifpb.edu.br</span></td>
+                                        <td>Prof. Msc. <span class="nome">Nádia Pinheiro Nóbrega.</span></td>
+                                        <td>E-mail: <span class="email">nadia.nobrega@ifpb.edu.br</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>Patrício Luiz de Andrade.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">patricio.luiz.andrade@gmail.com</span></td>
+                                        <td>Prof. Esp. <span class="nome">Patrício Luiz de Andrade.</span></td>
+                                        <td>E-mail: <span class="email">patricio.luiz.andrade@gmail.com</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>José Marcos da Silva.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">josemarcos08@yahoo.com.br</span></td>
+                                        <td>Prof. Esp. <span class="nome">José Marcos da Silva.</span></td>
+                                        <td>E-mail: <span class="email">josemarcos08@yahoo.com.br</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>Leonardo Ferreira Soares.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">leonardo.ferreira@ifpb.edu.br</span></td>
+                                        <td>Prof. Esp. <span class="nome">Leonardo Ferreira Soares.</span></td>
+                                        <td>E-mail: <span class="email">leonardo.ferreira@ifpb.edu.br</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>Thiago Andrade Fernandes.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">thiago_taf@hotmail.com</span></td>
+                                        <td>Prof. Esp. <span class="nome">Thiago Andrade Fernandes.</span></td>
+                                        <td>E-mail: <span class="email">thiago_taf@hotmail.com</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>Francisco Aureliano Vidal.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">aurelianovidal@hotmail.com</span></td>
+                                        <td>Prof. Esp. <span class="nome">Francisco Aureliano Vidal.</span></td>
+                                        <td>E-mail: <span class="email">aurelianovidal@hotmail.com</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>Antônia Edivaneide de Sousa Gonzaga.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">edivaneidesousa2012@gmail.com</span></td>
+                                        <td>Prof. Esp. <span class="nome">Antônia Edivaneide de Sousa Gonzaga.</span></td>
+                                        <td>E-mail: <span class="email">edivaneidesousa2012@gmail.com</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>Reginaldo Amaral Cordeiro Júnior.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">reginaldoajunior@gmail.com</span></td>
+                                        <td>Prof. Esp. <span class="nome">Reginaldo Amaral Cordeiro Júnior.</span></td>
+                                        <td>E-mail: <span class="email">reginaldoajunior@gmail.com</span></td>
                                     </tr>
                                     <tr>
-                                        <td>Prof. Esp. <strong>Valdecir Teófilo Moreno.</strong></td>
-                                        <td>E-mail: <span class="email-comissoes-anais">valdecir.moreno@ifpb.edu.br</span></td>
+                                        <td>Prof. Esp. <span class="nome">Valdecir Teófilo Moreno.</span></td>
+                                        <td>E-mail: <span class="email">valdecir.moreno@ifpb.edu.br</span></td>
                                     </tr>
                                 </table>
                             </div>
                         </div>
                     </div>
-                    <div class="comissoes-anais-item-list col-lg-4">
+                    <div class="comissoes-anais-item-list col-lg-4 col-md-4">
                         <div class="item-list-box">
                             <p class="title">Equipe Técnica/Operacional</p>
                             <div class="table-comissoes-box">
                                 <table class="tabela-comissoes">
                                     <tr>
                                         <td>Direção Geral do Campus:</td>
-                                        <td> <strong>Lucrécia Teresa Gonçalves Petrucci</strong>. </td>
+                                        <td><span class="nome">Lucrécia Teresa Gonçalves Petrucci</span>. </td>
                                     </tr>
                                     <tr>
                                         <td>Diretoria de Ensino:</td>
-                                        <td><strong>Gastão Coelho de Aquino Filho.</strong></td>
+                                        <td><span class="nome">Gastão Coelho de Aquino Filho.</span></td>
                                     </tr>
                                     <tr>
                                         <td>Coordenação de Comunicação:</td>
-                                        <td><strong>Lidiane Maria da Silva.</strong></td>
+                                        <td><span class="nome">Lidiane Maria da Silva.</span></td>
                                     </tr>
                                     <tr>
                                         <td>Coordenação do Curso de Licenciatura em Matemática:</td>
-                                        <td><strong>Prof. Baldoino Sonildo da Nóbrega.</strong></td>
+                                        <td><span class="nome">Prof. Baldoino Sonildo da Nóbrega.</span></td>
                                     </tr>
                                 </table>
                             </div>
@@ -134,52 +134,35 @@
                 <p class="text-center article-title col-sm-12">Edições</p>
                 <div class="col-lg-2 col-md-1 program-conteiner"></div>
                 <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
-                    <div class="program-day-box"> <!-- Open Program-Day-Box -->
-                        <a class="text-center edicao" href="">
-                            Segunda Edição
-                        </a>
-                        <div class="col-md-12 col-sm-12 img-edicao-box">
-                            <div class="container-ano-edicao text-center">
-                                <!--<p class="ano-edicao">2016</p>-->
-                                <a href="http://www.google.com">
-                                    <img src="img/logo/logo-ecmat2016-420x420.png">
-                                </a>
+                    <a href="">
+                        <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
+                            <p class="text-center edicao">
+                                Segunda Edição
+                            </p>
+                            <div class="col-md-12 col-sm-12 img-edicao-box">
+                                <div class="container-ano-edicao text-center">
+                                    <img src="img/logo/logo-ecmat2015-420x420.png">
+                                </div>
                             </div>
-                        </div>
-                        <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
-                        <!-- Clear to full box Height -->
-                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
-
-                        <!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
-                                                    <div class="documentos-anais">
-                                                        PDF'S
-                                                    </div>
-                                                </div>  Close List box with hours -->
-                    </div> 
+                            <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+                        </div> 
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
-                    <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
-                        <a class="text-center edicao" href="">
-                            Terceira Edição
-                        </a>
-                        <div class="col-md-12 col-sm-12 img-edicao-box">
-                            <div class="container-ano-edicao text-center">
-                                <!--<p class="ano-edicao">2016</p>-->
-                                <a href="http://www.google.com">
-                                    <img src="img/logo/logo-ecmat2015-420x420.png">
-                                </a>
-                            </div>
-                        </div>
-                        <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
-                        <!-- Clear to full box Height -->
-                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+                    <a href="http://localhost:8080/Ecmat2016/">
+                        <div class="program-day-box"> <!-- Open Program-Day-Box -->
+                            <p class="text-center edicao">
+                                Terceira Edição
+                            </p>
+                            <div class="col-md-12 col-sm-12 img-edicao-box">
+                                <div class="container-ano-edicao text-center">
+                                    <img src="img/logo/logo-ecmat2016-420x420.png">
 
-                        <!--                        <div class="hour-box-list container-documentos-anais" hidden>  Open List box with hours 
-                                                    <div class="documentos-anais">
-                                                        PDF'S
-                                                    </div>
-                                                </div>  Close List box with hours -->
-                    </div> 
+                                </div>
+                            </div>
+                            <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+                        </div> 
+                    </a>
                 </div>
                 <div class="col-lg-2 col-md-1 program-conteiner"></div>
             </div>

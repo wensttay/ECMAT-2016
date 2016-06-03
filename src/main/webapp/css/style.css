@@ -7,6 +7,7 @@
 @font-face { font-family: ClaireHand; src: url('../fonts/ClaireHandRegular.ttf');}
 @font-face { font-family: Rayando; src: url('../fonts/rayando.ttf');} 
 @font-face { font-family: DESYREL; src: url('../fonts/DESYREL_.ttf');}
+@font-face { font-family: DiciHandwrite; src: url('../fonts/DiciHandwrite.ttf');}
 
 .vermelho{background-color: red;}
 .verde{background-color: green;}

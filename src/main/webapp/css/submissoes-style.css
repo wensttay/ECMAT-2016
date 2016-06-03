@@ -9,7 +9,11 @@ and open the template in the editor.
 */
 
 .submissao-box{
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+}
+
+.submissao-box:last-child{
+    margin-bottom: 0;
 }
 .criterios{
     font-family: WC_RoughTrad;

@@ -18,7 +18,7 @@ and open the template in the editor.
     color: rgba(255, 255, 255, 1);
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.2);
-    border-bottom: 5px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.6);
     margin-bottom: 0;
     font-size: 20px;
 }
@@ -62,35 +62,42 @@ and open the template in the editor.
     font-size: 90px;
 }
 
-.email-comissoes-anais{
-    /*font-family: WC_RoughTrad;*/
-}
-
-.table-comissoes-box{
-    
-    width: 100%;
-}
-.tabela-comissoes{
+.tabela-comissoes, .table-comissoes-box{
     width: 100%;
 }
 
-.tabela-comissoes td{
+.tabela-comissoes tr{
+    border-bottom: 5px solid rgba(255,255,255,0.2);
+}
+
+.tabela-comissoes tr:last-child{
+    border-bottom: none;
+}
+
+.tabela-comissoes tr td{
     display: block;
     padding-right: 10px;
     padding-left: 10px;
-}
-.tabela-comissoes tr td{
     width: 100%;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
 }
+
+.tabela-comissoes tr:hover{
+    background-color: rgba(255,255,255, 0.2);
+}
+.tabela-comissoes .nome, .tabela-comissoes .email{
+    font-size: 25px;
+    font-family: DiciHandwrite;
+}
+
 .tabela-comissoes tr:last-child{
     border-radius: 20px;
 }
 
-.tabela-comissoes tr:nth-of-type(odd){
-    /*background-color: rgba(255,255,255,0.2);*/
-}
+/*.tabela-comissoes tr:nth-of-type(odd){
+    background-color: rgba(255,255,255,0.2);
+}*/
 
 .tabela-comissoes tr td:first-child{
     padding-top: 10px;
@@ -115,18 +122,22 @@ and open the template in the editor.
 .comissoes-anais-item-list{
     font-size: 22px;
     font-weight: bold;
+    margin-bottom: 50px;
 }
 
 .item-list-box{
     width: 100%;
-    border: 5px solid white;
+    border: 5px solid rgba(255,255,255,0.6);
     border-radius: 20px;
 }
 
 .item-list-box .title{
-    /*background-color: rgba(0,0,0,0.6);*/
-    font-size: 24px;
+    background-color: rgba(255,255,255,0.2);
+    font-size: 20px;
     text-align: center;
-    padding: 20px 0 0 0;
-    border-bottom: 5px solid white;
+    padding: 15px 0;
+    border-bottom: 5px solid rgba(255,255,255,0.6);
+    font-family: WC_RoughTrad;
+    color: white;
+    font-weight: normal;
 }
