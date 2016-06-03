@@ -8,9 +8,13 @@ and open the template in the editor.
     Author     : Victor Hugo
 */
 
-.sumario{
+.menu-anais{
     font-size: 22px;
     padding-bottom: 60px;
+}
+
+.menu-anais a{
+    display: initial;
 }
 
 .edicao{
@@ -140,4 +144,22 @@ and open the template in the editor.
     font-family: WC_RoughTrad;
     color: white;
     font-weight: normal;
+}
+
+.sumario{
+    font-family: WC_RoughTrad;
+    font-size: 22px;
+    list-style-position: inside;
+}
+
+.sumario ul{
+    padding-bottom: 20px;   
+}
+
+.sumario a{
+    display: initial;
+}
+
+.eixos-tematicos{
+    padding-bottom: 10px;
 }
