@@ -13,16 +13,37 @@ and open the template in the editor.
     padding-bottom: 60px;
 }
 
-.numero-edicao{
-    font-weight: bold;
-    font-size: 24px;
-    font-family: ClaireHand;
-    padding-top: 10px;
-    vertical-align: middle;
+.edicao{
+     /*cursor: pointer;*/
+    color: rgba(255, 255, 255, 1);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+    font-size: 20px;
 }
 
 .container-ano-edicao{
     height: 200px;
+}
+
+.container-ano-edicao img{
+    height: 100%;
+    padding: 20px;
+    -webkit-filter: grayscale(0.7);
+    filter: grayscale(0.7);
+    transition: all 0.4s;
+}
+
+.container-ano-edicao:hover img{
+    -webkit-filter: grayscale(0.2);
+    filter: grayscale(0.2);
+    transition: all 0.3s;
+}
+
+.img-edicao-box:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
 }
 
 .container-documentos-anais{
@@ -68,7 +89,7 @@ and open the template in the editor.
 }
 
 .tabela-comissoes tr:nth-of-type(odd){
-    background-color: rgba(0,0,0,0.6);
+    /*background-color: rgba(255,255,255,0.2);*/
 }
 
 .tabela-comissoes tr td:first-child{
@@ -103,8 +124,9 @@ and open the template in the editor.
 }
 
 .item-list-box .title{
+    /*background-color: rgba(0,0,0,0.6);*/
     font-size: 24px;
     text-align: center;
-    margin: 20px 0 0 0;
+    padding: 20px 0 0 0;
     border-bottom: 5px solid white;
 }

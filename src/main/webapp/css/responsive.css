@@ -28,8 +28,6 @@
 @media screen and (max-width: 820px){
     .issn{
         color: rgba(255,255,255, 0.6);
-        font-size: 20px;
-        font-weight: bold;
         width: 200px;
         text-align: center;
         padding: 10px;
@@ -145,6 +143,11 @@
 }
 
 @media (max-height: 700px) and (max-width: 820px){
+
+    .data-submissao{
+        font-size: 18px;
+    }
+
     .container-base{
         padding-top: 100px;
     }
@@ -198,6 +201,11 @@
 }
 
 @media screen and (max-width: 580px){
+    
+    .data-submissao{
+        font-size: 16px;
+    }
+    
     .evento-nome,
     construindo-title{
         font-size: 50px;
@@ -205,13 +213,18 @@
 }
 
 @media screen and (max-width: 450px){
+    
+    .container-ano-edicao img{
+        height: 175px;
+    }
+    
     .issn, .issn-box{
         width: 150px;
     }
     .issn{
         font-size: 15px;
     }
-    
+
     .evento-nome,
     .construindo-title{
         font-size: 40px;

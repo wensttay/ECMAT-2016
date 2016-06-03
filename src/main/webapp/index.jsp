@@ -27,8 +27,8 @@
         <link href="css/organizacao-responsive.css" rel="stylesheet">
         <link href="css/programacao-style.css" rel="stylesheet">
         <link href="css/submissoes-style.css" rel="stylesheet" type="text/css"/>
-        <link href="css/responsive.css" rel="stylesheet">
         <link href="css/anais-style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/responsive.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 

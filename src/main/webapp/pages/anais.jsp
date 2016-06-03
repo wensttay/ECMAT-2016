@@ -22,11 +22,11 @@
                     </li>
                 </ul>
             </div>
-
-            <p class="text-center article-title col-sm-12">Corpo Editorial</p>
-
+        </div>
+        <div class="row">
             <div class="comissoes-anais-box col-lg-12">
-                <div class="comissoes-anais-list">
+                <p class="text-center article-title col-lg-12">Sobre</p>
+                <div class="comissoes-anais-list col-lg-12">
                     <div class="comissoes-anais-item-list col-lg-4">
                         <div class="item-list-box">
                             <p class="title">Comissão Organizadora</p>
@@ -128,16 +128,22 @@
                     </div>
                 </div>
             </div>
-
-
+        </div>
+        <div class="row">
             <div class="col-md-12 container-edicoes">
                 <p class="text-center article-title col-sm-12">Edições</p>
-                <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
+                <div class="col-lg-2 col-md-1 program-conteiner"></div>
+                <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
                     <div class="program-day-box"> <!-- Open Program-Day-Box -->
-                        <p class="text-center title">Segunda Edição</p>
-                        <div class="col-md-12 col-sm-12 img-box">
-                            <div class="container-ano-edicao">
-                                <p class="ano-edicao">2015</p>
+                        <a class="text-center edicao" href="">
+                            Segunda Edição
+                        </a>
+                        <div class="col-md-12 col-sm-12 img-edicao-box">
+                            <div class="container-ano-edicao text-center">
+                                <!--<p class="ano-edicao">2016</p>-->
+                                <a href="http://www.google.com">
+                                    <img src="img/logo/logo-ecmat2016-420x420.png">
+                                </a>
                             </div>
                         </div>
                         <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
@@ -151,12 +157,17 @@
                                                 </div>  Close List box with hours -->
                     </div> 
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 program-conteiner">
+                <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
                     <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
-                        <p class="text-center title">Terceira Edição</p>
-                        <div class="col-md-12 col-sm-12 img-box">
-                            <div class="container-ano-edicao">
-                                <p class="ano-edicao">2016</p>
+                        <a class="text-center edicao" href="">
+                            Terceira Edição
+                        </a>
+                        <div class="col-md-12 col-sm-12 img-edicao-box">
+                            <div class="container-ano-edicao text-center">
+                                <!--<p class="ano-edicao">2016</p>-->
+                                <a href="http://www.google.com">
+                                    <img src="img/logo/logo-ecmat2015-420x420.png">
+                                </a>
                             </div>
                         </div>
                         <!--<p style="font-size: 60px; text-align: center; top: ">Dia</p>-->
@@ -170,7 +181,7 @@
                                                 </div>  Close List box with hours -->
                     </div> 
                 </div>
-
+                <div class="col-lg-2 col-md-1 program-conteiner"></div>
             </div>
         </div>
     </div>

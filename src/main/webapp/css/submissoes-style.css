@@ -8,12 +8,16 @@ and open the template in the editor.
     Author     : Victor Hugo
 */
 
+.submissao-box{
+    margin-bottom: 50px;
+}
 .criterios{
     font-family: WC_RoughTrad;
     font-size: 19px;
     padding-left: 12px;
     padding-right: 12px;
     list-style-position: inside;
+    text-align: justify;
 }
 
 .criterios li{
@@ -33,4 +37,10 @@ and open the template in the editor.
 .data-submissao{
     font-size: 20px;
     font-weight: bold;
+    padding-bottom: 40px;
+}
+
+.submissao{
+    font-family: WC_RoughTrad;
+    font-size: 19px;
 }
