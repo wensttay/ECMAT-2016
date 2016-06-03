@@ -15,10 +15,10 @@
                         <a href="#sobre">Apresentação do III Ecmat 2016</a>
                     </li>
                     <li>
-                        <a href="#organizacao">Organização e Corpo Editorial</a>
+                        <a href="#organizacao">Submissões e Normas para Publicação</a>
                     </li>   
                     <li>
-                        <a href="#submissoes">Submissões e Critérios de Avaliação</a>
+                        <a href="#submissoes">Contato</a>
                     </li>
                 </ul>
             </div>
