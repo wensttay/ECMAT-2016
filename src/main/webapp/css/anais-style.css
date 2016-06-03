@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : Victor Hugo
 */
 
-.sumario{
+.menu-anais{
     font-size: 22px;
     padding-bottom: 60px;
 }
@@ -129,4 +129,22 @@ and open the template in the editor.
     text-align: center;
     padding: 20px 0 0 0;
     border-bottom: 5px solid white;
+}
+
+.sumario{
+    font-family: WC_RoughTrad;
+    font-size: 22px;
+    list-style-position: inside;
+}
+
+.sumario ul{
+    padding-bottom: 20px;   
+}
+
+.sumario a{
+    display: initial;
+}
+
+.eixos-tematicos{
+    padding-bottom: 10px;
 }
