@@ -63,7 +63,7 @@
 
 .people{
     background-color: rgba(255, 255, 255, 1);
-    cursor: pointer;
+    /*cursor: pointer;*/
     box-shadow: 0px 0px 15px black;
     /*box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);*/
     -webkit-filter: grayscale();
@@ -100,9 +100,10 @@
     width: 100%;
     color: black;
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
+    line-height: 110%;
     /*font-weight: bold;*/
-    font-family: DESYREL;
+    font-family: DiciHandwrite;
 }
 
 .scroll-button{
@@ -126,13 +127,13 @@
     float: right;
 }
 
-/* continua a declaração de perspectiva para o container geral */
+/* continua a declaração de perspectiva para o container geral 
 .flip-container { 
     perspective: 1000; 
     transform-style: preserve-3d; 
 }  	
 
-/*  MODIFICADO! vira os containers frente e verso quando o mouse passa em cima */
+  MODIFICADO! vira os containers frente e verso quando o mouse passa em cima 
 .flip-container:hover .back { transform: rotateY(0deg); }  	
 .flip-container:hover .front { transform: rotateY(180deg); }    
 .flip-container, .front, .back { 
@@ -140,14 +141,14 @@
     height: 240px; 
 }    
 
-/* define a velocidade da animação */
+ define a velocidade da animação 
 .flipper {  	
     transition: 0.6s;  	
     transform-style: preserve-3d;    	
     position: relative;  
 }    
 
-/* esconde o verso durante a animação */
+ esconde o verso durante a animação 
 .front, .back { 
     backface-visibility: hidden;  	
     transition: 0.6s;  	
@@ -157,11 +158,13 @@
     left: 0;  
 }    
 
-/*  MODIFICADO! frente posicionada sobre o fundo */
+  MODIFICADO! frente posicionada sobre o fundo 
 .front {  	
     z-index: 2;  	
     transform: rotateY(0deg);  
 }    
 
-/* verso inicialmente escondido */
-.back { transform: rotateY(-180deg); }  
+ verso inicialmente escondido 
+.back { transform: rotateY(-180deg); }  */
+
+.back{ display: none; }

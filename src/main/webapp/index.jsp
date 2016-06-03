@@ -108,7 +108,7 @@
 
             <footer id="footer">
                 <p class="text-center">
-                    Desenvolvido por <a href="https://github.com/Hero-Code" style="display: inline; background-color: black; padding: 5px; font-family: WC_RoughTrad; border-radius: 5px; margin-left: 5px;"><strong>HeroCode</strong></a>
+                    Desenvolvido por <a href="https://github.com/Hero-Code" target="_Blanck" style="display: inline; background-color: black; padding: 5px; font-family: WC_RoughTrad; border-radius: 5px; margin-left: 5px;"><strong>HeroCode</strong></a>
                 </p>
             </footer>
         </div>
