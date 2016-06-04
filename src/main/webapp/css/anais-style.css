@@ -19,7 +19,7 @@ and open the template in the editor.
 
 .edicao{
      /*cursor: pointer;*/
-    color: rgba(255, 255, 255, 1);
+    /*color: rgba(255, 255, 255, 1);*/
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.2);
     border-bottom: 5px solid rgba(255, 255, 255, 0.6);
@@ -151,6 +151,12 @@ and open the template in the editor.
 
 .sumario a{
     display: initial;
+    font-size: 17px;
+    /*text-decoration: underline;*/
+    font-family: ClaireHand;
+    font-weight: bold;
+    /*color: white;*/
+    /*opacity: 1 !important;*/
 }
 
 .eixos-tematicos{

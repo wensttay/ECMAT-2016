@@ -27,66 +27,45 @@
 
         <div class="row">
             <div class="col-md-12">
-                <p class="text-center article-title col-sm-12">Sumário</p>
+                <p class="text-center article-title col-sm-12 low-white-transparence">Sumário</p>
 
                 <div class="sumario">
                     <ul>
                         <li>
-                            <p class="eixos-tematicos">Eixos Temáticos</p>
+                            <p class="eixos-tematicos low-white-transparence">Eixos Temáticos</p>
                             <ol>
                                 <li>
-                                    <p>Ensino de Matemática: Tecnologias, Resolução de Problemas, Modelagem Matemática e Atividades Lúdicas;</p>
+                                    <p class="low-white-transparence">Ensino de Matemática: Tecnologias, Resolução de Problemas, Modelagem Matemática e Atividades Lúdicas;</p>
                                     <ul>
                                         <li>
-                                            <a href="">Link do paranaue</a>        
-                                        </li>
-                                        <li>
-                                            <a href="">Link do paranaue</a>        
+                                            <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgMElkXzFHckhHX2s/view?usp=sharing" target="_blank">MODELAGEM MATEMÁTICA NO PROCESSO DE ENSINO E APRENDIZAGEM DE PORCENTAGENS</a>        
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <p>Matemática e Sociedade: Políticas Educacionais, Educação Básica e Formação de Professores;</p>
+                                    <p class="low-white-transparence">Matemática e Sociedade: Políticas Educacionais, Educação Básica e Formação de Professores;</p>
                                     <ul>
                                         <li>
-                                            <a href="">Link do paranaue</a>        
-                                        </li>
-                                        <li>
-                                            <a href="">Link do paranaue</a>        
+                                            <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgaWNWOGgwSkFzdWs/view?usp=sharing" target="_blank">O ENSINO DA MATEMÁTICA E A RESOLUÇÃO DE PROBLEMAS: UM RELATO DE EXPERIÊNCIA</a>        
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <p>Educação Matemática: Etnomatemática, História e Filosofia da Matemática e Didática da Matemática;</p>
+                                    <p class="low-white-transparence">Educação Matemática: Etnomatemática, História e Filosofia da Matemática e Didática da Matemática;</p>
                                     <ul>
                                         <li>
-                                            <a href="">Link do paranaue</a>        
-                                        </li>
-                                        <li>
-                                            <a href="">Link do paranaue</a>        
+                                            <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgS3VYRlFETjJMNWM/view?usp=sharing" target="_blank">A IMPORTÂNCIA DO ENSINO DE GEOMETRIA NO ENSINO FUNDAMENTAL: UMA BREVE ANÁLISE DO LIVRO DIDÁTICO</a>        
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <p>Matemática Pura;</p>
+                                    <p class="low-white-transparence">Matemática Pura;</p>
                                     <ul>
-                                        <li>
-                                            <a href="">Link do paranaue</a>        
-                                        </li>
-                                        <li>
-                                            <a href="">Link do paranaue</a>        
-                                        </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <p>Matemática e Aplicações;</p>
+                                    <p class="low-white-transparence">Matemática e Aplicações;</p>
                                     <ul>
-                                        <li>
-                                            <a href="">Link do paranaue</a>        
-                                        </li>
-                                        <li>
-                                            <a href="">Link do paranaue</a>        
-                                        </li>
                                     </ul>
                                 </li>
                             </ol>
@@ -99,11 +78,11 @@
 
         <div class="row">
             <div class="comissoes-anais-box col-lg-12">
-                <p class="text-center article-title col-lg-12">Sobre</p>
+                <p class="text-center article-title col-lg-12 low-white-transparence">Corpo Editorial</p>
                 <div class="comissoes-anais-list col-lg-12">
                     <div class="comissoes-anais-item-list col-lg-4 col-md-4">
                         <div class="item-list-box">
-                            <p class="title">Comissão Organizadora</p>
+                            <p class="title low-white-transparence">Comissão Organizadora</p>
                             <div class="table-comissoes-box">
                                 <table class="tabela-comissoes">
                                     <tr>
@@ -132,7 +111,7 @@
                     </div>
                     <div class="comissoes-anais-item-list col-lg-4 col-md-4">
                         <div class="item-list-box">
-                            <p class="title">Comitê Científico</p>
+                            <p class="title low-white-transparence">Comitê Científico</p>
                             <div class="table-comissoes-box">
                                 <table class="tabela-comissoes">
                                     <tr>
@@ -177,7 +156,7 @@
                     </div>
                     <div class="comissoes-anais-item-list col-lg-4 col-md-4">
                         <div class="item-list-box">
-                            <p class="title">Equipe Técnica/Operacional</p>
+                            <p class="title low-white-transparence">Equipe Técnica/Operacional</p>
                             <div class="table-comissoes-box">
                                 <table class="tabela-comissoes">
                                     <tr>
@@ -205,17 +184,17 @@
         </div>
         <div class="row">
             <div class="col-md-12 container-edicoes">
-                <p class="text-center article-title col-sm-12">Edições</p>
+                <p class="text-center article-title col-sm-12 low-white-transparence">Edições</p>
                 <div class="col-lg-2 col-md-1 program-conteiner"></div>
                 <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
                     <a href="">
                         <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
-                            <p class="text-center edicao">
-                                Segunda Edição
+                            <p class="text-center edicao low-white-transparence">
+                                Segunda Edição (2015)
                             </p>
                             <div class="col-md-12 col-sm-12 img-edicao-box">
                                 <div class="container-ano-edicao text-center">
-                                    <img src="img/logo/logo-ecmat2015-420x420.png">
+                                    <img class="off-load" src="img/logo/logo-ecmat2015-420x420.png">
                                 </div>
                             </div>
                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
@@ -225,12 +204,12 @@
                 <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
                     <a href="http://localhost:8080/Ecmat2016/">
                         <div class="program-day-box"> <!-- Open Program-Day-Box -->
-                            <p class="text-center edicao">
-                                Terceira Edição
+                            <p class="text-center edicao low-white-transparence">
+                                Terceira Edição (2016)
                             </p>
                             <div class="col-md-12 col-sm-12 img-edicao-box">
                                 <div class="container-ano-edicao text-center">
-                                    <img src="img/logo/logo-ecmat2016-420x420.png">
+                                    <img class="off-load" src="img/logo/logo-ecmat2016-420x420.png">
 
                                 </div>
                             </div>

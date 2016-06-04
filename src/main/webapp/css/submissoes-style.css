@@ -55,4 +55,10 @@ and open the template in the editor.
 .numeracao-criterio{
     float: left;
     height: 100px;
+    margin-right: 12px;
+}
+
+.destaque{
+    /*opacity: 1 !important;*/
+    color: white;
 }

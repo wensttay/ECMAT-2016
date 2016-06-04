@@ -9,7 +9,7 @@
 <article class="container-base invisivel" id="organizacao">
     <div class="container">
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão Geral</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão Geral</p>
         </div>
         <div class="row">
             <div class="organization">
@@ -103,7 +103,7 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão Científica</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão Científica</p>
         </div>
         <div class="row">
             <div class="organization">
@@ -279,7 +279,7 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão de Divulgação</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Divulgação</p>
         </div>
         <div class="row">
             <div class="organization">
@@ -374,7 +374,7 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão de Patrocínio</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Patrocínio</p>
         </div>
         <div class="row">
             <div class="organization">
@@ -449,7 +449,7 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão de Certificação</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Certificação</p>
         </div>
         <div class="row">
             <div class="organization">
@@ -544,7 +544,7 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão de Apoio</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Apoio</p>
         </div>
         <div class="row">
             <div class="organization">

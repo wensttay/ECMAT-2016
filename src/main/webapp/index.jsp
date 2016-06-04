@@ -36,12 +36,12 @@
         <div id="container-fullpage">
             <header id="header" class="blackboard-background">
                 <div class="construcao-background"></div>
-                <div id="menu-principal-button" class="menu-button-with-img low-transparent" >
+                <div id="menu-principal-button" class="menu-button-with-img low-white-transparence" >
                     <img src="img/menu/menu-icon.png" />
                 </div>
 
                 <a href="#inicio">
-                    <div id="logo-small" class="menu-button-with-img low-transparent">
+                    <div id="logo-small" class="menu-button-with-img low-white-transparence">
                         <img src="img/logo/logo-ecmat2016-75x75.png">
                     </div>
                 </a>
@@ -51,9 +51,9 @@
                             <img src="img/menu/exit-menu-icon.png"/>
                         </li>
 
-                        <li class="principal-list-item page-link item-bordered"><a class="principal-list-item" href="#inicio">Inicio</a></li>
+                        <li class="principal-list-item page-link item-bordered"><a class="item-title" href="#inicio">Inicio</a></li>
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
-                            <a href="#" class="list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                            <a href="#" class="item-title list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="drop-menu blackboard-background">
                                 <li class="drop-menu-item page-link" ><a href="#sobre">Sobre</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#programacao">Programação</a></li>
@@ -62,20 +62,20 @@
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Certificados</a></li>
                             </ul>
                         </li>
-                        <li class="principal-list-item page-link item-bordered" ><a href="#submissoes">Submissões</a></li>
+                        <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#submissoes">Submissões</a></li>
 
 
-                        <li class="principal-list-item menu-button-with-img low-transparent" id="logo-central" ><a href="#inicio">
+                        <li class="principal-list-item menu-button-with-img low-white-transparence" id="logo-central" ><a href="#inicio">
                                 <img src="img/logo/logo-ecmat2016-75x75.png"></a>
                         </li>
                         
-                        <li class="principal-list-item page-link item-bordered" ><a href="#anais">Anais</a></li>
+                        <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#anais">Anais</a></li>
 
-                        <li class="principal-list-item page-link item-bordered" ><a href="#contato">Contato</a></li>
+                        <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#contato">Contato</a></li>
                         <!--<li class="principal-list-item page-link item-bordered disabled" ><a href="#construcao">Inscrição</a></li>-->
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
                             <a href="#" class="list-item-withsublist-title">Inscrição  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                            <ul class="drop-menu blackboard-background">
+                            <ul class="item-title drop-menu blackboard-background">
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Entrar</a></li>
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Criar Conta</a></li>
                                 <!--                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Minha Conta</a></li>
@@ -86,7 +86,7 @@
                 </nav>
                 <div class="issn-box">
                     <div class="issn blackboard-background">
-                        ISSN 58900-000
+                        ISSN XXXX-XXX
                     </div>
                 </div>
             </header>
@@ -108,7 +108,7 @@
 
             <footer id="footer">
                 <p class="text-center">
-                    Desenvolvido por <a href="https://github.com/Hero-Code" target="_Blanck" style="display: inline; background-color: black; padding: 5px; font-family: WC_RoughTrad; border-radius: 5px; margin-left: 5px;"><strong>HeroCode</strong></a>
+                    Desenvolvido por <a href="https://github.com/Hero-Code" target="_blank" style="display: inline; background-color: black; padding: 5px; font-family: WC_RoughTrad; border-radius: 5px; margin-left: 5px;"><strong>HeroCode</strong></a>
                 </p>
             </footer>
         </div>
