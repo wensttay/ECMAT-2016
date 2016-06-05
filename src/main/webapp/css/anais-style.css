@@ -95,7 +95,7 @@ and open the template in the editor.
     background-color: rgba(255,255,255, 0.2);
 }
 
-.tabela-comissoes .comissao-people-box .comissao-people{
+.tabela-comissoes .comissao-people-box .comissao-people{    
     display: block;
     width: 100%;
     text-align: center;

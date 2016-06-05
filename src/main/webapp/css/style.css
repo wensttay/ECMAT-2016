@@ -215,7 +215,7 @@ nav{
 .menu-principal-box ul.principal-list li.principal-list-item-withsublist:hover{
     border: 4px dashed rgba(255, 255, 255, 0.8) !important;
 }
-.menu-principal-box ul.principal-list li.principal-list-item-withsublist a{
+.menu-principal-box ul.principal-list li.principal-list-item-withsublist .list-item-withsublist-title{
     cursor: default;
 }
 li.page-link:hover{

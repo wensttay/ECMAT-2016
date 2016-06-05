@@ -22,10 +22,10 @@
                             <a class="anais-link low-white-transparence" href="#sobre">Apresentação do ECMAT 2016</a>
                         </li>
                         <li>
-                            <a class="anais-link low-white-transparence" href="#organizacao">Submissões e Normas para Publicação</a>
+                            <a class="anais-link low-white-transparence" href="#submissoes">Submissões e Normas para Publicação</a>
                         </li>   
                         <li>
-                            <a class="anais-link low-white-transparence" href="#submissoes">Entre em Contato aqui</a>
+                            <a class="anais-link low-white-transparence" href="#contato">Entre em Contato aqui</a>
                         </li>
                     </ul>
                     <div class="container-chave-direita">
