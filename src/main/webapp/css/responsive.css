@@ -188,6 +188,10 @@
     p{
         font-size: 16px;
     }
+
+    .numeracao-criterio{
+        margin-bottom: 5px;
+    }
 }
 
 @media screen and (max-width: 580px) and (max-height: 700px) {
@@ -201,11 +205,11 @@
 }
 
 @media screen and (max-width: 580px){
-    
+
     .data-submissao{
         font-size: 16px;
     }
-    
+
     .evento-nome,
     construindo-title{
         font-size: 50px;
@@ -213,11 +217,11 @@
 }
 
 @media screen and (max-width: 450px){
-    
+
     .container-ano-edicao img{
         height: 175px;
     }
-    
+
     .issn, .issn-box{
         width: 150px;
     }

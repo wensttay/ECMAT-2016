@@ -28,6 +28,10 @@ a:active, a:link, a:hover, a:visited ,a{
     cursor: not-allowed !important;
 }
 
+.medium-margin-bottom{
+    margin-bottom: 50px;
+}
+
 .disabled:hover{
     opacity: 0.2;
     color: rgba(255,255,255, 0.8);
@@ -46,9 +50,12 @@ p{
     margin: 0;
 }
 
+.low-opacity{
+    opacity: 0.8;
+}
+
 .low-white-transparence{
-    /*opacity: 0.8;*/
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.8) !important;
 }
 
 .invisivel{}

@@ -20,6 +20,7 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/construcao-style.css" rel="stylesheet"/>
         <link href="css/contato-style.css" rel="stylesheet">
+        <link href="css/contato-responsive.css" rel="stylesheet">
         <link href="css/inicio-style.css" rel="stylesheet">
         <link href="css/sobre-style.css" rel="stylesheet">
         <link href="css/sobre-responsive.css" rel="stylesheet">
@@ -37,12 +38,12 @@
             <header id="header" class="blackboard-background">
                 <div class="construcao-background"></div>
                 <div id="menu-principal-button" class="menu-button-with-img low-white-transparence" >
-                    <img src="img/menu/menu-icon.png" />
+                    <img  class="low-opacity" src="img/menu/menu-icon.png" />
                 </div>
 
                 <a href="#inicio">
                     <div id="logo-small" class="menu-button-with-img low-white-transparence">
-                        <img src="img/logo/logo-ecmat2016-75x75.png">
+                        <img class="low-opacity" src="img/logo/logo-ecmat2016-75x75.png">
                     </div>
                 </a>
                 <nav class="menu-principal-box">
@@ -65,10 +66,10 @@
                         <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#submissoes">Submissões</a></li>
 
 
-                        <li class="principal-list-item menu-button-with-img low-white-transparence" id="logo-central" ><a href="#inicio">
+                        <li class="principal-list-item menu-button-with-img low-opacity" id="logo-central" ><a href="#inicio">
                                 <img src="img/logo/logo-ecmat2016-75x75.png"></a>
                         </li>
-                        
+
                         <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#anais">Anais</a></li>
 
                         <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#contato">Contato</a></li>
@@ -99,7 +100,6 @@
                 <%@ include file="pages/contato.jsp" %>
                 <%@ include file="pages/programacao.jsp" %>
                 <%@ include file="pages/organizacao.jsp" %>
-                <%@ include file="pages/erro.jsp" %>
                 <%@ include file="pages/construcao.jsp" %>
                 <%@ include file="pages/submissoes.jsp" %>
                 <%@ include file="pages/anais.jsp" %>
@@ -122,6 +122,10 @@
         <script src="js/page-controll-script.js"></script>
         <script src="js/organizacao-controll-script.js"></script>
         <script src="js/programacao-table-controll-script.js"></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
+        <!--<script src="js/map-script.js"></script>-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg" type="text/javascript"></script>
+        <script src="js/map-script.js"></script>
 
     </body>
 </html>

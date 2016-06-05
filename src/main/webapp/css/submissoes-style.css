@@ -7,11 +7,6 @@ and open the template in the editor.
     Created on : 28/05/2016, 15:43:46
     Author     : Victor Hugo
 */
-
-.submissao-box{
-    margin-bottom: 100px;
-}
-
 .submissao-box:last-child{
     margin-bottom: 0;
 }
@@ -55,7 +50,7 @@ and open the template in the editor.
 .numeracao-criterio{
     float: left;
     height: 100px;
-    margin-right: 12px;
+    margin-right: 15px;
 }
 
 .destaque{

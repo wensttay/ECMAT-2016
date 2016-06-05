@@ -75,12 +75,76 @@
 
             </div>
         </div>
-
+        
         <div class="row">
-            <div class="comissoes-anais-box col-lg-12">
+            <div class="col-md-12 container-edicoes">
+                <p class="text-center article-title col-sm-12 low-white-transparence">Edições</p>
+                <div class="col-lg-2 col-md-1 program-conteiner"></div>
+                <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
+                    <a href="">
+                        <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
+                            <p class="text-center edicao low-white-transparence">
+                                Segunda Edição (2015)
+                            </p>
+                            <div class="col-md-12 col-sm-12 img-edicao-box">
+                                <div class="container-ano-edicao text-center">
+                                    <img class="off-load" src="img/logo/logo-ecmat2015-420x420.png">
+                                </div>
+                            </div>
+                            <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+                        </div> 
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
+                    <a href="http://localhost:8080/Ecmat2016/">
+                        <div class="program-day-box"> <!-- Open Program-Day-Box -->
+                            <p class="text-center edicao low-white-transparence">
+                                Terceira Edição (2016)
+                            </p>
+                            <div class="col-md-12 col-sm-12 img-edicao-box">
+                                <div class="container-ano-edicao text-center">
+                                    <img class="off-load" src="img/logo/logo-ecmat2016-420x420.png">
+
+                                </div>
+                            </div>
+                            <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+                        </div> 
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-1 program-conteiner"></div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="medium-margin-bottom col-lg-12">
                 <p class="text-center article-title col-lg-12 low-white-transparence">Corpo Editorial</p>
                 <div class="comissoes-anais-list col-lg-12">
-                    <div class="comissoes-anais-item-list col-lg-4 col-md-4">
+                     <div class="comissoes-anais-item-list medium-margin-bottom col-lg-4 col-md-4">
+                        <div class="item-list-box">
+                            <p class="title low-white-transparence">Equipe Técnica/Operacional</p>
+                            <div class="table-comissoes-box">
+                                <table class="tabela-comissoes">
+                                    <tr>
+                                        <td>Direção Geral do Campus:</td>
+                                        <td><span class="nome">Lucrécia Teresa Gonçalves Petrucci</span>. </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Diretoria de Ensino:</td>
+                                        <td><span class="nome">Gastão Coelho de Aquino Filho.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Coordenação de Comunicação:</td>
+                                        <td><span class="nome">Lidiane Maria da Silva.</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Coordenação do Curso de Licenciatura em Matemática:</td>
+                                        <td><span class="nome">Prof. Baldoino Sonildo da Nóbrega.</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comissoes-anais-item-list medium-margin-bottom col-lg-4 col-md-4">
                         <div class="item-list-box">
                             <p class="title low-white-transparence">Comissão Organizadora</p>
                             <div class="table-comissoes-box">
@@ -109,7 +173,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="comissoes-anais-item-list col-lg-4 col-md-4">
+                    <div class="comissoes-anais-item-list medium-margin-bottom col-lg-4 col-md-4">
                         <div class="item-list-box">
                             <p class="title low-white-transparence">Comitê Científico</p>
                             <div class="table-comissoes-box">
@@ -154,70 +218,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="comissoes-anais-item-list col-lg-4 col-md-4">
-                        <div class="item-list-box">
-                            <p class="title low-white-transparence">Equipe Técnica/Operacional</p>
-                            <div class="table-comissoes-box">
-                                <table class="tabela-comissoes">
-                                    <tr>
-                                        <td>Direção Geral do Campus:</td>
-                                        <td><span class="nome">Lucrécia Teresa Gonçalves Petrucci</span>. </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Diretoria de Ensino:</td>
-                                        <td><span class="nome">Gastão Coelho de Aquino Filho.</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Coordenação de Comunicação:</td>
-                                        <td><span class="nome">Lidiane Maria da Silva.</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Coordenação do Curso de Licenciatura em Matemática:</td>
-                                        <td><span class="nome">Prof. Baldoino Sonildo da Nóbrega.</span></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 container-edicoes">
-                <p class="text-center article-title col-sm-12 low-white-transparence">Edições</p>
-                <div class="col-lg-2 col-md-1 program-conteiner"></div>
-                <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
-                    <a href="">
-                        <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
-                            <p class="text-center edicao low-white-transparence">
-                                Segunda Edição (2015)
-                            </p>
-                            <div class="col-md-12 col-sm-12 img-edicao-box">
-                                <div class="container-ano-edicao text-center">
-                                    <img class="off-load" src="img/logo/logo-ecmat2015-420x420.png">
-                                </div>
-                            </div>
-                            <span style="clear: both; content: ''; display: block; margin: 0;"></span>
-                        </div> 
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
-                    <a href="http://localhost:8080/Ecmat2016/">
-                        <div class="program-day-box"> <!-- Open Program-Day-Box -->
-                            <p class="text-center edicao low-white-transparence">
-                                Terceira Edição (2016)
-                            </p>
-                            <div class="col-md-12 col-sm-12 img-edicao-box">
-                                <div class="container-ano-edicao text-center">
-                                    <img class="off-load" src="img/logo/logo-ecmat2016-420x420.png">
-
-                                </div>
-                            </div>
-                            <span style="clear: both; content: ''; display: block; margin: 0;"></span>
-                        </div> 
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-1 program-conteiner"></div>
             </div>
         </div>
     </div>
