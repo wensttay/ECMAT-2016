@@ -123,24 +123,24 @@
                         <div class="item-list-box">
                             <p class="title low-white-transparence">Equipe Técnica/Operacional</p>
                             <div class="table-comissoes-box">
-                                <table class="tabela-comissoes">
-                                    <tr>
-                                        <td>Direção Geral do Campus:</td>
-                                        <td><span class="nome">Lucrécia Teresa Gonçalves Petrucci</span>. </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Diretoria de Ensino:</td>
-                                        <td><span class="nome">Gastão Coelho de Aquino Filho.</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Coordenação de Comunicação:</td>
-                                        <td><span class="nome">Lidiane Maria da Silva.</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Coordenação do Curso de Licenciatura em Matemática:</td>
-                                        <td><span class="nome">Prof. Baldoino Sonildo da Nóbrega.</span></td>
-                                    </tr>
-                                </table>
+                                <div class="tabela-comissoes">
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Direção Geral do Campus:</div>
+                                        <div class="comissao-people"><span class="nome">Lucrécia Teresa Gonçalves Petrucci</span>.</div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Diretoria de Ensino:</div>
+                                        <div class="comissao-people"><span class="nome">Gastão Coelho de Aquino Filho.</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Coordenação de Comunicação:</div>
+                                        <div class="comissao-people"><span class="nome">Lidiane Maria da Silva.</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Coordenação do Curso de Licenciatura em Matemática:</div>
+                                        <div class="comissao-people"><span class="nome">Prof. Baldoino Sonildo da Nóbrega.</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -148,28 +148,28 @@
                         <div class="item-list-box">
                             <p class="title low-white-transparence">Comissão Organizadora</p>
                             <div class="table-comissoes-box">
-                                <table class="tabela-comissoes">
-                                    <tr>
-                                        <td>Prof. Msc. <span class="nome">José Marcos da Silva</span>. </td>
-                                        <td>E-mail: <span class="email">josemarcos08@yahoo.com.br</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <span class="nome">Balboíno Sonildo da Nóbrega.</span></td>
-                                        <td>E-mail: <span class="email">baldoino.nobrega@ifpb.edu.br</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <span class="nome">José Nunes Aquino.</span></td>
-                                        <td>E-mail: <span class="email">nuneshaglaene@gmail.com</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <span class="nome">Francisco Aureliano Vidal.</span></td>
-                                        <td>E-mail: <span class="email">aurelianovidal@hotmail.com</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <div class="nome">Geraldo Herbetet de Lacerda.</div></td>
-                                        <td>E-mail: <span class="email">geraldo.lacerda@ifpb.edu.br</span></td>
-                                    </tr>
-                                </table>
+                                <div class="tabela-comissoes">
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Msc. <span class="nome">José Marcos da Silva</span>. </div>
+                                        <div class="comissao-people">E-mail: <span class="email">josemarcos08@yahoo.com.br</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <span class="nome">Balboíno Sonildo da Nóbrega.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">baldoino.nobrega@ifpb.edu.br</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <span class="nome">José Nunes Aquino.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">nuneshaglaene@gmail.com</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <span class="nome">Francisco Aureliano Vidal.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">aurelianovidal@hotmail.com</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <div class="nome">Geraldo Herbetet de Lacerda.</div></div>
+                                        <div class="comissao-people">E-mail: <span class="email">geraldo.lacerda@ifpb.edu.br</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -177,44 +177,44 @@
                         <div class="item-list-box">
                             <p class="title low-white-transparence">Comitê Científico</p>
                             <div class="table-comissoes-box">
-                                <table class="tabela-comissoes">
-                                    <tr>
-                                        <td>Prof. Msc. <span class="nome">Nádia Pinheiro Nóbrega.</span></td>
-                                        <td>E-mail: <span class="email">nadia.nobrega@ifpb.edu.br</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <span class="nome">Patrício Luiz de Andrade.</span></td>
-                                        <td>E-mail: <span class="email">patricio.luiz.andrade@gmail.com</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <span class="nome">José Marcos da Silva.</span></td>
-                                        <td>E-mail: <span class="email">josemarcos08@yahoo.com.br</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <span class="nome">Leonardo Ferreira Soares.</span></td>
-                                        <td>E-mail: <span class="email">leonardo.ferreira@ifpb.edu.br</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <span class="nome">Thiago Andrade Fernandes.</span></td>
-                                        <td>E-mail: <span class="email">thiago_taf@hotmail.com</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <span class="nome">Francisco Aureliano Vidal.</span></td>
-                                        <td>E-mail: <span class="email">aurelianovidal@hotmail.com</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <span class="nome">Antônia Edivaneide de Sousa Gonzaga.</span></td>
-                                        <td>E-mail: <span class="email">edivaneidesousa2012@gmail.com</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <span class="nome">Reginaldo Amaral Cordeiro Júnior.</span></td>
-                                        <td>E-mail: <span class="email">reginaldoajunior@gmail.com</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prof. Esp. <span class="nome">Valdecir Teófilo Moreno.</span></td>
-                                        <td>E-mail: <span class="email">valdecir.moreno@ifpb.edu.br</span></td>
-                                    </tr>
-                                </table>
+                                <div class="tabela-comissoes">
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Msc. <span class="nome">Nádia Pinheiro Nóbrega.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">nadia.nobrega@ifpb.edu.br</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <span class="nome">Patrício Luiz de Andrade.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">patricio.luiz.andrade@gmail.com</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <span class="nome">José Marcos da Silva.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">josemarcos08@yahoo.com.br</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <span class="nome">Leonardo Ferreira Soares.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">leonardo.ferreira@ifpb.edu.br</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <span class="nome">Thiago Andrade Fernandes.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">thiago_taf@hotmail.com</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <span class="nome">Francisco Aureliano Vidal.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">aurelianovidal@hotmail.com</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <span class="nome">Antônia Edivaneide de Sousa Gonzaga.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">edivaneidesousa2012@gmail.com</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <span class="nome">Reginaldo Amaral Cordeiro Júnior.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">reginaldoajunior@gmail.com</span></div>
+                                    </div>
+                                    <div class="comissao-people-box">
+                                        <div class="comissao-people">Prof. Esp. <span class="nome">Valdecir Teófilo Moreno.</span></div>
+                                        <div class="comissao-people">E-mail: <span class="email">valdecir.moreno@ifpb.edu.br</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
