@@ -23,7 +23,12 @@
 
 .organization-list{
     display: inline-flex;
-    overflow-x: hidden;
+    overflow-x: scroll;
+}
+@-moz-document url-prefix() { 
+    .organization-list{
+        overflow-x: hidden;
+    }
 }
 
 .list-size-4{
@@ -109,7 +114,7 @@
 .scroll-button{
     font-size: 80px;
     padding: 1em 0;
-    color: rgba(255,255,255, 0.8);
+    color: rgba(255,255,255, 1);
     cursor: pointer;
 }
 
