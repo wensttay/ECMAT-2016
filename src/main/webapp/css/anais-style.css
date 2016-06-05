@@ -81,7 +81,7 @@ and open the template in the editor.
 }
 
 .tabela-comissoes .comissao-people-box:last-child{
-    border-radius: 20px;
+    border-radius: 0 0 10px 10px;
     border-bottom: none;
 }
 
@@ -92,7 +92,6 @@ and open the template in the editor.
 
 .tabela-comissoes .comissao-people-box .comissao-people:first-child{
     padding-top: 10px;
-    margin-top: 10px;
 }
 .tabela-comissoes .comissao-people-box .comissao-people:last-child{
     padding-bottom: 10px;
@@ -108,7 +107,7 @@ and open the template in the editor.
 
 .comissoes-anais-item-list{
     font-size: 22px;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .item-list-box{
