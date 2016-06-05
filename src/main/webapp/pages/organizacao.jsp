@@ -9,7 +9,7 @@
 <article class="container-base invisivel" id="organizacao">
     <div class="container">
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão Geral</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão Geral</p>
         </div>
         <div class="row">
             <div class="organization">
@@ -32,9 +32,6 @@
                                     </div>
                                     <div class="back">
                                         <div class="people">
-                                            <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/geral/Francisco Aureliano Vidal.jpg"/>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +103,7 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão Científica</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão Científica</p>
         </div>
         <div class="row">
             <div class="organization">
@@ -282,7 +279,7 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão de Divulgação</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Divulgação</p>
         </div>
         <div class="row">
             <div class="organization">
@@ -290,26 +287,6 @@
                 <a class="scroll-button scroll-button-right"> > </a>
                 <div class="organization-box">
                     <div class="organization-list list-size-4">
-                        <div class="people-box">
-                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <div class="people">
-                                            <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
-                                            </div>
-                                            <div class="name">
-                                                <p>José Marcos da Silva</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="back">
-                                        <div class="people">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="people-box">
                             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                                 <div class="flipper">
@@ -370,14 +347,34 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>José Marcos da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div> 
             </div>
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão de Patrocínio</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Patrocínio</p>
         </div>
         <div class="row">
             <div class="organization">
@@ -452,7 +449,7 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão de Certificação</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Certificação</p>
         </div>
         <div class="row">
             <div class="organization">
@@ -460,46 +457,6 @@
                 <a class="scroll-button scroll-button-right"> > </a>
                 <div class="organization-box">
                     <div class="organization-list list-size-4">
-                        <div class="people-box">
-                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <div class="people">
-                                            <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
-                                            </div>
-                                            <div class="name">
-                                                <p>Maria José Alves da Silva</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="back">
-                                        <div class="people">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="people-box">
-                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <div class="people">
-                                            <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
-                                            </div>
-                                            <div class="name">
-                                                <p>José Marcos da Silva</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="back">
-                                        <div class="people">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="people-box">
                             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                                 <div class="flipper">
@@ -540,14 +497,54 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Maria José Alves da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>José Marcos da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div> 
             </div>
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12">Comissão de Apoio</p>
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Apoio</p>
         </div>
         <div class="row">
             <div class="organization">
@@ -601,10 +598,10 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img class="off-load" src="img/organizacao/apoio/Diego Ayllo da Silva Simoes.jpg"/>
                                             </div>
                                             <div class="name">
-                                                <p>Daniel Everson da Silva Andrade</p>
+                                                <p>Diego Ayllo da Silva Simões</p>
                                             </div>
                                         </div>
                                     </div>
@@ -621,10 +618,10 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/apoio/Diego Ayllo da Silva Simoes.jpg"/>
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
-                                                <p>Diego Ayllo da Silva Simões</p>
+                                                <p>Daniel Everson da Silva Andrade</p>
                                             </div>
                                         </div>
                                     </div>
@@ -635,7 +632,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                     </div>
                 </div> 
             </div>

@@ -7,17 +7,53 @@ and open the template in the editor.
     Created on : 28/05/2016, 15:43:46
     Author     : Victor Hugo
 */
-.criterios li{
-    margin-bottom: 28px;
+.submissao-box:last-child{
+    margin-bottom: 0;
+}
+.criterios{
+    font-family: WC_RoughTrad;
     font-size: 19px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-align: justify;
 }
 
-.titulo-criterio{
+.criterios p{
+    margin-bottom: 28px;
+}
+
+/*.criterios li{
+    margin-bottom: 28px;
+    display: list-item;
+}*/
+
+/*.criterios a{
+    margin-bottom: 50px;
+}*/
+
+/*.titulo-criterio{
     margin-top: 80px;
     margin-bottom: 40px;
-}
+}*/
 
 .data-submissao{
     font-size: 20px;
     font-weight: bold;
+    padding-bottom: 40px;
+}
+
+.submissao{
+    font-family: WC_RoughTrad;
+    font-size: 19px;
+}
+
+.numeracao-criterio{
+    float: left;
+    height: 100px;
+    margin-right: 15px;
+}
+
+.destaque{
+    /*opacity: 1 !important;*/
+    color: white;
 }

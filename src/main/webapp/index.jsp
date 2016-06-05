@@ -20,6 +20,7 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/construcao-style.css" rel="stylesheet"/>
         <link href="css/contato-style.css" rel="stylesheet">
+        <link href="css/contato-responsive.css" rel="stylesheet">
         <link href="css/inicio-style.css" rel="stylesheet">
         <link href="css/sobre-style.css" rel="stylesheet">
         <link href="css/sobre-responsive.css" rel="stylesheet">
@@ -27,6 +28,7 @@
         <link href="css/organizacao-responsive.css" rel="stylesheet">
         <link href="css/programacao-style.css" rel="stylesheet">
         <link href="css/submissoes-style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/anais-style.css" rel="stylesheet" type="text/css"/>
         <link href="css/responsive.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
@@ -35,13 +37,13 @@
         <div id="container-fullpage">
             <header id="header" class="blackboard-background">
                 <div class="construcao-background"></div>
-                <div id="menu-principal-button" class="menu-button-with-img low-transparent" >
-                    <img src="img/menu/menu-icon.png" />
+                <div id="menu-principal-button" class="menu-button-with-img low-white-transparence" >
+                    <img  class="low-opacity" src="img/menu/menu-icon.png" />
                 </div>
 
                 <a href="#inicio">
-                    <div id="logo-small" class="menu-button-with-img low-transparent">
-                        <img src="img/logo/logo-ecmat2016-75x75.png">
+                    <div id="logo-small" class="menu-button-with-img low-white-transparence">
+                        <img class="low-opacity" src="img/logo/logo-ecmat2016-75x75.png">
                     </div>
                 </a>
                 <nav class="menu-principal-box">
@@ -50,35 +52,31 @@
                             <img src="img/menu/exit-menu-icon.png"/>
                         </li>
 
-                        <li class="principal-list-item page-link item-bordered"><a class="principal-list-item" href="#inicio">Inicio</a></li>
+                        <li class="principal-list-item page-link item-bordered"><a class="item-title" href="#inicio">Inicio</a></li>
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
-                            <a href="#" class="list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                            <a href="#" class="item-title list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="drop-menu blackboard-background">
                                 <li class="drop-menu-item page-link" ><a href="#sobre">Sobre</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#programacao">Programação</a></li>
                                 <li class="drop-menu-item page-link" ><a href="#organizacao">Organização</a></li>
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Galeria</a></li>
-                            </ul>
-                        </li>
-                        <li class="principal-list-item page-link item-bordered" ><a href="#submissoes">Submissões</a></li>
-
-
-                        <li class="principal-list-item menu-button-with-img low-transparent" id="logo-central" ><a href="#inicio">
-                                <img src="img/logo/logo-ecmat2016-75x75.png"></a>
-                        </li>
-                        <li class="principal-list-item item-bordered  principal-list-item-withsublist">
-                            <a href="#" class="list-item-withsublist-title">Documentos  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                            <ul class="drop-menu blackboard-background">
-                                <li class="drop-menu-item page-link" ><a href="#construcao">Anais</a></li>
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Certificados</a></li>
                             </ul>
                         </li>
+                        <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#submissoes">Submissões</a></li>
 
-                        <li class="principal-list-item page-link item-bordered" ><a href="#contato">Contato</a></li>
+
+                        <li class="principal-list-item menu-button-with-img low-opacity" id="logo-central" ><a href="#inicio">
+                                <img src="img/logo/logo-ecmat2016-75x75.png"></a>
+                        </li>
+
+                        <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#anais">Anais</a></li>
+
+                        <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#contato">Contato</a></li>
                         <!--<li class="principal-list-item page-link item-bordered disabled" ><a href="#construcao">Inscrição</a></li>-->
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
                             <a href="#" class="list-item-withsublist-title">Inscrição  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                            <ul class="drop-menu blackboard-background">
+                            <ul class="item-title drop-menu blackboard-background">
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Entrar</a></li>
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Criar Conta</a></li>
                                 <!--                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Minha Conta</a></li>
@@ -87,6 +85,11 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="issn-box">
+                    <div class="issn blackboard-background">
+                        ISSN XXXX-XXX
+                    </div>
+                </div>
             </header>
 
             <div class="background blackboard-background"></div>
@@ -97,14 +100,15 @@
                 <%@ include file="pages/contato.jsp" %>
                 <%@ include file="pages/programacao.jsp" %>
                 <%@ include file="pages/organizacao.jsp" %>
-                <%@ include file="pages/erro.jsp" %>
                 <%@ include file="pages/construcao.jsp" %>
                 <%@ include file="pages/submissoes.jsp" %>
+                <%@ include file="pages/anais.jsp" %>
+
             </section>
 
             <footer id="footer">
                 <p class="text-center">
-                    Desenvolvido por <strong>BroCode</strong>
+                    Desenvolvido por <a href="https://github.com/Hero-Code" target="_blank" style="display: inline; background-color: black; padding: 5px; font-family: WC_RoughTrad; border-radius: 5px; margin-left: 5px;"><strong>HeroCode</strong></a>
                 </p>
             </footer>
         </div>
@@ -118,6 +122,10 @@
         <script src="js/page-controll-script.js"></script>
         <script src="js/organizacao-controll-script.js"></script>
         <script src="js/programacao-table-controll-script.js"></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
+        <!--<script src="js/map-script.js"></script>-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg" type="text/javascript"></script>
+        <script src="js/map-script.js"></script>
 
     </body>
 </html>

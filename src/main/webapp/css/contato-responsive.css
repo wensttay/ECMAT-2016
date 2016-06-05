@@ -1,0 +1,23 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05/06/2016, 01:17:47
+    Author     : wensttay
+*/
+
+@media screen and (max-width: 400px){
+    .dados{
+        width: 200px;
+    }
+    .material-icons { 
+        font-size: 50px !important;
+
+    }
+    .dados-info{
+        margin: 10px;
+        word-break: break-all;
+    }
+}

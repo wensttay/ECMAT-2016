@@ -1,0 +1,159 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/05/2016, 17:00:32
+    Author     : Victor Hugo
+*/
+
+.menu-anais{
+    font-size: 22px;
+    padding-bottom: 60px;
+}
+
+.menu-anais a{
+    display: initial;
+}
+
+.edicao{
+     /*cursor: pointer;*/
+    /*color: rgba(255, 255, 255, 1);*/
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.6);
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.container-ano-edicao{
+    height: 200px;
+}
+
+.container-ano-edicao img{
+    height: 100%;
+    padding: 20px;
+
+    transition: all 0.4s;
+}
+
+.img-edicao-box:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.container-documentos-anais{
+    height: 200px;
+}
+
+.ano-edicao, .documentos-anais{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.ano-edicao{
+    font-family: Rayando;
+    font-size: 90px;
+}
+
+.tabela-comissoes, .table-comissoes-box{
+    width: 100%;
+}
+
+.tabela-comissoes tr{
+    border-bottom: 5px solid rgba(255,255,255,0.2);
+}
+
+.tabela-comissoes tr:last-child{
+    border-bottom: none;
+}
+
+.tabela-comissoes tr td{
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.tabela-comissoes tr:hover{
+    background-color: rgba(255,255,255, 0.2);
+}
+.tabela-comissoes .nome, .tabela-comissoes .email{
+    font-size: 25px;
+    font-family: DiciHandwrite;
+}
+
+.tabela-comissoes tr:last-child{
+    border-radius: 20px;
+}
+
+/*.tabela-comissoes tr:nth-of-type(odd){
+    background-color: rgba(255,255,255,0.2);
+}*/
+
+.tabela-comissoes tr td:first-child{
+    padding-top: 10px;
+    margin-top: 10px;
+}
+.tabela-comissoes tr td:last-child{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.tabela-comissoes tr:last-child td:last-child{
+    margin-bottom: 0;
+}
+
+.comissoes-anais-list{
+    width: 100%;
+}
+
+.comissoes-anais-item-list{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.item-list-box{
+    width: 100%;
+    border: 5px solid rgba(255,255,255,0.6);
+    border-radius: 20px;
+}
+
+.item-list-box .title{
+    background-color: rgba(255,255,255,0.2);
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 5px solid rgba(255,255,255,0.6);
+    font-family: WC_RoughTrad;
+    color: white;
+    font-weight: normal;
+}
+
+.sumario{
+    font-family: WC_RoughTrad;
+    font-size: 22px;
+    list-style-position: inside;
+}
+
+.sumario ul{
+    padding-bottom: 20px;   
+}
+
+.sumario a{
+    display: initial;
+    font-size: 17px;
+    /*text-decoration: underline;*/
+    font-family: ClaireHand;
+    font-weight: bold;
+    /*color: white;*/
+    /*opacity: 1 !important;*/
+}
+
+.eixos-tematicos{
+    padding-bottom: 10px;
+}

@@ -29,7 +29,7 @@
 
 .program-day-box .title{
     cursor: pointer;
-    color: rgba(255, 255, 255, 1);
+    /*color: rgba(255, 255, 255, 1);*/
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.2);
     border-bottom: 5px solid rgba(255, 255, 255, 0.8);
@@ -62,7 +62,7 @@
     padding-left: 0;
 }
 .program-day-box .hour-box .row-box{
-    font-size: 12px;
+    font-size: 14px;
     padding-left: 20px;
     padding-right: 20px;
 }

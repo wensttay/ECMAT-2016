@@ -13,11 +13,11 @@
 
             <div class="col-lg-1 col-md-1 col-sm-1"></div>
             <div class="col-lg-10 col-md-10 col-sm-10">
-                <p class="text-center article-title col-sm-12">Programação</p>
+                <p class="text-center article-title col-sm-12 low-white-transparence">Programação</p>
 
                 <div class="col-lg-4 col-md-4 col-sm-12 program-conteiner"> <!-- Open Container of Day Box -->
                     <div class="program-day-box"> <!-- Open Program-Day-Box -->
-                        <p class="text-center title">Dia 24/08</p>
+                        <p class="text-center title low-white-transparence">Dia 24/08</p>
                         <div class="col-md-12 col-sm-12 img-box">
                             <div class="responsive-container">
                                 <div class="dummy"></div>
@@ -53,7 +53,7 @@
 
                 <div class="col-lg-4 col-md-4 col-sm-12 program-conteiner"> <!-- Open Container of Day Box -->
                     <div class="program-day-box"> <!-- Open Program-Day-Box -->
-                        <p class="text-center title">Dia 25/08</p>
+                        <p class="text-center title low-white-transparence">Dia 25/08</p>
                         <div class="col-md-12 col-sm-12 img-box">
                             <div class="responsive-container">
                                 <div class="dummy"></div>
@@ -99,7 +99,7 @@
 
                 <div class="col-lg-4 col-md-4 col-sm-12 program-conteiner"> <!-- Open Container of Day Box -->
                     <div class="program-day-box"> <!-- Open Program-Day-Box -->
-                        <p class="text-center title">Dia 26/08</p>
+                        <p class="text-center title low-white-transparence">Dia 26/08</p>
                         <div class="col-md-12 col-sm-12 img-box">
                             <div class="responsive-container">
                                 <div class="dummy"></div>
