@@ -113,14 +113,10 @@ and open the template in the editor.
 }
 
 .tabela-comissoes .comissao-people-box .comissao-people:first-child{
-    padding-top: 10px;
+    padding: 15px 15px 0 15px;
 }
 .tabela-comissoes .comissao-people-box .comissao-people:last-child{
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-.tabela-comissoes .comissao-people-box:last-child .comissao-people:last-child{
-    margin-bottom: 0;
+    padding: 0px 15px 15px 15px;
 }
 
 .comissoes-anais-list{
