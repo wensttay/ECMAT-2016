@@ -1,3 +1,1 @@
-web:    java -cp target/classes:target/dependency/* Main 
-
-web: gunicorn
+web: sh target/bin/webapp
