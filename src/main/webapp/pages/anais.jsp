@@ -36,7 +36,7 @@
                             <ol>
                                 <li>
                                     <p class="low-white-transparence">Ensino de Matemática: Tecnologias, Resolução de Problemas, Modelagem Matemática e Atividades Lúdicas;</p>
-                                    <ul>
+                                    <ul class="grup-of-files">
                                         <li>
                                             <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgMElkXzFHckhHX2s/view?usp=sharing" target="_blank">MODELAGEM MATEMÁTICA NO PROCESSO DE ENSINO E APRENDIZAGEM DE PORCENTAGENS</a>        
                                         </li>
@@ -44,7 +44,7 @@
                                 </li>
                                 <li>
                                     <p class="low-white-transparence">Matemática e Sociedade: Políticas Educacionais, Educação Básica e Formação de Professores;</p>
-                                    <ul>
+                                    <ul class="grup-of-files">
                                         <li>
                                             <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgaWNWOGgwSkFzdWs/view?usp=sharing" target="_blank">O ENSINO DA MATEMÁTICA E A RESOLUÇÃO DE PROBLEMAS: UM RELATO DE EXPERIÊNCIA</a>        
                                         </li>
@@ -52,7 +52,7 @@
                                 </li>
                                 <li>
                                     <p class="low-white-transparence">Educação Matemática: Etnomatemática, História e Filosofia da Matemática e Didática da Matemática;</p>
-                                    <ul>
+                                    <ul class="grup-of-files">
                                         <li>
                                             <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgS3VYRlFETjJMNWM/view?usp=sharing" target="_blank">A IMPORTÂNCIA DO ENSINO DE GEOMETRIA NO ENSINO FUNDAMENTAL: UMA BREVE ANÁLISE DO LIVRO DIDÁTICO</a>        
                                         </li>
@@ -60,12 +60,12 @@
                                 </li>
                                 <li>
                                     <p class="low-white-transparence">Matemática Pura;</p>
-                                    <ul>
+                                    <ul class="grup-of-files">
                                     </ul>
                                 </li>
                                 <li>
                                     <p class="low-white-transparence">Matemática e Aplicações;</p>
-                                    <ul>
+                                    <ul class="grup-of-files">
                                     </ul>
                                 </li>
                             </ol>
@@ -116,7 +116,7 @@
         </div>
         
         <div class="row">
-            <div class="medium-margin-bottom col-lg-12">
+            <div class="col-lg-12">
                 <p class="text-center article-title col-lg-12 low-white-transparence">Corpo Editorial</p>
                 <div class="comissoes-anais-list col-lg-12">
                      <div class="comissoes-anais-item-list medium-margin-bottom col-lg-4 col-md-4">

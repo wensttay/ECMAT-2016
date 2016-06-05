@@ -59,7 +59,7 @@
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
                 <div class="col-lg-12 medium-margin-bottom">
-                    <div id="map"></div>
+                    <div class="off-load" id="map"></div>
                     <!--<iframe class="mapa off-load" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0079620122965!2d-38.54710438567306!3d-6.889648769332253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a473a32378c727%3A0x4e45e65b60da5295!2sIFPB+-+Campus+Cajazeiras!5e0!3m2!1spt-BR!2sbr!4v1463258403761" frameborder="0" style="border:0" allowfullscreen></iframe>-->
                 </div>
             </div>

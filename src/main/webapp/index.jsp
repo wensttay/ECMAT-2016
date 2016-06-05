@@ -27,8 +27,9 @@
         <link href="css/organizacao-style.css" rel="stylesheet">
         <link href="css/organizacao-responsive.css" rel="stylesheet">
         <link href="css/programacao-style.css" rel="stylesheet">
-        <link href="css/submissoes-style.css" rel="stylesheet" type="text/css"/>
-        <link href="css/anais-style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/submissoes-style.css" rel="stylesheet"/>
+        <link href="css/anais-style.css" rel="stylesheet">
+        <link href="css/anais-responsive.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
@@ -72,7 +73,7 @@
 
                         <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#anais">Anais</a></li>
 
-                        <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#contato">Contato</a></li>
+                        <li class="principal-list-item page-link item-bordered" ><a class="item-title contact" href="#contato">Contato</a></li>
                         <!--<li class="principal-list-item page-link item-bordered disabled" ><a href="#construcao">Inscrição</a></li>-->
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
                             <a href="#" class="list-item-withsublist-title">Inscrição  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
@@ -118,15 +119,11 @@
         <!-- Bootstrap JavaScript -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <!-- Custom Script for this tamplate -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg&callback=initMap"></script>
         <script src="js/menu-controll-script.js"></script>
         <script src="js/page-controll-script.js"></script>
         <script src="js/organizacao-controll-script.js"></script>
         <script src="js/programacao-table-controll-script.js"></script>
-        <!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
-        <!--<script src="js/map-script.js"></script>-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg" type="text/javascript"></script>
-        <script src="js/map-script.js"></script>
-
     </body>
 </html>
 

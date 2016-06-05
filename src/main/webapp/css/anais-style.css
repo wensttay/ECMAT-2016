@@ -68,13 +68,12 @@ and open the template in the editor.
 }
 
 .tabela-comissoes tr:last-child{
+    border-radius: 20px;
     border-bottom: none;
 }
 
 .tabela-comissoes tr td{
     display: block;
-    padding-right: 10px;
-    padding-left: 10px;
     width: 100%;
     text-align: center;
     font-size: 18px;
@@ -88,9 +87,6 @@ and open the template in the editor.
     font-family: DiciHandwrite;
 }
 
-.tabela-comissoes tr:last-child{
-    border-radius: 20px;
-}
 
 /*.tabela-comissoes tr:nth-of-type(odd){
     background-color: rgba(255,255,255,0.2);
@@ -140,13 +136,21 @@ and open the template in the editor.
     list-style-position: inside;
 }
 
-.sumario ul{
-    padding-bottom: 20px;   
+.sumario ol, .sumario ul{
+    padding: 0;
+}
+.sumario ol, .sumario ul.grup-of-files{
+    margin-left: 40px;
 }
 
+.sumario ul.grup-of-files{
+/*    padding-left: 10px;
+    padding-right: 10px;*/
+    margin-left: 50px;
+    font-size: 17px;
+}
 .sumario a{
     display: initial;
-    font-size: 17px;
     /*text-decoration: underline;*/
     font-family: ClaireHand;
     font-weight: bold;
