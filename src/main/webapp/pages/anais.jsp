@@ -9,18 +9,32 @@
 <article class="container-base invisivel " id="anais">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 menu-anais">
-                <ul>
-                    <li>
-                        <a href="#sobre">Apresentação do III Ecmat 2016</a>
-                    </li>
-                    <li>
-                        <a href="#organizacao">Submissões e Normas para Publicação</a>
-                    </li>   
-                    <li>
-                        <a href="#submissoes">Contato</a>
-                    </li>
-                </ul>
+            <div class="col-md-12 medium-margin-bottom">
+
+                <div class="container-menu-anais col-md-12 text-center">
+
+                    <div class="container-chave-esquerda">
+                        <img src="img/other/chave.png">
+                    </div>
+                    
+                    <ul class="menu-anais">
+                        <li>
+                            <a class="anais-link low-white-transparence" href="#sobre">Apresentação do ECMAT 2016</a>
+                        </li>
+                        <li>
+                            <a class="anais-link low-white-transparence" href="#organizacao">Submissões e Normas para Publicação</a>
+                        </li>   
+                        <li>
+                            <a class="anais-link low-white-transparence" href="#submissoes">Entre em Contato aqui</a>
+                        </li>
+                    </ul>
+                    <div class="container-chave-direita">
+                        <img  src="img/other/chave.png">
+                    </div>
+                    <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+                </div>
+
+
             </div>
         </div>
 
@@ -75,7 +89,7 @@
 
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-md-12 container-edicoes">
                 <p class="text-center article-title col-sm-12 low-white-transparence">Edições</p>
@@ -114,12 +128,12 @@
                 <div class="col-lg-2 col-md-1 program-conteiner"></div>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-lg-12">
                 <p class="text-center article-title col-lg-12 low-white-transparence">Corpo Editorial</p>
                 <div class="comissoes-anais-list col-lg-12">
-                     <div class="comissoes-anais-item-list medium-margin-bottom col-lg-4 col-md-4">
+                    <div class="comissoes-anais-item-list medium-margin-bottom col-lg-4 col-md-4">
                         <div class="item-list-box">
                             <p class="title low-white-transparence">Equipe Técnica/Operacional</p>
                             <div class="table-comissoes-box">
