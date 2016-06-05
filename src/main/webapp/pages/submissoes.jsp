@@ -15,30 +15,30 @@
                     * Submissões a partir de 15 de junho de 2016.
                 </p>-->
                 <div class="col-lg-12 submissao">
-                    <p class="text-center article-title col-sm-12 low-white-transparence">Submissão</p>
+                    <p class="text-center article-title col-sm-12 low-white-transparence">Envio de Submissão</p>
                     <p>
                         <span class="destaque">A partir de 15 de junho de 2016 estarão sendo aceitas submissões de trabalhos para o III ECMAT</span><span class="low-white-transparence">, os autores interessados em submeter trabalhos, deverão <span class="destaque">enviar um e-mail para ecmat2016@gmail.com</span>, com as seguinte informações: </span>
                     </p>
-                    <ul class="low-white-transparence">
+                    <ul class="rules low-white-transparence">
                         <li>
-                            Assunto do e-mail: submissão
+                            <p>Assunto do e-mail: submissão</p>
                         </li>
                         <li>
-                            O e-mail deve conter:
+                            <p>O e-mail deve conter:</p>
                             <ul>
                                 <li>
-                                    Título;
+                                    <p>Título;</p>
                                 </li>
                                 <li>
-                                    Nome da Instituição;
+                                    <p>Nome da Instituição;</p>
                                 </li>
                                 <li>
-                                    Nome, CPF, telefone e e-mail do autores (até QUATRO), e identificar qual entre os autores citados é o orientador.
+                                    <p>Nome, CPF, telefone e e-mail do autores (até QUATRO), e identificar qual entre os autores citados é o orientador.</p>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <span class="destaque">Anexar o arquivo de submissão.</span>
+                            <p><span class="destaque">Anexar o arquivo de submissão.</span></p>
                         </li>
                     </ul>
                 </div>
