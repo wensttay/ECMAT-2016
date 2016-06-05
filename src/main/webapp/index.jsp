@@ -119,7 +119,7 @@
         <!-- Bootstrap JavaScript -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <!-- Custom Script for this tamplate -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg&callback=initMap"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg"></script>
         <script src="js/menu-controll-script.js"></script>
         <script src="js/page-controll-script.js"></script>
         <script src="js/organizacao-controll-script.js"></script>
