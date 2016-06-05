@@ -25,6 +25,7 @@
     display: inline-flex;
     overflow-x: scroll;
 }
+
 @-moz-document url-prefix() { 
     .organization-list{
         overflow-x: hidden;
