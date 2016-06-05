@@ -8,18 +8,40 @@ and open the template in the editor.
     Author     : Victor Hugo
 */
 
+.container-menu-anais{
+    margin-top: 50px;
+}
+
 .menu-anais{
     font-size: 22px;
     padding-bottom: 60px;
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+    padding: 0px;
+    font-family: WC_RoughTrad;
+    font-weight: normal;   
+    vertical-align: middle;
 }
 
-.menu-anais a{
+.anais-link{
     display: initial;
+    line-height: 2em;
+}
+
+.container-chave-esquerda img, .container-chave-direita img{
+    height: 130px;
+}
+
+.container-chave-esquerda, .container-chave-direita{
+    display: inline-block;
+}
+
+.container-chave-direita{
+    transform: rotate(180deg);
 }
 
 .edicao{
-     /*cursor: pointer;*/
-    /*color: rgba(255, 255, 255, 1);*/
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.2);
     border-bottom: 5px solid rgba(255, 255, 255, 0.6);
@@ -141,8 +163,8 @@ and open the template in the editor.
 }
 
 .sumario ul.grup-of-files{
-/*    padding-left: 10px;
-    padding-right: 10px;*/
+    /*    padding-left: 10px;
+        padding-right: 10px;*/
     margin-left: 50px;
     font-size: 17px;
 }
@@ -157,4 +179,8 @@ and open the template in the editor.
 
 .eixos-tematicos{
     padding-bottom: 10px;
+}
+
+.anais-link:hover{
+    color: white !important;
 }

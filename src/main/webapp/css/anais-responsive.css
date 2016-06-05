@@ -24,3 +24,35 @@ and open the template in the editor.
         font-size: 20px;
     }
 }
+
+@media screen and (max-width: 580px){
+
+    .menu-anais{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    .menu-anais{
+        font-size: 12px;
+    }
+
+    .container-chave-esquerda img, .container-chave-direita img{
+        height: 90px;
+    }
+
+}
+
+@media screen and (max-width: 345px){
+
+    .menu-anais{
+        font-size: 10px;
+    }
+
+    .anais-link{
+        line-height: 2.5em;
+    }
+
+}

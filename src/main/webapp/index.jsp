@@ -74,16 +74,17 @@
                         <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#anais">Anais</a></li>
 
                         <li class="principal-list-item page-link item-bordered" ><a class="item-title contact" href="#contato">Contato</a></li>
+                        <li class="principal-list-item page-link item-bordered disabled" ><a class="item-title contact" href="#construcao">Inscrição</a></li>
                         <!--<li class="principal-list-item page-link item-bordered disabled" ><a href="#construcao">Inscrição</a></li>-->
-                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
+<!--                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
                             <a href="#" class="list-item-withsublist-title">Inscrição  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="item-title drop-menu blackboard-background">
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Entrar</a></li>
                                 <li class="drop-menu-item page-link disabled" ><a href="#construcao">Criar Conta</a></li>
-                                <!--                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Minha Conta</a></li>
-                                                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Sair</a></li>-->
+                                                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Minha Conta</a></li>
+                                                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Sair</a></li>
                             </ul>
-                        </li>
+                        </li>-->
                     </ul>
                 </nav>
                 <div class="issn-box">
