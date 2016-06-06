@@ -1,10 +1,13 @@
-@font-face { font-family: ChalkDust; src: url('../fonts/ChalkDust.ttf');} 
-@font-face { font-family: Rayando; src: url('../fonts/rayando.ttf');} 
-@font-face { font-family: Rudiment; src: url('../fonts/Rudiment.ttf');} 
-@font-face { font-family: ClaireHand; src: url('../fonts/ClaireHandRegular.ttf');} 
+/* 
+    Created on : 15/05/2016, 01:52:33
+    Author     : Wensttay
+*/
+
 @font-face { font-family: WC_RoughTrad; src: url('../fonts/WC_RoughTrad.ttf');} 
-@font-face { font-family: erasdust; src: url('../fonts/erasdust.ttf');} 
-@font-face { font-family: DancingScript; src: url('../fonts/DancingScript-Regular.ttf');} 
+@font-face { font-family: ClaireHand; src: url('../fonts/ClaireHandRegular.ttf');}
+@font-face { font-family: Rayando; src: url('../fonts/rayando.ttf');} 
+@font-face { font-family: DESYREL; src: url('../fonts/DESYREL_.ttf');}
+@font-face { font-family: DiciHandwrite; src: url('../fonts/DiciHandwrite.ttf');}
 
 .vermelho{background-color: red;}
 .verde{background-color: green;}
@@ -18,6 +21,24 @@ a:active, a:link, a:hover, a:visited ,a{
     text-decoration: none;
     color: white;
     display: block;
+}
+.disabled,
+.disabled a{
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+}
+
+.medium-margin-bottom{
+    margin-bottom: 50px;
+}
+
+.hight-margin-bottom{
+    margin-bottom: 100px;
+}
+
+.disabled:hover{
+    opacity: 0.2;
+    color: rgba(255,255,255, 0.8);
 }
 
 html,body { 
@@ -33,12 +54,20 @@ p{
     margin: 0;
 }
 
-p, li, .low-transparent{
+.low-opacity{
     opacity: 0.8;
+}
+
+.low-white-transparence{
+    color: rgba(255,255,255,0.8) !important;
 }
 
 .invisivel{}
 .exibindo{}
+
+.off-load{
+    display: none !important;
+}
 
 .article-title{
     font-family: WC_RoughTrad;
@@ -47,6 +76,16 @@ p, li, .low-transparent{
     border-width: 0px 0px 5px 0px;
     border-color: rgba(255, 255, 255, 0.8);
     font-size: 28px;
+    margin-bottom: 35px;
+}
+
+.article-title-long{
+    font-family: WC_RoughTrad;
+    padding: 10px auto;
+    border-style: solid;
+    border-width: 0px 0px 5px 0px;
+    border-color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
     margin-bottom: 35px;
 }
 
@@ -74,7 +113,7 @@ p, li, .low-transparent{
 
 .blackboard-background {
     position: fixed;
-    background-image: url('../img/background/blackboard.png');
+    background-image: url('../img/background/blackboard.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -82,9 +121,34 @@ p, li, .low-transparent{
 }
 
 header{
-    padding:20px 0;
+    padding: 20px 0;
     z-index: 999;
     width: 100%;
+    border-bottom: 5px solid rgba(255,255,255,0.6);
+}
+
+.issn-box{
+    margin: 0 auto;
+    width: 200px;
+}
+
+.issn{
+    color: rgba(255,255,255, 0.6);
+    font-size: 14px;
+    font-weight: bold;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+    z-index: -1;
+    /*border-bottom: 5px solid rgba(255,255,255,0.6);*/
+    /*border-left: 5px solid rgba(255,255,255,0.6);*/
+    /*border-right: 5px solid rgba(255,255,255,0.6);*/
+    right: 0;
+    display: fixed;
+    position: absolute;
+    margin-top: -10px;
+    border-radius: 0 0 0 20px;
+    /*border-radius: 0 0 20px 20px;*/
 }
 
 section{
@@ -109,6 +173,7 @@ nav{
     height: 80px;
     padding: 0px;
     margin: 0px;
+    color: rgba(255,255,255, 0.8);
 }
 
 
@@ -141,19 +206,21 @@ nav{
     display: none;
 }
 
-.menu-principal-box ul.principal-list li.principal-list-item:hover{
-    opacity: 1;
+.menu-principal-box ul.principal-list li.principal-list-item:hover a.item-title{
     color: rgba(255, 255, 255, 1);
 }
 .menu-principal-box ul.principal-list li.item-bordered:hover{
     border-radius: 20px;
-    border: 4px solid rgba(255, 255, 255, 1);
+    border: 4px solid rgba(255, 255, 255, 0.8);
 }
 .menu-principal-box ul.principal-list li.principal-list-item-withsublist{
     border-radius: 20px 20px 0px 0px !important;
 }
 .menu-principal-box ul.principal-list li.principal-list-item-withsublist:hover{
-    border: 4px dashed rgba(255, 255, 255, 1) !important;
+    border: 4px dashed rgba(255, 255, 255, 0.8) !important;
+}
+.menu-principal-box ul.principal-list li.principal-list-item-withsublist .list-item-withsublist-title{
+    cursor: default;
 }
 li.page-link:hover{
     background-color: rgba(255, 255, 255, 0.2);   
@@ -168,7 +235,7 @@ ul.drop-menu{
     margin-left: -11px;
     margin-top: 7px;
     list-style: none;
-    border: 4px solid rgba(255, 255, 255, 1);
+    border: 4px solid rgba(255, 255, 255, 0.8);
     position: fixed;
     padding: 0px;
     border-radius: 0px 0px 20px 20px;
@@ -176,7 +243,10 @@ ul.drop-menu{
 
 ul.drop-menu,
 .menu-principal-box ul.principal-list li.principal-list-item{
-    width: 150px;
+    width: 155px;    
+}
+.menu-principal-box ul.principal-list li.principal-list-item a{
+    color: rgba(255,255,255, 0.8);
 }
 
 .menu-principal-box ul.principal-list li.principal-list-item{
@@ -189,14 +259,14 @@ ul.drop-menu,
 
 ul.drop-menu li.drop-menu-item{
     /*padding: 10px 0;*/
-    border-bottom: 5px solid rgba(255, 255, 255, 1);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.8);
     list-style: none;
     display: block !important;
 }
 ul.drop-menu li.drop-menu-item:last-child{
     border-bottom: none;
 }
-ul.drop-menu li.drop-menu-item:hover{
+ul.drop-menu li.drop-menu-item:hover a{
     opacity: 1;
     color: rgba(255, 255, 255, 1);
 }
@@ -241,3 +311,6 @@ footer p{
 }
 /* END */
 
+#footer{
+    z-index: 9999;
+}

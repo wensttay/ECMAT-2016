@@ -6,100 +6,637 @@
 
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<article class="container-base invisivel sobre-font" id="organizacao">
+<article class="container-base invisivel" id="organizacao">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center padding-extra-high"><p>Comissão Geral</p></div>
-            <div class="col-sm-12 col-md-12 evento-box">
-                <div class="col-sm-6 col-md-4">
-
-                    <div class="organizador">
-                        <img class="fita-esquerda" src="img/organizacao/fita_adesiva.png">
-
-                        <div class="card card-askew">
-                            <div class="card-header">
-                                <img src="img/organizacao/victus.jpg" >
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão Geral</p>
+        </div>
+        <div class="row">
+            <div class="organization">
+                <a class="scroll-button scroll-button-left disabled"> < </a>
+                <a class="scroll-button scroll-button-right"> > </a>
+                <div class="organization-box">
+                    <div class="organization-list list-size-4">
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/geral/Baldoino Sonildo da Nobrega.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Balboíno Sonildo da Nóbrega</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="nome">
-                                Victor Hugo da Silva Ribeiro
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/geral/Francisco Aureliano Vidal.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Francisco Aureliano Vidal</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/geral/Jose Nunes Aquino.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>José Nunes Aquino</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>José Marcos da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="organizador">
-                        <img class="fita-meio" src="img/organizacao/fita_adesiva.png">
-                        <div class="card card-straight">
-                            <div class="card-header">
-                                <img src="img/organizacao/wens.jpg" >
-                            </div>
-                            <div class="nome">
-                                Victor Hugo da Silva Ribeiro
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="organizador">
-                        <img class="fita-esquerda" src="img/organizacao/fita_adesiva.png">
-
-                        <div class="card card-askew">
-                            <div class="card-header">
-                                <img src="img/organizacao/victus.jpg" >
-                            </div>
-                            <div class="nome">
-                                Victor Hugo da Silva Ribeiro
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--                <div class="col-sm-6 col-md-4 padding-medium organizador">
-                                <a href="#">
-                                    <img class="organizador-foto" src="img/organizacao/wens.jpg">
-                                    <div class="poraloide text-center">
-                                        <img class="" src="img/organizacao/poraloide_2.png">
-                                    </div>
-                                </a>
-                            </div>-->
-            <!--                <div class="col-sm-6 col-md-4 padding-medium organizador">
-                                <a href="#">
-                                    <div class="organizador-foto text-center">
-                                        <img src="img/organizacao/poraloide_3.png">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 col-md-4 padding-medium organizador">
-                                <a href="#">
-                                    <div class="organizador-foto text-center">
-                                        <img src="img/organizacao/poraloide_1.png">
-                                    </div>
-                                </a>
-                            </div>-->
-            <!--</div>-->
-            <div class="col-md-12 text-center padding-extra-high"><p>Comissão Científica</p></div>
-            <div class="col-md-12 evento-box">
-                <br><br><br><br><br>
-            </div>
-            <div class="col-md-12 text-center padding-extra-high"><p>Comissão de Divulgação</p></div>
-            <div class="col-md-12 evento-box">
-                <br><br><br><br><br>
-            </div>
-            <div class="col-md-12 text-center padding-extra-high"><p>Comissão de Patrocínio</p></div>
-            <div class="col-md-12 evento-box">
-                <br><br><br><br><br>
-            </div>
-            <div class="col-md-12 text-center padding-extra-high"><p>Comissão de Certificação</p></div>
-            <div class="col-md-12 evento-box">
-                <br><br><br><br><br>
-            </div>
-            <div class="col-md-12 text-center padding-extra-high"><p>Comissão de Apoio</p></div>
-            <div class="col-md-12 evento-box">
-                <br><br><br><br><br>
+                </div> 
             </div>
         </div>
-    </div>
 
+        <div class="row">
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão Científica</p>
+        </div>
+        <div class="row">
+            <div class="organization">
+                <a class="scroll-button scroll-button-left disabled"> < </a>
+                <a class="scroll-button scroll-button-right"> > </a>
+                <div class="organization-box">
+                    <div class="organization-list list-size-4">
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/cientifica/Nadia Pinheiro Nobrega.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Nádia Pinheiro Nóbrega</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/cientifica/Patricio Luiz de Andrade.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Patrício Luiz de Andrade</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/cientifica/Leonardo Ferreira Soares.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Leonardo Ferreira Soares</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/cientifica/Thiago Andrade Fernandes.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Thiago Andrade Fernandes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/geral/Francisco Aureliano Vidal.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Francisco Aureliano Vidal</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>José Marcos da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Maria José Alves da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Antônia Edivaneide de Sousa Gonzaga</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Divulgação</p>
+        </div>
+        <div class="row">
+            <div class="organization">
+                <a class="scroll-button scroll-button-left disabled"> < </a>
+                <a class="scroll-button scroll-button-right"> > </a>
+                <div class="organization-box">
+                    <div class="organization-list list-size-4">
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/geral/Jose Nunes Aquino.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>José Nunes Aquino</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/divulgacao/Geraldo Herbetet de Lacerda.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Geraldo Herbetet de Lacerda</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Marcos Antonio Petrucci de Assis</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>José Marcos da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Patrocínio</p>
+        </div>
+        <div class="row">
+            <div class="organization">
+                <a class="scroll-button scroll-button-left disabled"> < </a>
+                <a class="scroll-button scroll-button-right"> > </a>
+                <div class="organization-box">
+                    <div class="organization-list list-size-3">
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/divulgacao/Geraldo Herbetet de Lacerda.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Geraldo Herbetet de Lacerda</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/geral/Baldoino Sonildo da Nobrega.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Baldoíno Sonildo da Nóbrega</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Marcos Antonio Petrucci de Assis</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Certificação</p>
+        </div>
+        <div class="row">
+            <div class="organization">
+                <a class="scroll-button scroll-button-left disabled"> < </a>
+                <a class="scroll-button scroll-button-right"> > </a>
+                <div class="organization-box">
+                    <div class="organization-list list-size-4">
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/geral/Jose Nunes Aquino.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>José Nunes Aquino</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/geral/Baldoino Sonildo da Nobrega.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Baldoíno Sonildo da Nóbrega</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Maria José Alves da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>José Marcos da Silva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Apoio</p>
+        </div>
+        <div class="row">
+            <div class="organization">
+                <a class="scroll-button scroll-button-left disabled"> < </a>
+                <a class="scroll-button scroll-button-right"> > </a>
+                <div class="organization-box">
+                    <div class="organization-list list-size-4">
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/apoio/wensttay-de-sousa-alencar.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Wensttay de Sousa Alencar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/apoio/victor-hugo-da-silva-ribeiro.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Victor Hugo da Silva Ribeiro</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/apoio/Diego Ayllo da Silva Simoes.jpg"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Diego Ayllo da Silva Simões</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="people-box">
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <div class="people">
+                                            <div class="photo-box">
+                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                            </div>
+                                            <div class="name">
+                                                <p>Daniel Everson da Silva Andrade</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="people">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+    </div>
 </article>

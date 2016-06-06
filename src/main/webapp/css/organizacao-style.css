@@ -1,104 +1,175 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : 15/05/2016, 01:50:49
     Author     : Victor Hugo
 */
-
-.nome{
-    text-align: center;
-    color: black;
-    font-family: DancingScript;
-    font-size: 22px;
-    margin: 15px;
+.organization{
+    border: 5px dashed rgba(255,255,255,0.8);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 100px;
 }
 
-.organizador{
+.organization-box{
+    margin: 0 auto;
     display: table;
-    margin: 0px auto;
-    padding-bottom: 15px;
 }
 
-.fita-esquerda{
-    height: 25px;
-    width: 85px;
-    transform: rotate(-20deg);
-    top: 12px;
-    left: -15px;
-    position: relative;
+.organization-list,
+.people{
+    margin: 0;
+    padding: 0;
 }
 
-.fita-meio{
-    height: 25px;
-    width: 85px;
-    top: 12px;
-    left: 25%;
-    position: relative;
+.organization-list{
+    display: inline-flex;
+    overflow-x: scroll;
 }
 
-.card{
-    margin: 0px auto;
-    /*    margin-bottom: 30px;
-        margin-top: 20px;*/
-    padding-top: 5px;
-    /*width: 230px;*/
-    display: table;
-    /*min-width: 170px;*/
-    max-width: 200px;
-    border-radius: 2px;
-    background: #fff;
-    transition: 0.5s;
-    box-shadow: 6px 7px 2px -7px rgba(0,0,0,0.75);
+@-moz-document url-prefix() { 
+    .organization-list{
+        overflow-x: hidden;
+    }
 }
 
-.card-askew{
-    transform: rotate(5deg);
+.list-size-4{
+    width: 840px;
+}
+.list-size-3{
+    width: 630px;
+}
+.list-size-2{
+    width: 420px;
+}
+.list-size-1{
+    width: 210px;
 }
 
-.card-header{
-    margin: 15px;
-    height: 160px;
-    overflow: hidden;
+::-webkit-scrollbar{
+    display: none;
 }
 
-.card-header img{
-    width: 100%;
-    height: 100%;
-}
-/*
-.card-askew:hover{
-    transition: 0.2s;
-    transform: rotate(0deg);
-    transform: scale(1.1);
+.people{
+    height: 240px;
 }
 
-.card-straight:hover{
-    transition: 0.2s;
-    transform: scale(1.1);
-}*/
+.people-box{
+    width: 210px;
+    height: 270px;
+    max-width: 210px;
+    max-height: 270px;
+    display: table-cell;
+    padding: 15px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .people-box{
+        min-width: 210px;
+    }
+}
 
+.people{
+    background-color: rgba(255, 255, 255, 1);
+    /*cursor: pointer;*/
+    box-shadow: 0px 0px 15px black;
+    /*box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);*/
+    -webkit-filter: grayscale();
+    filter: grayscale(1);
+    min-width: 180px;
+    max-width: 180px;
+}
 
-
-/*.organizador{
-    -webkit-filter: grayscale(100%);  Chrome 19+ & Safari 6+ 
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");  Firefox 3.5+ 
-    filter: gray;  IE6-9 
-    -o-transition: all 0.5s;  Opera 
-    -moz-transition: all 0.5s;  Firefox 
-    -webkit-transition: all 0.5s;  Safari 
-    transition: all 0.5s;
-}*/
-
-
-/*
-.organizador:hover{
-    -webkit-filter: grayscale(0%);  Chrome 19+ & Safari 6+ 
+/*.people:hover{
+    -webkit-filter: none;
     filter: none;
-    -o-transition: all 0.5s;  Opera 
-    -moz-transition: all 0.5s;  Firefox 
-    -webkit-transition: all 0.5s;  Safari 
-    transition: all 0.5s;
 }*/
+
+.people .photo-box{
+    max-height: 180px;
+    min-height: 180px;
+    max-width: 180px;
+    min-width: 180px;
+
+    padding: 10px;
+    text-align: center;
+}
+
+.people .photo-box img{
+    /*height: 100%;*/
+    /*width: 100%;*/
+    max-width: 160px;
+    max-height: 160px;
+}
+
+.people .name{
+    padding: 0 10px 10px 10px;
+    height: 60px;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    line-height: 110%;
+    /*font-weight: bold;*/
+    font-family: DiciHandwrite;
+}
+
+.scroll-button{
+    font-size: 80px;
+    padding: 1em 0;
+    color: rgba(255,255,255, 1);
+    cursor: pointer;
+}
+
+.scroll-button a{
+    padding:0px;
+    margin:0px;
+}
+
+.scroll-button-left{
+    margin-left: 50px;
+    float: left;
+}
+.scroll-button-right{
+    margin-right: 50px;
+    float: right;
+}
+
+/* continua a declaração de perspectiva para o container geral 
+.flip-container { 
+    perspective: 1000; 
+    transform-style: preserve-3d; 
+}  	
+
+  MODIFICADO! vira os containers frente e verso quando o mouse passa em cima 
+.flip-container:hover .back { transform: rotateY(0deg); }  	
+.flip-container:hover .front { transform: rotateY(180deg); }    
+.flip-container, .front, .back { 
+    width: 180px;
+    height: 240px; 
+}    
+
+ define a velocidade da animação 
+.flipper {  	
+    transition: 0.6s;  	
+    transform-style: preserve-3d;    	
+    position: relative;  
+}    
+
+ esconde o verso durante a animação 
+.front, .back { 
+    backface-visibility: hidden;  	
+    transition: 0.6s;  	
+    transform-style: preserve-3d;    	
+    position: absolute;  	
+    top: 0;  	
+    left: 0;  
+}    
+
+  MODIFICADO! frente posicionada sobre o fundo 
+.front {  	
+    z-index: 2;  	
+    transform: rotateY(0deg);  
+}    
+
+ verso inicialmente escondido 
+.back { transform: rotateY(-180deg); }  */
+
+.back{ display: none; }

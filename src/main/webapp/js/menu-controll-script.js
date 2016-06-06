@@ -1,8 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 $('a[href^="#"]').bind('click', function (evento) {
     var destino = $(this).attr('href'), $destino = $(destino);
@@ -12,6 +7,20 @@ $('a[href^="#"]').bind('click', function (evento) {
 
     if ($destino.length && !$origem.is($destino)) {
         $origem.fadeOut(function () {
+
+            if (destino === '#construcao') {
+                var pageConstruct = document.getElementsByClassName('construcao-background');
+                
+                for (var i = pageConstruct.length - 1; i >= 0; i--) {
+                    pageConstruct[i].style.display = 'block';
+                }
+            } else {
+                var pageConstruct = document.getElementsByClassName('construcao-background');
+
+                for (var i = pageConstruct.length - 1; i >= 0; i--) {
+                    pageConstruct[i].style.display = 'none';
+                }
+            }
 
             $origem.removeClass('exibindo');
             $origem.addClass('invisivel');
@@ -56,7 +65,6 @@ function menuSlideRight() {
 
 function dropDownSubmenu() {
     if ($(this).find("ul").css('display') === 'none') {
-
         $(this).find('.list-item-withsublist-title span.glyphicon').removeClass('glyphicon-triangle-bottom');
         $(this).find('.list-item-withsublist-title span.glyphicon').addClass('glyphicon-triangle-top');
         $(this).find("ul").css("visibility", "visible");
@@ -64,6 +72,7 @@ function dropDownSubmenu() {
         $(this).find("ul").css("display", 'block');
 
         $('.sublist-isOpen').find("ul").slideUp();
+        $('.sublist-isOpen').find(".list-item-withsublist-title").css('border-top', 'none');
         $('.sublist-isOpen').find('.list-item-withsublist-title span.glyphicon').addClass('glyphicon-triangle-bottom');
         $('.sublist-isOpen').find('.list-item-withsublist-title span.glyphicon').removeClass('glyphicon-triangle-top');
 
