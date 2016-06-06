@@ -95,7 +95,7 @@
                 <p class="text-center article-title col-sm-12 low-white-transparence">Edições</p>
                 <div class="col-lg-2 col-md-1 program-conteiner"></div>
                 <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
-                    <a href="">
+                    <a href="http://www.ecmat2016.com.br/">
                         <div class="program-day-box program-conteiner"> <!-- Open Program-Day-Box -->
                             <p class="text-center edicao low-white-transparence">
                                 Segunda Edição (2015)
@@ -110,7 +110,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">
-                    <a href="http://localhost:8080/Ecmat2016/">
+                    <a href="http://www.ecmat2016.com.br/">
                         <div class="program-day-box"> <!-- Open Program-Day-Box -->
                             <p class="text-center edicao low-white-transparence">
                                 Terceira Edição (2016)
