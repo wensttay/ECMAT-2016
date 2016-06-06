@@ -40,7 +40,7 @@
 
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 hight-margin-bottom">
                 <p class="text-center article-title col-sm-12 low-white-transparence">Sumário</p>
 
                 <div class="sumario">
@@ -91,7 +91,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12 container-edicoes">
+            <div class="col-md-12 medium-margin-bottom">
                 <p class="text-center article-title col-sm-12 low-white-transparence">Edições</p>
                 <div class="col-lg-2 col-md-1 program-conteiner"></div>
                 <div class="col-lg-4 col-md-5 col-sm-12 program-conteiner">

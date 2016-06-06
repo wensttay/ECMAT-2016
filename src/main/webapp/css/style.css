@@ -32,6 +32,10 @@ a:active, a:link, a:hover, a:visited ,a{
     margin-bottom: 50px;
 }
 
+.hight-margin-bottom{
+    margin-bottom: 100px;
+}
+
 .disabled:hover{
     opacity: 0.2;
     color: rgba(255,255,255, 0.8);
