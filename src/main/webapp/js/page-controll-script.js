@@ -26,7 +26,7 @@ function init() {
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(-6.889654, -38.544916),
         map: map,
-        title: 'IFPB'
+        title: 'IFPB - Campus Cajazeiras: \n\ - Rua José Dantas Nobres, 131 - Lot. Jardim Oasis, \n\ Cajazeiras - PB, 58900-000'
     });
 }
 

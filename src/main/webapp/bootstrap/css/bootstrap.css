@@ -1119,8 +1119,8 @@ img {
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
-.carousel-inner > .row-box > img,
-.carousel-inner > .row-box > a > img {
+.carousel-inner > .row-colum > img,
+.carousel-inner > .row-colum > a > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -6245,19 +6245,19 @@ button.close {
   width: 100%;
   overflow: hidden;
 }
-.carousel-inner > .row-box {
+.carousel-inner > .row-colum {
   position: relative;
   display: none;
   -webkit-transition: .6s ease-in-out left;
        -o-transition: .6s ease-in-out left;
           transition: .6s ease-in-out left;
 }
-.carousel-inner > .row-box > img,
-.carousel-inner > .row-box > a > img {
+.carousel-inner > .row-colum > img,
+.carousel-inner > .row-colum > a > img {
   line-height: 1;
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel-inner > .row-box {
+  .carousel-inner > .row-colum {
     -webkit-transition: -webkit-transform .6s ease-in-out;
          -o-transition:      -o-transform .6s ease-in-out;
             transition:         transform .6s ease-in-out;
@@ -6267,21 +6267,21 @@ button.close {
     -webkit-perspective: 1000px;
             perspective: 1000px;
   }
-  .carousel-inner > .row-box.next,
-  .carousel-inner > .row-box.active.right {
+  .carousel-inner > .row-colum.next,
+  .carousel-inner > .row-colum.active.right {
     left: 0;
     -webkit-transform: translate3d(100%, 0, 0);
             transform: translate3d(100%, 0, 0);
   }
-  .carousel-inner > .row-box.prev,
-  .carousel-inner > .row-box.active.left {
+  .carousel-inner > .row-colum.prev,
+  .carousel-inner > .row-colum.active.left {
     left: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
             transform: translate3d(-100%, 0, 0);
   }
-  .carousel-inner > .row-box.next.left,
-  .carousel-inner > .row-box.prev.right,
-  .carousel-inner > .row-box.active {
+  .carousel-inner > .row-colum.next.left,
+  .carousel-inner > .row-colum.prev.right,
+  .carousel-inner > .row-colum.active {
     left: 0;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);

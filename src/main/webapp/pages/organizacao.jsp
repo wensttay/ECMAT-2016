@@ -9,10 +9,10 @@
 <article class="container-base invisivel" id="organizacao">
     <div class="container">
         <div class="row">
-            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão Geral</p>
+            <p class="article-title default-border-color col-sm-12 default-low-color-white-transparence">Comissão Geral</p>
         </div>
         <div class="row">
-            <div class="organization">
+            <div class="organization default-dashed-border">
                 <a class="scroll-button scroll-button-left disabled"> < </a>
                 <a class="scroll-button scroll-button-right"> > </a>
                 <div class="organization-box">
@@ -23,10 +23,12 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/geral/Baldoino Sonildo da Nobrega.jpg"/>
+                                                <img alt="Fotografia de Baldoino Sonildo da Nóbrega"
+                                                    title="Fotografia de Baldoino Sonildo da Nóbrega"
+                                                    class="off-load" src="img/organizacao/geral/Baldoino Sonildo da Nobrega.jpg"/>
                                             </div>
                                             <div class="name">
-                                                <p>Balboíno Sonildo da Nóbrega</p>
+                                                <p>Baldoino Sonildo da Nóbrega</p>
                                             </div>
                                         </div>
                                     </div>
@@ -43,7 +45,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/geral/Francisco Aureliano Vidal.jpg"/>
+                                                <img alt="Fotografia de Francisco Aureliano Vidal"
+                                                    title="Fotografia de Francisco Aureliano Vidal"
+                                                    class="off-load" src="img/organizacao/geral/Francisco Aureliano Vidal.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Francisco Aureliano Vidal</p>
@@ -63,7 +67,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/geral/Jose Nunes Aquino.jpg"/>
+                                                <img alt="Fotografia de José Nunes Aquino"
+                                                    title="Fotografia de José Nunes Aquino"
+                                                    class="off-load" src="img/organizacao/geral/Jose Nunes Aquino.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Nunes Aquino</p>
@@ -83,7 +89,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img alt="Fotografia de José Marcos da Silva"
+                                                    title="Fotografia de José Marcos da Silva"
+                                                    class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Marcos da Silva</p>
@@ -103,10 +111,10 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão Científica</p>
+            <p class="article-title default-border-color col-sm-12 default-low-color-white-transparence">Comissão Científica</p>
         </div>
         <div class="row">
-            <div class="organization">
+            <div class="organization default-dashed-border">
                 <a class="scroll-button scroll-button-left disabled"> < </a>
                 <a class="scroll-button scroll-button-right"> > </a>
                 <div class="organization-box">
@@ -117,7 +125,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/cientifica/Nadia Pinheiro Nobrega.jpg"/>
+                                                <img alt="Fotografia de Nádia Pinheiro Nóbrega"
+                                                    title="Fotografia de Nádia Pinheiro Nóbrega"
+                                                    class="off-load" src="img/organizacao/cientifica/Nadia Pinheiro Nobrega.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Nádia Pinheiro Nóbrega</p>
@@ -137,7 +147,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/cientifica/Patricio Luiz de Andrade.jpg"/>
+                                                <img alt="Fotografia de Patrício Luiz de Andrade"
+                                                    title="Fotografia de Patrício Luiz de Andrade"
+                                                    class="off-load" src="img/organizacao/cientifica/Patricio Luiz de Andrade.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Patrício Luiz de Andrade</p>
@@ -158,7 +170,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/cientifica/Leonardo Ferreira Soares.jpg"/>
+                                                <img alt="Fotografia de Leonardo Ferreira Soares"
+                                                    title="Fotografia de Leonardo Ferreira Soares"
+                                                    class="off-load" src="img/organizacao/cientifica/Leonardo Ferreira Soares.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Leonardo Ferreira Soares</p>
@@ -178,7 +192,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/cientifica/Thiago Andrade Fernandes.jpg"/>
+                                                <img alt="Fotografia de Thiago Andrade Fernandes"
+                                                    title="Fotografia de Thiago Andrade Fernandes"
+                                                    class="off-load" src="img/organizacao/cientifica/Thiago Andrade Fernandes.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Thiago Andrade Fernandes</p>
@@ -198,7 +214,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/geral/Francisco Aureliano Vidal.jpg"/>
+                                                <img alt="Fotografia de Francisco Aureliano Vidal"
+                                                    title="Fotografia de Francisco Aureliano Vidal"
+                                                    class="off-load" src="img/organizacao/geral/Francisco Aureliano Vidal.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Francisco Aureliano Vidal</p>
@@ -218,7 +236,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img alt="Fotografia de José Marcos da Silva"
+                                                    title="Fotografia de José Marcos da Silva"
+                                                    class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Marcos da Silva</p>
@@ -238,7 +258,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img alt="Fotografia de Maria José Alves da Silva"
+                                                    title="Fotografia de Maria José Alves da Silva"
+                                                    class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Maria José Alves da Silva</p>
@@ -258,7 +280,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img alt="Fotografia de Antônia Edivaneide de Sousa Gonzaga"
+                                                    title="Fotografia de Antônia Edivaneide de Sousa Gonzaga"
+                                                    class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Antônia Edivaneide de Sousa Gonzaga</p>
@@ -279,10 +303,10 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Divulgação</p>
+            <p class="article-title default-border-color col-sm-12 default-low-color-white-transparence">Comissão de Divulgação</p>
         </div>
         <div class="row">
-            <div class="organization">
+            <div class="organization default-dashed-border">
                 <a class="scroll-button scroll-button-left disabled"> < </a>
                 <a class="scroll-button scroll-button-right"> > </a>
                 <div class="organization-box">
@@ -293,7 +317,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/geral/Jose Nunes Aquino.jpg"/>
+                                                <img alt="Fotografia de Antônia José Nunes Aquino"
+                                                    title="Fotografia de Antônia José Nunes Aquino"
+                                                    class="off-load" src="img/organizacao/geral/Jose Nunes Aquino.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Nunes Aquino</p>
@@ -313,7 +339,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/divulgacao/Geraldo Herbetet de Lacerda.jpg"/>
+                                                <img alt="Fotografia de Geraldo Herbetet de Lacerda"
+                                                    title="Fotografia de Geraldo Herbetet de Lacerda"
+                                                    class="off-load" src="img/organizacao/divulgacao/Geraldo Herbetet de Lacerda.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Geraldo Herbetet de Lacerda</p>
@@ -333,7 +361,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img alt="Fotografia de Marcos Antonio Petrucci de Assis"
+                                                    title="Fotografia de Marcos Antonio Petrucci de Assis"
+                                                    class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Marcos Antonio Petrucci de Assis</p>
@@ -353,7 +383,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img alt="Fotografia de José Marcos da Silva"
+                                                    title="Fotografia de José Marcos da Silva"
+                                                    class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Marcos da Silva</p>
@@ -374,10 +406,10 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Patrocínio</p>
+            <p class="article-title default-border-color col-sm-12 default-low-color-white-transparence">Comissão de Patrocínio</p>
         </div>
         <div class="row">
-            <div class="organization">
+            <div class="organization default-dashed-border">
                 <a class="scroll-button scroll-button-left disabled"> < </a>
                 <a class="scroll-button scroll-button-right"> > </a>
                 <div class="organization-box">
@@ -388,7 +420,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/divulgacao/Geraldo Herbetet de Lacerda.jpg"/>
+                                                <img alt="Fotografia de Geraldo Herbetet de Lacerda"
+                                                    title="Fotografia de Geraldo Herbetet de Lacerda"
+                                                    class="off-load" src="img/organizacao/divulgacao/Geraldo Herbetet de Lacerda.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Geraldo Herbetet de Lacerda</p>
@@ -408,10 +442,12 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/geral/Baldoino Sonildo da Nobrega.jpg"/>
+                                                <img alt="Fotografia de Baldoino Sonildo da Nóbrega"
+                                                    title="Fotografia de Baldoino Sonildo da Nóbrega"
+                                                    class="off-load" src="img/organizacao/geral/Baldoino Sonildo da Nobrega.jpg"/>
                                             </div>
                                             <div class="name">
-                                                <p>Baldoíno Sonildo da Nóbrega</p>
+                                                <p>Baldoino Sonildo da Nóbrega</p>
                                             </div>
                                         </div>
                                     </div>
@@ -428,7 +464,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img alt="Fotografia de Marcos Antonio Petrucci de Assis"
+                                                    title="Fotografia de Marcos Antonio Petrucci de Assis"
+                                                    class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Marcos Antonio Petrucci de Assis</p>
@@ -449,10 +487,10 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Certificação</p>
+            <p class="article-title default-border-color col-sm-12 default-low-color-white-transparence">Comissão de Certificação</p>
         </div>
         <div class="row">
-            <div class="organization">
+            <div class="organization default-dashed-border">
                 <a class="scroll-button scroll-button-left disabled"> < </a>
                 <a class="scroll-button scroll-button-right"> > </a>
                 <div class="organization-box">
@@ -463,7 +501,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/geral/Jose Nunes Aquino.jpg"/>
+                                                <img alt="Fotografia de José Nunes Aquino"
+                                                    title="Fotografia de José Nunes Aquino"
+                                                    class="off-load" src="img/organizacao/geral/Jose Nunes Aquino.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Nunes Aquino</p>
@@ -483,10 +523,12 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/geral/Baldoino Sonildo da Nobrega.jpg"/>
+                                                <img alt="Fotografia de Baldoino Sonildo da Nóbrega"
+                                                    title="Fotografia de Baldoino Sonildo da Nóbrega"
+                                                    class="off-load" src="img/organizacao/geral/Baldoino Sonildo da Nobrega.jpg"/>
                                             </div>
                                             <div class="name">
-                                                <p>Baldoíno Sonildo da Nóbrega</p>
+                                                <p>Baldoino Sonildo da Nóbrega</p>
                                             </div>
                                         </div>
                                     </div>
@@ -503,7 +545,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img alt="Fotografia de Maria José Alves da Silva"
+                                                    title="Fotografia de Maria José Alves da Silva"
+                                                    class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Maria José Alves da Silva</p>
@@ -523,7 +567,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img alt="Fotografia de José Marcos da Silva"
+                                                    title="Fotografia de José Marcos da Silva"
+                                                    class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>José Marcos da Silva</p>
@@ -544,10 +590,10 @@
         </div>
 
         <div class="row">
-            <p class="text-center article-title col-sm-12 low-white-transparence">Comissão de Apoio</p>
+            <p class="article-title default-border-color col-sm-12 default-low-color-white-transparence">Comissão de Apoio</p>
         </div>
         <div class="row">
-            <div class="organization">
+            <div class="organization default-dashed-border">
                 <a class="scroll-button scroll-button-left disabled"> < </a>
                 <a class="scroll-button scroll-button-right"> > </a>
                 <div class="organization-box">
@@ -558,7 +604,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/apoio/wensttay-de-sousa-alencar.jpg"/>
+                                                <img alt="Fotografia de Wensttay de Sousa Alencar"
+                                                    title="Fotografia de Wensttay de Sousa Alencar"
+                                                    class="off-load" src="img/organizacao/apoio/wensttay-de-sousa-alencar.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Wensttay de Sousa Alencar</p>
@@ -578,7 +626,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/apoio/victor-hugo-da-silva-ribeiro.jpg"/>
+                                                <img alt="Fotografia de Victor Hugo da Silva Ribeiro"
+                                                    title="Fotografia de Victor Hugo da Silva Ribeiro"
+                                                    class="off-load" src="img/organizacao/apoio/victor-hugo-da-silva-ribeiro.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Victor Hugo da Silva Ribeiro</p>
@@ -598,7 +648,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/apoio/Diego Ayllo da Silva Simoes.jpg"/>
+                                                <img alt="Fotografia de Diego Ayllo da Silva Simões"
+                                                    title="Fotografia de Diego Ayllo da Silva Simões"
+                                                    class="off-load" src="img/organizacao/apoio/Diego Ayllo da Silva Simoes.jpg"/>
                                             </div>
                                             <div class="name">
                                                 <p>Diego Ayllo da Silva Simões</p>
@@ -618,7 +670,9 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img class="off-load" src="img/organizacao/sem_foto.png"/>
+                                                <img alt="Fotografia de Daniel Everson da Silva Andrade"
+                                                    title="Fotografia de Daniel Everson da Silva Andrade"
+                                                    class="off-load" src="img/organizacao/sem_foto.png"/>
                                             </div>
                                             <div class="name">
                                                 <p>Daniel Everson da Silva Andrade</p>

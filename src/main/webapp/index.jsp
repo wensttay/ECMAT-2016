@@ -59,59 +59,77 @@
 
     <body>
         <div id="container-fullpage">
-            <header id="header" class="blackboard-background">
+            <header id="header" class="blackboard-background default-border-bottom">
                 <div class="construcao-background"></div>
-                <div id="menu-principal-button" class="menu-button-with-img low-white-transparence" >
-                    <img  class="low-opacity" src="img/menu/menu-icon.png" />
+                <div id="menu-principal-button" class="menu-button-with-img" >
+                    <img title="Clique para abrir o menu lateral." class="button-img default-low-opacity" src="img/menu/menu-icon.png" />
                 </div>
 
-                <a href="#inicio">
-                    <div id="logo-small" class="menu-button-with-img low-white-transparence">
-                        <img class="low-opacity" src="img/logo/logo-ecmat2016-75x75.png">
+                <a title="Clique para voltar a página inicial." href="#inicio">
+                    <div id="logo-small" class="menu-button-with-img">
+                        <img class="button-img default-low-opacity" src="img/logo/logo-ecmat2016-75x75.png">
                     </div>
                 </a>
                 <nav class="menu-principal-box">
                     <ul class="principal-list">
                         <li id="exit-menu-principal-button" class="menu-button-with-img" >
-                            <img src="img/menu/exit-menu-icon.png"/>
+                            <img title="Clique para sair do menu lateral." class="button-img default-low-opacity" src="img/menu/exit-menu-icon.png"/>
                         </li>
 
-                        <li class="principal-list-item page-link item-bordered"><a class="item-title" href="#inicio">Inicio</a></li>
+                        <li class="principal-list-item page-link item-bordered">
+                            <a title="Clique para voltar a página inicial." class="default-low-color-white-transparence item-title" href="#inicio">Inicio</a>
+                        </li>
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
-                            <a href="#" class="item-title list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                            <ul class="drop-menu blackboard-background">
-                                <li class="drop-menu-item page-link" ><a href="#sobre">Sobre</a></li>
-                                <li class="drop-menu-item page-link" ><a href="#programacao">Programação</a></li>
-                                <li class="drop-menu-item page-link" ><a href="#organizacao">Organização</a></li>
-                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Galeria</a></li>
-                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Certificados</a></li>
+                            <a href="#" class="default-low-color-white-transparence item-title list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                            <ul class="drop-menu default-border-color blackboard-background">
+                                <li class="drop-menu-item default-border-color page-link" >
+                                    <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#sobre">Sobre</a>
+                                </li>
+                                <li class="drop-menu-item default-border-color page-link" >
+                                    <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#programacao">Programação</a>
+                                </li>
+                                <li class="drop-menu-item default-border-color page-link" >
+                                    <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="#organizacao">Organização</a>
+                                </li>
+                                <li class="drop-menu-item default-border-color page-link disabled" >
+                                    <a title="Clique para ir para a página da Galeria." class="default-low-color-white-transparence" href="#construcao">Galeria</a>
+                                </li>
+                                <li class="drop-menu-item default-border-color page-link disabled" >
+                                    <a title="Clique para ir para a página de Certificados." class="default-low-color-white-transparence" href="#construcao">Certificados</a>
+                                </li>
                             </ul>
                         </li>
-                        <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#submissoes">Submissões</a></li>
-
-
-                        <li class="principal-list-item menu-button-with-img low-opacity" id="logo-central" ><a href="#inicio">
-                                <img src="img/logo/logo-ecmat2016-75x75.png"></a>
+                        <li class="principal-list-item page-link item-bordered" >
+                            <a title="Clique para ir para a página de Submissões." class="default-low-color-white-transparence item-title" href="#submissoes">Submissões</a>
                         </li>
 
-                        <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#anais">Anais</a></li>
+                        <li class="principal-list-item menu-button-with-img" id="logo-central" >
+                            <a title="Clique para voltar a página inicial." class="button-img default-low-opacity" href="#inicio">
+                                <img alt="Simbolodo do ECMAT" src="img/logo/logo-ecmat2016-75x75.png">
+                            </a>
+                        </li>
 
-                        <li class="principal-list-item page-link item-bordered" ><a class="item-title contact" href="#contato">Contato</a></li>
-                        <li class="principal-list-item page-link item-bordered disabled" ><a class="item-title contact" href="#construcao">Inscrição</a></li>
-                        <!--<li class="principal-list-item page-link item-bordered disabled" ><a href="#construcao">Inscrição</a></li>-->
-                        <!--                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
-                                                    <a href="#" class="list-item-withsublist-title">Inscrição  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                                                    <ul class="item-title drop-menu blackboard-background">
-                                                        <li class="drop-menu-item page-link disabled" ><a href="#construcao">Entrar</a></li>
-                                                        <li class="drop-menu-item page-link disabled" ><a href="#construcao">Criar Conta</a></li>
-                                                                                        <li class="drop-menu-item page-link disabled" ><a href="#construcao">Minha Conta</a></li>
-                                                                                        <li class="drop-menu-item page-link disabled" ><a href="#construcao">Sair</a></li>
-                                                    </ul>
-                                                </li>-->
+                        <li class="principal-list-item page-link item-bordered" >
+                            <a title="Clique para ir para a página de Anais." class="default-low-color-white-transparence item-title" href="#anais">Anais</a>
+                        </li>
+
+                        <li class="principal-list-item page-link item-bordered" >
+                            <a title="Clique para ir para a página de Contato." lass="default-low-color-white-transparence item-title" href="#contato">Contato</a>
+                        </li>
+                        <li class="principal-list-item page-link item-bordered disabled" >
+                            <a title="Clique para ir para a página de Inscrição." class="default-low-color-white-transparence item-title" href="#construcao">Inscrição</a>
+                        </li>
+<!--                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
+                            <a href="#" class="low-color-white-transparence list-item-withsublist-title">Inscrição  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                            <ul class="item-title drop-menu blackboard-background">
+                                <li class="drop-menu-item default-margin-color page-link disabled" ><a href="#construcao">Minha Conta</a></li>
+                                <li class="drop-menu-item default-margin-color page-link disabled" ><a href="#construcao">Sair</a></li>
+                            </ul>
+                        </li>-->
                     </ul>
                 </nav>
                 <div class="issn-box">
-                    <div class="issn blackboard-background">
+                    <div title="(International Standard Serial Number)" class="issn blackboard-background">
                         ISSN XXXX-XXX
                     </div>
                 </div>
@@ -133,7 +151,7 @@
 
             <footer id="footer">
                 <p class="text-center">
-                    Desenvolvido por <a href="https://github.com/Hero-Code" target="_blank" style="display: inline; background-color: black; padding: 5px; font-family: WC_RoughTrad; border-radius: 5px; margin-left: 5px;"><strong>HeroCode</strong></a>
+                    Desenvolvido por <a title="Clique para ir para a página da HeroCode." href="https://github.com/Hero-Code" target="_blank" style="display: inline; background-color: black; padding: 5px; font-family: WC_RoughTrad; border-radius: 5px; margin-left: 5px;"><strong>HeroCode</strong></a>
                 </p>
             </footer>
         </div>

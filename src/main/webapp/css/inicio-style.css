@@ -8,23 +8,19 @@
 }
 
 .evento-box{
-    border: 5px dashed rgba(255,255,255,0.8);
     border-radius: 20px;
     padding: 30px;
 }
 
-.evento-info-box a{
-    opacity: 0.8;
-}
-.evento-info-box a h3{
+.evento-info-box .evento-link h3{
     min-height: 52px;
 }
 
-.evento-info-box a:hover{
+.evento-info-box .evento-link:hover{
     opacity: 1;
 }
 
-.evento-info-box .evento-info-img{
+.evento-info-box .evento-link .evento-info-img{
     width : 150px; 
     height: 150px;
     margin-top: -10px;
