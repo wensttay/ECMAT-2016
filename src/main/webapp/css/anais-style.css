@@ -45,17 +45,35 @@ and open the template in the editor.
     font-family: ClaireHand;
     display: block;
     text-align: center;
-    font-size: 18px;
 }
 
 .body-list .comissao-people .nome,
 .body-list .comissao-people .email{
-    font-size: 25px;
-    font-family: DiciHandwrite;
+    font-family: WC_RoughTrad;
 }
 
+.body-list .default-row .comissao-people,
+.body-list .comissao-people .nome,
+.body-list .comissao-people .email{
+    font-size: 18px !important;
+}
 
+@media screen and (max-width : 1200px){
+    .body-list .default-row .comissao-people,
+    .body-list .comissao-people .nome,
+    .body-list .comissao-people .email{
+        font-size: 14px !important;
+    }
+}
 
+@media screen and (max-width : 330px){
+    .body-list .default-row .comissao-people,
+    .body-list .comissao-people .nome,
+    .body-list .comissao-people .email{
+        font-size: 10px !important;
+    }
+
+}
 
 .sumario{
     font-family: WC_RoughTrad;
@@ -115,7 +133,7 @@ and open the template in the editor.
     .instituicao-text-box, .instituicao-img-box{
         width: 100% !important;
     }
-    
+
     .ifpb-anais-img{
         height: 100px;
         max-height: 100px;
