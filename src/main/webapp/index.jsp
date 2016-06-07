@@ -114,7 +114,7 @@
                         </li>
 
                         <li class="principal-list-item page-link item-bordered" >
-                            <a title="Clique para ir para a página de Contato." lass="default-low-color-white-transparence item-title" href="#contato">Contato</a>
+                            <a title="Clique para ir para a página de Contato." class="default-low-color-white-transparence item-title" href="#contato">Contato</a>
                         </li>
                         <li class="principal-list-item page-link item-bordered disabled" >
                             <a title="Clique para ir para a página de Inscrição." class="default-low-color-white-transparence item-title" href="#construcao">Inscrição</a>

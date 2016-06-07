@@ -23,6 +23,10 @@
         font-size: 12px;
         width: 110px;
     }
+    .default-box{
+/*        width: 100% !important;*/
+        margin: 0 0 35px 0 !important;
+    }
 }
 
 @media screen and (max-width: 820px){
@@ -45,10 +49,6 @@
 
     .construindo-title{
         font-size: 50px;
-    }
-    .default-box{
-        width: 100% !important;
-        margin: 0 0 35px 0 !important;
     }
     header{
         padding: 0;

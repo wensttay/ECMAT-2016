@@ -92,3 +92,42 @@ and open the template in the editor.
 .anais-link:hover{
     color: white !important;
 }
+
+.instituicao-box{
+    display: table;
+    margin: 0 auto;
+
+}
+.ifpb-anais-img{
+    height: 200px;
+    max-height: 200px;
+}
+@media screen and (max-width: 500px){
+    .instituicao-box{
+        display: block;
+        width: 100%;
+        margin: 0;
+
+    }
+    .instituicao-img-box{
+        margin-bottom: 20px;
+    }
+    .instituicao-text-box, .instituicao-img-box{
+        width: 100% !important;
+    }
+    
+    .ifpb-anais-img{
+        height: 100px;
+        max-height: 100px;
+    }
+}
+
+.instituicao-text-box{
+    font-size: 24px;
+    font-family: WC_RoughTrad;
+}
+.instituicao-text-box, .instituicao-img-box{
+    text-align: center;
+    width: 200px;
+    float: left;
+}

@@ -100,8 +100,8 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12 medium-margin-bottom">
-                <p class="article-title default-border-color col-sm-12 default-low-color-white-transparence">Edições</p>
+            <div class="col-md-12 hight-margin-bottom">
+                <p class="article-title default-border-bottom default-low-color-white-transparence col-sm-12">Edições</p>
                 <div class="col-lg-2 col-md-1 "></div>
                 <div class="col-lg-4 col-md-5 col-sm-12 ">
                     <a title="Clique aqui para ver um documento que descreve esse evento na sua segunda edição (2015)"
@@ -142,8 +142,27 @@
         </div>
 
         <div class="row">
+            <div class="col-lg-12 medium-margin-bottom">
+                <p class="article-title default-border-bottom default-low-color-white-transparence">Institulo Sede</p>
+                <div class="col-lg-12">
+                    <div class="instituicao-box">
+                        <div class="instituicao-img-box">
+                            <img alt="Símbolodo do IFPB (Instituto Federal de Educação, Ciência e Tecnologia da Paraíba)" 
+                                 title="Símbolodo do IFPB (Instituto Federal de Educação, Ciência e Tecnologia da Paraíba)" 
+                                 class="ifpb-anais-img off-load" src="img/other/logo-ifpb-white.png">
+                        </div>
+                        <div class="instituicao-text-box default-low-color-white-transparence">
+                            <p class="medium-margin-bottom">Instituto Federal de Educação Ciência e Tecnologia da Paraíba - Campus Cajazeiras</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-lg-12">
                 <p class="article-title default-border-color col-lg-12 default-low-color-white-transparence">Corpo Editorial</p>
+
                 <div class="col-lg-12">
                     <div class="medium-margin-bottom col-lg-4 col-md-4">
                         <div class="default-box">

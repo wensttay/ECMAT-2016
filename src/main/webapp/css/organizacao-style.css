@@ -60,6 +60,47 @@
     display: table-cell;
     padding: 15px;
 }
+
+.back .people{
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-filter: none;
+    filter: none;
+}
+
+.social-icon-list{
+    display: table;
+    margin: 0 auto;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.social-icon-list .social-icon{
+    -webkit-filter: grayscale();
+    filter: grayscale(1);
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.social-icon-list a:last-child .social-icon{
+    margin-bottom: 0;
+}
+
+.social-icon-list .social-icon:hover{
+    -webkit-filter: none;
+    filter: none;
+}
+
+.social-icon-list .small-icon{
+    width: 50px;
+    height: 50px;  
+}
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .people-box{
         min-width: 210px;
@@ -68,19 +109,12 @@
 
 .people{
     background-color: rgba(255, 255, 255, 1);
-    /*cursor: pointer;*/
     box-shadow: 0px 0px 15px black;
-    /*box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);*/
     -webkit-filter: grayscale();
     filter: grayscale(1);
     min-width: 180px;
     max-width: 180px;
 }
-
-/*.people:hover{
-    -webkit-filter: none;
-    filter: none;
-}*/
 
 .people .photo-box{
     max-height: 180px;
@@ -93,8 +127,6 @@
 }
 
 .people .photo-box img{
-    /*height: 100%;*/
-    /*width: 100%;*/
     max-width: 160px;
     max-height: 160px;
 }
@@ -107,7 +139,6 @@
     text-align: center;
     font-size: 24px;
     line-height: 110%;
-    /*font-weight: bold;*/
     font-family: DiciHandwrite;
 }
 
@@ -132,13 +163,13 @@
     float: right;
 }
 
-/* continua a declaração de perspectiva para o container geral 
+/* continua a declaração de perspectiva para o container geral */
 .flip-container { 
     perspective: 1000; 
     transform-style: preserve-3d; 
 }  	
 
-  MODIFICADO! vira os containers frente e verso quando o mouse passa em cima 
+/*  MODIFICADO! vira os containers frente e verso quando o mouse passa em cima */
 .flip-container:hover .back { transform: rotateY(0deg); }  	
 .flip-container:hover .front { transform: rotateY(180deg); }    
 .flip-container, .front, .back { 
@@ -146,14 +177,14 @@
     height: 240px; 
 }    
 
- define a velocidade da animação 
+/* define a velocidade da animação */
 .flipper {  	
     transition: 0.6s;  	
     transform-style: preserve-3d;    	
     position: relative;  
 }    
 
- esconde o verso durante a animação 
+/* esconde o verso durante a animação */
 .front, .back { 
     backface-visibility: hidden;  	
     transition: 0.6s;  	
@@ -163,13 +194,11 @@
     left: 0;  
 }    
 
-  MODIFICADO! frente posicionada sobre o fundo 
+/*  MODIFICADO! frente posicionada sobre o fundo */
 .front {  	
     z-index: 2;  	
     transform: rotateY(0deg);  
 }    
 
- verso inicialmente escondido 
-.back { transform: rotateY(-180deg); }  */
-
-.back{ display: none; }
+/* verso inicialmente escondido */
+.back { transform: rotateY(-180deg); }  
