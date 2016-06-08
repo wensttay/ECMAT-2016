@@ -60,7 +60,8 @@
                                     <ul class="grup-of-files">
                                         <li>
                                             <a title="Clique aqui para ver o documento: MODELAGEM MATEMÁTICA NO PROCESSO DE ENSINO E APRENDIZAGEM DE PORCENTAGENS"
-                                               href="https://drive.google.com/file/d/0Bwx-SPHSFVqgMElkXzFHckhHX2s/view?usp=sharing" target="_blank">MODELAGEM MATEMÁTICA NO PROCESSO DE ENSINO E APRENDIZAGEM DE PORCENTAGENS</a>        
+                                               href="https://drive.google.com/open?id=0Bwx-SPHSFVqgMHRFOENPVzVPVDg" 
+                                               target="_blank">MODELAGEM MATEMÁTICA NO PROCESSO DE ENSINO E APRENDIZAGEM DE PORCENTAGENS</a>        
                                         </li>
                                     </ul>
                                 </li>
@@ -69,7 +70,8 @@
                                     <ul class="grup-of-files">
                                         <li>
                                             <a title="Clique aqui para ver o documento: O ENSINO DA MATEMÁTICA E A RESOLUÇÃO DE PROBLEMAS: UM RELATO DE EXPERIÊNCIA"
-                                               href="https://drive.google.com/file/d/0Bwx-SPHSFVqgaWNWOGgwSkFzdWs/view?usp=sharing" target="_blank">O ENSINO DA MATEMÁTICA E A RESOLUÇÃO DE PROBLEMAS: UM RELATO DE EXPERIÊNCIA</a>        
+                                               href="https://drive.google.com/file/d/0Bwx-SPHSFVqgaWNWOGgwSkFzdWs/view?usp=sharing" 
+                                               target="_blank">O ENSINO DA MATEMÁTICA E A RESOLUÇÃO DE PROBLEMAS: UM RELATO DE EXPERIÊNCIA</a>        
                                         </li>
                                     </ul>
                                 </li>

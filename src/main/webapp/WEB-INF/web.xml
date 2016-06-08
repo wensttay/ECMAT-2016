@@ -11,15 +11,33 @@
             <java-charset-name>UTF-8</java-charset-name> 
         </input-charset> 
     </charset-params>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/erro404</location>
+    </error-page>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>/erro500</location>
+    </error-page>
     
     <servlet>
         <servlet-name>index</servlet-name>
         <jsp-file>/index.jsp</jsp-file>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
     
-    <error-page>
-        <error-code>404</error-code>
-        <location>/erro.html</location>
-    </error-page>
+    <servlet>
+        <servlet-name>erro</servlet-name>
+        <jsp-file>/erro.html</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>erro</servlet-name>
+        <url-pattern>/erro</url-pattern>
+    </servlet-mapping>
      
 </web-app>
