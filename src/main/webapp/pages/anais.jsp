@@ -77,8 +77,9 @@
                                     <p class="default-low-color-white-transparence">Educação Matemática: Etnomatemática, História e Filosofia da Matemática e Didática da Matemática;</p>
                                     <ul class="grup-of-files">
                                         <li>
-                                            <a title="Clique aqui para ver o documento: A IMPORTÂNCIA DO ENSINO DE GEOMETRIA NO ENSINO FUNDAMENTAL: UMA BREVE ANÁLISE DO LIVRO DIDÁTICO"
-                                               href="https://drive.google.com/file/d/0Bwx-SPHSFVqgS3VYRlFETjJMNWM/view?usp=sharing" target="_blank">A IMPORTÂNCIA DO ENSINO DE GEOMETRIA NO ENSINO FUNDAMENTAL: UMA BREVE ANÁLISE DO LIVRO DIDÁTICO</a>        
+                                            <a title="Clique aqui para ver o documento: UMA BREVE ANÁLISE DO LIVRO DIDÁTICO DE MATEMÁTICA NO ENSINO FUNDAMENTAL: REFLEXÕES SOBRE O ENSINO DA GEOMETRIA"
+                                               href="https://drive.google.com/open?id=0Bwx-SPHSFVqgWWZRQ3BTVkUtWU0" 
+                                               target="_blank">UMA BREVE ANÁLISE DO LIVRO DIDÁTICO DE MATEMÁTICA NO ENSINO FUNDAMENTAL: REFLEXÕES SOBRE O ENSINO DA GEOMETRIA</a>        
                                         </li>
                                     </ul>
                                 </li>
@@ -143,7 +144,7 @@
 
         <div class="row">
             <div class="col-lg-12 medium-margin-bottom">
-                <p class="article-title default-border-bottom default-low-color-white-transparence">Institulo Sede</p>
+                <p class="article-title default-border-bottom default-low-color-white-transparence">Instituto Sede</p>
                 <div class="col-lg-12">
                     <div class="instituicao-box">
                         <div class="instituicao-img-box">

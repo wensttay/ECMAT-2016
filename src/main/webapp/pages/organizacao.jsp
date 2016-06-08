@@ -328,28 +328,6 @@
                                     <div class="front">
                                         <div class="people">
                                             <div class="photo-box">
-                                                <img alt="Fotografia de Maria José Alves da Silva"
-                                                     title="Fotografia de Maria José Alves da Silva"
-                                                     class="off-load" src="img/organizacao/sem_foto.png"/>
-                                            </div>
-                                            <div class="name">
-                                                <p>Maria José Alves da Silva</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="back">
-                                        <div class="people">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="people-box">
-                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <div class="people">
-                                            <div class="photo-box">
                                                 <img alt="Fotografia de Antônia Edivaneide de Sousa Gonzaga"
                                                      title="Fotografia de Antônia Edivaneide de Sousa Gonzaga"
                                                      class="off-load" src="img/organizacao/sem_foto.png"/>
@@ -361,6 +339,13 @@
                                     </div>
                                     <div class="back">
                                         <div class="people">
+                                            <div class="social-icon-list">
+                                                <a title="Link para o Curriculo Lattes de Antônia Edivaneide de Sousa Gonzaga" target="_blank"
+                                                   href="http://lattes.cnpq.br/1991497932269115">
+                                                    <img alt="Icone da Plataforma Lattes" 
+                                                         class="social-icon off-load" src="img/social/lattes.png">
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -613,7 +598,7 @@
                 <a class="scroll-button scroll-button-left disabled"> < </a>
                 <a class="scroll-button scroll-button-right"> > </a>
                 <div class="organization-box">
-                    <div class="organization-list list-size-4">
+                    <div class="organization-list list-size-3">
                         <div class="people-box">
                             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                                 <div class="flipper">
@@ -667,28 +652,6 @@
                                                          class="social-icon off-load" src="img/social/lattes.png">
                                                 </a>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="people-box">
-                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <div class="people">
-                                            <div class="photo-box">
-                                                <img alt="Fotografia de Maria José Alves da Silva"
-                                                     title="Fotografia de Maria José Alves da Silva"
-                                                     class="off-load" src="img/organizacao/sem_foto.png"/>
-                                            </div>
-                                            <div class="name">
-                                                <p>Maria José Alves da Silva</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="back">
-                                        <div class="people">
                                         </div>
                                     </div>
                                 </div>
