@@ -14,22 +14,8 @@
 
     <error-page>
         <error-code>404</error-code>
-        <location>/erro404</location>
+        <location>/erro</location>
     </error-page>
-    
-    <error-page>
-        <error-code>500</error-code>
-        <location>/erro500</location>
-    </error-page>
-    
-    <servlet>
-        <servlet-name>index</servlet-name>
-        <jsp-file>/index.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>index</servlet-name>
-        <url-pattern>/index</url-pattern>
-    </servlet-mapping>
     
     <servlet>
         <servlet-name>erro</servlet-name>
@@ -38,6 +24,15 @@
     <servlet-mapping>
         <servlet-name>erro</servlet-name>
         <url-pattern>/erro</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
     </servlet-mapping>
      
 </web-app>

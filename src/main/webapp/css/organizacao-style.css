@@ -37,12 +37,12 @@
 .list-size-3{
     width: 630px;
 }
-.list-size-2{
+/*.list-size-2{
     width: 420px;
 }
 .list-size-1{
     width: 210px;
-}
+}*/
 
 ::-webkit-scrollbar{
     display: none;
@@ -149,10 +149,10 @@
     cursor: pointer;
 }
 
-.scroll-button a{
+/*.scroll-button a{
     padding:0px;
     margin:0px;
-}
+}*/
 
 .scroll-button-left{
     margin-left: 50px;
