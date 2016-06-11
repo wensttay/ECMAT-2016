@@ -14,7 +14,7 @@
                 <div class="container-menu-anais col-md-12 text-center">
 
                     <div class="container-chave-esquerda">
-                        <img src="img/other/chave.png">
+                        <img width="24px" height="131px" src="img/other/chave.png">
                     </div>
 
                     <ul class="menu-anais">
@@ -32,7 +32,7 @@
                         </li>
                     </ul>
                     <div class="container-chave-direita">
-                        <img  src="img/other/chave.png">
+                        <img width="24px" height="131px" src="img/other/chave.png">
                     </div>
                     <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                 </div>

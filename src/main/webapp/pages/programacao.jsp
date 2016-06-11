@@ -23,7 +23,7 @@
                             <div class="responsive-container">
                                 <div class="dummy"></div>
                                 <div class="container-ajust">
-                                    <img alt="Representação de cálculo de resultado 1 (Primeiro dia)"
+                                    <img height="715px" width="715px" alt="Representação de cálculo de resultado 1 (Primeiro dia)"
                                          title="Clique aqui para exibir os horários do Dia 24/08"
                                          class="off-load default-low-opacity figure" src="img/other/menos-um-ao-quadrado.png"/>
                                 </div>
@@ -62,7 +62,7 @@
                             <div class="responsive-container">
                                 <div class="dummy"></div>
                                 <div class="container-ajust">
-                                    <img alt="Representação de cálculo de resultado 2 (Segundo dia)"
+                                    <img height="715px" width="715px" alt="Representação de cálculo de resultado 2 (Segundo dia)"
                                          title="Clique aqui para exibir os horários do Dia 25/08"
                                          class="off-load default-low-opacity figure" src="img/other/raiz-quadrada-de-quatro.png"/>
                                 </div>
@@ -110,7 +110,7 @@
                             <div class="responsive-container">
                                 <div class="dummy"></div>
                                 <div class="container-ajust">
-                                    <img alt="Representação de cálculo de resultado 3 (Terceiro dia)"
+                                    <img height="715px" width="715px" alt="Representação de cálculo de resultado 3 (Terceiro dia)"
                                          title="Clique aqui para exibir os horários do Dia 26/08"
                                          class="off-load default-low-opacity figure" src="img/other/trinta-dividido-por-dez.png"/>
                                 </div>
