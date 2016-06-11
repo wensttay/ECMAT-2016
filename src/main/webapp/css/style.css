@@ -9,9 +9,6 @@
 @font-face { font-family: DESYREL; src: url('../fonts/DESYREL_.ttf');}
 @font-face { font-family: DiciHandwrite; src: url('../fonts/DiciHandwrite.ttf');}
 
-.vermelho{background-color: red;}
-.verde{background-color: green;}
-.azul{background-color: blue;}
 
 .padding-medium{padding: 10px;}
 .padding-high{padding: 15px;}

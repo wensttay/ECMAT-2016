@@ -62,18 +62,18 @@
             <header id="header" class="blackboard-background default-border-bottom">
                 <div class="construcao-background"></div>
                 <div id="menu-principal-button" class="menu-button-with-img" >
-                    <img title="Clique para abrir o menu lateral." class="button-img default-low-opacity" src="img/menu/menu-icon.png" />
+                    <img width="75px" height="75px" title="Clique para abrir o menu lateral." class="button-img default-low-opacity" src="img/menu/menu-icon.png"/>
                 </div>
 
                 <a title="Clique para voltar a página inicial." href="#inicio">
                     <div id="logo-small" class="menu-button-with-img">
-                        <img class="button-img default-low-opacity" src="img/logo/logo-ecmat2016-75x75.png">
+                        <img width="75px" height="75px" class="button-img default-low-opacity" src="img/logo/logo-ecmat2016-75x75.png">
                     </div>
                 </a>
                 <nav class="menu-principal-box">
                     <ul class="principal-list">
                         <li id="exit-menu-principal-button" class="menu-button-with-img" >
-                            <img title="Clique para sair do menu lateral." class="button-img default-low-opacity" src="img/menu/exit-menu-icon.png"/>
+                            <img width="75px" height="75px" title="Clique para sair do menu lateral." class="button-img default-low-opacity" src="img/menu/exit-menu-icon.png"/>
                         </li>
 
                         <li class="principal-list-item page-link item-bordered">
@@ -105,7 +105,7 @@
 
                         <li class="principal-list-item menu-button-with-img" id="logo-central" >
                             <a title="Clique para voltar a página inicial." class="button-img default-low-opacity" href="#inicio">
-                                <img alt="Simbolodo do ECMAT" src="img/logo/logo-ecmat2016-75x75.png">
+                                <img width="75px" height="75px" alt="Simbolodo do ECMAT" src="img/logo/logo-ecmat2016-75x75.png">
                             </a>
                         </li>
 
@@ -119,13 +119,13 @@
                         <li class="principal-list-item page-link item-bordered disabled" >
                             <a title="Clique para ir para a página de Inscrição." class="default-low-color-white-transparence item-title" href="#construcao">Inscrição</a>
                         </li>
-<!--                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
-                            <a href="#" class="low-color-white-transparence list-item-withsublist-title">Inscrição  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                            <ul class="item-title drop-menu blackboard-background">
-                                <li class="drop-menu-item default-margin-color page-link disabled" ><a href="#construcao">Minha Conta</a></li>
-                                <li class="drop-menu-item default-margin-color page-link disabled" ><a href="#construcao">Sair</a></li>
-                            </ul>
-                        </li>-->
+                        <!--                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
+                                                    <a href="#" class="low-color-white-transparence list-item-withsublist-title">Inscrição  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                                                    <ul class="item-title drop-menu blackboard-background">
+                                                        <li class="drop-menu-item default-margin-color page-link disabled" ><a href="#construcao">Minha Conta</a></li>
+                                                        <li class="drop-menu-item default-margin-color page-link disabled" ><a href="#construcao">Sair</a></li>
+                                                    </ul>
+                                                </li>-->
                     </ul>
                 </nav>
                 <div class="issn-box">
@@ -139,14 +139,14 @@
 
             <section id="section">
                 <%@ include file="pages/inicio.jsp" %>
-                <%@ include file="pages/sobre.jsp" %>
-                <%@ include file="pages/contato.jsp" %>
-                <%@ include file="pages/programacao.jsp" %>
-                <%@ include file="pages/organizacao.jsp" %>
-                <%@ include file="pages/construcao.jsp" %>
                 <%@ include file="pages/submissoes.jsp" %>
                 <%@ include file="pages/anais.jsp" %>
-
+                <%@ include file="pages/sobre.jsp" %>
+                <%@ include file="pages/programacao.jsp" %>
+                <%@ include file="pages/contato.jsp" %>  
+                <%@ include file="pages/construcao.jsp" %>
+                <%@ include file="pages/organizacao.jsp" %>
+                
             </section>
 
             <footer id="footer">
