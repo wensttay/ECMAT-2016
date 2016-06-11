@@ -38,21 +38,8 @@
         <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
         <meta name="theme-color" content="#242424">
 
-
         <!-- Custom styles for this template -->
         <link href="css/style.css" rel="stylesheet">
-        <link href="css/construcao-style.css" rel="stylesheet"/>
-        <link href="css/contato-style.css" rel="stylesheet">
-        <link href="css/contato-responsive.css" rel="stylesheet">
-        <link href="css/inicio-style.css" rel="stylesheet">
-        <link href="css/sobre-style.css" rel="stylesheet">
-        <link href="css/sobre-responsive.css" rel="stylesheet">
-        <link href="css/organizacao-style.css" rel="stylesheet">
-        <link href="css/organizacao-responsive.css" rel="stylesheet">
-        <link href="css/programacao-style.css" rel="stylesheet">
-        <link href="css/submissoes-style.css" rel="stylesheet"/>
-        <link href="css/anais-style.css" rel="stylesheet">
-        <link href="css/anais-responsive.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
@@ -145,8 +132,7 @@
                 <%@ include file="pages/programacao.jsp" %>
                 <%@ include file="pages/contato.jsp" %>  
                 <%@ include file="pages/construcao.jsp" %>
-                <%@ include file="pages/organizacao.jsp" %>
-                
+                <%@ include file="pages/organizacao.jsp" %>  
             </section>
 
             <footer id="footer">
@@ -162,10 +148,7 @@
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <!-- Custom Script for this tamplate -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg"></script>
-        <script src="js/menu-controll-script.js"></script>
-        <script src="js/page-controll-script.js"></script>
-        <script src="js/organizacao-controll-script.js"></script>
-        <script src="js/programacao-table-controll-script.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
 
