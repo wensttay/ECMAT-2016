@@ -115,7 +115,7 @@
                             </p>
                             <div class="body-img col-md-12 col-sm-12 ">
                                 <div class="container-ano-edicao default-border-color text-center">
-                                    <img alt="Logo do evento no ano de 2015"
+                                    <img height="200px" width="200px" alt="Logo do evento no ano de 2015"
                                          class="figure figure-with-padding off-load" src="img/logo/logo-ecmat2015-420x420.png">
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
                             </p>
                             <div class="body-img col-md-12 col-sm-12 ">
                                 <div class="container-ano-edicao default-border-color text-center">
-                                    <img alt="Logo do evento no ano de 2016 (Atual)"
+                                    <img height="200px" width="200px" alt="Logo do evento no ano de 2016 (Atual)"
                                          class="figure figure-with-padding off-load" src="img/logo/logo-ecmat2016-420x420.png">
                                 </div>
                             </div>
@@ -150,7 +150,7 @@
                 <div class="col-lg-12">
                     <div class="instituicao-box">
                         <div class="instituicao-img-box">
-                            <img alt="Símbolodo do IFPB (Instituto Federal de Educação, Ciência e Tecnologia da Paraíba)" 
+                            <img height="200px" width="200px" alt="Símbolodo do IFPB (Instituto Federal de Educação, Ciência e Tecnologia da Paraíba)" 
                                  title="Símbolodo do IFPB (Instituto Federal de Educação, Ciência e Tecnologia da Paraíba)" 
                                  class="ifpb-anais-img off-load" src="img/other/logo-ifpb-white.png">
                         </div>
