@@ -1,0 +1,25 @@
+/* 
+    Created on : 26/05/2016, 08:34:10
+    Author     : Wensttay
+*/
+
+.construcao-background{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url('../img/background/construct-page-filter.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+}
+
+.construindo-title-box{
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    font-family: WC_RoughTrad;
+    font-size: 100px;
+}
