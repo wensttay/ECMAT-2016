@@ -1,11 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    heroku-deflater (0.6.2)
+      rack (>= 1.4.5)
+    rack (1.6.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  heroku-deflater
 
 BUNDLED WITH
    1.12.5
