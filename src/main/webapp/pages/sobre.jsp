@@ -26,7 +26,7 @@
                         <div class="responsive-container">
                             <div class="dummy"></div>
                             <div class="container-ajust">
-                                <img alt="Símbolodo do IFPB (Instituto Federal de Educação, Ciência e Tecnologia da Paraíba)"
+                                <img height="420px" width="420px" alt="Símbolodo do IFPB (Instituto Federal de Educação, Ciência e Tecnologia da Paraíba)"
                                      title="Símbolodo do IFPB (Instituto Federal de Educação, Ciência e Tecnologia da Paraíba)"
                                      class="off-load" src="img/other/logo-ifpb-white.png">
                             </div>

@@ -116,7 +116,7 @@
                             <div class="body-img col-md-12 col-sm-12 ">
                                 <div class="container-ano-edicao default-border-color text-center">
                                     <img height="200px" width="200px" alt="Logo do evento no ano de 2015"
-                                         class="figure figure-with-padding off-load" src="img/logo/logo-ecmat2015-420x420.png">
+                                         class="figure figure-with-padding off-load" src="img/logo/logo-ecmat2015-200x200.png">
                                 </div>
                             </div>
                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
