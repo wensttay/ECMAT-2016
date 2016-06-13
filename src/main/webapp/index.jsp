@@ -41,20 +41,20 @@
 
         <!-- Custom styles for this template -->
         <link href="css/style.css" rel="stylesheet">
-        <link href="css/construcao-style.css" rel="stylesheet"/>
-        <link href="css/contato-style.css" rel="stylesheet">
-        <link href="css/contato-responsive.css" rel="stylesheet">
-        <link href="css/inicio-style.css" rel="stylesheet">
-        <link href="css/sobre-style.css" rel="stylesheet">
-        <link href="css/sobre-responsive.css" rel="stylesheet">
-        <link href="css/organizacao-style.css" rel="stylesheet">
-        <link href="css/organizacao-responsive.css" rel="stylesheet">
-        <link href="css/programacao-style.css" rel="stylesheet">
-        <link href="css/submissoes-style.css" rel="stylesheet"/>
-        <link href="css/anais-style.css" rel="stylesheet">
-        <link href="css/anais-responsive.css" rel="stylesheet">
-        <link href="css/responsive.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/construcao-style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/contato-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/contato-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="css/inicio-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/sobre-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/sobre-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="css/organizacao-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/organizacao-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="css/programacao-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/submissoes-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/anais-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/anais-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -157,15 +157,15 @@
         </div>
 
         <!-- Jquery Script -->
-        <script src="js/jquery-2.2.2.min.js"></script>
+        <script src="js/jquery-2.2.2.min.js" type="text/javascript"></script>
         <!-- Bootstrap JavaScript -->
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- Custom Script for this tamplate -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg"></script>
-        <script src="js/menu-controll-script.js"></script>
-        <script src="js/page-controll-script.js"></script>
-        <script src="js/organizacao-controll-script.js"></script>
-        <script src="js/programacao-table-controll-script.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg" type="text/javascript"></script>
+        <script src="js/menu-controll-script.js" type="text/javascript"></script>
+        <script src="js/page-controll-script.js" type="text/javascript"></script>
+        <script src="js/organizacao-controll-script.js" type="text/javascript"></script>
+        <script src="js/programacao-table-controll-script.js" type="text/javascript"></script>
     </body>
 </html>
 
