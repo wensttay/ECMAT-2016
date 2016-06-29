@@ -6,22 +6,23 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import org.apache.commons.dbcp2.BasicDataSource;
 
-public final class Conexao {
+public final class ConnectionProvider {
     
-    private static Conexao conexao;
-    
-    private Conexao() { }
-    
-    public static synchronized Conexao getInstance(){
-        
-        if(conexao == null){
-            conexao = new Conexao();
-        }
-        
-        return conexao;
-    }
+    private static ConnectionProvider connectionProvider;
 
     private BasicDataSource connectionPool;
+
+    
+    private ConnectionProvider() { }
+    
+    public static synchronized ConnectionProvider getInstance(){
+        
+        if(connectionProvider == null){
+            connectionProvider = new ConnectionProvider();
+        }
+        
+        return connectionProvider;
+    }
 
     public Connection getConnection() throws SQLException {
 
