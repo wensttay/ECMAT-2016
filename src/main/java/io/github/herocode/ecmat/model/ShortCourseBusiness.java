@@ -59,11 +59,6 @@ public class ShortCourseBusiness implements ShortCourseDaoFunctions, Dao<ShortCo
     }
 
     @Override
-    public List<ShortCourse> searchByAttribute(String key, String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public List<ShortCourse> searchByAttributes(Map<String, String> map) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

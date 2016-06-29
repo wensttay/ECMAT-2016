@@ -5,6 +5,7 @@
  */
 package io.github.herocode.ecmat.interfaces;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -14,20 +15,27 @@ import java.util.Map;
  * @param <T> Object Type
  * @param <I> Object Id Type
  */
-public interface Dao <T,I>{
-        
+public interface Dao<T, I> {
+
     boolean save(T object);
-    
+
     boolean delete(T object);
-    
+
     boolean update(T object);
-    
+
     T searchById(I id);
-    
-    List<T> searchByAttribute(String key, String value);
-    
+
+    default List<T> searchByAttribute(String key, String value) {
+        
+        Map<String, String> map = new HashMap<>();
+
+        map.put(key, value);
+
+        return searchByAttributes(map);
+    }
+
     List<T> searchByAttributes(Map<String, String> map);
-    
+
     List<T> listAll();
-    
+
 }
