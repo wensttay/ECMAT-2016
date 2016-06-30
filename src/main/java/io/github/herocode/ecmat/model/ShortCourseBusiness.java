@@ -9,6 +9,7 @@ import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import io.github.herocode.ecmat.interfaces.Dao;
 import io.github.herocode.ecmat.interfaces.ShortCourseDaoFunctions;
+import java.sql.ResultSet;
 import java.util.List;
 import java.util.Map;
 
@@ -65,6 +66,16 @@ public class ShortCourseBusiness implements ShortCourseDaoFunctions, Dao<ShortCo
 
     @Override
     public List<ShortCourse> listAll() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ShortCourse fillObject(ResultSet rs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getTableName() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

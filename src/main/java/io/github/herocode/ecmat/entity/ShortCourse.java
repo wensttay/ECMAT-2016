@@ -5,10 +5,7 @@
  */
 package io.github.herocode.ecmat.entity;
 
-import io.github.herocode.ecmat.interfaces.ShortCourseDaoFunctions;
 import java.time.LocalDate;
-import java.util.Collections;
-import java.util.List;
 
 /**
  *
@@ -21,7 +18,6 @@ public class ShortCourse {
     private LocalDate               date;
     private String                  title;
     private String                  professor;
-    private ShortCourseDaoFunctions daoFunctions;
 
     public ShortCourse() { }
 
@@ -60,15 +56,6 @@ public class ShortCourse {
         return maxEnrollment;
     }
 
-    public void setMaxEnrollment(int maxEnrollment) {
-        this.maxEnrollment = maxEnrollment;
-    }
-
-    public int getCurrentEnrollment() {
-        
-        return daoFunctions.getCurrentEnrollment(this);
-    }
-
     public int getId() {
         return id;
     }
@@ -76,24 +63,7 @@ public class ShortCourse {
     public void setId(int id) {
         this.id = id;
     }
-
-    public List<Participant> getParticipants() {
-        
-        List<Participant> participants = daoFunctions.getShortCourseParticipants(this);
-        
-        return Collections.unmodifiableList(participants);
-    }
     
-    public void removeParticipant(Participant participant){
-        
-        daoFunctions.removeParticipant(this, participant);
-    }
-    
-    public void addParticipant(Participant participant){
-        
-        daoFunctions.addParticipant(this, participant);
-    }
-
     @Override
     public String toString() {
 
@@ -105,8 +75,8 @@ public class ShortCourse {
                 append(date).
                 append(" Professor: ").
                 append(professor).
-                append(" Current Enrollment: ").
-                append(getCurrentEnrollment());
+                append(" Max Enrollment: ").
+                append(maxEnrollment);
 
         return sb.toString();
     }
