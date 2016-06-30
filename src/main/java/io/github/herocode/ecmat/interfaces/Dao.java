@@ -5,9 +5,19 @@
  */
 package io.github.herocode.ecmat.interfaces;
 
+import io.github.herocode.ecmat.persistence.ConnectionProvider;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -26,7 +36,7 @@ public interface Dao<T, I> {
     T searchById(I id);
 
     default List<T> searchByAttribute(String key, String value) {
-        
+
         Map<String, String> map = new HashMap<>();
 
         map.put(key, value);
@@ -34,8 +44,67 @@ public interface Dao<T, I> {
         return searchByAttributes(map);
     }
 
-    List<T> searchByAttributes(Map<String, String> map);
+    default List<T> searchByAttributes(Map<String, String> map) {
+
+        List<T> results = new ArrayList<>();;
+        PreparedStatement ps;
+        Connection connection;
+
+        try {
+
+            connection = ConnectionProvider.getInstance().getConnection();
+
+            StringBuilder sqlBuilder = new StringBuilder("SELECT * FROM ");
+
+            sqlBuilder.append(getTableName()).
+                    append(" WHERE ");
+
+            Set<String> keys    = map.keySet();
+            Iterator<String> it = keys.iterator();
+
+            String key;
+
+            while (it.hasNext()) {
+
+                key = it.next();
+
+                sqlBuilder.append(key).
+                        append(" = ").
+                        append("'").
+                        append(map.get(key)).
+                        append("'");
+
+                if (it.hasNext()) {
+                    sqlBuilder.append(" AND ");
+                }
+
+            }
+
+            ps = connection.prepareStatement(sqlBuilder.toString());
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+
+                T object = fillObject(rs);
+
+                results.add(object);
+            }
+
+            ps.close();
+            connection.close();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Dao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return results;
+    }
 
     List<T> listAll();
+
+    T fillObject(ResultSet rs);
+
+    String getTableName();
 
 }
