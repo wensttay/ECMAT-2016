@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
-public interface ShortCourseDaoFunctions {
+public interface ShortCourseDao extends Dao<ShortCourse, Integer> {
     
     List<Participant> getShortCourseParticipants(ShortCourse shortCourse);
     
