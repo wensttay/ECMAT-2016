@@ -30,21 +30,21 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness {
     }
 
     @Override
-    public int getCurrentEnrollment(ShortCourse shortCourse) {
+    public int getShortCourseCurrentEnrollment(ShortCourse shortCourse) {
 
         return shortCourseDao.getCurrentEnrollment(shortCourse);
     }
 
     @Override
-    public boolean removeParticipant(ShortCourse shortCourse, Participant participant) {
+    public boolean removeParticipantFromShortCourse(ShortCourse shortCourse, Participant participant) {
 
         return shortCourseDao.removeParticipant(shortCourse, participant);
     }
 
     @Override
-    public synchronized boolean addParticipant(ShortCourse shortCourse, Participant participant) {
+    public synchronized boolean addParticipantInShortCourse(ShortCourse shortCourse, Participant participant) {
 
-        if (getCurrentEnrollment(shortCourse) < shortCourse.getMaxEnrollment()) {
+        if (getShortCourseCurrentEnrollment(shortCourse) < shortCourse.getMaxEnrollment()) {
             return shortCourseDao.addParticipant(shortCourse, participant);
         }
 
@@ -52,31 +52,31 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness {
     }
 
     @Override
-    public boolean save(ShortCourse object) {
+    public boolean saveShortCourse(ShortCourse object) {
 
         return shortCourseDao.save(object);
     }
 
     @Override
-    public boolean delete(ShortCourse object) {
+    public boolean deleteShortCourse(ShortCourse object) {
 
         return shortCourseDao.delete(object);
     }
 
     @Override
-    public boolean update(ShortCourse object) {
+    public boolean updateShortCourse(ShortCourse object) {
 
         return shortCourseDao.update(object);
     }
 
     @Override
-    public ShortCourse searchById(Integer id) {
+    public ShortCourse searchShortCourseById(Integer id) {
 
         return shortCourseDao.searchById(id);
     }
 
     @Override
-    public List<ShortCourse> listAll() {
+    public List<ShortCourse> listAllShortCourse() {
 
         List<ShortCourse> allShortCourse = shortCourseDao.listAll();
 

@@ -15,22 +15,22 @@ import java.util.List;
  */
 public interface ShortCourseBusiness {
 
-    boolean addParticipant(ShortCourse shortCourse, Participant participant);
+    boolean addParticipantInShortCourse(ShortCourse shortCourse, Participant participant);
 
-    boolean delete(ShortCourse object);
+    boolean deleteShortCourse(ShortCourse object);
 
-    int getCurrentEnrollment(ShortCourse shortCourse);
+    int getShortCourseCurrentEnrollment(ShortCourse shortCourse);
 
     List<Participant> getShortCourseParticipants(ShortCourse shortCourse);
 
-    List<ShortCourse> listAll();
+    List<ShortCourse> listAllShortCourse();
 
-    boolean removeParticipant(ShortCourse shortCourse, Participant participant);
+    boolean removeParticipantFromShortCourse(ShortCourse shortCourse, Participant participant);
 
-    boolean save(ShortCourse object);
+    boolean saveShortCourse(ShortCourse object);
 
-    ShortCourse searchById(Integer id);
+    ShortCourse searchShortCourseById(Integer id);
 
-    boolean update(ShortCourse object);
+    boolean updateShortCourse(ShortCourse object);
     
 }
