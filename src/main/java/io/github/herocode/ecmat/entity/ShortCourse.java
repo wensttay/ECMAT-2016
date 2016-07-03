@@ -52,6 +52,10 @@ public class ShortCourse {
         this.professor = professor;
     }
 
+    public void setMaxEnrollment(int maxEnrollment) {
+        this.maxEnrollment = maxEnrollment;
+    }
+
     public int getMaxEnrollment() {
         return maxEnrollment;
     }

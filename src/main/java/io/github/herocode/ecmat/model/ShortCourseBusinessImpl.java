@@ -52,21 +52,21 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness {
     }
 
     @Override
-    public boolean saveShortCourse(ShortCourse object) {
+    public boolean saveShortCourse(ShortCourse shortCourse) {
 
-        return shortCourseDao.save(object);
+        return shortCourseDao.save(shortCourse);
     }
 
     @Override
-    public boolean deleteShortCourse(ShortCourse object) {
+    public boolean deleteShortCourse(ShortCourse shortCourse) {
 
-        return shortCourseDao.delete(object);
+        return shortCourseDao.delete(shortCourse);
     }
 
     @Override
-    public boolean updateShortCourse(ShortCourse object) {
+    public boolean updateShortCourse(ShortCourse shortCourse) {
 
-        return shortCourseDao.update(object);
+        return shortCourseDao.update(shortCourse);
     }
 
     @Override
