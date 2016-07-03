@@ -7,6 +7,7 @@ package io.github.herocode.ecmat.model;
 
 import br.com.caelum.stella.validation.CPFValidator;
 import io.github.herocode.ecmat.entity.Participant;
+import io.github.herocode.ecmat.enums.ErrorMessage;
 import java.time.LocalDate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -39,7 +40,7 @@ public class ParticipantBuilder {
     private void validateCpf() throws IllegalArgumentException {
 
         if (stringIsEmpty(cpf)) {
-            throw new IllegalArgumentException("Campo CPF vazio, informe um CPF válido.");
+            throw new IllegalArgumentException(ErrorMessage.EMPTY_CPF.getErrorMessage());
         }
 
         CPFValidator cpfValidator = new CPFValidator();
@@ -47,14 +48,14 @@ public class ParticipantBuilder {
         try {
             cpfValidator.assertValid(cpf);
         } catch (Exception ex) {
-            throw new IllegalArgumentException("CPF Inválido");
+            throw new IllegalArgumentException(ErrorMessage.INVALID_CPF.getErrorMessage());
         }
     }
 
     private void validateName() throws IllegalArgumentException {
 
         if (stringIsEmpty(name)) {
-            throw new IllegalArgumentException("Campo nome vazio, informe seu nome.");
+            throw new IllegalArgumentException(ErrorMessage.EMPTY_NAME.getErrorMessage());
         }
 
     }
@@ -62,7 +63,7 @@ public class ParticipantBuilder {
     private void validateEmail() throws IllegalArgumentException {
 
         if (stringIsEmpty(email)) {
-            throw new IllegalArgumentException("Campo e-mail vazio, informe um e-mail válido.");
+            throw new IllegalArgumentException(ErrorMessage.EMPTY_EMAIL.getErrorMessage());
         }
 
         String emailPattern = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
@@ -73,7 +74,7 @@ public class ParticipantBuilder {
         Matcher matcher = pattern.matcher(email);
 
         if (!matcher.matches()) {
-            throw new IllegalArgumentException("O e-mail informado é inválido");
+            throw new IllegalArgumentException(ErrorMessage.INVALID_EMAIL.getErrorMessage());
         }
 
     }
