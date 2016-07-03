@@ -5,78 +5,82 @@
  */
 package io.github.herocode.ecmat.model;
 
+import io.github.herocode.ecmat.interfaces.ShortCourseBusiness;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
-import io.github.herocode.ecmat.interfaces.Dao;
-import io.github.herocode.ecmat.interfaces.ShortCourseDaoFunctions;
-import java.sql.ResultSet;
 import java.util.List;
-import java.util.Map;
+import io.github.herocode.ecmat.interfaces.ShortCourseDao;
+import java.util.Collections;
 
 /**
  *
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
-public class ShortCourseBusiness implements ShortCourseDaoFunctions, Dao<ShortCourse, Integer>{
+public class ShortCourseBusinessImpl implements ShortCourseBusiness {
+
+    private ShortCourseDao shortCourseDao;
 
     @Override
     public List<Participant> getShortCourseParticipants(ShortCourse shortCourse) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        List<Participant> shortCourseParticipants = shortCourseDao.getShortCourseParticipants(shortCourse);
+
+        return Collections.unmodifiableList(shortCourseParticipants);
+
     }
 
     @Override
     public int getCurrentEnrollment(ShortCourse shortCourse) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        return shortCourseDao.getCurrentEnrollment(shortCourse);
     }
 
     @Override
     public boolean removeParticipant(ShortCourse shortCourse, Participant participant) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        return shortCourseDao.removeParticipant(shortCourse, participant);
     }
 
     @Override
-    public boolean addParticipant(ShortCourse shortCourse, Participant participant) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public synchronized boolean addParticipant(ShortCourse shortCourse, Participant participant) {
+
+        if (getCurrentEnrollment(shortCourse) < shortCourse.getMaxEnrollment()) {
+            return shortCourseDao.addParticipant(shortCourse, participant);
+        }
+
+        return false;
     }
 
     @Override
     public boolean save(ShortCourse object) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        return shortCourseDao.save(object);
     }
 
     @Override
     public boolean delete(ShortCourse object) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        return shortCourseDao.delete(object);
     }
 
     @Override
     public boolean update(ShortCourse object) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        return shortCourseDao.update(object);
     }
 
     @Override
     public ShortCourse searchById(Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    @Override
-    public List<ShortCourse> searchByAttributes(Map<String, String> map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return shortCourseDao.searchById(id);
     }
 
     @Override
     public List<ShortCourse> listAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        List<ShortCourse> allShortCourse = shortCourseDao.listAll();
+
+        return Collections.unmodifiableList(allShortCourse);
     }
 
-    @Override
-    public ShortCourse fillObject(ResultSet rs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public String getTableName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }
