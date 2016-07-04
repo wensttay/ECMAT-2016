@@ -8,6 +8,7 @@ package io.github.herocode.ecmat.model;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
+import io.github.herocode.ecmat.interfaces.ParticipantDao;
 import java.util.List;
 
 /**
@@ -16,29 +17,42 @@ import java.util.List;
  */
 public class ParticipantBusinessImpl implements ParticipantBusiness{
 
+    private ParticipantDao participantDao;
+    
     @Override
     public boolean saveParticipant(Participant participant) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        return participantDao.save(participant);
     }
 
     @Override
     public boolean updateParticipant(Participant participant) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        return participantDao.update(participant);
     }
 
     @Override
     public boolean deleteParticipant(Participant participant) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public List<ShortCourse> listAllParticipants() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        return participantDao.delete(participant);
     }
 
     @Override
     public Participant searchParticipantById(Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        return participantDao.searchById(id);
+    }
+
+    @Override
+    public List<ShortCourse> getRegisteredShortCourse(Participant participant) {
+        
+        return participantDao.getRegisteredShortCourse(participant);
+    }
+
+    @Override
+    public List<Participant> listAllParticipants() {
+        
+        return participantDao.listAll();
     }
     
 }
