@@ -21,8 +21,10 @@ public interface ParticipantBusiness {
 
     boolean deleteParticipant(Participant participant);
 
-    List<ShortCourse> listAllParticipants();
+    List<Participant> listAllParticipants();
 
     Participant searchParticipantById(Integer id);
+    
+    List<ShortCourse> getRegisteredShortCourse(Participant participant);
 
 }
