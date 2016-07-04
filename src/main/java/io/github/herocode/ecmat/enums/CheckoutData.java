@@ -27,7 +27,9 @@ public enum CheckoutData {
     
     SENDER_NAME(""),
     SENDER_EMAIL(""),
-    SENDER_PHONE(""),
+    
+    PHONE_AREA_CODE(""),
+    PHONE_NUMBER(""),
     
     REDIRECT_URL(""),
     
