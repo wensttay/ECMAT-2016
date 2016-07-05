@@ -8,6 +8,8 @@ package io.github.herocode.ecmat.model;
 import io.github.herocode.ecmat.interfaces.ShortCourseBusiness;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
+import io.github.herocode.ecmat.enums.ErrorMessage;
+import io.github.herocode.ecmat.exceptions.EnrollingParticipantException;
 import java.util.List;
 import io.github.herocode.ecmat.interfaces.ShortCourseDao;
 import java.util.Collections;
@@ -42,13 +44,28 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness {
     }
 
     @Override
-    public synchronized boolean addParticipantInShortCourse(ShortCourse shortCourse, Participant participant) {
+    public synchronized boolean addParticipantInShortCourse(ShortCourse shortCourse, Participant participant) throws EnrollingParticipantException {
 
-        if (getShortCourseCurrentEnrollment(shortCourse) < shortCourse.getMaxEnrollment()) {
-            return shortCourseDao.addParticipant(shortCourse, participant);
+        if (!shortCourseDao.isParticipantEnrolledInThisShortCourse(participant, shortCourse)) {
+            if (getShortCourseCurrentEnrollment(shortCourse) < shortCourse.getMaxEnrollment()) {
+
+                if (!shortCourseDao.isParticipantEnrolledToDate(participant, shortCourse.getDate())) {
+
+                    return shortCourseDao.addParticipant(shortCourse, participant);
+                } else {
+
+                    throw new EnrollingParticipantException(ErrorMessage.PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE.getErrorMessage());
+                }
+
+            } else {
+
+                throw new EnrollingParticipantException(ErrorMessage.FILLED_SHORT_COURSE.getErrorMessage());
+            }
+        } else {
+            
+            throw new EnrollingParticipantException(ErrorMessage.PARTICIPANT_ALREADY_REGISTERED.getErrorMessage());
         }
 
-        return false;
     }
 
     @Override
