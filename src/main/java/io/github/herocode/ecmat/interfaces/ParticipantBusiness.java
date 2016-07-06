@@ -26,5 +26,7 @@ public interface ParticipantBusiness {
     Participant searchParticipantById(Integer id);
     
     List<ShortCourse> getRegisteredShortCourse(Participant participant);
+    
+    int getPaymentStatus(Participant participant);
 
 }

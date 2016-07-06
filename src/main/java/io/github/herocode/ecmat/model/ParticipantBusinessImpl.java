@@ -54,5 +54,11 @@ public class ParticipantBusinessImpl implements ParticipantBusiness{
         
         return participantDao.listAll();
     }
+
+    @Override
+    public int getPaymentStatus(Participant participant) {
+        
+        return participantDao.getPaymentStatus(participant);
+    }
     
 }

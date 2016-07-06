@@ -14,7 +14,9 @@ import java.util.List;
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
 public interface ParticipantDao extends Dao<Participant, Integer> {
-    
+
     List<ShortCourse> getRegisteredShortCourse(Participant participant);
-    
+
+    public int getPaymentStatus(Participant participant);
+
 }
