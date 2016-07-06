@@ -25,7 +25,7 @@ import java.math.BigDecimal;
 public class CheckoutCreatorImpl implements CheckoutCreator {
 
     @Override
-    public String buildCheckout() {
+    public String buildCheckout(String referenceCode) {
 
         Checkout checkout = new Checkout();
 
@@ -66,7 +66,7 @@ public class CheckoutCreatorImpl implements CheckoutCreator {
 
         checkout.setCurrency(Currency.BRL);
 
-        checkout.setReference("i1");
+        checkout.setReference(referenceCode);
 
         checkout.setRedirectURL(CheckoutData.REDIRECT_URL.getValue());
 

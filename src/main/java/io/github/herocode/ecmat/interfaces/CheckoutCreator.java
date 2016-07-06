@@ -15,6 +15,6 @@ public interface CheckoutCreator {
      * Build a checkout in the PagSeguro system and return the payment URL
      * @return Payment URL for this checkout
      */
-    String buildCheckout();
+    String buildCheckout(String referenceCode);
     
 }
