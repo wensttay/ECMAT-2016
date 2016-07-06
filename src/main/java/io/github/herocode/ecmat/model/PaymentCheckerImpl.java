@@ -10,6 +10,8 @@ import io.github.herocode.ecmat.interfaces.PaymentChecker;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -27,7 +29,7 @@ import org.xml.sax.SAXException;
 public class PaymentCheckerImpl implements PaymentChecker {
 
     @Override
-    public void checkPayment(String notificationCode) throws DOMException, IOException, ParserConfigurationException, SAXException {
+    public Map<String,String> checkPayment(String notificationCode) throws DOMException, IOException, ParserConfigurationException, SAXException {
 
         StringBuilder urlBuilder = new StringBuilder();
         urlBuilder.append("https://ws.pagseguro.uol.com.br/v3/transactions/notifications/").
@@ -61,6 +63,14 @@ public class PaymentCheckerImpl implements PaymentChecker {
         String type         = eElement.getElementsByTagName("type").item(0).getTextContent();
         String status       = eElement.getElementsByTagName("status").item(0).getTextContent();
 
+        Map<String,String> map = new HashMap<>();
+        map.put("date", date);
+        map.put("code", code);
+        map.put("reference", reference);
+        map.put("type", type);
+        map.put("status", status);
+        
+        return map;
     }
 
 }

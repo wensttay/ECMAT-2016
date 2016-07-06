@@ -6,6 +6,7 @@
 package io.github.herocode.ecmat.interfaces;
 
 import java.io.IOException;
+import java.util.Map;
 import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.DOMException;
 import org.xml.sax.SAXException;
@@ -16,6 +17,6 @@ import org.xml.sax.SAXException;
  */
 public interface PaymentChecker {
     
-    public void checkPayment(String notificationCode) throws DOMException,IOException,ParserConfigurationException,SAXException;
+    public Map<String,String> checkPayment(String notificationCode) throws DOMException,IOException,ParserConfigurationException,SAXException;
     
 }
