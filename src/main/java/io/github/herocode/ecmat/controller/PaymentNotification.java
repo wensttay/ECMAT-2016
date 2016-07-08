@@ -5,12 +5,19 @@
  */
 package io.github.herocode.ecmat.controller;
 
+import io.github.herocode.ecmat.entity.Payment;
+import io.github.herocode.ecmat.interfaces.PaymentBusiness;
 import io.github.herocode.ecmat.interfaces.PaymentChecker;
+import io.github.herocode.ecmat.model.PaymentBusinessImpl;
+import io.github.herocode.ecmat.model.PaymentCheckerImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.util.converter.LocalDateStringConverter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,15 +34,32 @@ import org.xml.sax.SAXException;
 @WebServlet(name = "PaymentNotification", urlPatterns = {"/PaymentNotification"})
 public class PaymentNotification extends HttpServlet {
 
-    private PaymentChecker paymentChecker;
-
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         String notificationCode = request.getParameter("notificationCode");
+        
+        PaymentChecker paymentChecker   = new PaymentCheckerImpl();
+        PaymentBusiness paymentBusiness = new PaymentBusinessImpl();
 
         try {
+            
             Map<String, String> paymentDetails = paymentChecker.checkPayment(notificationCode);
+            
+            String date             = paymentDetails.get("date");
+            String lastEventDate    = paymentDetails.get("lastEventDate");
+            
+            DateTimeFormatter formartter = DateTimeFormatter.ofPattern("YYYY-MM-DDThh:mm:ss.sTZD");
+            
+            Payment payment = new Payment();
+            payment.setCode(paymentDetails.get("code"));
+            payment.setDate(LocalDate.parse(date, formartter));
+            payment.setLastEventDate(LocalDate.parse(lastEventDate, formartter));
+            payment.setReference(paymentDetails.get("reference"));
+            payment.setStatus(paymentDetails.get("status"));
+            
+            paymentBusiness.update(payment);
+            
         } catch (DOMException | ParserConfigurationException | SAXException ex) {
             Logger.getLogger(PaymentNotification.class.getName()).log(Level.SEVERE, null, ex);
         }
