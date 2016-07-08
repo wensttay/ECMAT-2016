@@ -14,19 +14,33 @@ import java.time.LocalDate;
 public class Participant {
 
     private int         id;
+    private Payment     payment;
     private String      name;
     private String      email;
     private String      cpf;
     private LocalDate   birthDate;
 
-    public Participant() { }
+    public Participant() {
+        
+        payment = new Payment(String.valueOf(id));
+        
+    }
 
-    public Participant(int id, String name, String email, LocalDate birthDate, String cpf) {
-        this.id         = id;
-        this.name       = name;
-        this.email      = email;
-        this.birthDate  = birthDate;
-        this.cpf        = cpf;
+    public Participant(int id, Payment payment, String name, String email, String cpf, LocalDate birthDate) {
+        this.id = id;
+        this.payment = payment;
+        this.name = name;
+        this.email = email;
+        this.cpf = cpf;
+        this.birthDate = birthDate;
+    }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
     }
 
     public String getName() {
