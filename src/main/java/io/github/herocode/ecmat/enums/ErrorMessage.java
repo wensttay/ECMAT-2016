@@ -21,7 +21,10 @@ public enum ErrorMessage {
     FILLED_SHORT_COURSE("O mini curso está com todas as vagas preenchidas."),
     PARTICIPANT_ALREADY_REGISTERED("O participante já está matriculado neste mini curso."),
     PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE("O participante ja está matriculado para"
-            + " um minicurso no mesmo horário");
+            + " um minicurso no mesmo horário"),
+    
+    MISSING_PAYMENT("É necessário efetuar o pagamento da inscrição para registrar-se em"
+            + " um minicurso.");
 
     String errorMessage;
 
