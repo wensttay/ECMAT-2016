@@ -57,17 +57,17 @@ public class PaymentCheckerImpl implements PaymentChecker {
 
         Element eElement = (Element) node;
 
-        String date         = eElement.getElementsByTagName("date").item(0).getTextContent();
-        String code         = eElement.getElementsByTagName("code").item(0).getTextContent();
-        String reference    = eElement.getElementsByTagName("reference").item(0).getTextContent();
-        String type         = eElement.getElementsByTagName("type").item(0).getTextContent();
-        String status       = eElement.getElementsByTagName("status").item(0).getTextContent();
+        String date             = eElement.getElementsByTagName("date").item(0).getTextContent();
+        String lastEventDate    = eElement.getElementsByTagName("lastEventDate").item(0).getTextContent();
+        String code             = eElement.getElementsByTagName("code").item(0).getTextContent();
+        String reference        = eElement.getElementsByTagName("reference").item(0).getTextContent();
+        String status           = eElement.getElementsByTagName("status").item(0).getTextContent();
 
         Map<String,String> map = new HashMap<>();
         map.put("date", date);
+        map.put("lastEventDate", lastEventDate);
         map.put("code", code);
         map.put("reference", reference);
-        map.put("type", type);
         map.put("status", status);
         
         return map;
