@@ -7,6 +7,8 @@ package io.github.herocode.ecmat.persistence;
 
 import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.interfaces.Dao;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -32,7 +34,7 @@ public class PaymentDao implements Dao<Payment, String> {
 
         try {
 
-            String sql = "INSERT INTO " + getTableName() + " (date, lastEventDate, code, reference, status) VALUES ?, ?, ?, ?, ?";
+            String sql = "INSERT INTO " + getTableName() + " (date, lastEventDate, code, reference, status, url) VALUES ?, ?, ?, ?, ?, ?";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
@@ -44,6 +46,7 @@ public class PaymentDao implements Dao<Payment, String> {
             statement.setString(count++, object.getCode());
             statement.setString(count++, object.getReference());
             statement.setString(count++, object.getStatus());
+            statement.setString(count++, object.getUrl().toString());
 
             result = statement.executeUpdate();
 
@@ -207,7 +210,8 @@ public class PaymentDao implements Dao<Payment, String> {
             payment.setLastEventDate(rs.getDate("lastEventDate").toLocalDate());
             payment.setReference(rs.getString("reference"));
             payment.setStatus(rs.getString("status"));
-        } catch (SQLException ex) {
+            payment.setUrl(new URL(rs.getString("url")));
+        } catch (SQLException | MalformedURLException ex) {
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 

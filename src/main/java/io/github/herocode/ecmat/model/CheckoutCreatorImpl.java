@@ -85,8 +85,7 @@ public class CheckoutCreatorImpl implements CheckoutCreator {
 
             return checkoutUrl;
 
-        } catch (PagSeguroServiceException e) {
-        }
+        } catch (PagSeguroServiceException e) { }
 
         return "";
     }

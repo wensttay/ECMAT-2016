@@ -9,6 +9,7 @@ import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
 import io.github.herocode.ecmat.interfaces.ParticipantDao;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -46,13 +47,13 @@ public class ParticipantBusinessImpl implements ParticipantBusiness{
     @Override
     public List<ShortCourse> getRegisteredShortCourse(Participant participant) {
         
-        return participantDao.getRegisteredShortCourse(participant);
+        return Collections.unmodifiableList(participantDao.getRegisteredShortCourse(participant));
     }
 
     @Override
     public List<Participant> listAllParticipants() {
         
-        return participantDao.listAll();
+        return Collections.unmodifiableList(participantDao.listAll());
     }
 
     @Override

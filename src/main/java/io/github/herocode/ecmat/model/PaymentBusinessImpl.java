@@ -9,6 +9,7 @@ import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.interfaces.Dao;
 import io.github.herocode.ecmat.interfaces.PaymentBusiness;
 import io.github.herocode.ecmat.persistence.PaymentDao;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -51,7 +52,7 @@ public class PaymentBusinessImpl implements PaymentBusiness{
     @Override
     public List<Payment> listAll() {
         
-        return paymentDao.listAll();
+        return Collections.unmodifiableList(paymentDao.listAll());
     }
     
 }

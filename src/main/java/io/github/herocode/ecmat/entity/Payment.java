@@ -5,6 +5,7 @@
  */
 package io.github.herocode.ecmat.entity;
 
+import java.net.URL;
 import java.time.LocalDate;
 
 /**
@@ -18,6 +19,7 @@ public class Payment {
     private String      code;
     private String      reference;
     private String      status;
+    private URL         url;
 
     public Payment() { }
 
@@ -25,12 +27,21 @@ public class Payment {
         this.code = code;
     }
 
-    public Payment(LocalDate date, LocalDate lastEventDate, String code, String reference, String status) {
+    public Payment(LocalDate date, LocalDate lastEventDate, String code, String reference, String status, URL url) {
         this.date = date;
         this.lastEventDate = lastEventDate;
         this.code = code;
         this.reference = reference;
         this.status = status;
+        this.url = url;
+    }
+
+    public URL getUrl() {
+        return url;
+    }
+
+    public void setUrl(URL url) {
+        this.url = url;
     }
 
     public LocalDate getLastEventDate() {
