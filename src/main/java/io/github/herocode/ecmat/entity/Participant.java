@@ -5,6 +5,8 @@
  */
 package io.github.herocode.ecmat.entity;
 
+import br.com.uol.pagseguro.domain.Address;
+import br.com.uol.pagseguro.domain.Phone;
 import java.time.LocalDate;
 
 /**
@@ -16,9 +18,13 @@ public class Participant {
     private int         id;
     private Payment     payment;
     private String      name;
-    private String      email;
-    private String      cpf;
     private LocalDate   birthDate;
+    private Phone       phone;
+    private String      titration;
+    private String      cpf;
+    private String      email;
+    private String      password;
+    private Address     address;
 
     public Participant() {
         
@@ -26,13 +32,33 @@ public class Participant {
         
     }
 
-    public Participant(int id, Payment payment, String name, String email, String cpf, LocalDate birthDate) {
+    public Participant(int id, Payment payment, String name, LocalDate birthDate, Phone phone, String titration, String cpf, String email, String password, Address address) {
         this.id = id;
         this.payment = payment;
         this.name = name;
-        this.email = email;
-        this.cpf = cpf;
         this.birthDate = birthDate;
+        this.phone = phone;
+        this.titration = titration;
+        this.cpf = cpf;
+        this.email = email;
+        this.password = password;
+        this.address = address;
+    }
+
+    public Phone getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Phone phone) {
+        this.phone = phone;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Payment getPayment() {
@@ -51,6 +77,30 @@ public class Participant {
         this.name = name;
     }
 
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getTitration() {
+        return titration;
+    }
+
+    public void setTitration(String titration) {
+        this.titration = titration;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -59,12 +109,20 @@ public class Participant {
         this.email = email;
     }
 
-    public LocalDate getBirthDate() {
-        return birthDate;
+    public String getPassword() {
+        return password;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
     
     @Override
@@ -82,22 +140,6 @@ public class Participant {
         return sb.toString();
     }
 
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-    
     @Override
     public boolean equals(Object o){
         
