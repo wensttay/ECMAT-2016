@@ -46,7 +46,7 @@ public class CheckoutCreatorImpl implements CheckoutCreator {
                 CheckoutData.SHIPPING_NUMBER.getValue(),
                 CheckoutData.SHIPPING_COMPLEMENT.getValue()
         );
-
+        
         Phone senderPhone = new Phone(
                 CheckoutData.PHONE_AREA_CODE.getValue(),
                 CheckoutData.PHONE_NUMBER.getValue()

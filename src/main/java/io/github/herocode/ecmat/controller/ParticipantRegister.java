@@ -5,9 +5,12 @@
  */
 package io.github.herocode.ecmat.controller;
 
+import br.com.uol.pagseguro.domain.Address;
+import br.com.uol.pagseguro.domain.Phone;
 import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.interfaces.PaymentBusiness;
 import io.github.herocode.ecmat.interfaces.PaymentChecker;
+import io.github.herocode.ecmat.model.ParticipantBuilder;
 import io.github.herocode.ecmat.model.PaymentBusinessImpl;
 import io.github.herocode.ecmat.model.PaymentCheckerImpl;
 import java.io.IOException;
@@ -32,37 +35,30 @@ import org.xml.sax.SAXException;
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
 @WebServlet(name = "PaymentNotification", urlPatterns = {"/PaymentNotification"})
-public class PaymentNotification extends HttpServlet {
+public class ParticipantRegister extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String notificationCode = request.getParameter("notificationCode");
-        
-        PaymentChecker paymentChecker   = new PaymentCheckerImpl();
-        PaymentBusiness paymentBusiness = new PaymentBusinessImpl();
+        String name         = request.getParameter("name");
+        String birthDate    = request.getParameter("birth-date");
+        String titration    = request.getParameter("titration");
+        String cpf          = request.getParameter("cpf");
+        String ddd          = request.getParameter("ddd");
+        String phoneNumber  = request.getParameter("phone");
+        String email        = request.getParameter("email");
+        String password     = request.getParameter("password");
+        String street       = request.getParameter("street");
+        String number       = request.getParameter("number");
+        String district     = request.getParameter("district");
+        String city         = request.getParameter("city");
+        String postalCode   = request.getParameter("postal-code");
+        String state        = request.getParameter("state");
+        String country      = request.getParameter("country");
 
-        try {
-            
-            Map<String, String> paymentDetails = paymentChecker.checkPayment(notificationCode);
-            
-            String date             = paymentDetails.get("date");
-            String lastEventDate    = paymentDetails.get("lastEventDate");
-            
-            DateTimeFormatter formartter = DateTimeFormatter.ofPattern("YYYY-MM-DDThh:mm:ss.sTZD");
-            
-            Payment payment = new Payment();
-            payment.setCode(paymentDetails.get("code"));
-            payment.setDate(LocalDate.parse(date, formartter));
-            payment.setLastEventDate(LocalDate.parse(lastEventDate, formartter));
-            payment.setReference(paymentDetails.get("reference"));
-            payment.setStatus(paymentDetails.get("status"));
-            
-            paymentBusiness.update(payment);
-            
-        } catch (DOMException | ParserConfigurationException | SAXException ex) {
-            Logger.getLogger(PaymentNotification.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        Phone phone     = new Phone(ddd, phoneNumber);
+        Address address = new Address(country, state, city, district, postalCode, street, number, street);
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
