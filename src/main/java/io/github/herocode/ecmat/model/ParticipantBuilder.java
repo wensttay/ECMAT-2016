@@ -6,11 +6,17 @@
 package io.github.herocode.ecmat.model;
 
 import br.com.caelum.stella.validation.CPFValidator;
+import br.com.uol.pagseguro.domain.Address;
+import br.com.uol.pagseguro.domain.Phone;
 import io.github.herocode.ecmat.entity.Participant;
+import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.enums.ErrorMessage;
+import io.github.herocode.ecmat.enums.RegularExpressions;
+import io.github.herocode.ecmat.enums.Titrations;
 import java.time.LocalDate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.commons.codec.digest.DigestUtils;
 
 /**
  *
@@ -18,16 +24,23 @@ import java.util.regex.Pattern;
  */
 public class ParticipantBuilder {
 
-    private final String name;
-    private final String email;
-    private final String cpf;
+    private final String    name;
+    private final String    titration;
+    private final String    cpf;
+    private final String    email;
+    private final Address   address;
 
-    private LocalDate birthDate;
+    private LocalDate   birthDate;
+    private Payment     payment;
+    private Phone       phone;
+    private String      password;
 
-    public ParticipantBuilder(String name, String email, String cpf) {
-        this.name = name;
-        this.email = email;
-        this.cpf = cpf;
+    public ParticipantBuilder(String name, String titration, String cpf, String email, Address address) {
+        this.name       = name;
+        this.titration  = titration;
+        this.cpf        = cpf;
+        this.email      = email;
+        this.address    = address;
     }
 
     public ParticipantBuilder setBirthDate(LocalDate birthDate) {
@@ -37,6 +50,83 @@ public class ParticipantBuilder {
         return this;
     }
 
+    public ParticipantBuilder setPayment(Payment payment) {
+        
+        this.payment = payment;
+        
+        return this;
+    }
+
+    public ParticipantBuilder setPassword(String password) {
+
+        this.password = password;
+        
+        return this;
+    }
+    
+    public ParticipantBuilder setPhone(Phone phone) {
+        
+        this.phone = phone;
+        
+        return this;
+    }
+    
+    private void validateAddress() throws IllegalArgumentException{
+        
+        if(stringIsEmpty(address.getCountry())){
+            throw new IllegalArgumentException(ErrorMessage.EMPTY_COUNTRY.getErrorMessage());
+        }
+        
+        if(stringIsEmpty(address.getCity())){
+            throw new IllegalArgumentException(ErrorMessage.EMPTY_CITY.getErrorMessage());
+        }
+        
+        if(stringIsEmpty(address.getState())){
+            throw new IllegalArgumentException(ErrorMessage.EMPTY_STATE.getErrorMessage());
+        }
+        
+        
+    }
+    
+    private void validateTitration() throws IllegalArgumentException {
+        
+        if(stringIsEmpty(titration)){
+            throw new IllegalArgumentException(ErrorMessage.EMPTY_TITRATION.getErrorMessage());
+        }
+        
+        boolean equals = false;
+        
+        for(Titrations t : Titrations.values()){
+            if(t.getTitration().equals(titration)){
+                equals = true;
+                break;
+            }
+        }
+        
+        if(!equals){
+            throw new IllegalArgumentException(ErrorMessage.INVALID_TITRATION.getErrorMessage());
+        }
+
+    }
+    
+    private void validatePassword() throws IllegalArgumentException {
+        
+        if(stringIsEmpty(password)){
+            throw new IllegalArgumentException(ErrorMessage.INVALID_PASSWORD.getErrorMessage());
+        }
+        
+        Pattern pattern = Pattern.compile(RegularExpressions.PASSWORD_PATTERN.getRegex());
+
+        Matcher matcher = pattern.matcher(password);
+
+        if (!matcher.matches()) {
+            throw new IllegalArgumentException(ErrorMessage.INVALID_PASSWORD.getErrorMessage());
+        }
+        
+        password = DigestUtils.sha1Hex(password);
+        
+    }
+    
     private void validateCpf() throws IllegalArgumentException {
 
         if (stringIsEmpty(cpf)) {
@@ -66,10 +156,7 @@ public class ParticipantBuilder {
             throw new IllegalArgumentException(ErrorMessage.EMPTY_EMAIL.getErrorMessage());
         }
 
-        String emailPattern = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-
-        Pattern pattern = Pattern.compile(emailPattern);
+        Pattern pattern = Pattern.compile(RegularExpressions.EMAIL_PATTERN.getRegex());
 
         Matcher matcher = pattern.matcher(email);
 
@@ -89,6 +176,9 @@ public class ParticipantBuilder {
         validateName();
         validateEmail();
         validateCpf();
+        validatePassword();
+        validateTitration();
+        validateAddress();
 
         Participant participant = new Participant();
 
