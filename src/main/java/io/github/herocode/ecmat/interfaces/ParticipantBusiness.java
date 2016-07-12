@@ -23,7 +23,7 @@ public interface ParticipantBusiness {
 
     List<Participant> listAllParticipants();
 
-    Participant searchParticipantById(Integer id);
+    Participant searchParticipantById(int id);
     
     List<ShortCourse> getRegisteredShortCourse(Participant participant);
     

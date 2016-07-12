@@ -39,7 +39,7 @@ public class ParticipantBusinessImpl implements ParticipantBusiness{
     }
 
     @Override
-    public Participant searchParticipantById(Integer id) {
+    public Participant searchParticipantById(int id) {
         
         return participantDao.searchById(id);
     }
