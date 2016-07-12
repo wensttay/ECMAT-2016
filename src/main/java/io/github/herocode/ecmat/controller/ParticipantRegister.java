@@ -13,6 +13,7 @@ import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.enums.PaymentStatus;
 import io.github.herocode.ecmat.interfaces.CheckoutCreator;
+import io.github.herocode.ecmat.interfaces.Dao;
 import io.github.herocode.ecmat.interfaces.ParticipantDao;
 import io.github.herocode.ecmat.interfaces.PaymentBusiness;
 import io.github.herocode.ecmat.interfaces.PaymentChecker;
@@ -20,6 +21,7 @@ import io.github.herocode.ecmat.model.CheckoutCreatorImpl;
 import io.github.herocode.ecmat.model.ParticipantBuilder;
 import io.github.herocode.ecmat.model.PaymentBusinessImpl;
 import io.github.herocode.ecmat.model.PaymentCheckerImpl;
+import io.github.herocode.ecmat.persistence.ParticipantDaoImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.MalformedURLException;
@@ -100,7 +102,7 @@ public class ParticipantRegister extends HttpServlet {
 
             participant.setPayment(payment);
 
-            ParticipantDao participantDao = null;
+            Dao<Participant, Integer> participantDao = new ParticipantDaoImpl();
 
             participantDao.save(participant);
 
