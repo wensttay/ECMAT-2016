@@ -10,7 +10,7 @@ package io.github.herocode.ecmat.enums;
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
 public enum CheckoutData {
-    
+    //PERGUNTAR
     ITEM_ID(""), 
     ITEM_DESCRIPTION(""), 
     ITEM_SIZE(""), 

@@ -29,7 +29,7 @@ public class ParticipantBuilder {
     private final String    cpf;
     private final String    email;
     private final Address   address;
-
+    
     private LocalDate   birthDate;
     private Payment     payment;
     private Phone       phone;
