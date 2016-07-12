@@ -13,6 +13,7 @@ import io.github.herocode.ecmat.model.PaymentCheckerImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Map;
 import java.util.logging.Level;
@@ -53,8 +54,8 @@ public class PaymentNotification extends HttpServlet {
             
             Payment payment = new Payment();
             payment.setCode(paymentDetails.get("code"));
-            payment.setDate(LocalDate.parse(date, formartter));
-            payment.setLastEventDate(LocalDate.parse(lastEventDate, formartter));
+            payment.setDate(LocalDateTime.parse(date, formartter));
+            payment.setLastEventDate(LocalDateTime.parse(lastEventDate, formartter));
             payment.setReference(paymentDetails.get("reference"));
             payment.setStatus(paymentDetails.get("status"));
             
