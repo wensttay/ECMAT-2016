@@ -34,15 +34,15 @@ public class PaymentDao implements Dao<Payment, String> {
 
         try {
 
-            String sql = "INSERT INTO " + getTableName() + " (date, lastEventDate, code, reference, status, url) VALUES ?, ?, ?, ?, ?, ?";
+            String sql = "INSERT INTO " + getTableName() + " (date, last_event_date, code, reference, status, url) VALUES ?, ?, ?, ?, ?, ?";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
 
             int count = 1;
 
-            statement.setDate(count++, java.sql.Date.valueOf(object.getDate()));
-            statement.setDate(count++, java.sql.Date.valueOf(object.getLastEventDate()));
+            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getDate()));
+            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getLastEventDate()));
             statement.setString(count++, object.getCode());
             statement.setString(count++, object.getReference());
             statement.setString(count++, object.getStatus());
@@ -101,15 +101,15 @@ public class PaymentDao implements Dao<Payment, String> {
 
         try {
 
-            String sql = "UPDATE " + getTableName() + " SET date = ?, lastEventDate = ?, code = ?, status = ? WHERE reference = ?";
+            String sql = "UPDATE " + getTableName() + " SET date = ?, last_event_date = ?, code = ?, status = ? WHERE reference = ?";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
 
             int count = 1;
 
-            statement.setDate(count++, java.sql.Date.valueOf(object.getDate()));
-            statement.setDate(count++, java.sql.Date.valueOf(object.getLastEventDate()));
+            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getDate()));
+            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getLastEventDate()));
             statement.setString(count++, object.getCode());
             statement.setString(count++, object.getStatus());
             statement.setString(count++, object.getReference());
@@ -206,8 +206,8 @@ public class PaymentDao implements Dao<Payment, String> {
         try {
             payment = new Payment();
             payment.setCode(rs.getString("code"));
-            payment.setDate(rs.getDate("date").toLocalDate());
-            payment.setLastEventDate(rs.getDate("lastEventDate").toLocalDate());
+            payment.setDate(rs.getTimestamp("date").toLocalDateTime());
+            payment.setLastEventDate(rs.getTimestamp("last_event_date").toLocalDateTime());
             payment.setReference(rs.getString("reference"));
             payment.setStatus(rs.getString("status"));
             payment.setUrl(new URL(rs.getString("url")));
