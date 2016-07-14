@@ -8,7 +8,7 @@ package io.github.herocode.ecmat.model;
 import io.github.herocode.ecmat.interfaces.ShortCourseBusiness;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
-import io.github.herocode.ecmat.enums.ErrorMessage;
+import io.github.herocode.ecmat.enums.ErrorMessages;
 import io.github.herocode.ecmat.enums.PaymentStatus;
 import io.github.herocode.ecmat.exceptions.EnrollingParticipantException;
 import java.util.List;
@@ -58,20 +58,20 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness {
                         return shortCourseDao.addParticipant(shortCourse, participant);
                     } else {
 
-                        throw new EnrollingParticipantException(ErrorMessage.PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE.getErrorMessage());
+                        throw new EnrollingParticipantException(ErrorMessages.PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE.getErrorMessage());
                     }
 
                 } else {
 
-                    throw new EnrollingParticipantException(ErrorMessage.FILLED_SHORT_COURSE.getErrorMessage());
+                    throw new EnrollingParticipantException(ErrorMessages.FILLED_SHORT_COURSE.getErrorMessage());
                 }
             } else {
 
-                throw new EnrollingParticipantException(ErrorMessage.PARTICIPANT_ALREADY_REGISTERED.getErrorMessage());
+                throw new EnrollingParticipantException(ErrorMessages.PARTICIPANT_ALREADY_REGISTERED.getErrorMessage());
             }
         }else{
             
-                throw new EnrollingParticipantException(ErrorMessage.MISSING_PAYMENT.getErrorMessage());
+                throw new EnrollingParticipantException(ErrorMessages.MISSING_PAYMENT.getErrorMessage());
         }
 
     }
