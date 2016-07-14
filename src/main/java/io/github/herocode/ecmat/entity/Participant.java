@@ -7,6 +7,9 @@ package io.github.herocode.ecmat.entity;
 
 import br.com.uol.pagseguro.domain.Address;
 import br.com.uol.pagseguro.domain.Phone;
+import io.github.herocode.ecmat.interfaces.Dao;
+import io.github.herocode.ecmat.persistence.PaymentDao;
+import java.net.URL;
 import java.time.LocalDate;
 
 /**
@@ -15,26 +18,23 @@ import java.time.LocalDate;
  */
 public class Participant {
 
-    private int         id;
-    private Payment     payment;
-    private String      name;
-    private LocalDate   birthDate;
-    private Phone       phone;
-    private String      titration;
-    private String      cpf;
-    private String      email;
-    private String      password;
-    private Address     address;
+    private int                 id;
+    private String              name;
+    private LocalDate           birthDate;
+    private Phone               phone;
+    private String              titration;
+    private String              cpf;
+    private String              email;
+    private String              password;
+    private Address             address;
+    private Dao<Payment,String> paymentDao;
 
     public Participant() {
         
-        payment = new Payment(String.valueOf(id));
-        
     }
 
-    public Participant(int id, Payment payment, String name, LocalDate birthDate, Phone phone, String titration, String cpf, String email, String password, Address address) {
+    public Participant(int id, String name, LocalDate birthDate, Phone phone, String titration, String cpf, String email, String password, Address address) {
         this.id = id;
-        this.payment = payment;
         this.name = name;
         this.birthDate = birthDate;
         this.phone = phone;
@@ -62,13 +62,33 @@ public class Participant {
     }
 
     public Payment getPayment() {
-        return payment;
+        
+        if(paymentDao == null){
+            paymentDao = new PaymentDao();
+        }
+        
+        return paymentDao.searchById(String.valueOf(cpf.hashCode()));
+    }
+    
+    public void setPayment(Payment payment){
+     
+        if(paymentDao == null){
+            paymentDao = new PaymentDao();
+        }
+        
+        paymentDao.save(payment);   
     }
 
-    public void setPayment(Payment payment) {
-        this.payment = payment;
+    public String getPaymentStatus(){
+        
+        return getPayment().getStatus();
     }
-
+    
+    public URL getPaymentUrl(){
+        
+        return getPayment().getUrl();
+    }
+    
     public String getName() {
         return name;
     }

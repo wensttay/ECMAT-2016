@@ -11,6 +11,7 @@ import io.github.herocode.ecmat.interfaces.PaymentBusiness;
 import io.github.herocode.ecmat.persistence.PaymentDao;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -53,6 +54,18 @@ public class PaymentBusinessImpl implements PaymentBusiness{
     public List<Payment> listAll() {
         
         return Collections.unmodifiableList(paymentDao.listAll());
+    }
+
+    @Override
+    public List<Payment> searchParticipantByAttribute(String key, String value) {
+        
+        return Collections.unmodifiableList(paymentDao.searchByAttribute(key, value));
+    }
+
+    @Override
+    public List<Payment> searchParticipantByAttributes(Map<String, String> map) {
+        
+        return Collections.unmodifiableList(paymentDao.searchByAttributes(map));
     }
     
 }

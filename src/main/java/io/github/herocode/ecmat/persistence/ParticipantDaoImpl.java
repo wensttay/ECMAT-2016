@@ -33,8 +33,17 @@ public class ParticipantDaoImpl implements ParticipantDao {
     }
 
     @Override
-    public int getPaymentStatus(Participant participant) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean save(Participant participant, Payment payment) {
+        
+        save(participant);
+        
+        if (payment != null) {
+            
+            Dao<Payment, String> paymentDao = new PaymentDao();
+            return paymentDao.save(payment);
+        }
+        
+        return false;
     }
 
     @Override
@@ -47,11 +56,11 @@ public class ParticipantDaoImpl implements ParticipantDao {
 
         try {
 
-            String sql = "INSERT INTO " + getTableName() + " (id, payment_id, "
+            String sql = "INSERT INTO " + getTableName() + " (id, "
                     + "name, birth_date, phone_ddd, phone_number, titration, cpf,"
                     + " email, password, country, state, city, district, postal_code,"
-                    + " street, number) VALUES ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,"
-                    + "?, ?, ?, ?, ?, ?";
+                    + " street, house_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,"
+                    + "?, ?, ?, ?, ?)";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
@@ -59,7 +68,6 @@ public class ParticipantDaoImpl implements ParticipantDao {
             int count = 1;
 
             statement.setInt(count++, object.getId());
-            statement.setString(count++, object.getPayment().getReference());
             statement.setString(count++, object.getName());
             statement.setDate(count++, java.sql.Date.valueOf(object.getBirthDate()));
             statement.setString(count++, object.getPhone().getAreaCode());
@@ -77,11 +85,6 @@ public class ParticipantDaoImpl implements ParticipantDao {
             statement.setString(count++, object.getAddress().getNumber());
 
             result = statement.executeUpdate();
-
-            if (object.getPayment() != null) {
-                Dao<Payment, String> paymentDao = new PaymentDao();
-                paymentDao.save(object.getPayment());
-            }
 
             statement.close();
             connection.close();

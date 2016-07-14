@@ -185,6 +185,10 @@ public class ParticipantBuilder {
         participant.setName(name);
         participant.setCpf(cpf);
         participant.setEmail(email);
+        participant.setPhone(phone);
+        participant.setAddress(address);
+        participant.setTitration(titration);
+        participant.setPassword(password);
         participant.setBirthDate(birthDate);
 
         return participant;

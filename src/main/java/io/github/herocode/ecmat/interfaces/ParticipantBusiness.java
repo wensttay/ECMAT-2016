@@ -8,6 +8,7 @@ package io.github.herocode.ecmat.interfaces;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -27,6 +28,8 @@ public interface ParticipantBusiness {
     
     List<ShortCourse> getRegisteredShortCourse(Participant participant);
     
-    int getPaymentStatus(Participant participant);
-
+    List<Participant> searchParticipantByAttribute(String key, String value);
+    
+    List<Participant> searchParticipantByAttributes(Map<String, String> map);
+    
 }

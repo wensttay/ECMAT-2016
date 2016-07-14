@@ -56,42 +56,42 @@ public class ParticipantRegister extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String name = request.getParameter("name");
-        String birthDate = request.getParameter("birth-date");
-        String titration = request.getParameter("titration");
-        String cpf = request.getParameter("cpf");
-        String ddd = request.getParameter("ddd");
-        String phoneNumber = request.getParameter("phone");
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        String street = request.getParameter("street");
-        String number = request.getParameter("number");
-        String district = request.getParameter("district");
-        String city = request.getParameter("city");
-        String postalCode = request.getParameter("postal-code");
-        String state = request.getParameter("state");
-        String country = request.getParameter("country");
-
-        DateTimeFormatter formartter = DateTimeFormatter.ofPattern("DD-MM-YYYY");
-        LocalDate bDate = LocalDate.parse(birthDate, formartter);
-
-        Phone phone = new Phone(ddd, phoneNumber);
-        Address address = new Address(country, state, city, district, postalCode, street, number, "");
-
-        ParticipantBuilder participantBuilder = new ParticipantBuilder(name, titration, cpf, email, address);
-        participantBuilder.setPassword(password).
-                setPhone(phone).
-                setBirthDate(bDate);
+        String name         = request.getParameter("name");
+        String birthDate    = request.getParameter("birth-date");
+        String titration    = request.getParameter("titration");
+        String cpf          = request.getParameter("cpf");
+        String ddd          = request.getParameter("ddd");
+        String phoneNumber  = request.getParameter("phone");
+        String email        = request.getParameter("email");
+        String password     = request.getParameter("password");
+        String street       = request.getParameter("street");
+        String number       = request.getParameter("number");
+        String district     = request.getParameter("district");
+        String city         = request.getParameter("city");
+        String postalCode   = request.getParameter("postal-code");
+        String state        = request.getParameter("state");
+        String country      = request.getParameter("country");
 
         try {
 
+            DateTimeFormatter formartter = DateTimeFormatter.ofPattern("DD-MM-YYYY");
+            LocalDate bDate = LocalDate.parse(birthDate, formartter);
+
+            Phone phone = new Phone(ddd, phoneNumber);
+            Address address = new Address(country, state, city, district, postalCode, street, number, "");
+
+            ParticipantBuilder participantBuilder = new ParticipantBuilder(name, titration, cpf, email, address);
+            participantBuilder.setPassword(password).
+                    setPhone(phone).
+                    setBirthDate(bDate);
+
             Participant participant = participantBuilder.build();
-            
-            StringBuilder sb = new StringBuilder();
-            sb.append(participant.getCpf().hashCode()).
-                    append(new Date(System.currentTimeMillis()).hashCode());
-            
-            Payment payment = new Payment(String.valueOf(sb.toString().hashCode()));
+
+            ParticipantDao participantDao = new ParticipantDaoImpl();
+
+            participantDao.save(participant);
+
+            Payment payment = new Payment(String.valueOf(participant.getCpf().hashCode()));
 
             CheckoutCreator checkoutCreator = new CheckoutCreatorImpl();
 
@@ -102,22 +102,16 @@ public class ParticipantRegister extends HttpServlet {
 
             participant.setPayment(payment);
 
-            Dao<Participant, Integer> participantDao = new ParticipantDaoImpl();
-
-            participantDao.save(participant);
-
-        } catch (IllegalArgumentException ex) {
+        } catch (Exception ex) {
 
             Map<String, String> responseMap = new HashMap<>();
             responseMap.put("error", ex.getMessage());
-            
+
             String json = new Gson().toJson(responseMap);
-            
+
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
             response.getWriter().write(json);
-            
-        } catch (Exception ex) {
 
         }
 

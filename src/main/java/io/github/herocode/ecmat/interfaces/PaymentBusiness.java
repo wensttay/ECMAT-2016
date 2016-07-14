@@ -7,6 +7,7 @@ package io.github.herocode.ecmat.interfaces;
 
 import io.github.herocode.ecmat.entity.Payment;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -23,5 +24,9 @@ public interface PaymentBusiness {
     Payment searchById(String reference);
 
     List<Payment> listAll();
+    
+    List<Payment> searchParticipantByAttribute(String key, String value);
+    
+    List<Payment> searchParticipantByAttributes(Map<String, String> map);
 
 }

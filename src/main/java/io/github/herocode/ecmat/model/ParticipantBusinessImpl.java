@@ -9,8 +9,10 @@ import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
 import io.github.herocode.ecmat.interfaces.ParticipantDao;
+import io.github.herocode.ecmat.persistence.ParticipantDaoImpl;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -19,6 +21,10 @@ import java.util.List;
 public class ParticipantBusinessImpl implements ParticipantBusiness{
 
     private ParticipantDao participantDao;
+
+    public ParticipantBusinessImpl() {
+        this.participantDao = new ParticipantDaoImpl();
+    }
     
     @Override
     public boolean saveParticipant(Participant participant) {
@@ -57,9 +63,15 @@ public class ParticipantBusinessImpl implements ParticipantBusiness{
     }
 
     @Override
-    public int getPaymentStatus(Participant participant) {
+    public List<Participant> searchParticipantByAttribute(String key, String value) {
         
-        return participantDao.getPaymentStatus(participant);
+        return Collections.unmodifiableList(participantDao.searchByAttribute(key, value));
     }
-    
+
+    @Override
+    public List<Participant> searchParticipantByAttributes(Map<String, String> map) {
+        
+        return Collections.unmodifiableList(participantDao.searchByAttributes(map));
+    }
+
 }

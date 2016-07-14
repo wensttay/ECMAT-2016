@@ -24,7 +24,7 @@ CREATE TABLE participant (
     district TEXT, 
     postal_code VARCHAR(10), 
     street TEXT, 
-    number INT,
+    house_number VARCHAR(5),
     PRIMARY KEY(id),
     FOREIGN KEY(payment_id) REFERENCES payment(reference)
 );

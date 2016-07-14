@@ -6,6 +6,7 @@
 package io.github.herocode.ecmat.interfaces;
 
 import io.github.herocode.ecmat.entity.Participant;
+import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import java.util.List;
 
@@ -17,6 +18,6 @@ public interface ParticipantDao extends Dao<Participant, Integer> {
 
     List<ShortCourse> getRegisteredShortCourse(Participant participant);
 
-    public int getPaymentStatus(Participant participant);
+    public boolean save(Participant participant, Payment payment);
 
 }
