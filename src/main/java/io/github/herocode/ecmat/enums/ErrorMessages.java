@@ -9,7 +9,7 @@ package io.github.herocode.ecmat.enums;
  *
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
-public enum ErrorMessage {
+public enum ErrorMessages {
 
     EMPTY_NAME("Campo nome vazio, informe seu nome."),
     EMPTY_EMAIL("Campo e-mail vazio, informe um e-mail válido."),
@@ -23,6 +23,8 @@ public enum ErrorMessage {
     INVALID_EMAIL("O e-mail informado é inválido."),
     INVALID_PASSWORD("A senha deve conter ao menos 6 caracteres alfa-numéricos ou caracteres especiais como .,_"),
     INVALID_TITRATION("Titulação inválida."),
+    INVALID_TOKEN("Token inválido."),
+    INVALID_ID("Id inválido."),
     
     FILLED_SHORT_COURSE("O mini curso está com todas as vagas preenchidas."),
     PARTICIPANT_ALREADY_REGISTERED("O participante já está matriculado neste mini curso."),
@@ -34,7 +36,7 @@ public enum ErrorMessage {
 
     String errorMessage;
 
-    ErrorMessage(String message) {
+    ErrorMessages(String message) {
         errorMessage = message;
     }
 

@@ -24,7 +24,9 @@ public interface ParticipantBusiness {
 
     List<Participant> listAllParticipants();
 
-    Participant searchParticipantById(int id);
+    Participant searchParticipantById(int id) throws IllegalArgumentException;
+    
+    Participant searchParticipantByEmail(String email) throws IllegalArgumentException;
     
     List<ShortCourse> getRegisteredShortCourse(Participant participant);
     
