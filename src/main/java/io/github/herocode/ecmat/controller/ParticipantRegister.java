@@ -14,11 +14,13 @@ import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.enums.PaymentStatus;
 import io.github.herocode.ecmat.interfaces.CheckoutCreator;
 import io.github.herocode.ecmat.interfaces.Dao;
+import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
 import io.github.herocode.ecmat.interfaces.ParticipantDao;
 import io.github.herocode.ecmat.interfaces.PaymentBusiness;
 import io.github.herocode.ecmat.interfaces.PaymentChecker;
 import io.github.herocode.ecmat.model.CheckoutCreatorImpl;
 import io.github.herocode.ecmat.model.ParticipantBuilder;
+import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
 import io.github.herocode.ecmat.model.PaymentBusinessImpl;
 import io.github.herocode.ecmat.model.PaymentCheckerImpl;
 import io.github.herocode.ecmat.persistence.ParticipantDaoImpl;
@@ -50,7 +52,7 @@ import org.xml.sax.SAXException;
  *
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
-@WebServlet(name = "PaymentNotification", urlPatterns = {"/PaymentNotification"})
+@WebServlet(name = "ParticipantRegister", urlPatterns = {"/ParticipantRegister"})
 public class ParticipantRegister extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -86,10 +88,10 @@ public class ParticipantRegister extends HttpServlet {
                     setBirthDate(bDate);
 
             Participant participant = participantBuilder.build();
+            
+            ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
 
-            ParticipantDao participantDao = new ParticipantDaoImpl();
-
-            participantDao.save(participant);
+            participantBusiness.saveParticipant(participant);
 
             Payment payment = new Payment(String.valueOf(participant.getCpf().hashCode()));
 

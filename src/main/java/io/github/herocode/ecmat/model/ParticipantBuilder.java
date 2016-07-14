@@ -10,7 +10,7 @@ import br.com.uol.pagseguro.domain.Address;
 import br.com.uol.pagseguro.domain.Phone;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.Payment;
-import io.github.herocode.ecmat.enums.ErrorMessage;
+import io.github.herocode.ecmat.enums.ErrorMessages;
 import io.github.herocode.ecmat.enums.RegularExpressions;
 import io.github.herocode.ecmat.enums.Titrations;
 import java.time.LocalDate;
@@ -74,15 +74,15 @@ public class ParticipantBuilder {
     private void validateAddress() throws IllegalArgumentException{
         
         if(stringIsEmpty(address.getCountry())){
-            throw new IllegalArgumentException(ErrorMessage.EMPTY_COUNTRY.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.EMPTY_COUNTRY.getErrorMessage());
         }
         
         if(stringIsEmpty(address.getCity())){
-            throw new IllegalArgumentException(ErrorMessage.EMPTY_CITY.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.EMPTY_CITY.getErrorMessage());
         }
         
         if(stringIsEmpty(address.getState())){
-            throw new IllegalArgumentException(ErrorMessage.EMPTY_STATE.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.EMPTY_STATE.getErrorMessage());
         }
         
         
@@ -91,7 +91,7 @@ public class ParticipantBuilder {
     private void validateTitration() throws IllegalArgumentException {
         
         if(stringIsEmpty(titration)){
-            throw new IllegalArgumentException(ErrorMessage.EMPTY_TITRATION.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.EMPTY_TITRATION.getErrorMessage());
         }
         
         boolean equals = false;
@@ -104,7 +104,7 @@ public class ParticipantBuilder {
         }
         
         if(!equals){
-            throw new IllegalArgumentException(ErrorMessage.INVALID_TITRATION.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.INVALID_TITRATION.getErrorMessage());
         }
 
     }
@@ -112,7 +112,7 @@ public class ParticipantBuilder {
     private void validatePassword() throws IllegalArgumentException {
         
         if(stringIsEmpty(password)){
-            throw new IllegalArgumentException(ErrorMessage.INVALID_PASSWORD.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.INVALID_PASSWORD.getErrorMessage());
         }
         
         Pattern pattern = Pattern.compile(RegularExpressions.PASSWORD_PATTERN.getRegex());
@@ -120,7 +120,7 @@ public class ParticipantBuilder {
         Matcher matcher = pattern.matcher(password);
 
         if (!matcher.matches()) {
-            throw new IllegalArgumentException(ErrorMessage.INVALID_PASSWORD.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.INVALID_PASSWORD.getErrorMessage());
         }
         
         password = DigestUtils.sha1Hex(password);
@@ -130,7 +130,7 @@ public class ParticipantBuilder {
     private void validateCpf() throws IllegalArgumentException {
 
         if (stringIsEmpty(cpf)) {
-            throw new IllegalArgumentException(ErrorMessage.EMPTY_CPF.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.EMPTY_CPF.getErrorMessage());
         }
 
         CPFValidator cpfValidator = new CPFValidator();
@@ -138,14 +138,14 @@ public class ParticipantBuilder {
         try {
             cpfValidator.assertValid(cpf);
         } catch (Exception ex) {
-            throw new IllegalArgumentException(ErrorMessage.INVALID_CPF.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.INVALID_CPF.getErrorMessage());
         }
     }
 
     private void validateName() throws IllegalArgumentException {
 
         if (stringIsEmpty(name)) {
-            throw new IllegalArgumentException(ErrorMessage.EMPTY_NAME.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.EMPTY_NAME.getErrorMessage());
         }
 
     }
@@ -153,7 +153,7 @@ public class ParticipantBuilder {
     private void validateEmail() throws IllegalArgumentException {
 
         if (stringIsEmpty(email)) {
-            throw new IllegalArgumentException(ErrorMessage.EMPTY_EMAIL.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.EMPTY_EMAIL.getErrorMessage());
         }
 
         Pattern pattern = Pattern.compile(RegularExpressions.EMAIL_PATTERN.getRegex());
@@ -161,7 +161,7 @@ public class ParticipantBuilder {
         Matcher matcher = pattern.matcher(email);
 
         if (!matcher.matches()) {
-            throw new IllegalArgumentException(ErrorMessage.INVALID_EMAIL.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessages.INVALID_EMAIL.getErrorMessage());
         }
 
     }
