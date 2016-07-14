@@ -1,4 +1,5 @@
 CREATE TABLE payment (
+
 	date TIMESTAMP, 
 	last_event_date TIMESTAMP,
 	code TEXT, 
@@ -9,8 +10,9 @@ CREATE TABLE payment (
 );
 
 CREATE TABLE participant (
+
 	id SERIAL, 
-	payment_id VARCHAR(10),
+	payment_id VARCHAR(10) DEFAULT NULL,
 	name TEXT, 
 	birth_date DATE,
  	phone_ddd VARCHAR(2),
@@ -29,4 +31,12 @@ CREATE TABLE participant (
     FOREIGN KEY(payment_id) REFERENCES payment(reference)
 );
 
-	
+CREATE TABLE password_reset_request(
+
+	id SERIAL,
+	token TEXT,
+	is_valid BOOLEAN DEFAULT TRUE,
+	creation_date TIMESTAMP,
+	participant_email TEXT,
+	PRIMARY KEY(id),
+);	
