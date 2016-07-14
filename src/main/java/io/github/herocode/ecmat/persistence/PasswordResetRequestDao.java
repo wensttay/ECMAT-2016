@@ -5,10 +5,8 @@
  */
 package io.github.herocode.ecmat.persistence;
 
-import io.github.herocode.ecmat.entity.Payment;
+import io.github.herocode.ecmat.entity.PasswordResetRequest;
 import io.github.herocode.ecmat.interfaces.Dao;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,10 +20,10 @@ import java.util.logging.Logger;
  *
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
-public class PaymentDao implements Dao<Payment, String> {
+public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Integer> {
 
     @Override
-    public boolean save(Payment object) {
+    public boolean save(PasswordResetRequest object) {
 
         Connection connection;
         PreparedStatement statement;
@@ -34,19 +32,48 @@ public class PaymentDao implements Dao<Payment, String> {
 
         try {
 
-            String sql = "INSERT INTO " + getTableName() + " (date, last_event_date, code, reference, status, url) VALUES (?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO " + getTableName() + " (token, is_valid, creation_date, participant_email) VALUES (?, ?, ?, ?)";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
 
             int count = 1;
 
-            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getDate()));
-            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getLastEventDate()));
-            statement.setString(count++, object.getCode());
-            statement.setString(count++, object.getReference());
-            statement.setString(count++, object.getStatus());
-            statement.setString(count++, object.getUrl().toString());
+            statement.setString(count++, object.getToken());
+            statement.setBoolean(count++, object.isValid());
+            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getCreationDate()));
+            statement.setString(count++, object.getParticipantEmail());
+            
+            result = statement.executeUpdate();
+
+            statement.close();
+            connection.close();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return result != 0;
+    }
+
+    @Override
+    public boolean delete(PasswordResetRequest object) {
+
+        Connection connection;
+        PreparedStatement statement;
+
+        int result = 0;
+
+        try {
+
+            String sql = "DELETE FROM " + getTableName() + " WHERE id = ?";
+
+            connection = ConnectionProvider.getInstance().getConnection();
+            statement = connection.prepareCall(sql);
+
+            int count = 1;
+
+            statement.setInt(count++, object.getId());
 
             result = statement.executeUpdate();
 
@@ -61,8 +88,8 @@ public class PaymentDao implements Dao<Payment, String> {
     }
 
     @Override
-    public boolean delete(Payment object) {
-
+    public boolean update(PasswordResetRequest object) {
+        
         Connection connection;
         PreparedStatement statement;
 
@@ -70,14 +97,18 @@ public class PaymentDao implements Dao<Payment, String> {
 
         try {
 
-            String sql = "DELETE FROM " + getTableName() + " WHERE reference = ?";
+            String sql = "UPDATE " + getTableName() + " SET token = ?, is_valid = ?, creation_time = ?, participant_email = ? WHERE id = ?";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
 
             int count = 1;
 
-            statement.setString(count++, object.getReference());
+            statement.setString(count++, object.getToken());
+            statement.setBoolean(count++, object.isValid());
+            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getCreationDate()));
+            statement.setInt(count++, object.getId());
+            statement.setString(count++, object.getParticipantEmail());
 
             result = statement.executeUpdate();
 
@@ -92,64 +123,29 @@ public class PaymentDao implements Dao<Payment, String> {
     }
 
     @Override
-    public boolean update(Payment object) {
-
-        Connection connection;
-        PreparedStatement statement;
-
-        int result = 0;
-
-        try {
-
-            String sql = "UPDATE " + getTableName() + " SET date = ?, last_event_date = ?, code = ?, status = ? WHERE reference = ?";
-
-            connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
-
-            int count = 1;
-
-            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getDate()));
-            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getLastEventDate()));
-            statement.setString(count++, object.getCode());
-            statement.setString(count++, object.getStatus());
-            statement.setString(count++, object.getReference());
-
-            result = statement.executeUpdate();
-
-            statement.close();
-            connection.close();
-
-        } catch (SQLException ex) {
-            Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        return result != 0;
-    }
-
-    @Override
-    public Payment searchById(String id) {
-
+    public PasswordResetRequest searchById(Integer id) {
+        
         Connection connection;
         PreparedStatement statement;
         ResultSet resultSet;
 
-        Payment payment = null;
+        PasswordResetRequest resetRequest = null;
 
         try {
 
-            String sql = "SELECT * FROM " + getTableName() + " WHERE reference = ?";
+            String sql = "SELECT * FROM " + getTableName() + " WHERE id = ?";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
 
             int count = 1;
 
-            statement.setString(count++, id);
+            statement.setInt(count++, id);
 
             resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
-                payment = fillObject(resultSet);
+                resetRequest = fillObject(resultSet);
             }
 
             resultSet.close();
@@ -160,17 +156,17 @@ public class PaymentDao implements Dao<Payment, String> {
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        return payment;
+        return resetRequest;
     }
 
     @Override
-    public List<Payment> listAll() {
+    public List<PasswordResetRequest> listAll() {
         
         Connection connection;
         PreparedStatement statement;
         ResultSet resultSet;
 
-        List<Payment> payments = new ArrayList<>(); 
+        List<PasswordResetRequest> resetRequests = new ArrayList<>(); 
 
         try {
 
@@ -184,7 +180,7 @@ public class PaymentDao implements Dao<Payment, String> {
             resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
-                payments.add(fillObject(resultSet));
+                resetRequests.add(fillObject(resultSet));
             }
 
             resultSet.close();
@@ -195,32 +191,31 @@ public class PaymentDao implements Dao<Payment, String> {
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        return payments;
+        return resetRequests;
     }
 
     @Override
-    public Payment fillObject(ResultSet rs) {
-
-        Payment payment = null;
+    public PasswordResetRequest fillObject(ResultSet rs) {
+        
+        PasswordResetRequest resetRequest = null;
 
         try {
-            payment = new Payment();
-            payment.setCode(rs.getString("code"));
-            payment.setDate(rs.getTimestamp("date").toLocalDateTime());
-            payment.setLastEventDate(rs.getTimestamp("last_event_date").toLocalDateTime());
-            payment.setReference(rs.getString("reference"));
-            payment.setStatus(rs.getString("status"));
-            payment.setUrl(new URL(rs.getString("url")));
-        } catch (SQLException | MalformedURLException ex) {
+            resetRequest = new PasswordResetRequest();
+            resetRequest.setId(rs.getInt("id"));
+            resetRequest.setIsValid(rs.getBoolean("is_valid"));
+            resetRequest.setToken(rs.getString("token"));
+            resetRequest.setCreationDate(rs.getTimestamp("creation_date").toLocalDateTime());
+            resetRequest.setParticipantEmail(rs.getString("token"));
+        } catch (SQLException ex) {
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        return payment;
+        return resetRequest;
     }
 
     @Override
     public String getTableName() {
-        return "payment";
+        return "password_reset_request";
     }
 
 }
