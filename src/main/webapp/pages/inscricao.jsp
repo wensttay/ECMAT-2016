@@ -13,14 +13,14 @@
             <div class="col-md-6">
                 <div class="col-md-12">
                     <a href="#painel"><h1>Login</h1></a>
-                    <form class="form-horizontal" style="font-family: arial;"role="form">
-                        <label class="col-sm-2 col-xs-2">Login:</label>
+                    <form action="Login" method="POST" class="form-horizontal" style="font-family: arial;"role="form">
+                        <label class="col-sm-2 col-xs-2">Email:</label>
                         <div class="form-group col-sm-10 col-xs-10">
-                            <input type="text" class="form-control" style="font-size: 14px;">
+                            <input name="email" type="text" class="form-control" style="font-size: 14px;">
                         </div>
                         <label class="col-sm-2 col-xs-2">Senha:</label>
                         <div class="form-group col-sm-10 col-xs-10">
-                            <input type="password" class="form-control" style="font-size: 14px;"> 
+                            <input name="password" type="password" class="form-control" style="font-size: 14px;"> 
                         </div>
 
                         <div class="form-group col-sm-12 col-xs-12">

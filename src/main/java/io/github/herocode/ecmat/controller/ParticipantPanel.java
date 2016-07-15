@@ -43,7 +43,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.JOptionPane;
 import javax.xml.parsers.ParserConfigurationException;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.tomcat.util.digester.Digester;
@@ -54,37 +53,13 @@ import org.xml.sax.SAXException;
  *
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
-@WebServlet(name = "Login", urlPatterns = {"/Login"})
-public class LoginController extends HttpServlet {
+@WebServlet(name = "ParticipantPanel", urlPatterns = {"/ParticipantPanel"})
+public class ParticipantPanel extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        password = DigestUtils.sha1Hex(password);
-        JOptionPane.showMessageDialog(null, password);
-        ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
-
-        try {
-            
-            Participant participant = participantBusiness.login(email, password);
-            request.getSession().setAttribute("participant", participant);
-            JOptionPane.showMessageDialog(null, participant.getName());
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("ParticipantPanel");
-            requestDispatcher.forward(request, response);
-
-        } catch (IllegalArgumentException ex) {
-
-            Map<String, String> responseMap = new HashMap<>();
-            responseMap.put("error", ex.getMessage());
-
-            String json = new Gson().toJson(responseMap);
-
-            response.setContentType("application/json");
-            response.setCharacterEncoding("UTF-8");
-            response.getWriter().write(json);
-        }
+        
+        
 
     }
 
@@ -127,12 +102,4 @@ public class LoginController extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    public static void main(String[] args) {
-        ParticipantBusiness b = new ParticipantBusinessImpl();
-        
-        Participant login = b.login("victor.hugo.origins@gmail.com", "895b317c76b8e504c2fb32dbb4420178f60ce321");
-        
-        System.out.println(login.getName());
-    }
-    
 }
