@@ -134,6 +134,9 @@
                 <%@ include file="pages/construcao.jsp" %>
                 <%@ include file="pages/organizacao.jsp" %>
                 <%@ include file="pages/inscricao.jsp" %>
+                <%@ include file="pages/cadastro.jsp" %>
+                <%@ include file="pages/recuperacao.jsp" %>
+                <%@ include file="pages/painel.jsp" %>
             </section>
 
             <footer id="footer">

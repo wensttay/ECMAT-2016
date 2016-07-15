@@ -57,16 +57,15 @@
     </head>
 
     <body>
-
+        <div style="width: 100%; background-color: black; color: white; top: 0; z-index: 1000; margin-top: -20px;">
+            <div class="fix-vertical">
+                <a href="index" style="display: table">
+                    <p style="padding: 5px; margin-left: 20px;"><<< Voltar para o Site</p>
+                </a>
+            </div>
+        </div>  
         <div id="container-fullpage">
             <header id="header" class="blackboard-background default-border-bottom">
-<!--                <div style="width: 100%; background-color: black; color: white; top: 0; z-index: 1000; margin-top: -20px;">
-                    <div class="fix-vertical">
-                        <a href="index" style="display: table">
-                            <p style="padding: 5px; margin-left: 20px;"><<< Voltar para o Site</p>
-                        </a>
-                    </div>
-                </div>-->
                 <div id="menu-principal-button" class="menu-button-with-img" >
                     <img width="75px" height="75px" title="Clique para abrir o menu lateral." class="button-img default-low-opacity" src="img/menu/menu-icon.png"/>
                 </div>
@@ -119,7 +118,7 @@
                             <li class="principal-list-item page-link item-bordered" >
                                 <a title="Clique para ir para a página de Contato." class="default-low-color-white-transparence item-title" href="#contato">Contato</a>
                             </li>
-                        </div>
+                        </div>  
                     </ul>
                 </nav>
                 <div class="issn-box">
