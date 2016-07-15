@@ -137,7 +137,7 @@
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 13:00 até 15:00</div>
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Apresentação de de Trabalhos Orais</div>
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Apresentação de Trabalhos Orais</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 15:00 até 15:30</div>
@@ -149,7 +149,7 @@
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 15:45 até 16:15</div>
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Cerimônia de endivega de premiação da Olimpíada Cajazeirense de
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Cerimônia de entrega de premiação da Olimpíada Cajazeirense de
                                     Matemática</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->

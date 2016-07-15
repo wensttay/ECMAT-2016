@@ -7,17 +7,17 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<article class="container-base invisivel" id="sobre">
+<article class="container-base invisivel" id="apresentacao">
     <div class="container">
         <div class="row"> 
             <div class=" col-lg-2 col-md-1 col-sm-2"></div>
             <div class=" col-lg-8 col-md-10 col-sm-12 text-justify"> 
-                <p class="article-title default-border-color col-sm-12 default-low-color-white-transparence">Sobre</p>
+                <p class="article-title default-border-color col-sm-12 default-low-color-white-transparence">Apresentação</p>
 
 
                 <div class="sobre-paragraph col-md-12 col-sm-12 before-img-left">
                     <p class="default-low-color-white-transparence">
-                        O Encontro Cajazeirense de Matemática (ECMAT) trata-se de um evento promovido pela Coordenação do Curso de Licenciatura em Matemática do Instituto Federal de Educação, Ciência e Tecnologia da Paraíba – IFPB/Campus Cajazeiras e tem, como um de seus objetivos, a divulgação das atividades desenvolvidas pelos alunos do curso de Licenciatura em Matemática ofertado pelo referido campus.
+                        O Encontro Cajazeirense de Matemática (ECMAT) trata-se de um evento promovido pelo Curso de Licenciatura em Matemática do Instituto Federal de Educação, Ciência e Tecnologia da Paraíba – IFPB/Campus Cajazeiras e tem, como um de seus objetivos, a divulgação das atividades desenvolvidas pelos alunos do curso de Licenciatura em Matemática ofertado pelo referido campus.
                     </p>
                 </div>
 
@@ -58,11 +58,6 @@
                     </div>
                 </div>
 
-                <div class="sobre-paragraph col-md-12 col-sm-12">
-                    <p class="default-low-color-white-transparence">
-                        Nesse dia, matemáticos ligados à área da educação devem promover dinâmicas, bem como demonstrar que a Matemática é de grande importância para a evolução da sociedade através de atividades variadas que abordem as suas inúmeras utilizações.
-                    </p>
-                </div>
             </div>
             <div class=" col-lg-2 col-md-1 col-sm-2"></div>
         </div>
