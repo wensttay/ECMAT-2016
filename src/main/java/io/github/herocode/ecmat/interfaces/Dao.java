@@ -94,8 +94,6 @@ public interface Dao<T, I> {
             ps.close();
             connection.close();
             
-            System.out.println(sqlBuilder.toString());
-
         } catch (SQLException ex) {
             Logger.getLogger(Dao.class.getName()).log(Level.SEVERE, null, ex);
         }

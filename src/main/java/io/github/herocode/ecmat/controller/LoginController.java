@@ -19,6 +19,7 @@ import io.github.herocode.ecmat.interfaces.ParticipantDao;
 import io.github.herocode.ecmat.interfaces.PaymentBusiness;
 import io.github.herocode.ecmat.interfaces.PaymentChecker;
 import io.github.herocode.ecmat.model.CheckoutCreatorImpl;
+import io.github.herocode.ecmat.model.EmailClient;
 import io.github.herocode.ecmat.model.ParticipantBuilder;
 import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
 import io.github.herocode.ecmat.model.PaymentBusinessImpl;
@@ -63,17 +64,15 @@ public class LoginController extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         password = DigestUtils.sha1Hex(password);
-        JOptionPane.showMessageDialog(null, password);
         ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
 
         try {
             
             Participant participant = participantBusiness.login(email, password);
             request.getSession().setAttribute("participant", participant);
-            JOptionPane.showMessageDialog(null, participant.getName());
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("ParticipantPanel");
-            requestDispatcher.forward(request, response);
-
+            
+            response.sendRedirect("ParticipantPanel");
+            
         } catch (IllegalArgumentException ex) {
 
             Map<String, String> responseMap = new HashMap<>();
@@ -128,11 +127,7 @@ public class LoginController extends HttpServlet {
     }// </editor-fold>
 
     public static void main(String[] args) {
-        ParticipantBusiness b = new ParticipantBusinessImpl();
-        
-        Participant login = b.login("victor.hugo.origins@gmail.com", "895b317c76b8e504c2fb32dbb4420178f60ce321");
-        
-        System.out.println(login.getName());
+        EmailClient.sendEmail("teste", EmailClient.defaultSender,"teste", EmailClient.defaultSender, EmailClient.defaultPassword);
     }
     
 }

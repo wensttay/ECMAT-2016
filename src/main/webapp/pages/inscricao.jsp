@@ -25,7 +25,7 @@
 
                         <div class="form-group col-sm-12 col-xs-12">
                             <a href="#recuperacao" style="margin-left: 15px;"><small style="float: left">Esqueci minha Senha</small></a>
-                            <button type="submit" id="efetuar-loging" style="float: right;" class="btn btn-default" ></button>
+                            <button type="submit" id="efetuar-login" style="float: right;" class="btn btn-default" >Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -48,24 +48,4 @@
     </div>
 </article>
 
-<script>
-    function show_error(textError) {
-        $('p#error-body').html(textError);
-        $('#errorModal').modal({
-            show: 'true'
-        });
-    }
 
-    $('#efetuar-login').click(function (e) {
-        e.preventDefault();
-
-        $.post('login', $('#form-login').serialize(), function (response) {
-            var erro = response.erro;
-
-            if (erro !== undefined) {
-                show_error(erro);
-            }
-        });
-
-    });
-</script>

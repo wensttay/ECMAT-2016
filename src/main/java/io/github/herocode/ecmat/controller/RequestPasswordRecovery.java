@@ -53,6 +53,7 @@ import org.apache.tomcat.util.digester.Digester;
 import org.w3c.dom.DOMException;
 import org.xml.sax.SAXException;
 import io.github.herocode.ecmat.interfaces.PasswordResetBusiness;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -86,7 +87,9 @@ public class RequestPasswordRecovery extends HttpServlet {
         
         String emailMessage = EmailMessages.RECOVER_PASSWORD.getMessage() + "\n" + resetUrl;
         
-        EmailClient.sendEmail("Ecmat - Resetar Senha", email, emailMessage, EmailClient.defaultSender, EmailClient.defaultSender);
+        System.out.println("EMAIL: "+emailMessage);
+        
+        EmailClient.sendEmail("Ecmat - Resetar Senha", email, emailMessage, EmailClient.defaultSender, EmailClient.defaultPassword);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

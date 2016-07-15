@@ -97,7 +97,7 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
 
         try {
 
-            String sql = "UPDATE " + getTableName() + " SET token = ?, is_valid = ?, creation_time = ?, participant_email = ? WHERE id = ?";
+            String sql = "UPDATE " + getTableName() + " SET is_valid = ? WHERE id = ?";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
@@ -107,8 +107,9 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
             statement.setString(count++, object.getToken());
             statement.setBoolean(count++, object.isValid());
             statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getCreationDate()));
-            statement.setInt(count++, object.getId());
             statement.setString(count++, object.getParticipantEmail());
+            
+            statement.setInt(count++, object.getId());
 
             result = statement.executeUpdate();
 
@@ -205,7 +206,7 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
             resetRequest.setIsValid(rs.getBoolean("is_valid"));
             resetRequest.setToken(rs.getString("token"));
             resetRequest.setCreationDate(rs.getTimestamp("creation_date").toLocalDateTime());
-            resetRequest.setParticipantEmail(rs.getString("token"));
+            resetRequest.setParticipantEmail(rs.getString("participant_email"));
         } catch (SQLException ex) {
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }

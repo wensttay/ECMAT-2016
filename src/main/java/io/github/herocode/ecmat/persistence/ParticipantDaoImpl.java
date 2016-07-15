@@ -255,7 +255,7 @@ public class ParticipantDaoImpl implements ParticipantDao {
         Participant participant = null;
 
         try {
-
+            System.out.println("preenchendo...");
             participant = new Participant();
 
             Address address = new Address();
@@ -263,18 +263,18 @@ public class ParticipantDaoImpl implements ParticipantDao {
             address.setComplement("");
             address.setCountry(rs.getString("country"));
             address.setDistrict(rs.getString("district"));
-            address.setNumber(rs.getString("number"));
+            address.setNumber(rs.getString("house_number"));
             address.setPostalCode(rs.getString("postal_code"));
             address.setState(rs.getString("state"));
             address.setStreet(rs.getString("street"));
-
+            System.out.println("foi o address");
             Phone phone = new Phone();
             phone.setAreaCode("phone_ddd");
             phone.setNumber(rs.getString("phone_number"));
 
             participant.setAddress(address);
             participant.setPhone(phone);
-
+            System.out.println("foi o phone");
             participant.setBirthDate(rs.getDate("birth_date").toLocalDate());
             participant.setCpf(rs.getString("cpf"));
             participant.setEmail(rs.getString("email"));
@@ -282,7 +282,7 @@ public class ParticipantDaoImpl implements ParticipantDao {
             participant.setName(rs.getString("name"));
             participant.setPassword(rs.getString("password"));
             participant.setTitration(rs.getString("titration"));
-
+            System.out.println("concluido");
         } catch (SQLException ex) {
         }
 

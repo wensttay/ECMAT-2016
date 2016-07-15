@@ -1,7 +1,7 @@
-    <%-- 
-    Document   : index.jsp
-    Created on : 14/05/2016, 03:11:11
-    Author     : Wensttay, Victor Hugo
+<%-- 
+Document   : index.jsp
+Created on : 14/05/2016, 03:11:11
+Author     : Wensttay, Victor Hugo
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="pt">
@@ -157,6 +157,30 @@
         <script src="js/page-controll-script.js" type="text/javascript"></script>
         <script src="js/organizacao-controll-script.js" type="text/javascript"></script>
         <script src="js/programacao-table-controll-script.js" type="text/javascript"></script>
+
+        <script>
+            function show_error(textError) {
+                $('p#error-body').html(textError);
+                $('#errorModal').modal({
+                    show: 'true'
+                });
+            }
+
+            $('#efetuar-login').click(function (e) {
+                e.preventDefault();
+
+                $.post('Login', $('#form-login').serialize(), function (response) {
+                    var error = response.error;
+
+                    if (error !== undefined) {
+                        show_error(error);
+                    } else {
+                        window.location.href = "ParticipantPanel";
+                    }
+                });
+
+            });
+        </script>
     </body>
 </html>
 

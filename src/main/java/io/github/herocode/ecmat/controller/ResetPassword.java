@@ -52,6 +52,8 @@ import org.apache.tomcat.util.digester.Digester;
 import org.w3c.dom.DOMException;
 import org.xml.sax.SAXException;
 import io.github.herocode.ecmat.interfaces.PasswordResetBusiness;
+import javax.servlet.RequestDispatcher;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -64,26 +66,36 @@ public class ResetPassword extends HttpServlet {
             throws ServletException, IOException {
 
         String token = request.getParameter("token");
-        
-        if(token != null && !token.trim().isEmpty()){
-            
+
+        if (token != null && !token.trim().isEmpty()) {
+
             PasswordResetBusiness resetBusiness = new PasswordResetBusinessImpl();
-            
-            try{
-                
+
+            try {
+
                 PasswordResetRequest resetRequest = resetBusiness.searchRequestPasswordByToken(token);
-                
-                if(resetBusiness.isPasswordResetRequestValid(resetRequest)){
-                    //terminar, tem que redireionar para a pag que o boy vai digitar a senha
-                }else if(resetRequest.isValid()){
+
+                if (resetBusiness.isPasswordResetRequestValid(resetRequest)) {
+
+                    request.setAttribute("is_valid", true);
+                } else if (resetRequest.isValid()) {
+
                     resetRequest.setIsValid(false);
                     resetBusiness.updatePasswordResetRequest(resetRequest);
+
+                    request.setAttribute("is_valid", false);
                 }
-                
-            }catch(IllegalArgumentException ex){}
-            
+
+            } catch (IllegalArgumentException ex) {
+            }
+
+        } else {
+            request.setAttribute("is_valid", false);
         }
-        
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/redefinir.jsp");
+        dispatcher.forward(request, response);
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

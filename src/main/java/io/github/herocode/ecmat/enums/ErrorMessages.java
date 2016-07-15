@@ -26,6 +26,8 @@ public enum ErrorMessages {
     INVALID_TOKEN("Token inválido."),
     INVALID_ID("Id inválido."),
     
+    DIFFERENT_PASSWORDS("As senhas inseridas são diferentes, elas devem ser iguais."),
+    
     FILLED_SHORT_COURSE("O mini curso está com todas as vagas preenchidas."),
     PARTICIPANT_ALREADY_REGISTERED("O participante já está matriculado neste mini curso."),
     PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE("O participante ja está matriculado para"

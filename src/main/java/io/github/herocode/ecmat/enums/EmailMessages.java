@@ -18,6 +18,8 @@ public enum EmailMessages {
     String message;
     
     private EmailMessages(String msg) {
+        
+        message = msg;
     }
     
     public String getMessage(){

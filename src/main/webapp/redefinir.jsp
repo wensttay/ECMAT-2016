@@ -4,6 +4,7 @@
     Created on : 14/05/2016, 03:11:11
     Author     : Wensttay, Victor Hugo
 -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="pt">
     <head>
@@ -59,32 +60,46 @@
                 </a>  
             </header>
 
+
             <section id="error-section">
                 <article class="erro-article">
                     <div class="container">
                         <div class="row">
-                            <h1 style="text-align: center">Redefinir Senha</h1>
-                            <div class="erro-box default-low-opacity">
-                                <div class="col-lg-3 col-md-3 col-sm-3"></div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 text-center">
-                                    <form action="" method="POST" class="form-horizontal" style="font-family: arial;" role="form">
-                                        <label class="col-sm-4 col-xs-4" style="text-align: right">Nova Senha:</label>
-                                        <div class="form-group col-sm-6 col-xs-6">
-                                            <input name="newpassword" type="text" class="form-control" style="font-size: 14px;">
-                                        </div>
-                                        <label class="col-sm-4 col-xs-4" style="text-align: right">Repita a Nova Senha:</label>
-                                        <div class="form-group col-sm-6 col-xs-6">
-                                            <input name="newpasswordconfirm" type="text" class="form-control" style="font-size: 14px;">
-                                        </div>
-                                        <div class="col-sm-4 col-xs-4"></div>
-                                        <div class="form-group col-sm-6 col-xs-6">
-                                            <input type="submit" style="float: right;" class="btn btn-default" >
-                                        </div>
-                                        <div class="col-sm-4 col-xs-4"></div>
-                                    </form>
+                            <c:if test="${requestScope.is_valid == true}">
+                                <h1 style="text-align: center">Redefinir Senha</h1>
+                                <div class="erro-box default-low-opacity">
+                                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                                        <form action="" method="POST" class="form-horizontal" style="font-family: arial;" role="form">
+                                            <label class="col-sm-4 col-xs-4" style="text-align: right">Nova Senha:</label>
+                                            <div class="form-group col-sm-6 col-xs-6">
+                                                <input name="newpassword" type="text" class="form-control" style="font-size: 14px;">
+                                            </div>
+                                            <label class="col-sm-4 col-xs-4" style="text-align: right">Repita a Nova Senha:</label>
+                                            <div class="form-group col-sm-6 col-xs-6">
+                                                <input name="newpasswordconfirm" type="text" class="form-control" style="font-size: 14px;">
+                                            </div>
+                                            <div class="col-sm-4 col-xs-4"></div>
+                                            <div class="form-group col-sm-6 col-xs-6">
+                                                <input type="submit" style="float: right;" class="btn btn-default" >
+                                            </div>
+                                            <div class="col-sm-4 col-xs-4"></div>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
                                 </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3"></div>
-                            </div>
+                            </c:if>
+                                <c:if test="${requestScope.is_valid == false}">
+                                <h1 style="text-align: center">Token Expirado!</h1>
+                                <div class="erro-box default-low-opacity">
+                                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                                        <br>
+                                        <span>Este token está expirado, solicite novamente uma nova senha de acesso.</span>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                                </div>
+                            </c:if>
                         </div>
                     </div>
                 </article>

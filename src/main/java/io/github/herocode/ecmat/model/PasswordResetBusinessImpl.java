@@ -13,6 +13,7 @@ import io.github.herocode.ecmat.interfaces.PasswordResetBusiness;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -65,7 +66,7 @@ public class PasswordResetBusinessImpl implements PasswordResetBusiness {
             
             LocalDateTime currentDate = LocalDateTime.now();
             
-            boolean isValid = creationDate.isBefore(currentDate);
+            boolean isValid = creationDate.isAfter(currentDate);
             
             return isValid;
         }

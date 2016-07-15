@@ -38,5 +38,5 @@ CREATE TABLE password_reset_request(
 	is_valid BOOLEAN DEFAULT TRUE,
 	creation_date TIMESTAMP,
 	participant_email TEXT,
-	PRIMARY KEY(id),
+	PRIMARY KEY(id)
 );	

@@ -21,8 +21,8 @@ import javax.mail.internet.MimeMessage;
  */
 public class EmailClient {
 
-    public static String defaultSender = "";
-    public static String defaultPassword = "";
+    public static String defaultSender = "devecmat2016@gmail.com";
+    public static String defaultPassword = "devofecmat2016byherocode";
 
     public static void sendEmail(String subject, String receiver, String message, String sender, String password) {
 

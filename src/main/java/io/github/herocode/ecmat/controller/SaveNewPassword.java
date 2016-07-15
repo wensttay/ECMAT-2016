@@ -12,6 +12,7 @@ import com.google.gson.GsonBuilder;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.PasswordResetRequest;
 import io.github.herocode.ecmat.entity.Payment;
+import io.github.herocode.ecmat.enums.ErrorMessages;
 import io.github.herocode.ecmat.enums.PaymentStatus;
 import io.github.herocode.ecmat.interfaces.CheckoutCreator;
 import io.github.herocode.ecmat.interfaces.Dao;
@@ -78,30 +79,45 @@ public class SaveNewPassword extends HttpServlet {
                 if (resetBusiness.isPasswordResetRequestValid(resetRequest)) {
 
                     String email = request.getParameter("email");
-                    String newPassword = request.getParameter("password");
+                    String password = request.getParameter("password");
+                    String passwordConfirm = request.getParameter("password-confirm");
 
-                    ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
+                    if (!password.equals(passwordConfirm)) {
 
-                    try {
-                        
-                        Participant participant = participantBusiness.searchParticipantByEmail(email);
-                        participant.setPassword(DigestUtils.sha1Hex(newPassword));
-                        
-                        participantBusiness.updateParticipant(participant);
-                        
-                        resetRequest.setIsValid(false);
-                        
-                        resetBusiness.updatePasswordResetRequest(resetRequest);
-                        
-                        //falta terminar, redirecionamento de paginas e pah
+                        Map<String, String> responseMap = new HashMap<>();
+                        responseMap.put("error", ErrorMessages.DIFFERENT_PASSWORDS.getErrorMessage());
 
-                    } catch (IllegalArgumentException ex) {
+                        String json = new Gson().toJson(responseMap);
+
+                        response.setContentType("application/json");
+                        response.setCharacterEncoding("UTF-8");
+                        response.getWriter().write(json);
+
+                    } else {
+
+                        ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
+
+                        try {
+
+                            Participant participant = participantBusiness.searchParticipantByEmail(email);
+                            participant.setPassword(DigestUtils.sha1Hex(password));
+
+                            participantBusiness.updateParticipant(participant);
+
+                            resetRequest.setIsValid(false);
+
+                            resetBusiness.updatePasswordResetRequest(resetRequest);
+
+                            //falta terminar, redirecionamento de paginas e pah
+                        } catch (IllegalArgumentException ex) {
+
+                        }
 
                     }
 
                     //terminar, tem que redireionar para a pag que o boy vai digitar a senha
-                }else if(resetRequest.isValid()){
-                    
+                } else if (resetRequest.isValid()) {
+
                     resetRequest.setIsValid(false);
                     resetBusiness.updatePasswordResetRequest(resetRequest);
                 }
