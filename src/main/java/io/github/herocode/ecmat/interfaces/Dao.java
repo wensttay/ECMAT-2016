@@ -46,7 +46,7 @@ public interface Dao<T, I> {
 
     default List<T> searchByAttributes(Map<String, String> map) {
 
-        List<T> results = new ArrayList<>();;
+        List<T> results = new ArrayList<>();
         PreparedStatement ps;
         Connection connection;
 

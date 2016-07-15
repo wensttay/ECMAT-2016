@@ -31,6 +31,9 @@ public enum ErrorMessages {
     PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE("O participante ja está matriculado para"
             + " um minicurso no mesmo horário"),
     
+    FAIL_LOGIN("Não foi encontrado este usuário em nosso sistema, verifique o "
+            + "E-mail e senha e tente novamente."),
+    
     MISSING_PAYMENT("É necessário efetuar o pagamento da inscrição para registrar-se em"
             + " um minicurso.");
 

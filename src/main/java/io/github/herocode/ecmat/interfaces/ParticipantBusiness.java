@@ -26,6 +26,8 @@ public interface ParticipantBusiness {
 
     Participant searchParticipantById(int id) throws IllegalArgumentException;
     
+    Participant login(String email, String password) throws IllegalArgumentException;
+    
     Participant searchParticipantByEmail(String email) throws IllegalArgumentException;
     
     List<ShortCourse> getRegisteredShortCourse(Participant participant);
