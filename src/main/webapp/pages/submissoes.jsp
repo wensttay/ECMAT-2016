@@ -52,7 +52,7 @@
                         <img width="100px" height="100px" alt="Representação ilustrativa do númeiro 1 em algarismos romanos(Primeiro item)"
                              title="Representação ilustrativa do númeiro 1 em algarismos romanos(Primeiro item)"
                              class="off-load numeracao-criterio" src="img/numbers/primeiro.png">
-                        O texto da modalidade <span class="destaque"><strong>COMUNICAÇÃO CIENTÍFICA (CC)</strong></span> deverá apresentar resultados parciais ou finais de pesquisas científicas que versem sobre temas da Matemática, Matemática Aplicada ou Educação Matemática. Nesta modalidade, cabem trabalhos de natureza teórica e empírica que busquem articulação com o tema central do encontro.  Deve ter entre 8 e 10 páginas, incluindo resumo, palavras-chave, figuras, tabelas, referências e anexos. Cada trabalho deve ter no máximo 4 membros (1 autor e 3 coautores).
+                        O texto da modalidade <span class="destaque"><strong>COMUNICAÇÃO CIENTÍFICA (CC)</strong></span> deverá apresentar resultados parciais ou finais de pesquisas científicas que versem sobre temas da Matemática, Matemática Aplicada ou Educação Matemática. Nesta modalidade, cabem trabalhos de natureza teórica e empírica. Deve ter entre 8 e 10 páginas, incluindo resumo, palavras-chave, figuras, tabelas, referências e anexos. Cada trabalho deve ter no máximo 4 membros (1 autor e 3 coautores).
                     </p>
                     <p class="default-low-color-white-transparence">
                         <img width="100px" height="100px" alt="Representação ilustrativa do númeiro 2 em algarismos romanos (Segundo item)" 
@@ -63,7 +63,7 @@
                     <p class="default-low-color-white-transparence">
                         <img width="100px" height="100px" alt="Representação ilustrativa do númeiro 3 em algarismos romanos (Terceiro item)"
                              title="Representação ilustrativa do númeiro 3 em algarismos romanos (Terceiro item)" class="off-load numeracao-criterio" src="img/numbers/terceiro.png">
-                        O texto da modalidade <span class="destaque"><strong>PÔSTER</strong></span> pode versar sobre resultados parciais ou finais de pesquisa, bem como de relatos de experiências sobre Matemática, Matemática Aplicada ou Educação Matemática, que busquem articulação com o tema central do encontro. O pôster deverá ser confeccionado com dimensões 90 cm por 120 cm e deverá apresentar qualidades estéticas e atrativas aos participantes. Deve ter entre 4 e 6 páginas do título às referências. Cada trabalho deve ter no máximo 4 membros (1 autor e 3 coautores).
+                        O texto da modalidade <span class="destaque"><strong>PÔSTER</strong></span> pode versar sobre resultados parciais ou finais de pesquisa, bem como de relatos de experiências sobre Matemática, Matemática Aplicada ou Educação Matemática. O pôster deverá ser confeccionado com dimensões 90 cm por 120 cm e deverá apresentar qualidades estéticas e atrativas aos participantes. Deve ter entre 4 e 6 páginas do título às referências. Cada trabalho deve ter no máximo 4 membros (1 autor e 3 coautores).
                     </p>
                     <p class="default-low-color-white-transparence">
                         <img width="100px" height="100px" alt="Representação ilustrativa do númeiro 4 em algarismos romanos (Quarto item)"
@@ -98,7 +98,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-5">
                     <div class="default-box"> <!-- Open Program-Day-Box -->
                         <a title="Clique aqui para ver o documento de Critérios de Avaliação"
-                           href="https://drive.google.com/file/d/0Bwx-SPHSFVqgbHFRUHVodnFrMjQ/view" target="_blank">
+                           href="https://drive.google.com/file/d/0Bwx-SPHSFVqgMTdiS051WGNHWDA/view?usp=sharing" target="_blank">
                             <p class="title default-low-color-white-transparence default-border-color">Critérios de Avaliação</p>
                             <div class="col-md-12 col-sm-12 body-img">
                                 <div class="text-center">

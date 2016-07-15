@@ -12,7 +12,7 @@
         <meta name="description" content="Encontro Cajazeirense de Matemática">
         <meta name="author" content="Wensttay">
         <meta name="author" content="Victor Hugo">
-        <title>ECMAT 2016</title>
+        <title>ECMAT 2016 | Anais</title>
         <!-- Bootstrap core CSS -->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -41,7 +41,6 @@
 
         <!-- Custom styles for this template -->
         <link href="css/style.css" rel="stylesheet">
-        <link href="css/construcao-style.css" rel="stylesheet" type="text/css"/>
         <link href="css/contato-style.css" rel="stylesheet" type="text/css" />
         <link href="css/contato-responsive.css" rel="stylesheet" type="text/css" />
         <link href="css/inicio-style.css" rel="stylesheet" type="text/css" />
@@ -58,82 +57,119 @@
     </head>
 
     <body>
+
         <div id="container-fullpage">
             <header id="header" class="blackboard-background default-border-bottom">
-                <div class="construcao-background"></div>
+<!--                <div style="width: 100%; background-color: black; color: white; top: 0; z-index: 1000; margin-top: -20px;">
+                    <div class="fix-vertical">
+                        <a href="index" style="display: table">
+                            <p style="padding: 5px; margin-left: 20px;"><<< Voltar para o Site</p>
+                        </a>
+                    </div>
+                </div>-->
                 <div id="menu-principal-button" class="menu-button-with-img" >
                     <img width="75px" height="75px" title="Clique para abrir o menu lateral." class="button-img default-low-opacity" src="img/menu/menu-icon.png"/>
                 </div>
 
-                <a title="Clique para voltar a página inicial." href="#inicio">
+                <a title="Clique para voltar a página inicial." href="index">
                     <div id="logo-small" class="menu-button-with-img">
                         <img width="75px" height="75px" class="button-img default-low-opacity" src="img/logo/logo-ecmat2016-75x75.png">
                     </div>
                 </a>
                 <nav class="menu-principal-box">
                     <ul class="principal-list">
-                        <li id="exit-menu-principal-button" class="menu-button-with-img" >
-                            <img width="75px" height="75px" title="Clique para sair do menu lateral." class="button-img default-low-opacity" src="img/menu/exit-menu-icon.png"/>
-                        </li>
-
-                        <li class="principal-list-item page-link item-bordered">
-                            <a title="Clique para voltar a página inicial." class="default-low-color-white-transparence item-title" href="#inicio">Inicio</a>
-                        </li>
-                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
-                            <a href="#" class="default-low-color-white-transparence item-title list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                            <ul class="drop-menu default-border-color blackboard-background">
-                                <li class="drop-menu-item default-border-color page-link" >
-                                    <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#apresentacao">Apresentação</a>
-                                </li>
-                                <li class="drop-menu-item default-border-color page-link" >
-                                    <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#programacao">Programação</a>
-                                </li>
-                                <li class="drop-menu-item default-border-color page-link" >
-                                    <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="#organizacao">Organização</a>
-                                </li>
-                                <li class="drop-menu-item default-border-color page-link disabled" >
-                                    <a title="Clique para ir para a página da Galeria." class="default-low-color-white-transparence" href="#construcao">Galeria</a>
-                                </li>
-                                <li class="drop-menu-item default-border-color page-link disabled" >
-                                    <a title="Clique para ir para a página de Certificados." class="default-low-color-white-transparence" href="#construcao">Certificados</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="principal-list-item page-link item-bordered" >
-                            <a title="Clique para ir para a página de Submissões." class="default-low-color-white-transparence item-title" href="#submissoes">Submissões</a>
-                        </li>
-
-                        <li class="principal-list-item menu-button-with-img" id="logo-central" >
-                            <a title="Clique para voltar a página inicial." class="button-img default-low-opacity" href="#inicio">
-                                <img width="75px" height="75px" alt="Simbolodo do ECMAT" src="img/logo/logo-ecmat2016-75x75.png">
-                            </a>
-                        </li>
-
-                        <li class="principal-list-item page-link item-bordered" >
-                            <a title="Clique para ir para a página de Anais." class="default-low-color-white-transparence item-title" href="anais">Anais</a>
-                        </li>
-
-                        <li class="principal-list-item page-link item-bordered" >
-                            <a title="Clique para ir para a página de Contato." class="default-low-color-white-transparence item-title" href="#contato">Contato</a>
-                        </li>
-                        <li class="principal-list-item page-link item-bordered disabled" >
-                            <a title="Clique para ir para a página de Inscrição." class="default-low-color-white-transparence item-title" href="#inscricao">Inscrição</a>
-                        </li>
+                        <div class="fix-vertical">
+                            <li id="exit-menu-principal-button" class="menu-button-with-img" >
+                                <img width="75px" height="75px" title="Clique para sair do menu lateral." class="button-img default-low-opacity" src="img/menu/exit-menu-icon.png"/>
+                            </li>
+                        </div>
+                        <div class="fix-vertical">
+                            <li class="principal-list-item page-link item-bordered">
+                                <a title="Clique para voltar a página inicial." class="default-low-color-white-transparence item-title" href="#apresentacao">Apresentação</a>
+                            </li>
+                        </div>
+                        <div class="fix-vertical">
+                            <li class="principal-list-item page-link item-bordered">
+                                <a title="Clique para voltar a página inicial." class="default-low-color-white-transparence item-title" href="#expediente">Expediente</a>
+                            </li>
+                        </div>
+                        <div class="fix-vertical">
+                            <li class="principal-list-item page-link item-bordered" >
+                                <a title="Clique para ir para a página de Submissões." class="default-low-color-white-transparence item-title" href="#submissoes">Normas para publicações</a>
+                            </li>
+                        </div>
+                        <div class="fix-vertical">
+                            <li class="principal-list-item menu-button-with-img" id="logo-central" >
+                                <a title="Clique para voltar a página inicial." class="button-img default-low-opacity" href="index">
+                                    <img width="75px" height="75px" alt="Simbolodo do ECMAT" src="img/logo/logo-ecmat2016-75x75.png">
+                                </a>
+                            </li>
+                        </div>
+                        <div class="fix-vertical">
+                            <li class="principal-list-item page-link item-bordered" >
+                                <a title="Clique para ir para a página de Anais." class="default-low-color-white-transparence item-title" href="#edicao-atual">Edição atual</a>
+                            </li>
+                        </div>
+                        <div class="fix-vertical">
+                            <li class="principal-list-item page-link item-bordered disabled" >
+                                <a title="Clique para ir para a página de Inscrição." class="default-low-color-white-transparence item-title" href="#edicoes-anteriores">Edições anteriores</a>
+                            </li>
+                        </div>
+                        <div class="fix-vertical">
+                            <li class="principal-list-item page-link item-bordered" >
+                                <a title="Clique para ir para a página de Contato." class="default-low-color-white-transparence item-title" href="#contato">Contato</a>
+                            </li>
+                        </div>
                     </ul>
                 </nav>
+                <div class="issn-box">
+                    <div title="(International Standard Serial Number)" class="issn blackboard-background">
+                        Encontro Cajazeirense de Matemática - ISSN XXXX-XXX
+                    </div>
+                </div>
             </header>
 
             <div class="background blackboard-background"></div>
 
             <section id="section">
-                <%@ include file="pages/inicio.jsp" %>
                 <%@ include file="pages/submissoes.jsp" %>
-                <%@ include file="pages/apresentacao.jsp" %>
-                <%@ include file="pages/programacao.jsp" %>
+                <%@ include file="pages/apresentacao.jsp" %> 
                 <%@ include file="pages/contato.jsp" %>  
-                <%@ include file="pages/construcao.jsp" %>
-                <%@ include file="pages/organizacao.jsp" %>
-                <%@ include file="pages/inscricao.jsp" %>
+                <%@ include file="pages/edicoes-anteriores.jsp" %>
+                <%@ include file="pages/expediente.jsp" %>
+                <%@ include file="pages/edicao-atual.jsp" %>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div style="border: 5px solid white; display: table; padding: 15px; margin: 0 auto 30px;">
+                                <p>
+                                    Instituto Federal de Educação Ciência e Tecnologia da Paraíba/Campus
+                                </p>
+                                <p>
+                                    Cajazeiras - IFPB
+                                </p>
+                                <p>
+                                    Coordenação de Licenciatura em Matemática
+                                </p>
+                                <p>
+                                    Rua José Antônio da Silva, 300, B. Jardim Oásis
+                                </p>
+                                <p>
+                                    Cajazeiras -PB
+                                </p>
+                                <p>
+                                    CEP: 58900-000
+                                </p>
+                                <p>
+                                    Telefone: (83) 3532-4186/ (83) 99640-1322
+                                </p>
+                                <p>
+                                    E-mail: clmat.cz@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <footer id="footer">
