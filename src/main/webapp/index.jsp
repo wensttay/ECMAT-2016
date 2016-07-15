@@ -1,4 +1,4 @@
-<%-- 
+    <%-- 
     Document   : index.jsp
     Created on : 14/05/2016, 03:11:11
     Author     : Wensttay, Victor Hugo
@@ -137,6 +137,7 @@
                 <%@ include file="pages/cadastro.jsp" %>
                 <%@ include file="pages/recuperacao.jsp" %>
                 <%@ include file="pages/painel.jsp" %>
+                <%@ include file="pages/alert_error_model.jsp" %>
             </section>
 
             <footer id="footer">

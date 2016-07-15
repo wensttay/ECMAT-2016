@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="col-md-12">
                     <a href="#painel"><h1>Login</h1></a>
-                    <form action="Login" method="POST" class="form-horizontal" style="font-family: arial;"role="form">
+                    <form id="form-login" method="POST" class="form-horizontal" style="font-family: arial;"role="form">
                         <label class="col-sm-2 col-xs-2">Email:</label>
                         <div class="form-group col-sm-10 col-xs-10">
                             <input name="email" type="text" class="form-control" style="font-size: 14px;">
@@ -25,7 +25,7 @@
 
                         <div class="form-group col-sm-12 col-xs-12">
                             <a href="#recuperacao" style="margin-left: 15px;"><small style="float: left">Esqueci minha Senha</small></a>
-                            <input type="submit" style="float: right;" class="btn btn-default" >
+                            <button type="submit" id="efetuar-loging" style="float: right;" class="btn btn-default" ></button>
                         </div>
                     </form>
                 </div>
@@ -47,3 +47,25 @@
         </div>
     </div>
 </article>
+
+<script>
+    function show_error(textError) {
+        $('p#error-body').html(textError);
+        $('#errorModal').modal({
+            show: 'true'
+        });
+    }
+
+    $('#efetuar-login').click(function (e) {
+        e.preventDefault();
+
+        $.post('login', $('#form-login').serialize(), function (response) {
+            var erro = response.erro;
+
+            if (erro !== undefined) {
+                show_error(erro);
+            }
+        });
+
+    });
+</script>
