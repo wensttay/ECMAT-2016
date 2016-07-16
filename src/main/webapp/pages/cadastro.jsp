@@ -4,7 +4,10 @@
     Author     : Wensttay
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
+<%@page import="io.github.herocode.ecmat.enums.Titrations"%>
+<%@page import="io.github.herocode.ecmat.enums.States"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <article class="container-base" id="cadastro">
     <div class="container text-center">
@@ -20,12 +23,14 @@
                         </div>
                         <label class="col-sm-2 col-xs-2">Aniversário:</label>
                         <div class="form-group col-sm-10 col-xs-10">
-                            <input name="birth" type="date" class="form-control" style="font-size: 14px;"> 
+                            <input name="birth-date" placeholder="DD-MM-YYYY" type="date" class="form-control" style="font-size: 14px;"> 
                         </div>
                         <label class="col-sm-2 col-xs-2">Titulação:</label>
                         <div class="form-group col-sm-10 col-xs-10">
                             <select name="titration" class="form-control">
-                                <option></option>
+                                <c:forEach items="${Titrations.values()}" var="titration">
+                                    <option>${titration.titration}</option>
+                                </c:forEach>
                             </select>
                         </div>
 
@@ -39,7 +44,7 @@
                         </div>
                         <label class="col-sm-2 col-xs-2">Telefone:</label>
                         <div class="form-group col-sm-10 col-xs-10">
-                            <input name="phone" class="form-control" style="font-size: 14px;" type="tel" required="required" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" />
+                            <input name="phone" class="form-control" style="font-size: 14px;" type="tel" required="required" maxlength="15" pattern="[0-9]{4,6}-[0-9]{3,4}$" />
                         </div>
                         <label class="col-sm-2 col-xs-2">Email:</label>
                         <div class="form-group col-sm-10 col-xs-10">
@@ -72,13 +77,15 @@
                         <label class="col-sm-2 col-xs-2">Estado:</label>
                         <div class="form-group col-sm-10 col-xs-10">
                             <select name="state" class="form-control">
-                                <option></option>
+                                <c:forEach items="${States.values()}" var="state">
+                                    <option>${state.name()}</option>
+                                </c:forEach>
                             </select>
                         </div>
                         <label class="col-sm-2 col-xs-2">Pais:</label>
                         <div class="form-group col-sm-10 col-xs-10">
                             <select name="country" class="form-control">
-                                <option></option>
+                                <option>BR</option>
                             </select>
                         </div>
 

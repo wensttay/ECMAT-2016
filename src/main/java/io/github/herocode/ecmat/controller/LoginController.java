@@ -12,6 +12,7 @@ import com.google.gson.GsonBuilder;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.enums.PaymentStatus;
+import io.github.herocode.ecmat.enums.RegularExpressions;
 import io.github.herocode.ecmat.interfaces.CheckoutCreator;
 import io.github.herocode.ecmat.interfaces.Dao;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
@@ -37,6 +38,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javafx.util.converter.LocalDateStringConverter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -127,7 +130,12 @@ public class LoginController extends HttpServlet {
     }// </editor-fold>
 
     public static void main(String[] args) {
-        EmailClient.sendEmail("teste", EmailClient.defaultSender,"teste", EmailClient.defaultSender, EmailClient.defaultPassword);
+        String p = "a1234567123321";
+        
+        Pattern pattern = Pattern.compile("[A-Za-z.,_0-9]+");
+        Matcher matcher = pattern.matcher(p);
+        
+        System.out.println(matcher.matches());
     }
     
 }
