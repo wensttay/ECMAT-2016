@@ -57,13 +57,13 @@
     </head>
 
     <body>
-        <div style="width: 100%; background-color: black; color: white; top: 0; z-index: 1000; margin-top: -20px;">
+<!--        <div style="width: 100%; background-color: black; color: white; top: 0; z-index: 1000; margin-top: -20px;">
             <div class="fix-vertical">
                 <a href="index" style="display: table">
                     <p style="padding: 5px; margin-left: 20px;"><<< Voltar para o Site</p>
                 </a>
             </div>
-        </div>  
+        </div>  -->
         <div id="container-fullpage">
             <header id="header" class="blackboard-background default-border-bottom">
                 <div id="menu-principal-button" class="menu-button-with-img" >
