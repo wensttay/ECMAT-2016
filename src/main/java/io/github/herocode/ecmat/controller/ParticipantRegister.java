@@ -75,8 +75,8 @@ public class ParticipantRegister extends HttpServlet {
         String country      = request.getParameter("country");
 
         try {
-
-            DateTimeFormatter formartter = DateTimeFormatter.ofPattern("DD-MM-YYYY");
+            System.out.println("Saning... "+password);
+            DateTimeFormatter formartter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             LocalDate bDate = LocalDate.parse(birthDate, formartter);
 
             Phone phone = new Phone(ddd, phoneNumber);
@@ -93,19 +93,19 @@ public class ParticipantRegister extends HttpServlet {
 
             participantBusiness.saveParticipant(participant);
 
-            Payment payment = new Payment(String.valueOf(participant.getCpf().hashCode()));
-
-            CheckoutCreator checkoutCreator = new CheckoutCreatorImpl();
-
-            String checkoutUrl = checkoutCreator.buildCheckout(payment.getReference());
-
-            payment.setUrl(new URL(checkoutUrl));
-            payment.setStatus(PaymentStatus.AWAITING_PAYMENT.getPaymentStatusCode());
-
-            participant.setPayment(payment);
+//            Payment payment = new Payment(String.valueOf(participant.getCpf().hashCode()));
+//
+//            CheckoutCreator checkoutCreator = new CheckoutCreatorImpl();
+//
+//            String checkoutUrl = checkoutCreator.buildCheckout(payment.getReference());
+//
+//            payment.setUrl(new URL(checkoutUrl));
+//            payment.setStatus(PaymentStatus.AWAITING_PAYMENT.getPaymentStatusCode());
+//
+//            participant.setPayment(payment);
 
         } catch (Exception ex) {
-
+ex.printStackTrace();
             Map<String, String> responseMap = new HashMap<>();
             responseMap.put("error", ex.getMessage());
 

@@ -4,7 +4,10 @@
     Author     : Wensttay
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
+<%@page import="io.github.herocode.ecmat.enums.Titrations"%>
+<%@page import="io.github.herocode.ecmat.enums.States"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <article class="container-base" id="cadastro">
     <div class="container text-center">
@@ -25,19 +28,20 @@
                         <div class="form-group col-sm-12 col-xs-12">
                             <label class="col-sm-2 col-xs-12">Aniversário:</label>
                             <div class="col-sm-10 col-xs-12">
-                                <input name="birth-date" type="date" class="form-control" style="font-size: 14px;"> 
+                                <input name="birth-date" placeholder="DD-MM-YYYY" type="date" class="form-control" style="font-size: 14px;" > 
                             </div>
                         </div>
 
                         <div class="form-group col-sm-12 col-xs-12">
                             <label class="col-sm-2 col-xs-12">Titulação:</label>
                             <div class="col-sm-10 col-xs-12">
-                                <select name="titration" class="form-control">
-                                    <option></option>
-                                </select>
+                            <select name="titration" class="form-control">
+                                <c:forEach items="${Titrations.values()}" var="titration">
+                                    <option>${titration.titration}</option>
+                                </c:forEach>
+                            </select>
                             </div>
                         </div>
-
 
                         <div class="form-group col-sm-12 col-xs-12">
                             <label class="col-sm-2 col-xs-12">CPF:</label>
@@ -65,17 +69,18 @@
 
                         <div class="form-group col-sm-12 col-xs-12" style="margin-bottom: 0;">
                             <label class="col-sm-2 col-xs-12">Estado:</label>
-                            <div class="col-sm-4 col-xs-12" style="margin-bottom: 15px">
-                                <select name="state" class="form-control">
-                                    <option></option>
-                                </select>
+                            <div class="col-sm-3 col-xs-12" style="margin-bottom: 15px">
+                                 <select name="state" class="form-control">
+                                <c:forEach items="${States.values()}" var="state">
+                                    <option>${state.name()}</option>
+                                </c:forEach>
+                            </select>
                             </div>
                             <label class="col-sm-2 col-xs-12">Cidade:</label>
-                            <div class="col-sm-4 col-xs-12" style="margin-bottom: 15px">
+                            <div class="col-sm-5 col-xs-12" style="margin-bottom: 15px">
                                 <input name="city" type="text" class="form-control" style="font-size: 14px;"> 
                             </div>
                         </div>
-
 
 
                         <div class="form-group col-sm-12 col-xs-12" style="margin-bottom: 0;">
@@ -99,9 +104,7 @@
                                 <input name="district" type="text" class="form-control" style="font-size: 14px;"> 
                             </div>
                         </div>
-
-
-
+                        
                         <div class="form-group col-sm-12 col-xs-12">
                             <label class="col-sm-2 col-xs-12">Email:</label>
                             <div class="col-sm-10 col-xs-12">

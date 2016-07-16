@@ -118,7 +118,7 @@ public class ParticipantBuilder {
         Pattern pattern = Pattern.compile(RegularExpressions.PASSWORD_PATTERN.getRegex());
 
         Matcher matcher = pattern.matcher(password);
-
+        
         if (!matcher.matches()) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_PASSWORD.getErrorMessage());
         }

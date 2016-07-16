@@ -104,11 +104,7 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
 
             int count = 1;
 
-            statement.setString(count++, object.getToken());
             statement.setBoolean(count++, object.isValid());
-            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getCreationDate()));
-            statement.setString(count++, object.getParticipantEmail());
-            
             statement.setInt(count++, object.getId());
 
             result = statement.executeUpdate();
