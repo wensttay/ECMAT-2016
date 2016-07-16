@@ -105,7 +105,7 @@ Author     : Wensttay, Victor Hugo
 
                         <li class="principal-list-item menu-button-with-img" id="logo-central" >
                             <a title="Clique para voltar a página inicial." class="button-img default-low-opacity" href="#inicio">
-                                <img width="75px" height="75px" alt="Simbolodo do ECMAT" src="img/logo/logo-ecmat2016-75x75.png">
+                                <img width="75px" height="75px" alt="Simbolodo do ECMAT" src="img/logo/logo-ecmat2016-75x75.png" >
                             </a>
                         </li>
 
@@ -116,9 +116,29 @@ Author     : Wensttay, Victor Hugo
                         <li class="principal-list-item page-link item-bordered" >
                             <a title="Clique para ir para a página de Contato." class="default-low-color-white-transparence item-title" href="#contato">Contato</a>
                         </li>
-                        <li class="principal-list-item page-link item-bordered disabled" >
+                        
+                        
+<!--                        <li class="principal-list-item page-link item-bordered disabled" >
                             <a title="Clique para ir para a página de Inscrição." class="default-low-color-white-transparence item-title" href="#inscricao">Inscrição</a>
+                        </li>-->
+
+                        <!--AQUI ENTRARIA UM IF-->
+                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
+                            <a href="#" class="default-low-color-white-transparence item-title list-item-withsublist-title">Minha Conta     <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                            <ul class="drop-menu default-border-color blackboard-background">
+                                <li class="drop-menu-item default-border-color page-link" >
+                                    <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="painel_de_controle">Inscrições</a>
+                                </li>
+                                <li class="drop-menu-item default-border-color page-link" >
+                                    <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#construcao">Editar Dados</a>
+                                </li>
+                                <li class="drop-menu-item default-border-color page-link" >
+                                    <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="#construcao">Deslogar</a>
+                                </li>
+                            </ul>
                         </li>
+                        <!--AQUI ENTRARIA UM IF-->
+                        
                     </ul>
                 </nav>
             </header>
@@ -136,7 +156,7 @@ Author     : Wensttay, Victor Hugo
                 <%@ include file="pages/inscricao.jsp" %>
                 <%@ include file="pages/cadastro.jsp" %>
                 <%@ include file="pages/recuperacao.jsp" %>
-                <%@ include file="pages/painel.jsp" %>
+                
                 <%@ include file="pages/alert_error_model.jsp" %>
             </section>
 

@@ -12,7 +12,7 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <div class="col-md-12">
-                    <a href="#painel"><h1>Login</h1></a>
+                    <h1>Login</h1>
                     <form id="form-login" method="POST" class="form-horizontal" style="font-family: arial;"role="form">
                         <label class="col-sm-2 col-xs-2">Email:</label>
                         <div class="form-group col-sm-10 col-xs-10">
