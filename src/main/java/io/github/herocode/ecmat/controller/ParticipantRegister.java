@@ -72,15 +72,14 @@ public class ParticipantRegister extends HttpServlet {
         String city         = request.getParameter("city");
         String postalCode   = request.getParameter("postal-code");
         String state        = request.getParameter("state");
-        String country      = request.getParameter("country");
-
+//FALTA FAZER = CPF REPETIDO, REDIRECIONAMENTO
         try {
             System.out.println("Saning... "+password);
             DateTimeFormatter formartter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             LocalDate bDate = LocalDate.parse(birthDate, formartter);
 
             Phone phone = new Phone(ddd, phoneNumber);
-            Address address = new Address(country, state, city, district, postalCode, street, number, "");
+            Address address = new Address("BRA", state, city, district, postalCode, street, number, "");
 
             ParticipantBuilder participantBuilder = new ParticipantBuilder(name, titration, cpf, email, address);
             participantBuilder.setPassword(password).
@@ -93,16 +92,16 @@ public class ParticipantRegister extends HttpServlet {
 
             participantBusiness.saveParticipant(participant);
 
-//            Payment payment = new Payment(String.valueOf(participant.getCpf().hashCode()));
-//
-//            CheckoutCreator checkoutCreator = new CheckoutCreatorImpl();
-//
-//            String checkoutUrl = checkoutCreator.buildCheckout(payment.getReference());
-//
-//            payment.setUrl(new URL(checkoutUrl));
-//            payment.setStatus(PaymentStatus.AWAITING_PAYMENT.getPaymentStatusCode());
-//
-//            participant.setPayment(payment);
+            Payment payment = new Payment(String.valueOf(participant.getCpf().hashCode()));
+
+            CheckoutCreator checkoutCreator = new CheckoutCreatorImpl();
+
+            String checkoutUrl = checkoutCreator.buildCheckout(participant, payment.getReference());
+            System.out.println("salvado... "+checkoutUrl);
+            payment.setUrl(new URL(checkoutUrl));
+            payment.setStatus(PaymentStatus.AWAITING_PAYMENT.getCode());
+
+            participant.setPayment(payment);
 
         } catch (Exception ex) {
 ex.printStackTrace();

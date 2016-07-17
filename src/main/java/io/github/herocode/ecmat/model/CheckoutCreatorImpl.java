@@ -14,9 +14,11 @@ import br.com.uol.pagseguro.domain.checkout.Checkout;
 import br.com.uol.pagseguro.enums.Currency;
 import br.com.uol.pagseguro.enums.ShippingType;
 import br.com.uol.pagseguro.exception.PagSeguroServiceException;
+import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.enums.CheckoutData;
 import io.github.herocode.ecmat.interfaces.CheckoutCreator;
 import java.math.BigDecimal;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,7 +27,7 @@ import java.math.BigDecimal;
 public class CheckoutCreatorImpl implements CheckoutCreator {
 
     @Override
-    public String buildCheckout(String referenceCode) {
+    public String buildCheckout(Participant participant, String referenceCode) {
 
         Checkout checkout = new Checkout();
 
@@ -36,26 +38,12 @@ public class CheckoutCreatorImpl implements CheckoutCreator {
                 new BigDecimal(CheckoutData.ITEM_PRICE.getValue())
         );
 
-        Address checkoutShippingAddress = new Address(
-                CheckoutData.SHIPPING_COUNTRY.getValue(),
-                CheckoutData.SHIPPING_STATE.getValue(),
-                CheckoutData.SHIPPING_CITY.getValue(),
-                CheckoutData.SHIPPING_DISTRICT.getValue(),
-                CheckoutData.SHIPPING_POSTAL_CODE.getValue(),
-                CheckoutData.SHIPPING_STREET.getValue(),
-                CheckoutData.SHIPPING_NUMBER.getValue(),
-                CheckoutData.SHIPPING_COMPLEMENT.getValue()
-        );
-        
-        Phone senderPhone = new Phone(
-                CheckoutData.PHONE_AREA_CODE.getValue(),
-                CheckoutData.PHONE_NUMBER.getValue()
-        );
+        Address checkoutShippingAddress = participant.getAddress();
 
         Sender checkoutSender = new Sender(
-                CheckoutData.SENDER_NAME.getValue(),
-                CheckoutData.SENDER_EMAIL.getValue(),
-                senderPhone
+                participant.getName(),
+                participant.getEmail(),
+                participant.getPhone()
         );
 
         checkout.addItem(checkoutItem);
@@ -73,19 +61,20 @@ public class CheckoutCreatorImpl implements CheckoutCreator {
         checkout.setShippingType(ShippingType.NOT_SPECIFIED);
 
         try {
-
+            
             boolean onlyCheckoutCode = false;
 
-            AccountCredentials ac = new AccountCredentials(
-                    CheckoutData.ACCOUNT_EMAIL.getValue(),
-                    CheckoutData.ACCOUNT_TOKEN.getValue()
-            );
-
+            checkout.setNotificationURL(CheckoutData.NOTIFICATION_URL.getValue());
+            
+            AccountCredentials ac = new AccountCredentials(CheckoutData.ACCOUNT_EMAIL.getValue(), CheckoutData.ACCOUNT_TOKEN.getValue());
+            
             String checkoutUrl = checkout.register(ac, onlyCheckoutCode);
-
+            System.out.println("dps do register");
+            System.out.println(checkoutUrl);
+            
             return checkoutUrl;
 
-        } catch (PagSeguroServiceException e) { }
+        } catch (PagSeguroServiceException e) {e.printStackTrace(); }
 
         return "";
     }

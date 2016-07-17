@@ -78,6 +78,13 @@ public class Participant {
         
         paymentDao.save(payment);   
     }
+    
+    public String getFirstName(){
+        
+        int endOfName = name.indexOf(" ");
+        
+        return name.substring(0, endOfName);
+    }
 
     public String getPaymentStatus(){
         

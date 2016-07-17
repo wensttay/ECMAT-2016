@@ -55,15 +55,15 @@
                         <div class="form-group col-sm-12 col-xs-12" style="margin-bottom: 0;">
                             <label class="col-sm-2 col-xs-12">DDD:</label>
                             <div class="col-sm-2 col-xs-12" style="margin-bottom: 15px">
-                                <input name="ddd" type="text" class="form-control" pattern="\([0-9]{2}\)"
-                                       title="Digite o DDD no formato (nn)"
+                                <input name="ddd" type="text" class="form-control" pattern="\[0-9]{2}\"
+                                       title="Digite o DDD, apenas números"
                                        style="font-size: 14px;" > 
                             </div>
                             <label class="col-sm-3 col-xs-12">Telefone:</label>
                             <div class="col-sm-5 col-xs-12" style="margin-bottom: 15px">
                                 <input name="phone" class="form-control" style="font-size: 14px;" type="tel" required="required" 
                                        title="Digite o Telefone no formato nnnn-nnnn"
-                                       maxlength="15" pattern="[0-9]{4,6}-[0-9]{3,4}$" >
+                                       maxlength="15" pattern="[0-9]{4,6}[0-9]{3,4}$" >
                             </div>
                         </div>
 
@@ -97,7 +97,7 @@
                         <div class="form-group col-sm-12 col-xs-12" style="margin-bottom: 0;">
                             <label class="col-sm-2 col-xs-12">CEP:</label>
                             <div class="col-sm-4 col-xs-12" style="margin-bottom: 15px">
-                                <input name="postal-code" pattern="\d{5}-?\d{3}" type="text" class="form-control" style="font-size: 14px;"> 
+                                <input name="postal-code" pattern="\d{5}?\d{3}" type="text" class="form-control" style="font-size: 14px;"> 
                             </div>
                             <label class="col-sm-2 col-xs-12">Bairro:</label>
                             <div class="col-sm-4 col-xs-12" style="margin-bottom: 15px">

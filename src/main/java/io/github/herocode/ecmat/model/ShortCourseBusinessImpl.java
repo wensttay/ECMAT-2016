@@ -47,7 +47,7 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness {
     @Override
     public synchronized boolean addParticipantInShortCourse(ShortCourse shortCourse, Participant participant) throws EnrollingParticipantException {
 
-        if (participant.getPayment().getStatus().equals(PaymentStatus.COMPLETE.getPaymentStatusCode())) {
+        if (participant.getPayment().getStatus().equals(PaymentStatus.COMPLETE.getCode())) {
             
             if (!shortCourseDao.isParticipantEnrolledInThisShortCourse(participant, shortCourse)) {
                 

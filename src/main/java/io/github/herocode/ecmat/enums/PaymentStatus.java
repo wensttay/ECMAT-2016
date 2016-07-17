@@ -25,7 +25,7 @@ public enum PaymentStatus {
         code = paymentCode;
     }
 
-    public String getPaymentStatusCode() {
+    public String getCode() {
         return code;
     }
 

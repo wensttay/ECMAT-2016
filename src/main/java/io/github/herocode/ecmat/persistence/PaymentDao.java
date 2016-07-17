@@ -34,16 +34,17 @@ public class PaymentDao implements Dao<Payment, String> {
 
         try {
 
-            String sql = "INSERT INTO " + getTableName() + " (date, last_event_date, code, reference, status, url) VALUES (?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO " + getTableName() + " (date, last_event_date, reference, status, url) VALUES (?, ?, ?, ?, ?)";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
 
             int count = 1;
 
-            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getDate()));
-            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getLastEventDate()));
-            statement.setString(count++, object.getCode());
+            java.sql.Timestamp timestamp = new java.sql.Timestamp(System.currentTimeMillis());
+            
+            statement.setTimestamp(count++, timestamp);
+            statement.setTimestamp(count++, timestamp);
             statement.setString(count++, object.getReference());
             statement.setString(count++, object.getStatus());
             statement.setString(count++, object.getUrl().toString());

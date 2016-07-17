@@ -59,7 +59,13 @@ public class ParticipantPanel extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        if(request.getSession().getAttribute("participant") == null){
+            response.sendRedirect("/");
+        }
         
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/painel.jsp");
+        requestDispatcher.forward(request, response);
+        System.out.println("beleza vou pro painel");
 
     }
 

@@ -5,6 +5,7 @@
     Author     : Wensttay, Victor Hugo
 -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page import="io.github.herocode.ecmat.enums.PaymentStatus"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="pt">
     <head>
@@ -66,16 +67,23 @@
                     <div class="container text-center">
 
                         <div class="row">
-                            <h1>Minicursos</h1>
+                            <h1>Bem vindo, ${sessionScope.participant.getFirstName()}</h1>
                             <div class="col-md-3"></div>
                             <div class="col-md-6" style="margin-top: 50px !important;">
-                                <div class="col-xs-2"></div>
-                                <a href="#cadastro">
-                                    <div class="default-dashed-border col-xs-8" style="display: table;background-color: rgba(255,255,255,0.2);">
-                                        <h2>Compre sua Entrada Antecipada</h2>
+                                <!--<div class="col-xs-2"></div>-->
+                                <c:if test="${!sessionScope.participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.code)}">
+                                    <div class="col-md-12">
+                                        <p>
+                                            parece que você ainda não concluiu sua inscrição,
+                                            realize o pagamento da mesma e tenha acesso aos Minicursos que ocorrerão no evento!
+                                        </p>
+                                        <br>
+                                        <a href="${sessionScope.participant.getPaymentUrl()}">
+                                            <img src="img/other/pag-seguro-logo.png">
+                                        </a>
                                     </div>
-                                </a>
-                                <div class="col-xs-2"></div>
+                                </c:if>
+                                <!--<div class="col-xs-2"></div>-->
                             </div>
                             <div class="col-md-3"></div>
                         </div>

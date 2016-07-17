@@ -56,10 +56,10 @@ public class ParticipantDaoImpl implements ParticipantDao {
 
         try {
 
-            String sql = "INSERT INTO " + getTableName() + " (id, "
-                    + "name, birth_date, phone_ddd, phone_number, titration, cpf,"
+            String sql = "INSERT INTO " + getTableName()
+                    + "(name, birth_date, phone_ddd, phone_number, titration, cpf,"
                     + " email, password, country, state, city, district, postal_code,"
-                    + " street, house_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,"
+                    + " street, house_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,"
                     + "?, ?, ?, ?, ?)";
 
             connection = ConnectionProvider.getInstance().getConnection();
@@ -67,7 +67,6 @@ public class ParticipantDaoImpl implements ParticipantDao {
 
             int count = 1;
 
-            statement.setInt(count++, object.getId());
             statement.setString(count++, object.getName());
             statement.setDate(count++, java.sql.Date.valueOf(object.getBirthDate()));
             statement.setString(count++, object.getPhone().getAreaCode());
