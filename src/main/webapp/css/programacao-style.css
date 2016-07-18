@@ -1,0 +1,21 @@
+/* 
+    Created on : 21/05/2016, 10:41:18
+    Author     : wensttay
+*/
+.default-box .programacao-title{
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/*.default-box .programacao-day-box{
+    cursor: pointer;
+}*/
+.default-box .default-row .programacao-row-colum:first-child{
+    font-size: 18px;
+    padding-left: 0;
+}
+.default-box .default-row .programacao-row-colum{
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

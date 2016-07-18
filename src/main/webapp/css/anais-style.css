@@ -1,0 +1,146 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/05/2016, 17:00:32
+    Author     : Victor Hugo
+*/
+
+.container-menu-anais{
+    margin-top: 50px;
+}
+
+.menu-anais{
+    font-size: 22px;
+    padding-bottom: 60px;
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+    padding: 0px;
+    font-family: WC_RoughTrad;
+    font-weight: normal;   
+    vertical-align: middle;
+}
+
+.anais-link{
+    display: initial;
+    line-height: 2em;
+}
+
+.container-chave-esquerda img, .container-chave-direita img{
+    height: 130px;
+}
+
+.container-chave-esquerda, .container-chave-direita{
+    display: inline-block;
+}
+
+.container-chave-direita{
+    transform: rotate(180deg);
+}
+
+.body-list .default-row .comissao-people{
+    font-family: ClaireHand;
+    display: block;
+    text-align: center;
+}
+
+.body-list .comissao-people .nome,
+.body-list .comissao-people .email{
+    font-family: WC_RoughTrad;
+}
+
+.body-list .default-row .comissao-people,
+.body-list .comissao-people .nome,
+.body-list .comissao-people .email{
+    font-size: 18px !important;
+}
+
+@media screen and (max-width : 1200px){
+    .body-list .default-row .comissao-people,
+    .body-list .comissao-people .nome,
+    .body-list .comissao-people .email{
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width : 330px){
+    .body-list .default-row .comissao-people,
+    .body-list .comissao-people .nome,
+    .body-list .comissao-people .email{
+        font-size: 10px !important;
+    }
+
+}
+
+.sumario{
+    font-family: WC_RoughTrad;
+    font-size: 22px;
+    list-style-position: inside;
+}
+
+.sumario p{
+    display: inline;
+}
+
+.sumario ol, .sumario ul{
+    padding: 0;
+}
+.sumario ol, .sumario ul.grup-of-files{
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.sumario ul.grup-of-files{
+    margin-left: 50px;
+    font-size: 17px;
+}
+.sumario a{
+    display: initial;
+    font-family: ClaireHand;
+    font-weight: bold;
+}
+
+.eixos-tematicos{
+    padding-bottom: 10px;
+}
+
+.anais-link:hover{
+    color: white !important;
+}
+
+.instituicao-box{
+    display: table;
+    margin: 0 auto;
+
+}
+.ifpb-anais-img{
+    height: 200px;
+    max-height: 200px;
+}
+@media screen and (max-width: 500px){
+    .instituicao-box{
+        display: block;
+        width: 100%;
+        margin: 0;
+
+    }
+    .instituicao-img-box{
+        margin-bottom: 20px;
+    }
+    .instituicao-text-box, .instituicao-img-box{
+        width: 100% !important;
+    }
+}
+
+.instituicao-text-box{
+    font-size: 24px;
+    font-family: WC_RoughTrad;
+}
+.instituicao-text-box, .instituicao-img-box{
+    text-align: center;
+    width: 200px;
+    float: left;
+}

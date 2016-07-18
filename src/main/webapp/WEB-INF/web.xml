@@ -34,5 +34,23 @@
         <servlet-name>index</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>painel_de_controle</servlet-name>
+        <jsp-file>/painel_de_controle.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>painel_de_controle</servlet-name>
+        <url-pattern>/painel_de_controle</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>anais</servlet-name>
+        <jsp-file>/anais.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>anais</servlet-name>
+        <url-pattern>/anais</url-pattern>
+    </servlet-mapping>
      
 </web-app>

@@ -1,0 +1,78 @@
+/* 
+    Created on : 23/05/2016, 23:23:35
+    Author     : wensttay
+*/
+
+@media screen and (max-width: 1200px){
+    .list-size-4{
+        width: calc(210px * 3);
+    }
+    .list-size-3{
+        width: calc(210px * 3);
+    }
+/*    .list-size-2{
+        width: calc(210px * 2);
+    }
+    .list-size-1{
+        width: calc(210px * 1);
+    }*/
+}
+@media screen and (max-width: 993px){
+    .list-size-4{
+        width: calc(210px * 2);
+    }
+    .list-size-3{
+        width: calc(210px * 2);
+    }
+/*    .list-size-2{
+        width: calc(210px * 2);
+    }
+    .list-size-1{
+        width: calc(210px * 1);
+    }*/
+}
+@media screen and (max-width: 610px){
+    .list-size-4{
+        width: calc(210px * 1);
+    }
+    .list-size-3{
+        width: calc(210px * 1);
+    }
+/*    .list-size-2{
+        width: calc(210px * 1);
+    }
+    .list-size-1{
+        width: calc(210px * 1);
+    }*/
+}
+
+@media screen and (max-width: 820px){
+    .scroll-button-left{
+        position: absolute;
+        float: none;
+        left: 0;
+        margin-left: 50px;
+    }
+    .scroll-button-right{
+        position: absolute;
+        float: none;
+        right: 0;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .scroll-button-left{
+        margin-left: 20px;
+    }
+
+    .scroll-button-right{
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 820px){
+    .people .name p{
+        font-size: 24px !important;
+    }
+}
