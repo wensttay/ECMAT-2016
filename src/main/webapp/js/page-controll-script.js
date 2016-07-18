@@ -31,7 +31,6 @@ function init() {
 }
 
 $(document).ready(function () {
-    alert('oi');
     $(window).on('hashchange', function () {
         myFunction();
     });
