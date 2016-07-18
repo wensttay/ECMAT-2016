@@ -199,5 +199,12 @@
     transform: rotateY(0deg);  
 }    
 
+/*<<<<<<< HEAD*/
 /* verso inicialmente escondido */
 .back { transform: rotateY(-180deg); }  
+/*=======
+ verso inicialmente escondido 
+.back { transform: rotateY(-180deg); }  */
+
+/*.back{ display: none; }*/
+/*>>>>>>> heroku/master*/
