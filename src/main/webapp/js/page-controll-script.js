@@ -30,12 +30,12 @@ function init() {
     });
 }
 
-$(document).ready(function () {
+//$(document).ready(function () {
     $(window).on('hashchange', function () {
         myFunction();
     });
     myFunction();
-});
+//});
 
 var mapReady = 0;
 var oldAnchor = '#inicio';
