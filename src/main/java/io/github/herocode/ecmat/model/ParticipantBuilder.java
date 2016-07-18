@@ -13,6 +13,8 @@ import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.enums.ErrorMessages;
 import io.github.herocode.ecmat.enums.RegularExpressions;
 import io.github.herocode.ecmat.enums.Titrations;
+import io.github.herocode.ecmat.interfaces.ParticipantDao;
+import io.github.herocode.ecmat.persistence.ParticipantDaoImpl;
 import java.time.LocalDate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -34,6 +36,8 @@ public class ParticipantBuilder {
     private Payment     payment;
     private Phone       phone;
     private String      password;
+    
+    private ParticipantDao dao;
 
     public ParticipantBuilder(String name, String titration, String cpf, String email, Address address) {
         this.name       = name;
@@ -140,6 +144,12 @@ public class ParticipantBuilder {
         } catch (Exception ex) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_CPF.getErrorMessage());
         }
+        System.out.println("vou olhar se o cpf e repetido");
+        if(dao.existsCpf(cpf)){
+            System.out.println("era sim");
+            throw new IllegalArgumentException(ErrorMessages.EXISTING_CPF.getErrorMessage());
+        }
+        System.out.println("nao era");
     }
 
     private void validateName() throws IllegalArgumentException {
@@ -163,6 +173,10 @@ public class ParticipantBuilder {
         if (!matcher.matches()) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_EMAIL.getErrorMessage());
         }
+        
+        if(dao.existsEmail(email)){
+            throw new IllegalArgumentException(ErrorMessages.EXISTING_EMAIL.getErrorMessage());
+        }
 
     }
 
@@ -174,12 +188,14 @@ public class ParticipantBuilder {
     public Participant build() throws IllegalArgumentException {
 
         validateName();
-        validateEmail();
-        validateCpf();
         validatePassword();
         validateTitration();
         validateAddress();
 
+        dao = new ParticipantDaoImpl();
+        validateEmail();
+        validateCpf();
+        
         Participant participant = new Participant();
 
         participant.setName(name);

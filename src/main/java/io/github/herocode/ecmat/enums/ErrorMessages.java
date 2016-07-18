@@ -26,6 +26,9 @@ public enum ErrorMessages {
     INVALID_TOKEN("Token inválido."),
     INVALID_ID("Id inválido."),
     
+    EXISTING_EMAIL("O E-mail informado já está cadastrado."),
+    EXISTING_CPF("O CPF informado já está cadastrado."),
+    
     DIFFERENT_PASSWORDS("As senhas inseridas são diferentes, elas devem ser iguais."),
     
     FILLED_SHORT_COURSE("O mini curso está com todas as vagas preenchidas."),

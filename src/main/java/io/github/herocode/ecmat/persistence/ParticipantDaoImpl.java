@@ -34,15 +34,15 @@ public class ParticipantDaoImpl implements ParticipantDao {
 
     @Override
     public boolean save(Participant participant, Payment payment) {
-        
+
         save(participant);
-        
+
         if (payment != null) {
-            
+
             Dao<Payment, String> paymentDao = new PaymentDao();
             return paymentDao.save(payment);
         }
-        
+
         return false;
     }
 
@@ -292,6 +292,78 @@ public class ParticipantDaoImpl implements ParticipantDao {
     public String getTableName() {
 
         return "participant";
+    }
+
+    @Override
+    public boolean existsEmail(String email) {
+
+        Connection connection;
+        PreparedStatement statement;
+        ResultSet resultSet;
+
+        boolean result = false;
+
+        try {
+
+            String sql = "SELECT COUNT(id)>0 AS result from " + getTableName() + " WHERE email = ?";
+
+            connection = ConnectionProvider.getInstance().getConnection();
+            statement = connection.prepareCall(sql);
+
+            int count = 1;
+
+            statement.setString(count++, email);
+
+            resultSet = statement.executeQuery();
+            resultSet.next();
+
+            result = resultSet.getBoolean("result");
+
+            resultSet.close();
+            statement.close();
+            connection.close();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return result;
+    }
+
+    @Override
+    public boolean existsCpf(String cpf) {
+
+        Connection connection;
+        PreparedStatement statement;
+        ResultSet resultSet;
+
+        boolean result = false;
+
+        try {
+
+            String sql = "SELECT COUNT(id)>0 AS result from " + getTableName() + " WHERE cpf = ?";
+
+            connection = ConnectionProvider.getInstance().getConnection();
+            statement = connection.prepareCall(sql);
+
+            int count = 1;
+
+            statement.setString(count++, cpf);
+
+            resultSet = statement.executeQuery();
+            resultSet.next();
+
+            result = resultSet.getBoolean("result");
+
+            resultSet.close();
+            statement.close();
+            connection.close();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.println("era pra dar true "+result);
+        return result;
     }
 
 }

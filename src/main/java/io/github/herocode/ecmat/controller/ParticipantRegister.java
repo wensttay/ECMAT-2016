@@ -102,6 +102,9 @@ public class ParticipantRegister extends HttpServlet {
             payment.setStatus(PaymentStatus.AWAITING_PAYMENT.getCode());
 
             participant.setPayment(payment);
+            
+            request.getSession().setAttribute("participant", participant);
+            response.sendRedirect("ParticipantPanel");
 
         } catch (Exception ex) {
 ex.printStackTrace();
