@@ -3,6 +3,7 @@ Document   : index.jsp
 Created on : 14/05/2016, 03:11:11
 Author     : Wensttay, Victor Hugo
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="pt">
     <head>
@@ -116,29 +117,38 @@ Author     : Wensttay, Victor Hugo
                         <li class="principal-list-item page-link item-bordered" >
                             <a title="Clique para ir para a página de Contato." class="default-low-color-white-transparence item-title" href="#contato">Contato</a>
                         </li>
-                        
-                        
-<!--                        <li class="principal-list-item page-link item-bordered disabled" >
-                            <a title="Clique para ir para a página de Inscrição." class="default-low-color-white-transparence item-title" href="#inscricao">Inscrição</a>
-                        </li>-->
+
+
+                        <!--                        <li class="principal-list-item page-link item-bordered disabled" >
+                                                    <a title="Clique para ir para a página de Inscrição." class="default-low-color-white-transparence item-title" href="#inscricao">Inscrição</a>
+                                                </li>-->
 
                         <!--AQUI ENTRARIA UM IF-->
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
                             <a href="#" class="default-low-color-white-transparence item-title list-item-withsublist-title">Minha Conta     <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="drop-menu default-border-color blackboard-background">
-                                <li class="drop-menu-item default-border-color page-link" >
-                                    <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="painel_de_controle">Inscrições</a>
-                                </li>
-                                <li class="drop-menu-item default-border-color page-link" >
-                                    <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#construcao">Editar Dados</a>
-                                </li>
-                                <li class="drop-menu-item default-border-color page-link" >
-                                    <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="#construcao">Deslogar</a>
-                                </li>
+                                <c:if test="${empty sessionScope.participant}">
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#inscricao">Inscrições</a>
+                                    </li>
+                                </c:if>
+
+                                <c:if test="${!empty sessionScope.participant}">
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="ParticipantPanel">Principal</a>
+                                    </li>
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Logut">Deslogar</a>
+                                    </li>
+                                    <!--                                    <li class="drop-menu-item default-border-color page-link" >
+                                                                            <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#construcao">Editar Dados</a>
+                                                                        </li>-->
+                                </c:if>
+
                             </ul>
                         </li>
                         <!--AQUI ENTRARIA UM IF-->
-                        
+
                     </ul>
                 </nav>
             </header>
@@ -156,7 +166,7 @@ Author     : Wensttay, Victor Hugo
                 <%@ include file="pages/inscricao.jsp" %>
                 <%@ include file="pages/cadastro.jsp" %>
                 <%@ include file="pages/recuperacao.jsp" %>
-                
+
                 <%@ include file="pages/alert_error_model.jsp" %>
             </section>
 
