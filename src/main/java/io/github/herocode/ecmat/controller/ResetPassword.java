@@ -78,6 +78,7 @@ public class ResetPassword extends HttpServlet {
                 if (resetBusiness.isPasswordResetRequestValid(resetRequest)) {
 
                     request.setAttribute("is_valid", true);
+                    request.setAttribute("token", token);
                 } else if (resetRequest.isValid()) {
 
                     resetRequest.setIsValid(false);

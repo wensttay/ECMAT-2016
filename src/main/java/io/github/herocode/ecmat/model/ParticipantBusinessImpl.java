@@ -15,6 +15,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -86,9 +87,9 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
     public Participant searchParticipantByEmail(String email) throws IllegalArgumentException {
 
         try {
+            JOptionPane.showMessageDialog(null, email);
 
             Participant participant = searchParticipantByAttribute("email", email).get(0);
-
             return participant;
         } catch (Exception ex) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_EMAIL.getErrorMessage());

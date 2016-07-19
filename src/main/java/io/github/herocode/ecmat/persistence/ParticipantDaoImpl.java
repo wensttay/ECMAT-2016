@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -133,14 +134,14 @@ public class ParticipantDaoImpl implements ParticipantDao {
         PreparedStatement statement;
 
         int result = 0;
-
+        JOptionPane.showMessageDialog(null, object.getPhone().getAreaCode());
         try {
 
             String sql = "UPDATE " + getTableName() + " SET payment_id = ?, "
                     + "name = ?, birth_date = ?, phone_ddd = ?, phone_number = ?,"
                     + " titration = ?, cpf = ?, email = ?, password = ?, country = ?,"
                     + " state = ?, city = ?, district = ?, postal_code = ?,"
-                    + " street = ?, number = ?";
+                    + " street = ?, house_number = ?";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
@@ -268,7 +269,7 @@ public class ParticipantDaoImpl implements ParticipantDao {
             address.setStreet(rs.getString("street"));
             System.out.println("foi o address");
             Phone phone = new Phone();
-            phone.setAreaCode("phone_ddd");
+            phone.setAreaCode(rs.getString("phone_ddd"));
             phone.setNumber(rs.getString("phone_number"));
 
             participant.setAddress(address);

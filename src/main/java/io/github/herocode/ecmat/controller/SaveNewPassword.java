@@ -67,18 +67,21 @@ public class SaveNewPassword extends HttpServlet {
             throws ServletException, IOException {
 
         String token = request.getParameter("token");
+        System.out.println("entrei");
+        System.out.println(token);
 
         if (token != null && !token.trim().isEmpty()) {
 
             PasswordResetBusiness resetBusiness = new PasswordResetBusinessImpl();
-
+System.out.println("token n nulo");
             try {
 
                 PasswordResetRequest resetRequest = resetBusiness.searchRequestPasswordByToken(token);
 
                 if (resetBusiness.isPasswordResetRequestValid(resetRequest)) {
 
-                    String email = request.getParameter("email");
+                    String email = resetRequest.getParticipantEmail();
+                    
                     String password = request.getParameter("password");
                     String passwordConfirm = request.getParameter("password-confirm");
 
@@ -96,7 +99,7 @@ public class SaveNewPassword extends HttpServlet {
                     } else {
 
                         ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
-
+                        
                         try {
 
                             Participant participant = participantBusiness.searchParticipantByEmail(email);
@@ -110,7 +113,7 @@ public class SaveNewPassword extends HttpServlet {
 
                             //falta terminar, redirecionamento de paginas e pah
                         } catch (IllegalArgumentException ex) {
-
+                                ex.printStackTrace();
                         }
 
                     }

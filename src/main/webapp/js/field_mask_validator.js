@@ -1,7 +1,7 @@
 function add_mask(input_field, m_function) {
 
-    field = input_field;
-    mask_function = m_function;
+    field           = input_field;
+    mask_function   = m_function;
 
     setTimeout("execute_mask()", 1);
 }

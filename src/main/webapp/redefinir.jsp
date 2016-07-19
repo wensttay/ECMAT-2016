@@ -70,14 +70,14 @@
                                 <div class="erro-box default-low-opacity">
                                     <div class="col-lg-3 col-md-3 col-sm-3"></div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 text-center">
-                                        <form action="" method="POST" class="form-horizontal" style="font-family: arial;" role="form">
+                                        <form action="SaveNewPassword?token=${requestScope.token}" method="POST" class="form-horizontal" style="font-family: arial;" role="form">
                                             <label class="col-sm-4 col-xs-4" style="text-align: right">Nova Senha:</label>
                                             <div class="form-group col-sm-6 col-xs-6">
-                                                <input name="newpassword" type="text" class="form-control" style="font-size: 14px;">
+                                                <input name="password" type="text" class="form-control" style="font-size: 14px;">
                                             </div>
                                             <label class="col-sm-4 col-xs-4" style="text-align: right">Repita a Nova Senha:</label>
                                             <div class="form-group col-sm-6 col-xs-6">
-                                                <input name="newpasswordconfirm" type="text" class="form-control" style="font-size: 14px;">
+                                                <input name="password-confirm" type="text" class="form-control" style="font-size: 14px;">
                                             </div>
                                             <div class="col-sm-4 col-xs-4"></div>
                                             <div class="form-group col-sm-6 col-xs-6">
