@@ -19,7 +19,7 @@
     
     <servlet>
         <servlet-name>erro</servlet-name>
-        <jsp-file>/erro.html</jsp-file>
+        <jsp-file>/erro.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>erro</servlet-name>
