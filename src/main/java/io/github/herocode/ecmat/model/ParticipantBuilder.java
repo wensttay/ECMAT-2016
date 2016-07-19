@@ -157,6 +157,10 @@ public class ParticipantBuilder {
         if (stringIsEmpty(name)) {
             throw new IllegalArgumentException(ErrorMessages.EMPTY_NAME.getErrorMessage());
         }
+        
+        if(name.split(" ").length > 1){
+            throw new IllegalArgumentException(ErrorMessages.INVALID_NAME.getErrorMessage());
+        }
 
     }
 

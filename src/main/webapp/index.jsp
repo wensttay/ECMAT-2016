@@ -187,6 +187,7 @@ Author     : Wensttay, Victor Hugo
         <script src="js/page-controll-script.js" type="text/javascript"></script>
         <script src="js/organizacao-controll-script.js" type="text/javascript"></script>
         <script src="js/programacao-table-controll-script.js" type="text/javascript"></script>
+        <script src="js/fields_mask_validator.js" type="text/javascript"></script>
 
         <script>
             function show_error(textError) {

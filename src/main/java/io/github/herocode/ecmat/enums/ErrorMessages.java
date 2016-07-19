@@ -25,6 +25,7 @@ public enum ErrorMessages {
     INVALID_TITRATION("Titulação inválida."),
     INVALID_TOKEN("Token inválido."),
     INVALID_ID("Id inválido."),
+    INVALID_NAME("É necessario informar o nome e sobrenome."),
     
     EXISTING_EMAIL("O E-mail informado já está cadastrado."),
     EXISTING_CPF("O CPF informado já está cadastrado."),
