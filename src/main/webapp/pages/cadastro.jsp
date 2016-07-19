@@ -104,7 +104,8 @@
                             <label class="col-sm-2 col-xs-12">CEP:</label>
                             <div class="col-sm-4 col-xs-12" style="margin-bottom: 15px">
                                 <input name="postal-code" pattern="\d{5}?\d{3}" type="text" class="form-control" style="font-size: 14px;"
-                                       onkeypress="javascript: add_mask(this, number_only);"> 
+                                       onkeypress="javascript: add_mask(this, number_only);"
+                                       maxlength="8"> 
                             </div>
                             <label class="col-sm-2 col-xs-12">Bairro:</label>
                             <div class="col-sm-4 col-xs-12" style="margin-bottom: 15px">
