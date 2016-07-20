@@ -26,10 +26,10 @@
                         </div>
 
                         <div class="form-group col-sm-12 col-xs-12">
-                            <label class="col-sm-2 col-xs-12">Aniversário:</label>
+                            <label class="col-sm-2 col-xs-12">Nascimento:</label>
                             <div class="col-sm-10 col-xs-12">
                                 <input name="birth-date" placeholder="DD-MM-YYYY" type="date" class="form-control" style="font-size: 14px;" 
-                                       min="2015-01-01" max="1876-01-01"> 
+                                       max="2015-01-01" min="1876-01-01"> 
                             </div>
                         </div>
 

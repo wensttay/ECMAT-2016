@@ -40,3 +40,13 @@ CREATE TABLE password_reset_request(
 	participant_email TEXT,
 	PRIMARY KEY(id)
 );	
+
+CREATE TABLE payment_log (
+	
+	id SERIAL,
+	occurrence_date TIMESTAMP,
+	occurrence TEXT, 
+	stack_trace TEXT, 
+	notification_code TEXT,
+	PRIMARY KEY(id)
+);

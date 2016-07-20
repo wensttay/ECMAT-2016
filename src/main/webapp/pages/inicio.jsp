@@ -28,8 +28,8 @@
                         <img width="150px" height="150px" alt="Representação ilustrativa de um ponto geográfico" class="evento-info-img medium-margin-bottom off-load" src="img/other/posicao.png"/>
                     </a>
                 </div>
-                <div class="evento-info-box col-md-4 col-sm-4 disabled">
-                    <a title="Clique para conferir a página de inscrição." href="#construcao" class="evento-link default-low-opacity">
+                <div class="evento-info-box col-md-4 col-sm-4">
+                    <a title="Clique para conferir a página de inscrição." href="#inscricao" class="evento-link default-low-opacity">
                         <h3>Inscrições a partir de 15 de Junho</h3>
                         <img width="150px" height="150px" alt="Representação ilustrativa de um papel de inscrição" class="evento-info-img medium-margin-bottom off-load" src="img/other/inscricao.png"/>
                     </a>

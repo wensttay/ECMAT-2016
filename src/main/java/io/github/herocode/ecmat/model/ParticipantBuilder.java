@@ -123,7 +123,7 @@ public class ParticipantBuilder {
 
         Matcher matcher = pattern.matcher(password);
         
-        if (!matcher.matches()) {
+        if (!matcher.matches() || password.length() < 6) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_PASSWORD.getErrorMessage());
         }
         
@@ -158,7 +158,7 @@ public class ParticipantBuilder {
             throw new IllegalArgumentException(ErrorMessages.EMPTY_NAME.getErrorMessage());
         }
         
-        if(name.split(" ").length > 1){
+        if(name.split(" ").length <= 1){
             throw new IllegalArgumentException(ErrorMessages.INVALID_NAME.getErrorMessage());
         }
 
@@ -212,6 +212,16 @@ public class ParticipantBuilder {
         participant.setBirthDate(birthDate);
 
         return participant;
+    }
+    
+    public static void main(String[] args) {
+        
+        Pattern pattern = Pattern.compile(RegularExpressions.PASSWORD_PATTERN.getRegex());
+
+        Matcher matcher = pattern.matcher("abacaxi^");
+        
+        System.out.println(matcher.matches());
+        
     }
 
 }

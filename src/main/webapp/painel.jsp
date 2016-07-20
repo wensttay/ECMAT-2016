@@ -58,7 +58,10 @@
                     <div class="erro-header-item">
                         <img class="erro-logo default-low-opacity" src="img/logo/logo-ecmat2016-75x75.png">
                     </div>
-                </a>  
+                </a> 
+                <div>
+                    <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;" title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Logut">Sair</a>
+                </div>
             </header>
 
 
@@ -67,6 +70,37 @@
                     <div class="container text-center">
 
                         <div class="row">
+                            <p class="estado_inscricao">Estado da inscrição:
+                                <c:if test="${!sessionScope.participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.code)}">
+                                    <span style="color:yellow;">Pendente</span>
+                                    <span>,
+                                        <c:choose>
+                                            <c:when test="${sessionScope.participant.getPaymentStatus().equals(PaymentStatus.IN_REVIEW.code)}">
+                                                o pagamento está em análise.
+                                            </c:when>
+                                            <c:when test="${sessionScope.participant.getPaymentStatus().equals(PaymentStatus.AWAITING_PAYMENT.code)}">
+                                                o pagamento ainda não foi efetuado.
+                                            </c:when>
+                                            <c:when test="${sessionScope.participant.getPaymentStatus().equals(PaymentStatus.IN_DISPUTE.code)}">
+                                                o pagamento está em disputa.
+                                            </c:when>
+                                            <c:when test="${sessionScope.participant.getPaymentStatus().equals(PaymentStatus.AVAILABLE.code)}">
+                                                o pagamento ainda não foi efetuado.
+                                            </c:when>
+                                            <c:when test="${sessionScope.participant.getPaymentStatus().equals(PaymentStatus.RETURNED.code)}">
+                                                o pagamento foi retornado.
+                                            </c:when>
+                                            <c:when test="${sessionScope.participant.getPaymentStatus().equals(PaymentStatus.CANCELLED.code)}">
+                                                o pagamento foi cancelado.
+                                            </c:when>
+                                        </c:choose>
+                                    </span>
+                                </c:if>
+                                <c:if test="${sessionScope.participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.code)}">
+                                    <span style="color: lime">Concluída</span> !
+                                </c:if>
+                            </p>
+                            <br><br><br>
                             <h1>Bem vindo, ${sessionScope.participant.getFirstName()}</h1>
                             <div class="col-md-3"></div>
                             <div class="col-md-6" style="margin-top: 50px !important;">
@@ -75,7 +109,7 @@
                                     <div class="col-md-12">
                                         <p>
                                             parece que você ainda não concluiu sua inscrição,
-                                            realize o pagamento da mesma e tenha acesso aos Minicursos que ocorrerão no evento!
+                                            realize o pagamento da mesma e tenha acesso aos Minicursos que ocorrerão no evento !
                                         </p>
                                         <br>
                                         <a href="${sessionScope.participant.getPaymentUrl()}">
@@ -87,10 +121,14 @@
                             </div>
                             <div class="col-md-3"></div>
                         </div>
+                        <div class="row notice">
+                            <p style="font-family: WC_RoughTrad;">* Os minicursos e as inscrições para os mesmos estarão disponíveis em breve, fique atento !</p>
+                        </div>
                     </div>
                 </article>
             </section>
-
+            <!--<div class="row">-->
+            <!--</div>--> 
             <footer id="footer">
                 <p class="text-center">
                     Desenvolvido por <a href="https://github.com/Hero-Code" target="_blank" style="display: inline; background-color: black; padding: 5px; font-family: WC_RoughTrad; border-radius: 5px; margin-left: 5px;"><strong>HeroCode</strong></a>
