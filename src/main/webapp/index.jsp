@@ -151,6 +151,11 @@ Author     : Wensttay, Victor Hugo
 
                     </ul>
                 </nav>
+                <div class="issn-box">
+                    <div class="issn blackboard-background">
+                        Encontro Cajazeirense de Matemática - ISSN 2525-3727
+                    </div>
+                </div>
             </header>
 
             <div class="background blackboard-background"></div>
@@ -243,7 +248,7 @@ Author     : Wensttay, Victor Hugo
 
                     if (success !== undefined) {
                         show_success(success);
-                    } 
+                    }
                 });
 
             });
