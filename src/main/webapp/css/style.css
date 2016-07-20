@@ -212,6 +212,11 @@ footer{
     padding: 10px;
 }
 
+.notice{
+    text-align: left;
+    margin-top: 105px;
+}
+
 nav{
     display: table;
     margin: 0 auto;	
@@ -376,3 +381,13 @@ footer p{
 #footer{
     z-index: 9999;
 }
+
+.estado_inscricao{
+    float: left; 
+    font-family: WC_RoughTrad;
+}
+
+.label-cadastro{
+    text-align: right;
+}
+

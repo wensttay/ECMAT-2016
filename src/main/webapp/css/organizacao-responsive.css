@@ -10,12 +10,12 @@
     .list-size-3{
         width: calc(210px * 3);
     }
-/*    .list-size-2{
-        width: calc(210px * 2);
-    }
-    .list-size-1{
-        width: calc(210px * 1);
-    }*/
+    /*    .list-size-2{
+            width: calc(210px * 2);
+        }
+        .list-size-1{
+            width: calc(210px * 1);
+        }*/
 }
 @media screen and (max-width: 993px){
     .list-size-4{
@@ -24,12 +24,12 @@
     .list-size-3{
         width: calc(210px * 2);
     }
-/*    .list-size-2{
-        width: calc(210px * 2);
-    }
-    .list-size-1{
-        width: calc(210px * 1);
-    }*/
+    /*    .list-size-2{
+            width: calc(210px * 2);
+        }
+        .list-size-1{
+            width: calc(210px * 1);
+        }*/
 }
 @media screen and (max-width: 610px){
     .list-size-4{
@@ -38,12 +38,12 @@
     .list-size-3{
         width: calc(210px * 1);
     }
-/*    .list-size-2{
-        width: calc(210px * 1);
-    }
-    .list-size-1{
-        width: calc(210px * 1);
-    }*/
+    /*    .list-size-2{
+            width: calc(210px * 1);
+        }
+        .list-size-1{
+            width: calc(210px * 1);
+        }*/
 }
 
 @media screen and (max-width: 820px){
@@ -74,5 +74,11 @@
 @media screen and (max-width: 820px){
     .people .name p{
         font-size: 24px !important;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .label-cadastro{
+        text-align: left;
     }
 }

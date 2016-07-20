@@ -123,7 +123,7 @@
                 </nav>
                 <div class="issn-box">
                     <div title="(International Standard Serial Number)" class="issn blackboard-background">
-                        Encontro Cajazeirense de Matemática - ISSN XXXX-XXX
+                        Encontro Cajazeirense de Matemática - ISSN 2525-3727
                     </div>
                 </div>
             </header>

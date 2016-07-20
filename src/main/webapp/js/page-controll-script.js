@@ -45,9 +45,9 @@ function myFunction() {
     var anchorElementAux = document.getElementById(anchorAux);
 
     if (anchorElementAux === null) {
-        var pathArray = window.location.pathname;
-                //(window.location.pathname + "/").split('/');
-        if (pathArray === "/anais") {
+        var pathArray = (window.location.pathname + "/").split('/');
+
+        if (pathArray[2] === "anais") {
             anchor = "#apresentacao";
         } else {
             anchor = oldAnchor;

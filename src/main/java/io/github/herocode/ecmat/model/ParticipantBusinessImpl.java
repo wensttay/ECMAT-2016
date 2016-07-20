@@ -88,7 +88,6 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
         try {
 
             Participant participant = searchParticipantByAttribute("email", email).get(0);
-
             return participant;
         } catch (Exception ex) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_EMAIL.getErrorMessage());

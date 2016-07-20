@@ -6,27 +6,20 @@
 package io.github.herocode.ecmat.controller;
 
 import io.github.herocode.ecmat.entity.Payment;
+import io.github.herocode.ecmat.entity.PaymentNotificationExceptionLog;
 import io.github.herocode.ecmat.interfaces.PaymentBusiness;
 import io.github.herocode.ecmat.interfaces.PaymentChecker;
 import io.github.herocode.ecmat.model.PaymentBusinessImpl;
 import io.github.herocode.ecmat.model.PaymentCheckerImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.util.converter.LocalDateStringConverter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.parsers.ParserConfigurationException;
-import org.w3c.dom.DOMException;
-import org.xml.sax.SAXException;
 
 /**
  *
@@ -39,30 +32,47 @@ public class PaymentNotification extends HttpServlet {
             throws ServletException, IOException {
 
         String notificationCode = request.getParameter("notificationCode");
-        
-        PaymentChecker paymentChecker   = new PaymentCheckerImpl();
-        PaymentBusiness paymentBusiness = new PaymentBusinessImpl();
 
         try {
-            
+
+            PaymentChecker paymentChecker = new PaymentCheckerImpl();
+            PaymentBusiness paymentBusiness = new PaymentBusinessImpl();
+
             Map<String, String> paymentDetails = paymentChecker.checkPayment(notificationCode);
-            
-            String date             = paymentDetails.get("date");
-            String lastEventDate    = paymentDetails.get("lastEventDate");
-            
+
+            String date = paymentDetails.get("date");
+            String lastEventDate = paymentDetails.get("lastEventDate");
+
             DateTimeFormatter formartter = DateTimeFormatter.ofPattern("YYYY-MM-DDThh:mm:ss.sTZD");
-            
+
             Payment payment = new Payment();
             payment.setCode(paymentDetails.get("code"));
             payment.setDate(LocalDateTime.parse(date, formartter));
             payment.setLastEventDate(LocalDateTime.parse(lastEventDate, formartter));
             payment.setReference(paymentDetails.get("reference"));
             payment.setStatus(paymentDetails.get("status"));
-            
+
             paymentBusiness.update(payment);
-            
-        } catch (DOMException | ParserConfigurationException | SAXException ex) {
-            Logger.getLogger(PaymentNotification.class.getName()).log(Level.SEVERE, null, ex);
+
+        } catch (Exception ex) {
+
+            PaymentNotificationExceptionLog log = new PaymentNotificationExceptionLog();
+            log.setDateTime(LocalDateTime.now());
+            log.setOccurrence(ex.getMessage());
+            log.setNotifizcationCode(notificationCode);
+
+            StackTraceElement[] stes = ex.getStackTrace();
+
+            StringBuilder sb = new StringBuilder();
+
+            for (StackTraceElement ste : stes) {
+                sb.append(ste.toString());
+                sb.append("\n");
+            }
+
+            log.setStackTrace(sb.toString());
+
+            log.saveLog();
         }
     }
 

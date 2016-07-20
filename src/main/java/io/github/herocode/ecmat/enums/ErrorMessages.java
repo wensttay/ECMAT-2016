@@ -25,6 +25,16 @@ public enum ErrorMessages {
     INVALID_TITRATION("Titulação inválida."),
     INVALID_TOKEN("Token inválido."),
     INVALID_ID("Id inválido."),
+    INVALID_NAME("É necessario informar o nome e sobrenome."),
+    INVALID_PHONE("Este número de telefone é inválido"),
+    
+    TOO_LONG_CITY_NAME("Aparentemente a cidade informada não existe."),
+    TOO_LONG_DISTRICT_NAME("Aparentemente o bairro informado não existe."),
+    TOO_LONG_POSTAL_CODE("Aparentemente o CEP informado não existe."),
+    TOO_LONG_STREET_NAME("Aparentemente a rua informada não existe."),
+    TOO_LONG_HOUSE_NUMBER("Aparentemente este numero residencial não existe."),
+    TOO_LONG_STATE_NAME("Aparentemente este estado não existe."),
+    TOO_LONG_DDD("Aparentemente este DDD não existe"),
     
     EXISTING_EMAIL("O E-mail informado já está cadastrado."),
     EXISTING_CPF("O CPF informado já está cadastrado."),

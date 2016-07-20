@@ -111,7 +111,7 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
 
             statement.close();
             connection.close();
-
+            
         } catch (SQLException ex) {
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }

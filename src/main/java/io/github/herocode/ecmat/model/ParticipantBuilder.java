@@ -89,6 +89,29 @@ public class ParticipantBuilder {
             throw new IllegalArgumentException(ErrorMessages.EMPTY_STATE.getErrorMessage());
         }
         
+        if(address.getCity().length() > 50){
+            throw new IllegalArgumentException(ErrorMessages.TOO_LONG_CITY_NAME.getErrorMessage());
+        }
+        
+        if(address.getDistrict().length() > 50){
+            throw new IllegalArgumentException(ErrorMessages.TOO_LONG_DISTRICT_NAME.getErrorMessage());
+        }
+        
+        if(address.getPostalCode().length() > 8){
+            throw new IllegalArgumentException(ErrorMessages.TOO_LONG_POSTAL_CODE.getErrorMessage());
+        }
+        
+        if(address.getStreet().length() > 50){
+            throw new IllegalArgumentException(ErrorMessages.TOO_LONG_STREET_NAME.getErrorMessage());
+        }
+        
+        if(address.getNumber().length() > 5){
+            throw new IllegalArgumentException(ErrorMessages.TOO_LONG_HOUSE_NUMBER.getErrorMessage());
+        }
+        
+        if(address.getState().length() > 2){
+            throw new IllegalArgumentException(ErrorMessages.TOO_LONG_STATE_NAME.getErrorMessage());
+        }
         
     }
     
@@ -123,7 +146,7 @@ public class ParticipantBuilder {
 
         Matcher matcher = pattern.matcher(password);
         
-        if (!matcher.matches()) {
+        if (!matcher.matches() || password.length() < 6) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_PASSWORD.getErrorMessage());
         }
         
@@ -144,18 +167,22 @@ public class ParticipantBuilder {
         } catch (Exception ex) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_CPF.getErrorMessage());
         }
-        System.out.println("vou olhar se o cpf e repetido");
+
         if(dao.existsCpf(cpf)){
-            System.out.println("era sim");
+
             throw new IllegalArgumentException(ErrorMessages.EXISTING_CPF.getErrorMessage());
         }
-        System.out.println("nao era");
+        
     }
 
     private void validateName() throws IllegalArgumentException {
 
         if (stringIsEmpty(name)) {
             throw new IllegalArgumentException(ErrorMessages.EMPTY_NAME.getErrorMessage());
+        }
+        
+        if(name.split(" ").length <= 1){
+            throw new IllegalArgumentException(ErrorMessages.INVALID_NAME.getErrorMessage());
         }
 
     }
@@ -179,6 +206,19 @@ public class ParticipantBuilder {
         }
 
     }
+    
+    
+    private void validatePhone() {
+        
+        if(phone.getAreaCode().length() > 2){
+            throw new IllegalArgumentException(ErrorMessages.TOO_LONG_DDD.getErrorMessage());
+        }
+        
+        if(phone.getNumber().length() > 12){
+            throw new IllegalArgumentException(ErrorMessages.INVALID_PHONE.getErrorMessage());
+        }
+        
+    }
 
     private boolean stringIsEmpty(String string) {
 
@@ -191,6 +231,7 @@ public class ParticipantBuilder {
         validatePassword();
         validateTitration();
         validateAddress();
+        validatePhone();
 
         dao = new ParticipantDaoImpl();
         validateEmail();
@@ -209,5 +250,5 @@ public class ParticipantBuilder {
 
         return participant;
     }
-
+    
 }

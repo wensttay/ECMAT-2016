@@ -1,7 +1,8 @@
 /* 
     Created on : 15/05/2016, 01:50:49
-    Author     : Victor Hugo
+    Author     : Wensttay
 */
+
 .organization{
     border-radius: 20px;
     padding: 30px;
@@ -199,12 +200,5 @@
     transform: rotateY(0deg);  
 }    
 
-/*<<<<<<< HEAD*/
 /* verso inicialmente escondido */
 .back { transform: rotateY(-180deg); }  
-/*=======
- verso inicialmente escondido 
-.back { transform: rotateY(-180deg); }  */
-
-/*.back{ display: none; }*/
-/*>>>>>>> heroku/master*/

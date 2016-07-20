@@ -8,45 +8,25 @@ package io.github.herocode.ecmat.controller;
 import br.com.uol.pagseguro.domain.Address;
 import br.com.uol.pagseguro.domain.Phone;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.enums.PaymentStatus;
 import io.github.herocode.ecmat.interfaces.CheckoutCreator;
-import io.github.herocode.ecmat.interfaces.Dao;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
-import io.github.herocode.ecmat.interfaces.ParticipantDao;
-import io.github.herocode.ecmat.interfaces.PaymentBusiness;
-import io.github.herocode.ecmat.interfaces.PaymentChecker;
 import io.github.herocode.ecmat.model.CheckoutCreatorImpl;
 import io.github.herocode.ecmat.model.ParticipantBuilder;
 import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
-import io.github.herocode.ecmat.model.PaymentBusinessImpl;
-import io.github.herocode.ecmat.model.PaymentCheckerImpl;
-import io.github.herocode.ecmat.persistence.ParticipantDaoImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.util.converter.LocalDateStringConverter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.parsers.ParserConfigurationException;
-import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.tomcat.util.digester.Digester;
-import org.w3c.dom.DOMException;
-import org.xml.sax.SAXException;
 
 /**
  *
@@ -58,25 +38,31 @@ public class ParticipantRegister extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String name         = request.getParameter("name");
-        String birthDate    = request.getParameter("birth-date");
-        String titration    = request.getParameter("titration");
-        String cpf          = request.getParameter("cpf");
-        String ddd          = request.getParameter("ddd");
-        String phoneNumber  = request.getParameter("phone");
-        String email        = request.getParameter("email");
-        String password     = request.getParameter("password");
-        String street       = request.getParameter("street");
-        String number       = request.getParameter("number");
-        String district     = request.getParameter("district");
-        String city         = request.getParameter("city");
-        String postalCode   = request.getParameter("postal-code");
-        String state        = request.getParameter("state");
-//FALTA FAZER = CPF REPETIDO, REDIRECIONAMENTO
+        String name = request.getParameter("name");
+        String birthDate = request.getParameter("birth-date");
+        String titration = request.getParameter("titration");
+        String cpf = request.getParameter("cpf");
+        String ddd = request.getParameter("ddd");
+        String phoneNumber = request.getParameter("phone");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String street = request.getParameter("street");
+        String number = request.getParameter("number");
+        String district = request.getParameter("district");
+        String city = request.getParameter("city");
+        String postalCode = request.getParameter("postal-code");
+        String state = request.getParameter("state");
+
+        DateTimeFormatter formartter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate bDate = LocalDate.parse(birthDate, formartter);
+
         try {
-            System.out.println("Saning... "+password);
-            DateTimeFormatter formartter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-            LocalDate bDate = LocalDate.parse(birthDate, formartter);
+            bDate = LocalDate.parse(birthDate, formartter);
+        } catch (Exception ex) {
+            bDate = LocalDate.now();
+        }
+
+        try {
 
             Phone phone = new Phone(ddd, phoneNumber);
             Address address = new Address("BRA", state, city, district, postalCode, street, number, "");
@@ -87,7 +73,7 @@ public class ParticipantRegister extends HttpServlet {
                     setBirthDate(bDate);
 
             Participant participant = participantBuilder.build();
-            
+
             ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
 
             participantBusiness.saveParticipant(participant);
@@ -97,17 +83,17 @@ public class ParticipantRegister extends HttpServlet {
             CheckoutCreator checkoutCreator = new CheckoutCreatorImpl();
 
             String checkoutUrl = checkoutCreator.buildCheckout(participant, payment.getReference());
-            System.out.println("salvado... "+checkoutUrl);
+
             payment.setUrl(new URL(checkoutUrl));
             payment.setStatus(PaymentStatus.AWAITING_PAYMENT.getCode());
 
             participant.setPayment(payment);
-            
+
             request.getSession().setAttribute("participant", participant);
             response.sendRedirect("ParticipantPanel");
 
         } catch (Exception ex) {
-ex.printStackTrace();
+
             Map<String, String> responseMap = new HashMap<>();
             responseMap.put("error", ex.getMessage());
 

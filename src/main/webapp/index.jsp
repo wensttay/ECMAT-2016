@@ -119,11 +119,43 @@ Author     : Wensttay, Victor Hugo
                         </li>
 
 
-                        <li class="principal-list-item page-link item-bordered disabled" >
-                            <a title="Clique para ir para a página de Inscrição." class="default-low-color-white-transparence item-title" href="#construcao">Inscrição</a>
+                        <!--                        <li class="principal-list-item page-link item-bordered disabled" >
+                                                    <a title="Clique para ir para a página de Inscrição." class="default-low-color-white-transparence item-title" href="#inscricao">Inscrição</a>
+                                                </li>-->
+
+                        <!--AQUI ENTRARIA UM IF-->
+                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
+                            <a href="#" class="default-low-color-white-transparence item-title list-item-withsublist-title">Minha Conta     <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                            <ul class="drop-menu default-border-color blackboard-background">
+                                <c:if test="${empty sessionScope.participant}">
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#inscricao">Inscrições</a>
+                                    </li>
+                                </c:if>
+
+                                <c:if test="${!empty sessionScope.participant}">
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="ParticipantPanel">Principal</a>
+                                    </li>
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Logut">Sair</a>
+                                    </li>
+                                    <!--                                    <li class="drop-menu-item default-border-color page-link" >
+                                                                            <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#construcao">Editar Dados</a>
+                                                                        </li>-->
+                                </c:if>
+
+                            </ul>
                         </li>
+                        <!--AQUI ENTRARIA UM IF-->
+
                     </ul>
                 </nav>
+                <div class="issn-box">
+                    <div class="issn blackboard-background">
+                        Encontro Cajazeirense de Matemática - ISSN 2525-3727
+                    </div>
+                </div>
             </header>
 
             <div class="background blackboard-background"></div>
@@ -136,7 +168,12 @@ Author     : Wensttay, Victor Hugo
                 <%@ include file="pages/contato.jsp" %>  
                 <%@ include file="pages/construcao.jsp" %>
                 <%@ include file="pages/organizacao.jsp" %>
+                <%@ include file="pages/inscricao.jsp" %>
+                <%@ include file="pages/cadastro.jsp" %>
+                <%@ include file="pages/recuperacao.jsp" %>
 
+                <%@ include file="pages/alert_error_model.jsp" %>
+                <%@ include file="pages/alert_success_model.jsp" %>
             </section>
 
             <footer id="footer">
@@ -156,11 +193,19 @@ Author     : Wensttay, Victor Hugo
         <script src="js/page-controll-script.js" type="text/javascript"></script>
         <script src="js/organizacao-controll-script.js" type="text/javascript"></script>
         <script src="js/programacao-table-controll-script.js" type="text/javascript"></script>
+        <script src="js/field_mask_validator.js" type="text/javascript"></script>
 
         <script>
             function show_error(textError) {
                 $('p#error-body').html(textError);
                 $('#errorModal').modal({
+                    show: 'true'
+                });
+            }
+
+            function show_success(textError) {
+                $('p#success-body').html(textError);
+                $('#successModal').modal({
                     show: 'true'
                 });
             }
@@ -172,6 +217,21 @@ Author     : Wensttay, Victor Hugo
                     var error = response.error;
 
                     if (error !== undefined) {
+                        show_success(error);
+                    } else {
+                        window.location.href = "ParticipantPanel";
+                    }
+                });
+
+            });
+
+            $('#efetuar-cadastro').click(function (e) {
+                e.preventDefault();
+
+                $.post('ParticipantRegister', $('#form-cadastro').serialize(), function (response) {
+                    var error = response.error;
+
+                    if (error !== undefined) {
                         show_error(error);
                     } else {
                         window.location.href = "ParticipantPanel";
@@ -179,6 +239,20 @@ Author     : Wensttay, Victor Hugo
                 });
 
             });
+
+            $('#recuperar-senha').click(function (e) {
+                e.preventDefault();
+
+                $.post('RequestPasswordRecovery', $('#form-recuperacao').serialize(), function (response) {
+                    var success = response.success;
+
+                    if (success !== undefined) {
+                        show_success(success);
+                    }
+                });
+
+            });
+
         </script>
     </body>
 </html>

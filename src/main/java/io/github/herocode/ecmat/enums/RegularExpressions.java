@@ -12,7 +12,7 @@ package io.github.herocode.ecmat.enums;
 public enum RegularExpressions {
     
     EMAIL_PATTERN("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"), 
-    PASSWORD_PATTERN("[A-Za-z.,_0-9]{6}");
+    PASSWORD_PATTERN("[A-Za-z.,_0-9]+");
     
     String regex;
 
