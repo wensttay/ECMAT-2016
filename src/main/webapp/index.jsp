@@ -87,9 +87,6 @@ Author     : Wensttay, Victor Hugo
                                     <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#apresentacao">Apresentação</a>
                                 </li>
                                 <li class="drop-menu-item default-border-color page-link" >
-                                    <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#programacao">Programação</a>
-                                </li>
-                                <li class="drop-menu-item default-border-color page-link" >
                                     <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="#organizacao">Organização</a>
                                 </li>
                                 <li class="drop-menu-item default-border-color page-link disabled" >
@@ -101,8 +98,9 @@ Author     : Wensttay, Victor Hugo
                             </ul>
                         </li>
                         <li class="principal-list-item page-link item-bordered" >
-                            <a title="Clique para ir para a página de Submissões." class="default-low-color-white-transparence item-title" href="#submissoes">Submissões</a>
+                            <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#programacao">Programação</a>
                         </li>
+                        
 
                         <li class="principal-list-item menu-button-with-img" id="logo-central" >
                             <a title="Clique para voltar a página inicial." class="button-img default-low-opacity" href="#inicio">
