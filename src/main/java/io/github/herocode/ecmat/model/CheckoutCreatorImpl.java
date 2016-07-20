@@ -8,7 +8,6 @@ package io.github.herocode.ecmat.model;
 import br.com.uol.pagseguro.domain.AccountCredentials;
 import br.com.uol.pagseguro.domain.Address;
 import br.com.uol.pagseguro.domain.Item;
-import br.com.uol.pagseguro.domain.Phone;
 import br.com.uol.pagseguro.domain.Sender;
 import br.com.uol.pagseguro.domain.checkout.Checkout;
 import br.com.uol.pagseguro.enums.Currency;
@@ -18,7 +17,6 @@ import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.enums.CheckoutData;
 import io.github.herocode.ecmat.interfaces.CheckoutCreator;
 import java.math.BigDecimal;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -42,10 +40,9 @@ public class CheckoutCreatorImpl implements CheckoutCreator {
 
         Sender checkoutSender = new Sender(
                 participant.getName(),
-                participant.getEmail(),
-                participant.getPhone()
+                participant.getEmail()
         );
-
+        
         checkout.addItem(checkoutItem);
 
         checkout.setShippingAddress(checkoutShippingAddress);

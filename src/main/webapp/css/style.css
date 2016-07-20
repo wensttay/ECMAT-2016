@@ -386,3 +386,8 @@ footer p{
     float: left; 
     font-family: WC_RoughTrad;
 }
+
+.label-cadastro{
+    text-align: right;
+}
+

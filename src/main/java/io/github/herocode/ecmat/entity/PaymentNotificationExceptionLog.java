@@ -98,24 +98,5 @@ public class PaymentNotificationExceptionLog {
         }
 
     }
-    
-    public static void main(String[] args) {
-       
-        try{
-            int x = 3/0;
-        }catch(Exception ex){
-            
-            StackTraceElement[] stes = ex.getStackTrace();
-            
-            StringBuilder sb = new StringBuilder();
-            
-            for(StackTraceElement ste: stes){
-                sb.append(ste.toString());
-                sb.append("\n");
-            }
-            
-            System.out.println(sb);
-        }
-    }
 
 }

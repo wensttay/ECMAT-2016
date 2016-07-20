@@ -62,26 +62,28 @@
 
 
             <section id="error-section">
+                <%@ include file="pages/alert_error_model.jsp" %>
+                <%@ include file="pages/alert_success_model.jsp" %>
                 <article class="erro-article">
                     <div class="container">
-                        <div class="row">
+                        <div class="row" id="row">
                             <c:if test="${requestScope.is_valid == true}">
                                 <h1 style="text-align: center">Redefinir Senha</h1>
                                 <div class="erro-box default-low-opacity">
                                     <div class="col-lg-3 col-md-3 col-sm-3"></div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 text-center">
-                                        <form action="SaveNewPassword?token=${requestScope.token}" method="POST" class="form-horizontal" style="font-family: arial;" role="form">
+                                        <form id="form-redefinir" method="POST" class="form-horizontal" style="font-family: arial;" role="form">
                                             <label class="col-sm-4 col-xs-4" style="text-align: right">Nova Senha:</label>
                                             <div class="form-group col-sm-6 col-xs-6">
-                                                <input name="password" type="text" class="form-control" style="font-size: 14px;">
+                                                <input name="password" type="password" class="form-control" style="font-size: 14px;">
                                             </div>
                                             <label class="col-sm-4 col-xs-4" style="text-align: right">Repita a Nova Senha:</label>
                                             <div class="form-group col-sm-6 col-xs-6">
-                                                <input name="password-confirm" type="text" class="form-control" style="font-size: 14px;">
+                                                <input name="password-confirm" type="password" class="form-control" style="font-size: 14px;">
                                             </div>
                                             <div class="col-sm-4 col-xs-4"></div>
                                             <div class="form-group col-sm-6 col-xs-6">
-                                                <input type="submit" style="float: right;" class="btn btn-default" >
+                                                <input id="input-redefinir" type="submit" style="float: right;" class="btn btn-default" >
                                             </div>
                                             <div class="col-sm-4 col-xs-4"></div>
                                         </form>
@@ -89,7 +91,7 @@
                                     <div class="col-lg-3 col-md-3 col-sm-3"></div>
                                 </div>
                             </c:if>
-                                <c:if test="${requestScope.is_valid == false}">
+                            <c:if test="${requestScope.is_valid == false}">
                                 <h1 style="text-align: center">Token Expirado!</h1>
                                 <div class="erro-box default-low-opacity">
                                     <div class="col-lg-3 col-md-3 col-sm-3"></div>
@@ -111,6 +113,50 @@
                 </p>
             </footer>
         </div>
+        <!-- Jquery Script -->
+        <script src="js/jquery-2.2.2.min.js" type="text/javascript"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- Custom Script for this tamplate -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg" type="text/javascript"></script>
+        <script src="js/menu-controll-script.js" type="text/javascript"></script>
+        <script src="js/page-controll-script.js" type="text/javascript"></script>
+        <script src="js/organizacao-controll-script.js" type="text/javascript"></script>
+        <script src="js/programacao-table-controll-script.js" type="text/javascript"></script>
+        <script src="js/field_mask_validator.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+            function show_error(textError) {
+                $('p#error-body').html(textError);
+                $('#errorModal').modal({
+                    show: 'true'
+                });
+            }
+
+            function show_success(textError) {
+                $('p#success-body').html(textError);
+                $('#successModal').modal({
+                    show: 'true'
+                });
+            }
+
+            $('#input-redefinir').click(function (e) {
+                e.preventDefault();
+
+                $.post('SaveNewPassword?token=${requestScope.token}', $('#form-redefinir').serialize(), function (response) {
+                    var error = response.error;
+
+                    if (error !== undefined) {
+                        show_error(error);
+                    } else {
+                        show_success('Sua senha foi redefinida com sucesso !');
+                        $('#row').hide();
+                    }
+                });
+
+            });
+
+        </script>
     </body>
 </html>
 

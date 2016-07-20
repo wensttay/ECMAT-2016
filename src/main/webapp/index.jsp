@@ -168,6 +168,7 @@ Author     : Wensttay, Victor Hugo
                 <%@ include file="pages/recuperacao.jsp" %>
 
                 <%@ include file="pages/alert_error_model.jsp" %>
+                <%@ include file="pages/alert_success_model.jsp" %>
             </section>
 
             <footer id="footer">
@@ -197,10 +198,32 @@ Author     : Wensttay, Victor Hugo
                 });
             }
 
+            function show_success(textError) {
+                $('p#success-body').html(textError);
+                $('#successModal').modal({
+                    show: 'true'
+                });
+            }
+
             $('#efetuar-login').click(function (e) {
                 e.preventDefault();
 
                 $.post('Login', $('#form-login').serialize(), function (response) {
+                    var error = response.error;
+
+                    if (error !== undefined) {
+                        show_success(error);
+                    } else {
+                        window.location.href = "ParticipantPanel";
+                    }
+                });
+
+            });
+
+            $('#efetuar-cadastro').click(function (e) {
+                e.preventDefault();
+
+                $.post('ParticipantRegister', $('#form-cadastro').serialize(), function (response) {
                     var error = response.error;
 
                     if (error !== undefined) {
@@ -211,6 +234,20 @@ Author     : Wensttay, Victor Hugo
                 });
 
             });
+
+            $('#recuperar-senha').click(function (e) {
+                e.preventDefault();
+
+                $.post('RequestPasswordRecovery', $('#form-recuperacao').serialize(), function (response) {
+                    var success = response.success;
+
+                    if (success !== undefined) {
+                        show_success(success);
+                    } 
+                });
+
+            });
+
         </script>
     </body>
 </html>

@@ -1,7 +1,5 @@
 package io.github.herocode.ecmat.persistence;
 
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import org.apache.commons.dbcp2.BasicDataSource;
