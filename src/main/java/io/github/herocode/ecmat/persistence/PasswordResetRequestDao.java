@@ -95,7 +95,6 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
 
         int result = 0;
 
-        System.out.println("fiz update para "+object.isValid());
         try {
 
             String sql = "UPDATE " + getTableName() + " SET is_valid = ? WHERE id = ?";
@@ -113,8 +112,6 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
             statement.close();
             connection.close();
             
-            System.out.println("fiz update para "+object.isValid());
-
         } catch (SQLException ex) {
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }

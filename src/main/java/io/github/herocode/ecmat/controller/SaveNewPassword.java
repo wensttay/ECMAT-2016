@@ -34,13 +34,11 @@ public class SaveNewPassword extends HttpServlet {
             throws ServletException, IOException {
 
         String token = request.getParameter("token");
-        System.out.println("entrei");
-        System.out.println(token);
 
         if (token != null && !token.trim().isEmpty()) {
 
             PasswordResetBusiness resetBusiness = new PasswordResetBusinessImpl();
-            System.out.println("token n nulo");
+            
             try {
 
                 PasswordResetRequest resetRequest = resetBusiness.searchRequestPasswordByToken(token);

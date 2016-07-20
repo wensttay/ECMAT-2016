@@ -66,8 +66,6 @@ public class CheckoutCreatorImpl implements CheckoutCreator {
             AccountCredentials ac = new AccountCredentials(CheckoutData.ACCOUNT_EMAIL.getValue(), CheckoutData.ACCOUNT_TOKEN.getValue());
             
             String checkoutUrl = checkout.register(ac, onlyCheckoutCode);
-            System.out.println("dps do register");
-            System.out.println(checkoutUrl);
             
             return checkoutUrl;
 

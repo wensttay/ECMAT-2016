@@ -63,7 +63,6 @@ public class ParticipantRegister extends HttpServlet {
         }
 
         try {
-            System.out.println("Saning... " + password);
 
             Phone phone = new Phone(ddd, phoneNumber);
             Address address = new Address("BRA", state, city, district, postalCode, street, number, "");
@@ -84,7 +83,7 @@ public class ParticipantRegister extends HttpServlet {
             CheckoutCreator checkoutCreator = new CheckoutCreatorImpl();
 
             String checkoutUrl = checkoutCreator.buildCheckout(participant, payment.getReference());
-            System.out.println("salvado... " + checkoutUrl);
+
             payment.setUrl(new URL(checkoutUrl));
             payment.setStatus(PaymentStatus.AWAITING_PAYMENT.getCode());
 

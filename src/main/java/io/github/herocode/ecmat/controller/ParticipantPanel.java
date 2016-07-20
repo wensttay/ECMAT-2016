@@ -28,7 +28,6 @@ public class ParticipantPanel extends HttpServlet {
         } else {
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/painel.jsp");
             requestDispatcher.forward(request, response);
-            System.out.println("beleza vou pro painel");
         }
 
     }

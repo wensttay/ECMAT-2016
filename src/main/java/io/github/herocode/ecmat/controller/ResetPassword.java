@@ -29,7 +29,7 @@ public class ResetPassword extends HttpServlet {
         String token = request.getParameter("token");
 
         if (token != null && !token.trim().isEmpty()) {
-            System.out.println(token);
+
             PasswordResetBusiness resetBusiness = new PasswordResetBusinessImpl();
 
             try {
@@ -54,7 +54,7 @@ public class ResetPassword extends HttpServlet {
             }
 
         } else {
-            System.out.println("if");
+            
             request.setAttribute("is_valid", false);
         }
 

@@ -167,12 +167,12 @@ public class ParticipantBuilder {
         } catch (Exception ex) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_CPF.getErrorMessage());
         }
-        System.out.println("vou olhar se o cpf e repetido");
+
         if(dao.existsCpf(cpf)){
-            System.out.println("era sim");
+
             throw new IllegalArgumentException(ErrorMessages.EXISTING_CPF.getErrorMessage());
         }
-        System.out.println("nao era");
+        
     }
 
     private void validateName() throws IllegalArgumentException {
