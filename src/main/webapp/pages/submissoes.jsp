@@ -83,7 +83,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-5">
                     <div class="default-box"> <!-- Open Program-Day-Box -->
                         <a title="Clique aqui para ver o documento de Modelos de Trabalhos"
-                           href="https://drive.google.com/file/d/0Bwx-SPHSFVqgT0xfX01hM0swOFk/view?usp=sharing" target="_blank">
+                           href="https://drive.google.com/open?id=0Bwx-SPHSFVqgbVJyb2s4RUQ5TGc" target="_blank">
                             <p class="title default-low-color-white-transparence default-border-color">Modelos de Trabalhos</p>
                             <div class="col-md-12 col-sm-12 body-img">
                                 <div class="text-center">
@@ -98,12 +98,12 @@
                 <div class="col-lg-4 col-md-4 col-sm-5">
                     <div class="default-box"> <!-- Open Program-Day-Box -->
                         <a title="Clique aqui para ver o documento de Critérios de Avaliação"
-                           href="https://drive.google.com/file/d/0Bwx-SPHSFVqgVFJzZF9rc1F2LXM/view?usp=sharing" target="_blank">
+                           href="https://drive.google.com/open?id=0Bwx-SPHSFVqgYXFzX0hlaEpTUFk" target="_blank">
                             <p class="title default-low-color-white-transparence default-border-color">Critérios de Avaliação</p>
                             <div class="col-md-12 col-sm-12 body-img">
                                 <div class="text-center">
                                     <img width="150px" height="150px" alt="Representação ilustrativa de um documento" 
-                                         class="figure figure-with-padding off-load" src="img/other/right-document.png">
+                                         class="figure figure-with-padding off-load" src="img/other/right-document.png" >
                                 </div>
                             </div>
                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
