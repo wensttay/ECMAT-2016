@@ -43,7 +43,6 @@ public final class ConnectionProvider {
                         append(dbUri.getHost()).
                         append(':').
                         append(dbUri.getPort()).
-                        append(':').
                         append(dbUri.getPath());
                 
                 connectionPool = new BasicDataSource();
