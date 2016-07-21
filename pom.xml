@@ -22,15 +22,15 @@
             <version>1.2</version>
         </dependency>
         <!--projeto-->
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>pagseguro-api</groupId>
             <artifactId>pagseguro-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>-->
         <dependency>
-            <groupId>pagseguro-api</groupId>
-            <artifactId>pagseguro-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>pagseguro</groupId>
+            <artifactId>pagseguro</artifactId>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>javax</groupId>
@@ -106,8 +106,22 @@
         </dependency>
     </dependencies>
     
+    <repositories>
+        <!--other repositories if any-->
+        <repository>
+            <id>project.local</id>
+            <name>project</name>
+            <url>file:${project.basedir}/repo</url>
+        </repository>
+    </repositories>
+    
     <build>
         <plugins>
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>1.0.3</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
