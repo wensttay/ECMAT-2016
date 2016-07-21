@@ -47,8 +47,11 @@ public class PasswordResetBusinessImpl implements PasswordResetBusiness {
     public PasswordResetRequest searchRequestPasswordByToken(String token) throws IllegalArgumentException {
 
         try {
+            System.out.println("antes dao");
             return dao.searchByAttribute("token", token).get(0);
         } catch (Exception ex) {
+            System.out.println("except dao");
+            ex.printStackTrace();
             throw new IllegalArgumentException(ErrorMessages.INVALID_TOKEN.getErrorMessage());
         }
 

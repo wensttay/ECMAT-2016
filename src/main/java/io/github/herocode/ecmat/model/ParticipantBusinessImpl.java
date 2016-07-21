@@ -6,6 +6,7 @@
 package io.github.herocode.ecmat.model;
 
 import io.github.herocode.ecmat.entity.Participant;
+import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import io.github.herocode.ecmat.enums.ErrorMessages;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
@@ -29,9 +30,9 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
     }
 
     @Override
-    public boolean saveParticipant(Participant participant) {
+    public boolean saveParticipant(Participant participant, String paymentId) {
 
-        return dao.save(participant);
+        return dao.save(participant, paymentId);
     }
 
     @Override
@@ -111,6 +112,12 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
         }
         
         return participants.get(0);
+    }
+
+    @Override
+    public boolean saveParticipant(Participant participant, Payment payment) {
+        
+        return dao.save(participant, payment);
     }
 
 }

@@ -6,6 +6,7 @@
 package io.github.herocode.ecmat.interfaces;
 
 import io.github.herocode.ecmat.entity.Participant;
+import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +17,9 @@ import java.util.Map;
  */
 public interface ParticipantBusiness {
 
-    boolean saveParticipant(Participant participant);
+    boolean saveParticipant(Participant participant, String paymentId);
+    
+    boolean saveParticipant(Participant participant, Payment payment);
 
     boolean updateParticipant(Participant participant);
 

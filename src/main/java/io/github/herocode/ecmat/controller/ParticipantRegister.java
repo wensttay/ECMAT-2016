@@ -16,6 +16,7 @@ import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
 import io.github.herocode.ecmat.model.CheckoutCreatorImpl;
 import io.github.herocode.ecmat.model.ParticipantBuilder;
 import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
+import io.github.herocode.ecmat.persistence.PaymentDao;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -76,9 +77,9 @@ public class ParticipantRegister extends HttpServlet {
 
             ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
 
-            participantBusiness.saveParticipant(participant);
+            String paymentReference = String.valueOf(participant.getCpf().hashCode());
 
-            Payment payment = new Payment(String.valueOf(participant.getCpf().hashCode()));
+            Payment payment = new Payment(paymentReference);
 
             CheckoutCreator checkoutCreator = new CheckoutCreatorImpl();
 
@@ -87,13 +88,18 @@ public class ParticipantRegister extends HttpServlet {
             payment.setUrl(new URL(checkoutUrl));
             payment.setStatus(PaymentStatus.AWAITING_PAYMENT.getCode());
 
-            participant.setPayment(payment);
+            PaymentDao paymentDao = new PaymentDao();
+
+            paymentDao.save(payment);
+
+            System.out.println("salvar participant");
+            participantBusiness.saveParticipant(participant, paymentReference);
 
             request.getSession().setAttribute("participant", participant);
             response.sendRedirect("ParticipantPanel");
 
         } catch (Exception ex) {
-
+            
             Map<String, String> responseMap = new HashMap<>();
             responseMap.put("error", ex.getMessage());
 

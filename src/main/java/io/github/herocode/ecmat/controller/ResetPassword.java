@@ -51,10 +51,11 @@ public class ResetPassword extends HttpServlet {
                 }
 
             } catch (IllegalArgumentException ex) {
+                request.setAttribute("is_valid", false);
             }
 
         } else {
-            
+
             request.setAttribute("is_valid", false);
         }
 

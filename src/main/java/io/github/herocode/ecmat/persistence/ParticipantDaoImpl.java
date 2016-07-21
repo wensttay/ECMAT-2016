@@ -47,8 +47,8 @@ public class ParticipantDaoImpl implements ParticipantDao {
     }
 
     @Override
-    public boolean save(Participant object) {
-
+    public boolean save(Participant object, String participantId) {
+        System.out.println("entrei");
         Connection connection;
         PreparedStatement statement;
 
@@ -57,9 +57,9 @@ public class ParticipantDaoImpl implements ParticipantDao {
         try {
 
             String sql = "INSERT INTO " + getTableName()
-                    + "(name, birth_date, phone_ddd, phone_number, titration, cpf,"
+                    + "(payment_id, name, birth_date, phone_ddd, phone_number, titration, cpf,"
                     + " email, password, country, state, city, district, postal_code,"
-                    + " street, house_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,"
+                    + " street, house_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,"
                     + "?, ?, ?, ?, ?)";
 
             connection = ConnectionProvider.getInstance().getConnection();
@@ -67,6 +67,7 @@ public class ParticipantDaoImpl implements ParticipantDao {
 
             int count = 1;
 
+            statement.setString(count++, participantId);
             statement.setString(count++, object.getName());
             statement.setDate(count++, java.sql.Date.valueOf(object.getBirthDate()));
             statement.setString(count++, object.getPhone().getAreaCode());
@@ -83,12 +84,14 @@ public class ParticipantDaoImpl implements ParticipantDao {
             statement.setString(count++, object.getAddress().getStreet());
             statement.setString(count++, object.getAddress().getNumber());
 
+            System.out.println("antes do update");
             result = statement.executeUpdate();
 
             statement.close();
             connection.close();
 
         } catch (SQLException ex) {
+            ex.printStackTrace();
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -364,6 +367,12 @@ public class ParticipantDaoImpl implements ParticipantDao {
         }
 
         return result;
+    }
+
+    @Deprecated
+    @Override
+    public boolean save(Participant object) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
