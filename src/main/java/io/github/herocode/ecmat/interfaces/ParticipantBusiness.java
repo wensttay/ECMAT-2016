@@ -39,4 +39,6 @@ public interface ParticipantBusiness {
     
     List<Participant> searchParticipantByAttributes(Map<String, String> map);
     
+    String getEmailFromPaymentReference(String paymentReference);
+    
 }

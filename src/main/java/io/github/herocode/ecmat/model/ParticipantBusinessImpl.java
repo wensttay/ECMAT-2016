@@ -120,4 +120,10 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
         return dao.save(participant, payment);
     }
 
+    @Override
+    public String getEmailFromPaymentReference(String paymentReference) {
+        
+        return dao.getEmailFromPaymentReference(paymentReference);
+    }
+
 }

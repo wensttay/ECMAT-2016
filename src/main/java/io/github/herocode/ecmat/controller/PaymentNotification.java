@@ -7,8 +7,12 @@ package io.github.herocode.ecmat.controller;
 
 import io.github.herocode.ecmat.entity.Payment;
 import io.github.herocode.ecmat.entity.PaymentNotificationExceptionLog;
+import io.github.herocode.ecmat.enums.PaymentStatus;
+import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
 import io.github.herocode.ecmat.interfaces.PaymentBusiness;
 import io.github.herocode.ecmat.interfaces.PaymentChecker;
+import io.github.herocode.ecmat.model.EmailClient;
+import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
 import io.github.herocode.ecmat.model.PaymentBusinessImpl;
 import io.github.herocode.ecmat.model.PaymentCheckerImpl;
 import java.io.IOException;
@@ -17,7 +21,6 @@ import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
@@ -71,6 +74,17 @@ public class PaymentNotification extends HttpServlet {
             payment.setStatus(paymentDetails.get("status"));
 
             paymentBusiness.update(payment);
+
+            if (payment.getStatus().equals(PaymentStatus.COMPLETE.getCode())) {
+                
+                ParticipantBusiness p = new ParticipantBusinessImpl();
+
+                String participantEmail = p.getEmailFromPaymentReference(payment.getReference());
+
+                String emailMessage = "Recebemos o pagamento de sua inscrição, agora você inscrever-se nos minicursos do evento.";
+
+                EmailClient.sendEmail("Ecmat - Inscrição", participantEmail, emailMessage, EmailClient.defaultSender, EmailClient.defaultPassword);
+            }
 
         } catch (Exception ex) {
 

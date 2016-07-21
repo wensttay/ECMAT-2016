@@ -25,5 +25,7 @@ public interface ParticipantDao extends Dao<Participant, Integer> {
     boolean existsEmail(String email);
     
     boolean existsCpf(String cpf);
+    
+    String getEmailFromPaymentReference(String paymentReference);
 
 }

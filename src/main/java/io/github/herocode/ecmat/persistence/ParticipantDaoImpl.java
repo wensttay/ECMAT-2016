@@ -376,4 +376,41 @@ public class ParticipantDaoImpl implements ParticipantDao {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public String getEmailFromPaymentReference(String paymentReference) {
+        
+        Connection connection;
+        PreparedStatement statement;
+        ResultSet resultSet;
+
+        String result = "";
+        
+        try {
+
+            String sql = "SELECT email FROM " + getTableName() + " WHERE payment_id = ?";
+
+            connection = ConnectionProvider.getInstance().getConnection();
+            statement = connection.prepareCall(sql);
+
+            int count = 1;
+
+            statement.setString(count++, paymentReference);
+
+            resultSet = statement.executeQuery();
+
+            resultSet.next();
+            
+            result = resultSet.getString("email");
+            
+            resultSet.close();
+            statement.close();
+            connection.close();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return result;
+    }
+
 }
