@@ -11,6 +11,7 @@ import io.github.herocode.ecmat.interfaces.Dao;
 import io.github.herocode.ecmat.persistence.PasswordResetRequestDao;
 import io.github.herocode.ecmat.interfaces.PasswordResetBusiness;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 /**
  *
@@ -61,7 +62,7 @@ public class PasswordResetBusinessImpl implements PasswordResetBusiness {
             LocalDateTime creationDate = resetRequest.getCreationDate();
             creationDate = creationDate.plusMinutes(30);
             
-            LocalDateTime currentDate = LocalDateTime.now();
+            LocalDateTime currentDate = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
             
             boolean isValid = creationDate.isAfter(currentDate);
             

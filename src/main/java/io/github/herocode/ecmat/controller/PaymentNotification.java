@@ -13,6 +13,7 @@ import io.github.herocode.ecmat.model.PaymentBusinessImpl;
 import io.github.herocode.ecmat.model.PaymentCheckerImpl;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Map;
 import javax.servlet.ServletException;
@@ -57,7 +58,7 @@ public class PaymentNotification extends HttpServlet {
         } catch (Exception ex) {
 
             PaymentNotificationExceptionLog log = new PaymentNotificationExceptionLog();
-            log.setDateTime(LocalDateTime.now());
+            log.setDateTime(LocalDateTime.now(ZoneId.of("America/Sao_Paulo")));
             log.setOccurrence(ex.getMessage());
             log.setNotifizcationCode(notificationCode);
 
