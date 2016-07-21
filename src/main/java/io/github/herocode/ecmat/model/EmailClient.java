@@ -32,14 +32,14 @@ public class EmailClient {
 
             @Override
             public void run() {
-
+                
                 Email from = new Email(sender);
                 Email to = new Email(receiver);
                 Content content = new Content("text/plain", message);
 
                 Mail mail = new Mail(from, subject, to, content);
 
-                SendGrid sg = new SendGrid(System.getenv("SENDGRID_API_KEY"));
+                SendGrid sg = new SendGrid("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");
 
                 Request request = new Request();
 
@@ -48,15 +48,10 @@ public class EmailClient {
                     request.endpoint = "mail/send";
                     request.body = mail.build();
                     Response response = sg.api(request);
-                    System.out.println(response.statusCode);
-                    System.out.println(response.body);
-                    System.out.println(response.headers);
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
-
             }
-
         }.start();
 
     }
