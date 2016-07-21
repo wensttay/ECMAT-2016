@@ -54,7 +54,7 @@ public class ParticipantRegister extends HttpServlet {
         String state = request.getParameter("state");
 
         DateTimeFormatter formartter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate bDate = LocalDate.parse(birthDate, formartter);
+        LocalDate bDate;
 
         try {
             bDate = LocalDate.parse(birthDate, formartter);

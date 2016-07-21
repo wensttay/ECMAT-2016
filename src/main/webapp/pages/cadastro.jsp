@@ -21,7 +21,7 @@
                         <div class="form-group col-sm-12 col-xs-12">
                             <label class="col-sm-3 col-xs-12 label-cadastro">Nome Completo:</label>
                             <div class="col-sm-9 col-xs-12">
-                                <input name="name" type="text" class="form-control" style="font-size: 14px;">
+                                <input name="name" type="text" class="form-control" style="font-size: 14px;" required="required">
                             </div>
                         </div>
 
