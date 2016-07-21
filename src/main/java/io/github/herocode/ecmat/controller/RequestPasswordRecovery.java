@@ -60,7 +60,7 @@ public class RequestPasswordRecovery extends HttpServlet {
         EmailClient.sendEmail("Ecmat - Resetar Senha", email, emailMessage, EmailClient.defaultSender, EmailClient.defaultPassword);
 
         Map<String, String> responseMap = new HashMap<>();
-        responseMap.put("success", "Um E-mail foi enviado com as instruções de recuperação.");
+        responseMap.put("success", "Dentro de alguns minutos um E-mail será enviado com as instruções de recuperação.");
 
         String json = new Gson().toJson(responseMap);
 
