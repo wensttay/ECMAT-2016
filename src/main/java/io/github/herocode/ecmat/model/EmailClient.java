@@ -5,6 +5,8 @@
  */
 package io.github.herocode.ecmat.model;
 
+import com.sendgrid.*;
+import java.io.IOException;
 import java.util.Properties;
 import javax.mail.Address;
 import javax.mail.Message;
@@ -31,44 +33,30 @@ public class EmailClient {
             @Override
             public void run() {
 
-                Properties props = new Properties();
-                /**
-                 * Parâmetros de conexão com servidor Gmail
-                 */
-                props.put("mail.smtp.host", "smtp.gmail.com");
-                props.put("mail.smtp.socketFactory.port", "465");
-                props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-                props.put("mail.smtp.auth", "true");
-                props.put("mail.smtp.port", "465");
+                Email from = new Email(sender);
+                Email to = new Email(receiver);
+                Content content = new Content("text/plain", message);
 
-                Session session = Session.getDefaultInstance(props,
-                        new javax.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(sender, password);
-                    }
-                });
+                Mail mail = new Mail(from, subject, to, content);
 
-                session.setDebug(true);
+                SendGrid sg = new SendGrid(System.getenv("SENDGRID_API_KEY"));
+
+                Request request = new Request();
 
                 try {
-
-                    Message msg = new MimeMessage(session);
-                    msg.setContent(message, "text/plain; charset=UTF-8");
-                    msg.setFrom(new InternetAddress(sender));
-
-                    Address[] toUser = InternetAddress.parse(receiver);
-
-                    msg.setRecipients(Message.RecipientType.TO, toUser);
-                    msg.setSubject(subject);
-
-                    Transport.send(msg);
-
-                } catch (MessagingException e) {
-                    throw new RuntimeException(e);
+                    request.method = Method.POST;
+                    request.endpoint = "mail/send";
+                    request.body = mail.build();
+                    Response response = sg.api(request);
+                    System.out.println(response.statusCode);
+                    System.out.println(response.body);
+                    System.out.println(response.headers);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
                 }
 
             }
-            
+
         }.start();
 
     }
