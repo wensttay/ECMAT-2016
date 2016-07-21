@@ -19,7 +19,7 @@
                     <form id="form-cadastro" method="POST" class="form-horizontal" style="font-family: arial;" role="form">
 
                         <div class="form-group col-sm-12 col-xs-12">
-                            <label class="col-sm-3 col-xs-12 label-cadastro">Nome:</label>
+                            <label class="col-sm-3 col-xs-12 label-cadastro">Nome Completo:</label>
                             <div class="col-sm-9 col-xs-12">
                                 <input name="name" type="text" class="form-control" style="font-size: 14px;">
                             </div>
