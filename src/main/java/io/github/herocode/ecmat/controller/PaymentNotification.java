@@ -12,10 +12,16 @@ import io.github.herocode.ecmat.interfaces.PaymentChecker;
 import io.github.herocode.ecmat.model.PaymentBusinessImpl;
 import io.github.herocode.ecmat.model.PaymentCheckerImpl;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
+import java.util.TimeZone;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -44,12 +50,23 @@ public class PaymentNotification extends HttpServlet {
             String date = paymentDetails.get("date");
             String lastEventDate = paymentDetails.get("lastEventDate");
 
-            DateTimeFormatter formartter = DateTimeFormatter.ofPattern("YYYY-MM-DDThh:mm:ss.sTZD");
+            DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", new Locale("pt", "BR"));
+            format.setTimeZone(TimeZone.getTimeZone("GMT-03:00"));
+
+            Date utilDate = format.parse(date);
+            Date eventUtilDate = format.parse(lastEventDate);
+
+            Instant instant = Instant.ofEpochMilli(utilDate.getTime());
+            Instant eInstant = Instant.ofEpochMilli(eventUtilDate.getTime());
+
+            LocalDateTime lDate = LocalDateTime.ofInstant(instant, ZoneId.of("America/Sao_Paulo"));
+            LocalDateTime eDate = LocalDateTime.ofInstant(eInstant, ZoneId.of("America/Sao_Paulo"));
 
             Payment payment = new Payment();
             payment.setCode(paymentDetails.get("code"));
-            payment.setDate(LocalDateTime.parse(date, formartter));
-            payment.setLastEventDate(LocalDateTime.parse(lastEventDate, formartter));
+
+            payment.setDate(lDate);
+            payment.setLastEventDate(eDate);
             payment.setReference(paymentDetails.get("reference"));
             payment.setStatus(paymentDetails.get("status"));
 
