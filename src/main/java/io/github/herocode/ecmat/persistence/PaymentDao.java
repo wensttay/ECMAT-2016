@@ -13,6 +13,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -40,8 +42,8 @@ public class PaymentDao implements Dao<Payment, String> {
             statement = connection.prepareCall(sql);
 
             int count = 1;
-
-            java.sql.Timestamp timestamp = new java.sql.Timestamp(System.currentTimeMillis());
+            LocalDateTime now = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
+            java.sql.Timestamp timestamp = java.sql.Timestamp.valueOf(now);
             
             statement.setTimestamp(count++, timestamp);
             statement.setTimestamp(count++, timestamp);

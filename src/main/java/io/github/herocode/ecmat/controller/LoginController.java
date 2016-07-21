@@ -7,7 +7,10 @@ package io.github.herocode.ecmat.controller;
 
 import com.google.gson.Gson;
 import io.github.herocode.ecmat.entity.Participant;
+import io.github.herocode.ecmat.interfaces.CheckoutCreator;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
+import io.github.herocode.ecmat.model.CheckoutCreatorImpl;
+import io.github.herocode.ecmat.model.ParticipantBuilder;
 import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
 import java.io.IOException;
 import java.util.HashMap;
@@ -93,5 +96,10 @@ public class LoginController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+    
+    public static void main(String[] args) {
+//        Add
+//        ParticipantBuilder pb = new ParticipantBuilder("Paloma Kelli Oliveira de Lima", "Estudante", "087.592.294-54", "paloma.kelli2013@gmail.com", address)
+    }
     
 }

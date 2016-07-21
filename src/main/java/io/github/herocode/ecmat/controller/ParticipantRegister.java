@@ -83,7 +83,7 @@ public class ParticipantRegister extends HttpServlet {
 
             CheckoutCreator checkoutCreator = new CheckoutCreatorImpl();
 
-            String checkoutUrl = checkoutCreator.buildCheckout(participant, payment.getReference());
+            String checkoutUrl = checkoutCreator.buildCheckout(participant, paymentReference);
 
             payment.setUrl(new URL(checkoutUrl));
             payment.setStatus(PaymentStatus.AWAITING_PAYMENT.getCode());

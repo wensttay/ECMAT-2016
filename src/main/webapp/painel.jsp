@@ -71,7 +71,7 @@
 
                         <div class="row">
                             <p class="estado_inscricao">Estado da inscrição:
-                                <c:if test="${!sessionScope.participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.code)}">
+                                <c:if test="${!empty sessionScope.participant && !sessionScope.participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.code)}">
                                     <span style="color:yellow;">Pendente</span>
                                     <span>,
                                         <c:choose>
