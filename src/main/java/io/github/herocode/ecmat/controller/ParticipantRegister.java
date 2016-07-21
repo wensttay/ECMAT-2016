@@ -100,6 +100,10 @@ public class ParticipantRegister extends HttpServlet {
 
         } catch (Exception ex) {
             
+            ex.printStackTrace();
+            
+            System.err.println(ex);
+            
             Map<String, String> responseMap = new HashMap<>();
             responseMap.put("error", ex.getMessage());
 
