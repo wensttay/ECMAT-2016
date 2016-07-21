@@ -57,6 +57,8 @@ public class PaymentDao implements Dao<Payment, String> {
             connection.close();
 
         } catch (SQLException ex) {
+            System.err.println(ex);
+            ex.printStackTrace();
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 

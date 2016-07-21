@@ -11,20 +11,20 @@ import org.apache.commons.dbcp2.BasicDataSource;
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
 public final class ConnectionProvider {
-    
+
     private static ConnectionProvider connectionProvider;
 
     private BasicDataSource connectionPool;
 
-    
-    private ConnectionProvider() { }
-    
-    public static synchronized ConnectionProvider getInstance(){
-        
-        if(connectionProvider == null){
+    private ConnectionProvider() {
+    }
+
+    public static synchronized ConnectionProvider getInstance() {
+
+        if (connectionProvider == null) {
             connectionProvider = new ConnectionProvider();
         }
-        
+
         return connectionProvider;
     }
 
@@ -34,25 +34,25 @@ public final class ConnectionProvider {
 
             try {
 
-                //URI dbUri       = new URI(System.getenv("DATABASE_URL"));
-                String username = "postgres";//dbUri.getUserInfo().split(":")[0];
-                 String password = "123456";//dbUri.getUserInfo().split(":")[1];
-//                
-//                StringBuilder dbUrl = new StringBuilder();
-//                dbUrl.append("jdbc:postgresql://").
-//                        append(dbUri.getHost()).
-//                        append(':').
-//                        append(dbUri.getPort()).
-//                        append(dbUri.getPath());
-                
+                URI dbUri = new URI(System.getenv("DATABASE_URL"));
+                String username = dbUri.getUserInfo().split(":")[0];
+                String password = dbUri.getUserInfo().split(":")[1];
+
+                StringBuilder dbUrl = new StringBuilder();
+                dbUrl.append("jdbc:postgresql://").
+                        append(dbUri.getHost()).
+                        append(':').
+                        append(dbUri.getPort()).
+                        append(dbUri.getPath());
+
                 connectionPool = new BasicDataSource();
 
                 connectionPool.setUsername(username);
                 connectionPool.setPassword(password);
                 connectionPool.setDriverClassName("org.postgresql.Driver");
-               connectionPool.setUrl("jdbc:postgresql://localhost:5432/ecmat");
-                
-            } catch (IndexOutOfBoundsException ex) {
+                connectionPool.setUrl(dbUrl.toString());
+
+            } catch (IndexOutOfBoundsException | URISyntaxException ex) {
                 connectionPool.close();
                 return null;
             }

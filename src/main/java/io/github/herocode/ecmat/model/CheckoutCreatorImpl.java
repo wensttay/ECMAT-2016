@@ -42,7 +42,7 @@ public class CheckoutCreatorImpl implements CheckoutCreator {
                 participant.getName(),
                 participant.getEmail()
         );
-        
+
         checkout.addItem(checkoutItem);
 
         checkout.setShippingAddress(checkoutShippingAddress);
@@ -58,18 +58,21 @@ public class CheckoutCreatorImpl implements CheckoutCreator {
         checkout.setShippingType(ShippingType.NOT_SPECIFIED);
 
         try {
-            
+
             boolean onlyCheckoutCode = false;
 
             checkout.setNotificationURL(CheckoutData.NOTIFICATION_URL.getValue());
-            
+
             AccountCredentials ac = new AccountCredentials(CheckoutData.ACCOUNT_EMAIL.getValue(), CheckoutData.ACCOUNT_TOKEN.getValue());
-            
+
             String checkoutUrl = checkout.register(ac, onlyCheckoutCode);
-            
+
             return checkoutUrl;
 
-        } catch (PagSeguroServiceException e) {e.printStackTrace(); }
+        } catch (PagSeguroServiceException ex) {
+            System.err.println(ex);
+            ex.printStackTrace();
+        }
 
         return "";
     }

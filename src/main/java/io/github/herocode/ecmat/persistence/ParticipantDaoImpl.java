@@ -91,6 +91,7 @@ public class ParticipantDaoImpl implements ParticipantDao {
             connection.close();
 
         } catch (SQLException ex) {
+            System.err.println(ex);
             ex.printStackTrace();
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }

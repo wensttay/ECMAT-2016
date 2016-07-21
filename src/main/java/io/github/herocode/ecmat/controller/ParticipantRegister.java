@@ -60,6 +60,8 @@ public class ParticipantRegister extends HttpServlet {
         try {
             bDate = LocalDate.parse(birthDate, formartter);
         } catch (Exception ex) {
+            System.err.println(ex);
+            ex.printStackTrace();
             bDate = LocalDate.now();
         }
 
@@ -99,10 +101,8 @@ public class ParticipantRegister extends HttpServlet {
             response.sendRedirect("ParticipantPanel");
 
         } catch (Exception ex) {
-            
-            ex.printStackTrace();
-            
             System.err.println(ex);
+            ex.printStackTrace();
             
             Map<String, String> responseMap = new HashMap<>();
             responseMap.put("error", ex.getMessage());
