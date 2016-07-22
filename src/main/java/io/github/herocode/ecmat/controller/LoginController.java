@@ -32,19 +32,22 @@ public class LoginController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        password = DigestUtils.sha1Hex(password);
-        ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
-
         try {
-            
+
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+            password = DigestUtils.sha1Hex(password);
+            ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
+
             Participant participant = participantBusiness.login(email, password);
             request.getSession().setAttribute("participant", participant);
-            
+
             response.sendRedirect("ParticipantPanel");
+
+        } catch (Exception ex) {
             
-        } catch (IllegalArgumentException ex) {
+            System.err.println(ex);
+            ex.printStackTrace();
 
             Map<String, String> responseMap = new HashMap<>();
             responseMap.put("error", ex.getMessage());
@@ -96,5 +99,5 @@ public class LoginController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    
+
 }
