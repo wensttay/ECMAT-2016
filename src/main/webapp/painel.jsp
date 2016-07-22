@@ -101,7 +101,7 @@
                                 </c:if>
                             </p>
                             <br><br><br>
-                            <h1>Bem vindo, ${sessionScope.participant.getFirstName()}</h1>
+                            <h1>Bem vindo(a), ${sessionScope.participant.getFirstName()}</h1>
                             <div class="col-md-3"></div>
                             <div class="col-md-6" style="margin-top: 50px !important;">
                                 <!--<div class="col-xs-2"></div>-->

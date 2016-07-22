@@ -97,9 +97,4 @@ public class LoginController extends HttpServlet {
         return "Short description";
     }// </editor-fold>
     
-    public static void main(String[] args) {
-//        Add
-//        ParticipantBuilder pb = new ParticipantBuilder("Paloma Kelli Oliveira de Lima", "Estudante", "087.592.294-54", "paloma.kelli2013@gmail.com", address)
-    }
-    
 }
