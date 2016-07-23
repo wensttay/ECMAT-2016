@@ -38,7 +38,7 @@ public class SaveNewPassword extends HttpServlet {
         if (token != null && !token.trim().isEmpty()) {
 
             PasswordResetBusiness resetBusiness = new PasswordResetBusinessImpl();
-            
+
             try {
 
                 PasswordResetRequest resetRequest = resetBusiness.searchRequestPasswordByToken(token);
@@ -77,7 +77,8 @@ public class SaveNewPassword extends HttpServlet {
                             resetBusiness.updatePasswordResetRequest(resetRequest);
 
                         } catch (IllegalArgumentException ex) {
-                            
+                            System.err.println(ex);
+                            ex.printStackTrace();
                         }
 
                     }
@@ -101,6 +102,14 @@ public class SaveNewPassword extends HttpServlet {
                 }
 
             } catch (IllegalArgumentException ex) {
+                Map<String, String> responseMap = new HashMap<>();
+                responseMap.put("error", ErrorMessages.INVALID_TOKEN.getErrorMessage());
+
+                String json = new Gson().toJson(responseMap);
+
+                response.setContentType("application/json");
+                response.setCharacterEncoding("UTF-8");
+                response.getWriter().write(json);
             }
 
         } else {

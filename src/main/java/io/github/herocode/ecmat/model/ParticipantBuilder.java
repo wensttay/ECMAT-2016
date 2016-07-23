@@ -16,6 +16,7 @@ import io.github.herocode.ecmat.enums.Titrations;
 import io.github.herocode.ecmat.interfaces.ParticipantDao;
 import io.github.herocode.ecmat.persistence.ParticipantDaoImpl;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -26,134 +27,128 @@ import org.apache.commons.codec.digest.DigestUtils;
  */
 public class ParticipantBuilder {
 
-    private final String    name;
-    private final String    titration;
-    private final String    cpf;
-    private final String    email;
-    private final Address   address;
-    
-    private LocalDate   birthDate;
-    private Payment     payment;
-    private Phone       phone;
-    private String      password;
-    
+    private final String name;
+    private final String titration;
+    private final String cpf;
+    private final String email;
+    private final Address address;
+    private final LocalDate birthDate;
+
+    private Payment payment;
+    private Phone phone;
+    private String password;
+
     private ParticipantDao dao;
 
-    public ParticipantBuilder(String name, String titration, String cpf, String email, Address address) {
-        this.name       = name;
-        this.titration  = titration;
-        this.cpf        = cpf;
-        this.email      = email;
-        this.address    = address;
-    }
-
-    public ParticipantBuilder setBirthDate(LocalDate birthDate) {
-
-        this.birthDate = birthDate;
-
-        return this;
+    public ParticipantBuilder(String name, String titration, String cpf, String email, Address address, LocalDate bDate) {
+        this.name = name;
+        this.titration = titration;
+        this.cpf = cpf;
+        this.email = email;
+        this.address = address;
+        this.birthDate = bDate;
     }
 
     public ParticipantBuilder setPayment(Payment payment) {
-        
+
         this.payment = payment;
-        
+
         return this;
     }
 
     public ParticipantBuilder setPassword(String password) {
 
         this.password = password;
-        
+
         return this;
     }
-    
+
     public ParticipantBuilder setPhone(Phone phone) {
-        
+
         this.phone = phone;
-        
+
         return this;
     }
-    
-    private void validateAddress() throws IllegalArgumentException{
-        
-        if(stringIsEmpty(address.getCountry())){
+
+    private void validateAddress() throws IllegalArgumentException {
+
+        if (stringIsEmpty(address.getCountry())) {
             throw new IllegalArgumentException(ErrorMessages.EMPTY_COUNTRY.getErrorMessage());
         }
-        
-        if(stringIsEmpty(address.getCity())){
+
+        if (stringIsEmpty(address.getCity())) {
             throw new IllegalArgumentException(ErrorMessages.EMPTY_CITY.getErrorMessage());
         }
-        
-        if(stringIsEmpty(address.getState())){
+
+        if (stringIsEmpty(address.getState())) {
             throw new IllegalArgumentException(ErrorMessages.EMPTY_STATE.getErrorMessage());
         }
-        
-        if(address.getCity().length() > 50){
+
+        if (address.getCity().length() > 50) {
             throw new IllegalArgumentException(ErrorMessages.TOO_LONG_CITY_NAME.getErrorMessage());
         }
-        
-        if(address.getDistrict().length() > 50){
+
+        if (address.getDistrict().length() > 50) {
             throw new IllegalArgumentException(ErrorMessages.TOO_LONG_DISTRICT_NAME.getErrorMessage());
         }
-        
-        if(address.getPostalCode().length() > 8){
+
+        if (address.getPostalCode().length() > 8) {
             throw new IllegalArgumentException(ErrorMessages.TOO_LONG_POSTAL_CODE.getErrorMessage());
         }
-        
-        if(address.getStreet().length() > 50){
+
+        if (address.getStreet().length() > 50) {
             throw new IllegalArgumentException(ErrorMessages.TOO_LONG_STREET_NAME.getErrorMessage());
         }
-        
-        if(address.getNumber().length() > 5){
+
+        if (address.getNumber().length() > 5) {
             throw new IllegalArgumentException(ErrorMessages.TOO_LONG_HOUSE_NUMBER.getErrorMessage());
         }
-        
-        if(address.getState().length() > 2){
+
+        if (address.getState().length() > 2) {
             throw new IllegalArgumentException(ErrorMessages.TOO_LONG_STATE_NAME.getErrorMessage());
         }
-        
+
     }
-    
+
     private void validateTitration() throws IllegalArgumentException {
-        
-        if(stringIsEmpty(titration)){
+
+        if (stringIsEmpty(titration)) {
             throw new IllegalArgumentException(ErrorMessages.EMPTY_TITRATION.getErrorMessage());
         }
-        
+
         boolean equals = false;
-        
-        for(Titrations t : Titrations.values()){
-            if(t.getTitration().equals(titration)){
+
+        for (Titrations t : Titrations.values()) {
+            if (t.getTitration().equals(titration)) {
                 equals = true;
                 break;
             }
         }
-        
-        if(!equals){
+
+        if (!equals) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_TITRATION.getErrorMessage());
         }
 
     }
-    
+
     private void validatePassword() throws IllegalArgumentException {
-        
-        if(stringIsEmpty(password)){
+
+        if (stringIsEmpty(password)) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_PASSWORD.getErrorMessage());
         }
-        
+
         Pattern pattern = Pattern.compile(RegularExpressions.PASSWORD_PATTERN.getRegex());
 
         Matcher matcher = pattern.matcher(password);
-        
+
         if (!matcher.matches() || password.length() < 6) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_PASSWORD.getErrorMessage());
         }
-        
+
         password = DigestUtils.sha1Hex(password);
-        
+
     }
-    
+
     private void validateCpf() throws IllegalArgumentException {
 
         if (stringIsEmpty(cpf)) {
@@ -168,11 +163,11 @@ public class ParticipantBuilder {
             throw new IllegalArgumentException(ErrorMessages.INVALID_CPF.getErrorMessage());
         }
 
-        if(dao.existsCpf(cpf)){
+        if (dao.existsCpf(cpf)) {
 
             throw new IllegalArgumentException(ErrorMessages.EXISTING_CPF.getErrorMessage());
         }
-        
+
     }
 
     private void validateName() throws IllegalArgumentException {
@@ -180,8 +175,8 @@ public class ParticipantBuilder {
         if (stringIsEmpty(name)) {
             throw new IllegalArgumentException(ErrorMessages.EMPTY_NAME.getErrorMessage());
         }
-        
-        if(name.split(" ").length <= 1){
+
+        if (name.split(" ").length <= 1) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_NAME.getErrorMessage());
         }
 
@@ -200,24 +195,34 @@ public class ParticipantBuilder {
         if (!matcher.matches()) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_EMAIL.getErrorMessage());
         }
-        
-        if(dao.existsEmail(email)){
+
+        if (dao.existsEmail(email)) {
             throw new IllegalArgumentException(ErrorMessages.EXISTING_EMAIL.getErrorMessage());
         }
 
     }
-    
-    
-    private void validatePhone() {
-        
-        if(phone.getAreaCode().length() > 2){
+
+    private void validatePhone() throws IllegalArgumentException {
+
+        if (phone.getAreaCode().length() > 2) {
             throw new IllegalArgumentException(ErrorMessages.TOO_LONG_DDD.getErrorMessage());
         }
-        
-        if(phone.getNumber().length() > 12){
+
+        if (phone.getNumber().length() > 12) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_PHONE.getErrorMessage());
         }
-        
+
+    }
+
+    private void validateBirthDate() throws IllegalArgumentException {
+
+        DateTimeFormatter formartter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate minimunBirthDate = LocalDate.parse("2013-01-01", formartter);
+
+        if (birthDate == null || birthDate.isAfter(minimunBirthDate)) {
+            throw new IllegalArgumentException(ErrorMessages.INVALID_BIRTH_DATE.getErrorMessage());
+        }
+
     }
 
     private boolean stringIsEmpty(String string) {
@@ -226,6 +231,8 @@ public class ParticipantBuilder {
     }
 
     public Participant build() throws IllegalArgumentException {
+
+        validateBirthDate();
 
         validateName();
         validatePassword();
@@ -236,7 +243,7 @@ public class ParticipantBuilder {
         dao = new ParticipantDaoImpl();
         validateEmail();
         validateCpf();
-        
+
         Participant participant = new Participant();
 
         participant.setName(name);
@@ -250,5 +257,5 @@ public class ParticipantBuilder {
 
         return participant;
     }
-    
+
 }

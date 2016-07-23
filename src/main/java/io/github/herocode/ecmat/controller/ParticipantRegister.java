@@ -20,6 +20,7 @@ import io.github.herocode.ecmat.persistence.PaymentDao;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
@@ -62,7 +63,7 @@ public class ParticipantRegister extends HttpServlet {
         } catch (Exception ex) {
             System.err.println(ex);
             ex.printStackTrace();
-            bDate = LocalDate.now();
+            bDate = LocalDate.now(ZoneId.of("America/Sao_Paulo"));
         }
 
         try {
@@ -70,10 +71,9 @@ public class ParticipantRegister extends HttpServlet {
             Phone phone = new Phone(ddd, phoneNumber);
             Address address = new Address("BRA", state, city, district, postalCode, street, number, "");
 
-            ParticipantBuilder participantBuilder = new ParticipantBuilder(name, titration, cpf, email, address);
+            ParticipantBuilder participantBuilder = new ParticipantBuilder(name, titration, cpf, email, address, bDate);
             participantBuilder.setPassword(password).
-                    setPhone(phone).
-                    setBirthDate(bDate);
+                    setPhone(phone);
 
             Participant participant = participantBuilder.build();
 

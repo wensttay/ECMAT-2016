@@ -91,6 +91,7 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
             Participant participant = searchParticipantByAttribute("email", email).get(0);
             return participant;
         } catch (Exception ex) {
+            System.err.println("Email invalido - "+email);
             throw new IllegalArgumentException(ErrorMessages.INVALID_EMAIL.getErrorMessage());
 
         }
