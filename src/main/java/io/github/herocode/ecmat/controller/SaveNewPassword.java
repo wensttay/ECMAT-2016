@@ -34,6 +34,7 @@ public class SaveNewPassword extends HttpServlet {
             throws ServletException, IOException {
 
         String token = request.getParameter("token");
+        String error = "";
 
         if (token != null && !token.trim().isEmpty()) {
 
@@ -52,14 +53,7 @@ public class SaveNewPassword extends HttpServlet {
 
                     if (!password.equals(passwordConfirm)) {
 
-                        Map<String, String> responseMap = new HashMap<>();
-                        responseMap.put("error", ErrorMessages.DIFFERENT_PASSWORDS.getErrorMessage());
-
-                        String json = new Gson().toJson(responseMap);
-
-                        response.setContentType("application/json");
-                        response.setCharacterEncoding("UTF-8");
-                        response.getWriter().write(json);
+                        error = ErrorMessages.DIFFERENT_PASSWORDS.getErrorMessage();
 
                     } else {
 
@@ -76,14 +70,13 @@ public class SaveNewPassword extends HttpServlet {
 
                             resetBusiness.updatePasswordResetRequest(resetRequest);
 
-                        } catch (IllegalArgumentException ex) {
+                        } catch (Exception ex) {
                             System.err.println(ex);
                             ex.printStackTrace();
                         }
 
                     }
 
-                    //terminar, tem que redireionar para a pag que o boy vai digitar a senha
                 } else {
 
                     if (resetRequest.isValid()) {
@@ -91,30 +84,24 @@ public class SaveNewPassword extends HttpServlet {
                         resetBusiness.updatePasswordResetRequest(resetRequest);
                     }
 
-                    Map<String, String> responseMap = new HashMap<>();
-                    responseMap.put("error", ErrorMessages.INVALID_TOKEN.getErrorMessage());
+                    error = ErrorMessages.INVALID_TOKEN.getErrorMessage();
 
-                    String json = new Gson().toJson(responseMap);
-
-                    response.setContentType("application/json");
-                    response.setCharacterEncoding("UTF-8");
-                    response.getWriter().write(json);
                 }
 
             } catch (IllegalArgumentException ex) {
-                Map<String, String> responseMap = new HashMap<>();
-                responseMap.put("error", ErrorMessages.INVALID_TOKEN.getErrorMessage());
 
-                String json = new Gson().toJson(responseMap);
-
-                response.setContentType("application/json");
-                response.setCharacterEncoding("UTF-8");
-                response.getWriter().write(json);
+                error = ErrorMessages.INVALID_TOKEN.getErrorMessage();
             }
 
         } else {
+
+            error = ErrorMessages.INVALID_TOKEN.getErrorMessage();
+        }
+
+        if (!error.trim().isEmpty()) {
+
             Map<String, String> responseMap = new HashMap<>();
-            responseMap.put("error", ErrorMessages.INVALID_TOKEN.getErrorMessage());
+            responseMap.put("error", error);
 
             String json = new Gson().toJson(responseMap);
 
