@@ -5,20 +5,17 @@
  */
 package io.github.herocode.ecmat.controller;
 
-import br.com.uol.pagseguro.domain.Address;
 import br.com.uol.pagseguro.domain.Phone;
 import com.google.gson.Gson;
 import io.github.herocode.ecmat.entity.Participant;
-import io.github.herocode.ecmat.entity.Payment;
-import io.github.herocode.ecmat.enums.PaymentStatus;
-import io.github.herocode.ecmat.interfaces.CheckoutCreator;
+import io.github.herocode.ecmat.entity.ParticipantRecover;
+import io.github.herocode.ecmat.enums.ErrorMessages;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
-import io.github.herocode.ecmat.model.CheckoutCreatorImpl;
-import io.github.herocode.ecmat.model.ParticipantBuilder;
 import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
-import io.github.herocode.ecmat.persistence.PaymentDao;
+import io.github.herocode.ecmat.model.ParticipantValidator;
+import io.github.herocode.ecmat.persistence.ParticipantRecoverDao;
 import java.io.IOException;
-import java.net.URL;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -29,96 +26,104 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.commons.codec.digest.DigestUtils;
 
 /**
  *
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
-@WebServlet(name = "ParticipantRegister", urlPatterns = {"/ParticipantRegister"})
-public class ParticipantRegister extends HttpServlet {
+@WebServlet(name = "ParticipantRecoverUpdate", urlPatterns = {"/ParticipantRecoverUpdate"})
+public class ParticipantRecoverUpdate extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
 
         String name = request.getParameter("name");
         String birthDate = request.getParameter("birth-date");
         String titration = request.getParameter("titration");
-        String cpf = request.getParameter("cpf");
         String ddd = request.getParameter("ddd");
         String phoneNumber = request.getParameter("phone");
-        String email = request.getParameter("email");
         String password = request.getParameter("password");
-        String street = request.getParameter("street");
-        String number = request.getParameter("number");
-        String district = request.getParameter("district");
-        String city = request.getParameter("city");
-        String postalCode = request.getParameter("postal-code");
-        String state = request.getParameter("state");
+        
+        String token = request.getParameter("token");
+        String error = "";
 
-        DateTimeFormatter formartter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate bDate;
+        if (token != null && !token.trim().isEmpty()) {
 
-        try {
-            bDate = LocalDate.parse(birthDate, formartter);
-        } catch (Exception ex) {
-            System.err.println(ex);
-            ex.printStackTrace();
-            bDate = LocalDate.now(ZoneId.of("America/Sao_Paulo"));
+            ParticipantRecoverDao recoverDao = new ParticipantRecoverDao();
+
+            ParticipantRecover participantRecover = recoverDao.searchById(token);
+
+            if (participantRecover.isValid()) {
+
+                DateTimeFormatter formartter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                LocalDate bDate;
+
+                try {
+                    bDate = LocalDate.parse(birthDate, formartter);
+                } catch (Exception ex) {
+                    System.err.println(ex);
+                    ex.printStackTrace();
+                    bDate = LocalDate.now(ZoneId.of("America/Sao_Paulo"));
+                }
+
+                Phone phone = new Phone(ddd, phoneNumber);
+
+                ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
+                Participant participant = participantBusiness.searchParticipantByEmail(participantRecover.getParticipantEmail());
+
+                participant.setName(name);
+                participant.setBirthDate(bDate);
+                participant.setTitration(titration);
+                participant.setPhone(phone);
+                participant.setPassword(password);
+
+                try {
+
+                    ParticipantValidator.validateParticipant(participant);
+                    participant.setPassword(DigestUtils.sha1Hex(password));
+                    
+                    participantBusiness.updateParticipant(participant);
+
+                    participantRecover.setIsValid(false);
+                    recoverDao.update(participantRecover);
+
+                } catch (IllegalArgumentException ex) {
+
+                    error = ex.getMessage();
+                }
+
+            } else {
+
+                error = ErrorMessages.INVALID_TOKEN.getErrorMessage() + " , ele ja foi utilizado.";
+            }
+
+        } else {
+
+            error = ErrorMessages.INVALID_TOKEN.getErrorMessage() + " , nenhum token Informado.";
         }
 
-        try {
+        if (!error.trim().isEmpty()) {
 
-            Phone phone = new Phone(ddd, phoneNumber);
-            Address address = new Address("BRA", state, city, district, postalCode, street, number, "");
-
-            ParticipantBuilder participantBuilder = new ParticipantBuilder(cpf, email);
-            participantBuilder.setName(name).
-                    setTitration(titration).
-                    setAddress(address).
-                    setBirthDate(bDate).
-                    setPassword(password).
-                    setPhone(phone);
-
-            Participant participant = participantBuilder.build();
-
-            ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
-
-            String paymentReference = String.valueOf(participant.getCpf().hashCode());
-
-            Payment payment = new Payment(paymentReference);
-
-            CheckoutCreator checkoutCreator = new CheckoutCreatorImpl();
-
-            String checkoutUrl = checkoutCreator.buildCheckout(participant, paymentReference);
-
-            payment.setUrl(new URL(checkoutUrl));
-            payment.setStatus(PaymentStatus.AWAITING_PAYMENT.getCode());
-
-            PaymentDao paymentDao = new PaymentDao();
-
-            paymentDao.save(payment);
-
-            System.out.println("salvar participant");
-            participantBusiness.saveParticipant(participant, paymentReference);
-
-            request.getSession().setAttribute("participant", participant);
-            response.sendRedirect("ParticipantPanel");
-
-        } catch (Exception ex) {
-            System.err.println(ex);
-            ex.printStackTrace();
-            
             Map<String, String> responseMap = new HashMap<>();
-            responseMap.put("error", ex.getMessage());
+            responseMap.put("error", error);
 
             String json = new Gson().toJson(responseMap);
 
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
             response.getWriter().write(json);
-
         }
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

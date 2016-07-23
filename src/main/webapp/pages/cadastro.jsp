@@ -130,7 +130,7 @@
                             <label class="col-sm-3 col-xs-12 label-cadastro">Senha:</label>
                             <div class="col-sm-9 col-xs-12">
                                 <input name="password" type="password" class="form-control" style="font-size: 14px;"
-                                       placeholder="6 dígitos alfanuméricos"> 
+                                       placeholder="Ao menos 6 dígitos alfanuméricos"> 
                             </div>
                         </div>
 

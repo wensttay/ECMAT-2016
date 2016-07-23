@@ -51,3 +51,11 @@ CREATE TABLE payment_log (
 	notification_code TEXT,
 	PRIMARY KEY(id)
 );
+
+CREATE TABLE participant_recover(
+
+	token TEXT,
+	is_valid BOOLEAN DEFAULT TRUE,
+	participant_email UNIQUE,
+	PRIMARY KEY (token)
+);

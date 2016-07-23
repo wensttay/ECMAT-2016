@@ -144,7 +144,7 @@ public class ParticipantDaoImpl implements ParticipantDao {
                     + "name = ?, birth_date = ?, phone_ddd = ?, phone_number = ?,"
                     + " titration = ?, password = ?, country = ?,"
                     + " state = ?, city = ?, district = ?, postal_code = ?,"
-                    + " street = ?, house_number = ?";
+                    + " street = ?, house_number = ? WHERE cpf = ?";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
@@ -165,6 +165,7 @@ public class ParticipantDaoImpl implements ParticipantDao {
             statement.setString(count++, object.getAddress().getPostalCode());
             statement.setString(count++, object.getAddress().getStreet());
             statement.setString(count++, object.getAddress().getNumber());
+            statement.setString(count++, object.getCpf());
 
             result = statement.executeUpdate();
 
