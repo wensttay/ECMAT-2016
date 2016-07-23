@@ -142,7 +142,7 @@ public class ParticipantDaoImpl implements ParticipantDao {
 
             String sql = "UPDATE " + getTableName() + " SET payment_id = ?, "
                     + "name = ?, birth_date = ?, phone_ddd = ?, phone_number = ?,"
-                    + " titration = ?, email = ?, password = ?, country = ?,"
+                    + " titration = ?, password = ?, country = ?,"
                     + " state = ?, city = ?, district = ?, postal_code = ?,"
                     + " street = ?, house_number = ?";
 
@@ -157,7 +157,6 @@ public class ParticipantDaoImpl implements ParticipantDao {
             statement.setString(count++, object.getPhone().getAreaCode());
             statement.setString(count++, object.getPhone().getNumber());
             statement.setString(count++, object.getTitration());
-            statement.setString(count++, object.getEmail());
             statement.setString(count++, object.getPassword());
             statement.setString(count++, object.getAddress().getCountry());
             statement.setString(count++, object.getAddress().getState());
