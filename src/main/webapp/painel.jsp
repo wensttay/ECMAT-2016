@@ -15,7 +15,7 @@
         <meta name="description" content="Encontro Cajazeirense de Matemática">
         <meta name="author" content="Wensttay">
         <meta name="author" content="Victor Hugo">
-        <title>ECMAT 2016 | Redefinir</title>
+        <title>ECMAT 2016 | Painel do Usuário</title>
 
         <!-- Bootstrap core CSS -->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">

@@ -39,13 +39,27 @@ public class LoginController extends HttpServlet {
             password = DigestUtils.sha1Hex(password);
             ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
 
-            Participant participant = participantBusiness.login(email, password);
-            request.getSession().setAttribute("participant", participant);
+            if (participantBusiness.needRecover(email)) {
 
-            response.sendRedirect("ParticipantPanel");
+                Map<String, String> responseMap = new HashMap<>();
+                responseMap.put("error", "recover");
+
+                String json = new Gson().toJson(responseMap);
+
+                response.setContentType("application/json");
+                response.setCharacterEncoding("UTF-8");
+                response.getWriter().write(json);
+
+            } else {
+
+                Participant participant = participantBusiness.login(email, password);
+
+                request.getSession().setAttribute("participant", participant);
+                response.sendRedirect("ParticipantPanel");
+            }
 
         } catch (Exception ex) {
-            
+
             System.err.println(ex);
             ex.printStackTrace();
 

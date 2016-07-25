@@ -12,6 +12,7 @@ import io.github.herocode.ecmat.enums.ErrorMessages;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
 import io.github.herocode.ecmat.interfaces.ParticipantDao;
 import io.github.herocode.ecmat.persistence.ParticipantDaoImpl;
+import io.github.herocode.ecmat.persistence.ParticipantRecoverDao;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -23,34 +24,37 @@ import java.util.Map;
  */
 public class ParticipantBusinessImpl implements ParticipantBusiness {
 
-    private ParticipantDao dao;
+    private ParticipantDao participantDao;
+    private ParticipantRecoverDao recoverDao;
 
     public ParticipantBusinessImpl() {
-        this.dao = new ParticipantDaoImpl();
+        
+        this.participantDao = new ParticipantDaoImpl();
+        this.recoverDao = new ParticipantRecoverDao();
     }
 
     @Override
     public boolean saveParticipant(Participant participant, String paymentId) {
 
-        return dao.save(participant, paymentId);
+        return participantDao.save(participant, paymentId);
     }
 
     @Override
     public boolean updateParticipant(Participant participant) {
 
-        return dao.update(participant);
+        return participantDao.update(participant);
     }
 
     @Override
     public boolean deleteParticipant(Participant participant) {
 
-        return dao.delete(participant);
+        return participantDao.delete(participant);
     }
 
     @Override
     public Participant searchParticipantById(int id) throws IllegalArgumentException {
 
-        Participant participant = dao.searchById(id);
+        Participant participant = participantDao.searchById(id);
 
         if (participant == null) {
             throw new IllegalArgumentException(ErrorMessages.INVALID_ID.getErrorMessage());
@@ -62,25 +66,25 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
     @Override
     public List<ShortCourse> getRegisteredShortCourse(Participant participant) {
 
-        return Collections.unmodifiableList(dao.getRegisteredShortCourse(participant));
+        return Collections.unmodifiableList(participantDao.getRegisteredShortCourse(participant));
     }
 
     @Override
     public List<Participant> listAllParticipants() {
 
-        return Collections.unmodifiableList(dao.listAll());
+        return Collections.unmodifiableList(participantDao.listAll());
     }
 
     @Override
     public List<Participant> searchParticipantByAttribute(String key, String value) {
 
-        return Collections.unmodifiableList(dao.searchByAttribute(key, value));
+        return Collections.unmodifiableList(participantDao.searchByAttribute(key, value));
     }
 
     @Override
     public List<Participant> searchParticipantByAttributes(Map<String, String> map) {
 
-        return Collections.unmodifiableList(dao.searchByAttributes(map));
+        return Collections.unmodifiableList(participantDao.searchByAttributes(map));
     }
 
     @Override
@@ -118,13 +122,25 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
     @Override
     public boolean saveParticipant(Participant participant, Payment payment) {
         
-        return dao.save(participant, payment);
+        return participantDao.save(participant, payment);
     }
 
     @Override
     public String getEmailFromPaymentReference(String paymentReference) {
         
-        return dao.getEmailFromPaymentReference(paymentReference);
+        return participantDao.getEmailFromPaymentReference(paymentReference);
+    }
+
+    @Override
+    public boolean existsEmail(String email) {
+        
+        return participantDao.existsEmail(email);
+    }
+
+    @Override
+    public boolean needRecover(String email) {
+
+        return recoverDao.needRecover(email);
     }
 
 }

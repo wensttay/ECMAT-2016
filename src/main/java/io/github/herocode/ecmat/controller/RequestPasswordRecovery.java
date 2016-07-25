@@ -8,6 +8,8 @@ package io.github.herocode.ecmat.controller;
 import com.google.gson.Gson;
 import io.github.herocode.ecmat.entity.PasswordResetRequest;
 import io.github.herocode.ecmat.enums.EmailMessages;
+import io.github.herocode.ecmat.enums.ErrorMessages;
+import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
 import io.github.herocode.ecmat.model.EmailClient;
 import io.github.herocode.ecmat.model.PasswordResetBusinessImpl;
 import java.io.IOException;
@@ -22,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.codec.digest.DigestUtils;
 import io.github.herocode.ecmat.interfaces.PasswordResetBusiness;
+import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
 
 /**
  *
@@ -34,39 +37,64 @@ public class RequestPasswordRecovery extends HttpServlet {
             throws ServletException, IOException {
 
         String email = request.getParameter("email");
+        String error = "";
 
-        LocalDateTime localDateTime = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
+        if (email != null && !email.trim().isEmpty()) {
 
-        String token = email.hashCode() + String.valueOf(localDateTime.hashCode());
+            ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
 
-        token = DigestUtils.md5Hex(token);
+            if (participantBusiness.existsEmail(email)) {
 
-        String resetUrl = "http://www.ecmat.com.br/ResetPassword?token=" + token;
+                LocalDateTime localDateTime = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
 
-        PasswordResetRequest resetRequest = new PasswordResetRequest();
-        resetRequest.setCreationDate(localDateTime);
-        resetRequest.setIsValid(true);
-        resetRequest.setToken(token);
-        resetRequest.setParticipantEmail(email);
+                String token = email.hashCode() + String.valueOf(localDateTime.hashCode());
 
-        PasswordResetBusiness resetPasswordBusiness = new PasswordResetBusinessImpl();
+                token = DigestUtils.md5Hex(token);
 
-        resetPasswordBusiness.save(resetRequest);
+                String resetUrl = "http://www.ecmat.com.br/ResetPassword?token=" + token;
 
-        String emailMessage = EmailMessages.RECOVER_PASSWORD.getMessage() + "\n" + resetUrl;
+                PasswordResetRequest resetRequest = new PasswordResetRequest();
+                resetRequest.setCreationDate(localDateTime);
+                resetRequest.setIsValid(true);
+                resetRequest.setToken(token);
+                resetRequest.setParticipantEmail(email);
 
-        System.out.println("EMAIL: " + emailMessage);
+                PasswordResetBusiness resetPasswordBusiness = new PasswordResetBusinessImpl();
 
-        EmailClient.sendEmail("Ecmat - Resetar Senha", email, emailMessage, EmailClient.defaultSender, EmailClient.defaultPassword);
+                resetPasswordBusiness.save(resetRequest);
+
+                String emailMessage = EmailMessages.RECOVER_PASSWORD.getMessage() + "\n" + resetUrl;
+
+                System.out.println("EMAIL: " + emailMessage);
+
+                EmailClient.sendEmail("Ecmat - Resetar Senha", email, emailMessage, EmailClient.defaultSender, EmailClient.defaultPassword);
+
+            } else {
+
+                error = ErrorMessages.INVALID_EMAIL.getErrorMessage();
+            }
+
+        } else {
+
+            error = ErrorMessages.INVALID_EMAIL.getErrorMessage();
+        }
 
         Map<String, String> responseMap = new HashMap<>();
-        responseMap.put("success", "Dentro de alguns minutos um E-mail será enviado com as instruções de recuperação.");
+
+        if (error.trim().isEmpty()) {
+            
+            responseMap.put("success", "Dentro de alguns minutos um E-mail será enviado com as instruções de recuperação.");
+        }else{
+            
+            responseMap.put("error", error);
+        }
 
         String json = new Gson().toJson(responseMap);
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(json);
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -36,6 +36,15 @@
     </servlet-mapping>
     
     <servlet>
+        <servlet-name>aviso_participant_recover</servlet-name>
+        <jsp-file>/participant_recover_aviso.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aviso_participant_recover</servlet-name>
+        <url-pattern>/aviso_participant_recover</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
         <servlet-name>painel_de_controle</servlet-name>
         <jsp-file>/painel_de_controle.jsp</jsp-file>
     </servlet>

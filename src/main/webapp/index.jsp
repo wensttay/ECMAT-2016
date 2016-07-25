@@ -214,7 +214,13 @@ Author     : Wensttay, Victor Hugo
                     var error = response.error;
 
                     if (error !== undefined) {
-                        show_success(error);
+                        
+                        if(error === "recover"){
+                            window.location.href = "aviso_participant_recover";
+                        }else{
+                            show_error(error);
+                        }
+                        
                     } else {
                         window.location.href = "ParticipantPanel";
                     }
@@ -242,9 +248,12 @@ Author     : Wensttay, Victor Hugo
 
                 $.post('RequestPasswordRecovery', $('#form-recuperacao').serialize(), function (response) {
                     var success = response.success;
+                    var error = response.error;
 
                     if (success !== undefined) {
                         show_success(success);
+                    }else{
+                        show_error(error);
                     }
                 });
 

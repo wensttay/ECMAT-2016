@@ -67,41 +67,15 @@
                 <article class="erro-article">
                     <div class="container">
                         <div class="row" id="row">
-                            <c:if test="${requestScope.is_valid == true}">
-                                <h1 style="text-align: center">Redefinir Senha</h1>
-                                <div class="erro-box default-low-opacity">
-                                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 text-center">
-                                        <form id="form-redefinir" method="POST" class="form-horizontal" style="font-family: arial;" role="form">
-                                            <label class="col-sm-4 col-xs-4" style="text-align: right">Nova Senha:</label>
-                                            <div class="form-group col-sm-6 col-xs-6">
-                                                <input name="password" type="password" class="form-control" style="font-size: 14px;">
-                                            </div>
-                                            <label class="col-sm-4 col-xs-4" style="text-align: right">Repita a Nova Senha:</label>
-                                            <div class="form-group col-sm-6 col-xs-6">
-                                                <input name="password-confirm" type="password" class="form-control" style="font-size: 14px;">
-                                            </div>
-                                            <div class="col-sm-4 col-xs-4"></div>
-                                            <div class="form-group col-sm-6 col-xs-6">
-                                                <input id="input-redefinir" type="submit" style="float: right;" class="btn btn-default" >
-                                            </div>
-                                            <div class="col-sm-4 col-xs-4"></div>
-                                        </form>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                            <h1 style="text-align: center">Atenção!</h1>
+                            <div class="erro-box default-low-opacity">
+                                <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 text-center">
+                                    <br>
+                                    <span>Tivemos alguns problemas na sua conta, enviamos-lhe um e-mail para solucionarmos o imprevisto, por favor favor verifique sua caixa de entrada, span e lixeira.</span>
                                 </div>
-                            </c:if>
-                            <c:if test="${requestScope.is_valid == false}">
-                                <h1 style="text-align: center">Token Expirado!</h1>
-                                <div class="erro-box default-low-opacity">
-                                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 text-center">
-                                        <br>
-                                        <span>Este token está expirado, solicite novamente uma nova senha de acesso.</span>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
-                                </div>
-                            </c:if>
+                                <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                            </div>
                         </div>
                     </div>
                 </article>

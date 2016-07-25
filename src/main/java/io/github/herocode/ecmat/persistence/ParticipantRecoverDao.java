@@ -65,6 +65,44 @@ public class ParticipantRecoverDao implements Dao<ParticipantRecover, String> {
         return result > 0;
     }
 
+    public boolean needRecover(String email) {
+
+        Connection connection;
+        PreparedStatement statement;
+        ResultSet resultSet;
+
+        boolean response = false;
+
+        try {
+
+            String sql = "SELECT is_valid FROM " + getTableName() + " WHERE participant_email = ?";
+
+            connection = ConnectionProvider.getInstance().getConnection();
+            statement = connection.prepareCall(sql);
+            
+            int count = 1;
+
+            statement.setString(count++, email);
+
+            System.err.println(sql + email);
+            resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                response = resultSet.getBoolean("is_valid");
+            }
+
+            resultSet.close();
+            statement.close();
+            connection.close();
+
+        } catch (SQLException ex) {
+            System.err.println(ex);
+            ex.printStackTrace();
+        }
+
+        return response;
+    }
+
     @Override
     public ParticipantRecover searchById(String token) {
 
@@ -87,9 +125,9 @@ public class ParticipantRecoverDao implements Dao<ParticipantRecover, String> {
 
             resultSet = statement.executeQuery();
 
-            resultSet.next();
-
-            participantRecover = fillObject(resultSet);
+            if (resultSet.next()) {
+                participantRecover = fillObject(resultSet);
+            }
 
             resultSet.close();
             statement.close();

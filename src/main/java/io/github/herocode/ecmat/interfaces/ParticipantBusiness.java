@@ -24,6 +24,10 @@ public interface ParticipantBusiness {
     boolean updateParticipant(Participant participant);
 
     boolean deleteParticipant(Participant participant);
+    
+    boolean existsEmail(String email);
+    
+    boolean needRecover(String email);
 
     List<Participant> listAllParticipants();
 

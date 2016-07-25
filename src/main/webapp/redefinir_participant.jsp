@@ -69,71 +69,71 @@
                     <div class="container">
                         <div class="row" id="row">
                             <c:if test="${requestScope.is_valid == true}">
-                            <h1 style="text-align: center">Por favor, confirme seus dados abaixo: </h1>
-                            <br>
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6">
-                                <form id="form-redefinir-participant" method="POST" class="form-horizontal" style="font-family: arial;" role="form">
+                                <h1 style="text-align: center">Por favor, confirme seus dados abaixo: </h1>
+                                <br>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <form id="form-redefinir-participant" method="POST" class="form-horizontal" style="font-family: arial;" role="form">
 
-                                    <div class="form-group col-sm-12 col-xs-12">
-                                        <label class="col-sm-3 col-xs-12 label-cadastro">Nome Completo:</label>
-                                        <div class="col-sm-9 col-xs-12">
-                                            <input name="name" type="text" class="form-control" style="font-size: 14px;" required="required">
+                                        <div class="form-group col-sm-12 col-xs-12">
+                                            <label class="col-sm-3 col-xs-12 label-cadastro">Nome Completo:</label>
+                                            <div class="col-sm-9 col-xs-12">
+                                                <input name="name" type="text" class="form-control" style="font-size: 14px;" required="required">
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="form-group col-sm-12 col-xs-12">
-                                        <label class="col-sm-3 col-xs-12 label-cadastro">Nascimento:</label>
-                                        <div class="col-sm-9 col-xs-12">
-                                            <input name="birth-date" placeholder="DD-MM-YYYY" type="date" class="form-control" style="font-size: 14px;" 
-                                                   max="2015-01-01" min="1876-01-01"> 
+                                        <div class="form-group col-sm-12 col-xs-12">
+                                            <label class="col-sm-3 col-xs-12 label-cadastro">Nascimento:</label>
+                                            <div class="col-sm-9 col-xs-12">
+                                                <input name="birth-date" placeholder="DD-MM-YYYY" type="date" class="form-control" style="font-size: 14px;" 
+                                                       max="2015-01-01" min="1876-01-01"> 
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="form-group col-sm-12 col-xs-12">
-                                        <label class="col-sm-3 col-xs-12 label-cadastro">Titulação:</label>
-                                        <div class="col-sm-9 col-xs-12">
-                                            <select name="titration" class="form-control">
-                                                <c:forEach items="${Titrations.values()}" var="titration">
-                                                    <option>${titration.titration}</option>
-                                                </c:forEach>
-                                            </select>
+                                        <div class="form-group col-sm-12 col-xs-12">
+                                            <label class="col-sm-3 col-xs-12 label-cadastro">Titulação:</label>
+                                            <div class="col-sm-9 col-xs-12">
+                                                <select name="titration" class="form-control">
+                                                    <c:forEach items="${Titrations.values()}" var="titration">
+                                                        <option>${titration.titration}</option>
+                                                    </c:forEach>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="form-group col-sm-12 col-xs-12" style="margin-bottom: 0;">
-                                        <label class="col-sm-3 col-xs-12 label-cadastro">DDD:</label>
-                                        <div class="col-sm-2 col-xs-12" style="margin-bottom: 15px">
-                                            <input name="ddd" type="text" class="form-control" pattern="\[0-9]{2}\"
-                                                   title="Digite o DDD, apenas números"
-                                                   style="font-size: 14px;" 
-                                                   onkeypress="javascript: add_mask(this, number_only);" maxlength="2"> 
+                                        <div class="form-group col-sm-12 col-xs-12" style="margin-bottom: 0;">
+                                            <label class="col-sm-3 col-xs-12 label-cadastro">DDD:</label>
+                                            <div class="col-sm-2 col-xs-12" style="margin-bottom: 15px">
+                                                <input name="ddd" type="text" class="form-control" pattern="\[0-9]{2}\"
+                                                       title="Digite o DDD, apenas números"
+                                                       style="font-size: 14px;" 
+                                                       onkeypress="javascript: add_mask(this, number_only);" maxlength="2"> 
+                                            </div>
+                                            <label class="col-sm-3 col-xs-12 label-cadastro">Telefone:</label>
+                                            <div class="col-sm-4 col-xs-12" style="margin-bottom: 15px">
+                                                <input name="phone" class="form-control" style="font-size: 14px;" type="tel" required="required" 
+                                                       title="Digite o Telefone"
+                                                       maxlength="12"
+                                                       onkeypress="javascript: add_mask(this, number_only);">
+                                            </div>
                                         </div>
-                                        <label class="col-sm-3 col-xs-12 label-cadastro">Telefone:</label>
-                                        <div class="col-sm-4 col-xs-12" style="margin-bottom: 15px">
-                                            <input name="phone" class="form-control" style="font-size: 14px;" type="tel" required="required" 
-                                                   title="Digite o Telefone"
-                                                   maxlength="12"
-                                                   onkeypress="javascript: add_mask(this, number_only);">
-                                        </div>
-                                    </div>
 
-                                    <div class="form-group col-sm-12 col-xs-12">
-                                        <label class="col-sm-3 col-xs-12 label-cadastro">Senha:</label>
-                                        <div class="col-sm-9 col-xs-12">
-                                            <input name="password" type="password" class="form-control" style="font-size: 14px;"
-                                                   placeholder="Ao menos 6 dígitos alfanuméricos"> 
+                                        <div class="form-group col-sm-12 col-xs-12">
+                                            <label class="col-sm-3 col-xs-12 label-cadastro">Senha:</label>
+                                            <div class="col-sm-9 col-xs-12">
+                                                <input name="password" type="password" class="form-control" style="font-size: 14px;"
+                                                       placeholder="Ao menos 6 dígitos alfanuméricos"> 
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="form-group col-sm-12 col-xs-12">
-                                        <div class="col-sm-12 col-xs-12">
-                                            <input type="submit" id="input-redefinir-participant" style="float: right;" class="btn btn-default" value="Registrar" >
+                                        <div class="form-group col-sm-12 col-xs-12">
+                                            <div class="col-sm-12 col-xs-12">
+                                                <input type="submit" id="input-redefinir-participant" style="float: right;" class="btn btn-default" value="Registrar" >
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-md-3"></div>
+                                    </form>
+                                </div>
+                                <div class="col-md-3"></div>
                             </c:if>
                             <c:if test="${requestScope.is_valid == false}">
                                 <h1 style="text-align: center">Token Expirado!</h1>
@@ -171,35 +171,44 @@
 
         <script type="text/javascript">
 
-                                                    function show_error(textError) {
-                                                           $('p#error-body').html(textError);
-                                                           $('#errorModal').modal({
-                                                               show: 'true'
+                                                           function show_error(textError) {
+                                                               $('p#error-body').html(textError);
+                                                               $('#errorModal').modal({
+                                                                   show: 'true'
+                                                               });
+                                                           }
+
+                                                           function show_success(textError) {
+                                                               $('p#success-body').html(textError);
+                                                               $('#successModal').modal({
+                                                                   show: 'true'
+                                                               });
+                                                           }
+
+                                                           $('#input-redefinir-participant').click(function (e) {
+                                                               e.preventDefault();
+
+                                                               $.post('ParticipantRecoverUpdate?token=${requestScope.token}', $('#form-redefinir-participant').serialize(), function (response) {
+                                                                   var error = response.error;
+
+                                                                   if (error !== undefined) {
+                                                                       show_error(error);
+                                                                   } else {
+                                                                       show_success('Obrigado por confirmar seus dados ! Pedimos desculpas pelo incoveniente.');
+                                                                       $('#row').hide();
+                                                                   }
+                                                               });
+
                                                            });
-                                                       }
+                                                           
+                                                           
+                                                           $('#input-success-modal').click(function (e) {
+                                                               e.preventDefault();
 
-                                                       function show_success(textError) {
-                                                           $('p#success-body').html(textError);
-                                                           $('#successModal').modal({
-                                                               show: 'true'
-                                                           });
-                                                       }
+                                                               window.location.replace("/#inscricao");
 
-                                                       $('#input-redefinir-participant').click(function (e) {
-                                                           e.preventDefault();
-
-                                                           $.post('ParticipantRecoverUpdate?token=${requestScope.token}', $('#form-redefinir-participant').serialize(), function (response) {
-                                                               var error = response.error;
-
-                                                               if (error !== undefined) {
-                                                                   show_error(error);
-                                                               } else {
-                                                                   show_success('Obrigado por confirmar seus dados ! Pedimos desculpas pelo incoveniente.');
-                                                                   $('#row').hide();
-                                                               }
                                                            });
 
-                                                       });
 
         </script>
     </body>
