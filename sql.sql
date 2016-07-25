@@ -3,7 +3,7 @@
 	date TIMESTAMP, 
 	last_event_date TIMESTAMP,
 	code TEXT, 
-	reference VARCHAR(10),
+	reference VARCHAR(28),
 	status VARCHAR(1),
 	url TEXT,
 	PRIMARY KEY(reference)
@@ -12,8 +12,8 @@
 CREATE TABLE participant (
 
 	id SERIAL, 
-	payment_id VARCHAR(10) DEFAULT NULL,
-	name TEXT, 
+	payment_id VARCHAR(28) DEFAULT NULL,
+	name TEXT,  
 	birth_date DATE,
 	phone_ddd VARCHAR(2),
 	phone_number VARCHAR(12), 
@@ -56,6 +56,6 @@ CREATE TABLE participant_recover(
 
 	token TEXT,
 	is_valid BOOLEAN DEFAULT TRUE,
-	participant_email UNIQUE,
+	participant_email TEXT UNIQUE,
 	PRIMARY KEY (token)
 );
