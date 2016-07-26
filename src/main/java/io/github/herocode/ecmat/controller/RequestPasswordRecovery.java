@@ -67,7 +67,7 @@ public class RequestPasswordRecovery extends HttpServlet {
 
                 System.out.println("EMAIL: " + emailMessage);
 
-                EmailClient.sendEmail("Ecmat - Resetar Senha", email, emailMessage, EmailClient.defaultSender, EmailClient.defaultPassword);
+                EmailClient.sendEmail("Ecmat - Resetar Senha", email, emailMessage, EmailClient.defaultSender);
 
             } else {
 

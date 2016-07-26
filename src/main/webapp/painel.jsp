@@ -112,7 +112,7 @@
                                             realize o pagamento da mesma e tenha acesso aos Minicursos que ocorrerão no evento !
                                         </p>
                                         <br>
-                                        <a href="${sessionScope.participant.getPaymentUrl()}">
+                                        <a href="${sessionScope.participant.getPaymentUrl()}" target="_blank">
                                             <img src="img/other/pag-seguro-logo.png">
                                         </a>
                                     </div>

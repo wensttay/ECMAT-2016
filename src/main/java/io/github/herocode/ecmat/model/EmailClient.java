@@ -24,9 +24,8 @@ import javax.mail.internet.MimeMessage;
 public class EmailClient {
 
     public static String defaultSender = "devecmat2016@gmail.com";
-    public static String defaultPassword = "devofecmat2016byherocode";
 
-    public static void sendEmail(String subject, String receiver, String message, String sender, String password) {
+    public static void sendEmail(String subject, String receiver, String message, String sender) {
 
         new Thread() {
 
@@ -50,6 +49,8 @@ public class EmailClient {
                     Response response = sg.api(request);
                 } catch (IOException ex) {
                     ex.printStackTrace();
+                    System.out.println(receiver);
+                    System.out.println(message);
                 }
             }
         }.start();

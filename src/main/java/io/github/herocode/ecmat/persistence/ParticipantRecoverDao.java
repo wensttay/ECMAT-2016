@@ -84,7 +84,6 @@ public class ParticipantRecoverDao implements Dao<ParticipantRecover, String> {
 
             statement.setString(count++, email);
 
-            System.err.println(sql + email);
             resultSet = statement.executeQuery();
 
             if (resultSet.next()) {

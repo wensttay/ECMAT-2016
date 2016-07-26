@@ -83,7 +83,7 @@ public class PaymentNotification extends HttpServlet {
 
                 String emailMessage = "Recebemos o pagamento de sua inscrição, agora você inscrever-se nos minicursos do evento.";
 
-                EmailClient.sendEmail("Ecmat - Inscrição", participantEmail, emailMessage, EmailClient.defaultSender, EmailClient.defaultPassword);
+                EmailClient.sendEmail("Ecmat - Inscrição", participantEmail, emailMessage, EmailClient.defaultSender);
             }
 
         } catch (Exception ex) {
