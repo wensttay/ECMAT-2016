@@ -17,11 +17,10 @@ import io.github.herocode.ecmat.model.CheckoutCreatorImpl;
 import io.github.herocode.ecmat.model.ParticipantBuilder;
 import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
 import io.github.herocode.ecmat.persistence.PaymentDao;
+import io.github.herocode.ecmat.utils.DateUtils;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.ServletException;
@@ -55,18 +54,9 @@ public class ParticipantRegister extends HttpServlet {
         String postalCode = request.getParameter("postal-code");
         String state = request.getParameter("state");
 
-        DateTimeFormatter formartter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate bDate;
-
         try {
-            bDate = LocalDate.parse(birthDate, formartter);
-        } catch (Exception ex) {
-            System.err.println(ex);
-            ex.printStackTrace();
-            bDate = LocalDate.now(ZoneId.of("America/Sao_Paulo"));
-        }
 
-        try {
+            LocalDate bDate = DateUtils.getLocalDateFromString(birthDate);
 
             Phone phone = new Phone(ddd, phoneNumber);
             Address address = new Address("BRA", state, city, district, postalCode, street, number, "");
@@ -98,7 +88,6 @@ public class ParticipantRegister extends HttpServlet {
 
             paymentDao.save(payment);
 
-            System.out.println("salvar participant");
             participantBusiness.saveParticipant(participant, paymentReference);
 
             request.getSession().setAttribute("participant", participant);
@@ -107,7 +96,7 @@ public class ParticipantRegister extends HttpServlet {
         } catch (Exception ex) {
             System.err.println(ex);
             ex.printStackTrace();
-            
+
             Map<String, String> responseMap = new HashMap<>();
             responseMap.put("error", ex.getMessage());
 
