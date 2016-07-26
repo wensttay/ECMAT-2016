@@ -10,7 +10,7 @@
     <div class="construcao-background">
         <div class="container">
             <div class="row">
-                <div class="construindo-title-box">
+                <div class="construindo-title-box default-low-color-white-transparence">
                     <p class="construindo-title">Página em <br> Construção</p>
                 </div>
             </div>

@@ -5,7 +5,8 @@
 
 .erro-header-box{
     position: fixed;
-    margin: 0;
+    margin: 0px;
+    margin-top: -20px;
     padding: 0;
     display: table;
     height: 75px;
@@ -15,7 +16,6 @@
     float: left;
 }
 .erro-header-box .erro-header-item .erro-logo{
-    opacity: 0.8;
     margin: 35px 0 35px 35px;
 }
 .erro-header-box .erro-header-item .erro-logo:hover{
@@ -23,7 +23,6 @@
 }
 .erro-box{
     font-family: WC_RoughTrad;
-    opacity: 0.8;
 }
 .erro-title{
     margin-bottom: 30px;

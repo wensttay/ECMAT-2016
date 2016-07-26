@@ -9,37 +9,37 @@
 <article class="container-base invisivel " id="contato">
     <div class="container contato">
         <div class="row">
-            <div class="col-lg-2 col-md-1"></div>
-            <p class="text-center article-title low-white-transparence col-lg-8">Contato</p> 
-            <div class="col-lg-2 col-md-1"></div>
+            <div class="col-lg-2"></div>
+            <p class="article-title default-border-color default-low-color-white-transparence col-lg-8">Contato</p> 
+            <div class="col-lg-2"></div>
         </div>
         <div class="row">
-            <div class="col-lg-2 col-md-1"></div>
-            <div class="col-lg-8 col-md-10 low-white-transparence medium-margin-bottom">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 default-low-color-white-transparence medium-margin-bottom">
                 <div class="dados-list">
                     <div class="dados-box col-lg-6 col-md-6 col-sm-12">
-                        <div class="dados">
+                        <div class="dados default-border">
                             <i class="material-icons padding-medium">&#xE55F;</i>
                             <p class="dados-info">Rua José Antônio da Silva, 300, B. Jardim Oásis</p>
                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                         </div>
                     </div>
                     <div class="dados-box col-lg-6 col-md-6 col-sm-12">
-                        <div class="dados">
+                        <div class="dados default-border">
                             <i class="material-icons padding-medium">&#xE0BE;</i>
                             <p class="dados-info">ecmat2016@gmail.com</p>
                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                         </div>
                     </div>
                     <div class="dados-box col-lg-6 col-md-6 col-sm-12">
-                        <div class="dados">
+                        <div class="dados default-border">
                             <i class="material-icons padding-medium">&#xE0B0;</i>
                             <p class="dados-info">(83) 3532-4100 Ramal: 4186</p>
                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                         </div>
                     </div>
                     <div class="dados-box col-lg-6 col-md-6 col-sm-12">
-                        <div class="dados">
+                        <div class="dados default-border">
                             <i class="material-icons padding-medium">&#xE32C;</i>
                             <p class="dados-info">(83) 99640-1322</p>
                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
@@ -47,12 +47,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 col-md-1"></div>
+            <div class="col-lg-2"></div>
         </div>
         
         <div class="row">
             <div class="col-lg-2"></div>
-            <p class="text-center article-title low-white-transparence col-lg-8">Google Maps</p> 
+            <p class="article-title default-border-color default-low-color-white-transparence col-lg-8">Google Maps</p> 
             <div class="col-lg-2"></div>
         </div>
         <div class="row">

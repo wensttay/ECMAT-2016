@@ -1,8 +1,9 @@
 <%-- 
-    Document   : index.jsp
-    Created on : 14/05/2016, 03:11:11
-    Author     : Wensttay, Victor Hugo
+Document   : index.jsp
+Created on : 14/05/2016, 03:11:11
+Author     : Wensttay, Victor Hugo
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="pt">
     <head>
@@ -41,78 +42,116 @@
 
         <!-- Custom styles for this template -->
         <link href="css/style.css" rel="stylesheet">
-        <link href="css/construcao-style.css" rel="stylesheet"/>
-        <link href="css/contato-style.css" rel="stylesheet">
-        <link href="css/contato-responsive.css" rel="stylesheet">
-        <link href="css/inicio-style.css" rel="stylesheet">
-        <link href="css/sobre-style.css" rel="stylesheet">
-        <link href="css/sobre-responsive.css" rel="stylesheet">
-        <link href="css/organizacao-style.css" rel="stylesheet">
-        <link href="css/organizacao-responsive.css" rel="stylesheet">
-        <link href="css/programacao-style.css" rel="stylesheet">
-        <link href="css/submissoes-style.css" rel="stylesheet"/>
-        <link href="css/anais-style.css" rel="stylesheet">
-        <link href="css/anais-responsive.css" rel="stylesheet">
-        <link href="css/responsive.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/construcao-style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/contato-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/contato-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="css/inicio-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/sobre-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/sobre-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="css/organizacao-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/organizacao-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="css/programacao-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/submissoes-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/anais-style.css" rel="stylesheet" type="text/css" />
+        <link href="css/anais-responsive.css" rel="stylesheet" type="text/css" />
+        <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
         <div id="container-fullpage">
-            <header id="header" class="blackboard-background">
+            <header id="header" class="blackboard-background default-border-bottom">
                 <div class="construcao-background"></div>
-                <div id="menu-principal-button" class="menu-button-with-img low-white-transparence" >
-                    <img  class="low-opacity" src="img/menu/menu-icon.png" />
+                <div id="menu-principal-button" class="menu-button-with-img" >
+                    <img width="75px" height="75px" title="Clique para abrir o menu lateral." class="button-img default-low-opacity" src="img/menu/menu-icon.png"/>
                 </div>
 
-                <a href="#inicio">
-                    <div id="logo-small" class="menu-button-with-img low-white-transparence">
-                        <img class="low-opacity" src="img/logo/logo-ecmat2016-75x75.png">
+                <a title="Clique para voltar a página inicial." href="#inicio">
+                    <div id="logo-small" class="menu-button-with-img">
+                        <img width="75px" height="75px" class="button-img default-low-opacity" src="img/logo/logo-ecmat2016-75x75.png">
                     </div>
                 </a>
                 <nav class="menu-principal-box">
                     <ul class="principal-list">
                         <li id="exit-menu-principal-button" class="menu-button-with-img" >
-                            <img src="img/menu/exit-menu-icon.png"/>
+                            <img width="75px" height="75px" title="Clique para sair do menu lateral." class="button-img default-low-opacity" src="img/menu/exit-menu-icon.png"/>
                         </li>
 
-                        <li class="principal-list-item page-link item-bordered"><a class="item-title" href="#inicio">Inicio</a></li>
+                        <li class="principal-list-item page-link item-bordered">
+                            <a title="Clique para voltar a página inicial." class="default-low-color-white-transparence item-title" href="#inicio">Inicio</a>
+                        </li>
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
-                            <a href="#" class="item-title list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                            <ul class="drop-menu blackboard-background">
-                                <li class="drop-menu-item page-link" ><a href="#sobre">Sobre</a></li>
-                                <li class="drop-menu-item page-link" ><a href="#programacao">Programação</a></li>
-                                <li class="drop-menu-item page-link" ><a href="#organizacao">Organização</a></li>
-                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Galeria</a></li>
-                                <li class="drop-menu-item page-link disabled" ><a href="#construcao">Certificados</a></li>
+                            <a href="#" class="default-low-color-white-transparence item-title list-item-withsublist-title">Evento  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                            <ul class="drop-menu default-border-color blackboard-background">
+                                <li class="drop-menu-item default-border-color page-link" >
+                                    <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#apresentacao">Apresentação</a>
+                                </li>
+                                <li class="drop-menu-item default-border-color page-link" >
+                                    <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="#organizacao">Organização</a>
+                                </li>
+                                <li class="drop-menu-item default-border-color page-link disabled" >
+                                    <a title="Clique para ir para a página da Galeria." class="default-low-color-white-transparence" href="#construcao">Galeria</a>
+                                </li>
+                                <li class="drop-menu-item default-border-color page-link disabled" >
+                                    <a title="Clique para ir para a página de Certificados." class="default-low-color-white-transparence" href="#construcao">Certificados</a>
+                                </li>
                             </ul>
                         </li>
-                        <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#submissoes">Submissões</a></li>
+                        <li class="principal-list-item page-link item-bordered" >
+                            <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#programacao">Programação</a>
+                        </li>
+                        
 
-
-                        <li class="principal-list-item menu-button-with-img low-opacity" id="logo-central" ><a href="#inicio">
-                                <img src="img/logo/logo-ecmat2016-75x75.png"></a>
+                        <li class="principal-list-item menu-button-with-img" id="logo-central" >
+                            <a title="Clique para voltar a página inicial." class="button-img default-low-opacity" href="#inicio">
+                                <img width="75px" height="75px" alt="Simbolodo do ECMAT" src="img/logo/logo-ecmat2016-75x75.png" >
+                            </a>
                         </li>
 
-                        <li class="principal-list-item page-link item-bordered" ><a class="item-title" href="#anais">Anais</a></li>
+                        <li class="principal-list-item page-link item-bordered" >
+                            <a title="Clique para ir para a página de Anais." class="default-low-color-white-transparence item-title" href="anais">Anais</a>
+                        </li>
 
-                        <li class="principal-list-item page-link item-bordered" ><a class="item-title contact" href="#contato">Contato</a></li>
-                        <li class="principal-list-item page-link item-bordered disabled" ><a class="item-title contact" href="#construcao">Inscrição</a></li>
-                        <!--<li class="principal-list-item page-link item-bordered disabled" ><a href="#construcao">Inscrição</a></li>-->
-                        <!--                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
-                                                    <a href="#" class="list-item-withsublist-title">Inscrição  <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-                                                    <ul class="item-title drop-menu blackboard-background">
-                                                        <li class="drop-menu-item page-link disabled" ><a href="#construcao">Entrar</a></li>
-                                                        <li class="drop-menu-item page-link disabled" ><a href="#construcao">Criar Conta</a></li>
-                                                                                        <li class="drop-menu-item page-link disabled" ><a href="#construcao">Minha Conta</a></li>
-                                                                                        <li class="drop-menu-item page-link disabled" ><a href="#construcao">Sair</a></li>
-                                                    </ul>
+                        <li class="principal-list-item page-link item-bordered" >
+                            <a title="Clique para ir para a página de Contato." class="default-low-color-white-transparence item-title" href="#contato">Contato</a>
+                        </li>
+
+
+                        <!--                        <li class="principal-list-item page-link item-bordered disabled" >
+                                                    <a title="Clique para ir para a página de Inscrição." class="default-low-color-white-transparence item-title" href="#inscricao">Inscrição</a>
                                                 </li>-->
+
+                        <!--AQUI ENTRARIA UM IF-->
+                        <li class="principal-list-item item-bordered principal-list-item-withsublist">
+                            <a href="#" class="default-low-color-white-transparence item-title list-item-withsublist-title">Minha Conta     <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                            <ul class="drop-menu default-border-color blackboard-background">
+                                <c:if test="${empty sessionScope.participant}">
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#inscricao">Inscrições</a>
+                                    </li>
+                                </c:if>
+
+                                <c:if test="${!empty sessionScope.participant}">
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="ParticipantPanel">Principal</a>
+                                    </li>
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Logut">Sair</a>
+                                    </li>
+                                    <!--                                    <li class="drop-menu-item default-border-color page-link" >
+                                                                            <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#construcao">Editar Dados</a>
+                                                                        </li>-->
+                                </c:if>
+
+                            </ul>
+                        </li>
+                        <!--AQUI ENTRARIA UM IF-->
+
                     </ul>
                 </nav>
                 <div class="issn-box">
                     <div class="issn blackboard-background">
-                        ISSN XXXX-XXX
+                        Encontro Cajazeirense de Matemática - ISSN 2525-3727
                     </div>
                 </div>
             </header>
@@ -121,33 +160,106 @@
 
             <section id="section">
                 <%@ include file="pages/inicio.jsp" %>
-                <%@ include file="pages/sobre.jsp" %>
-                <%@ include file="pages/contato.jsp" %>
+                <%@ include file="pages/apresentacao.jsp" %>
                 <%@ include file="pages/programacao.jsp" %>
-                <%@ include file="pages/organizacao.jsp" %>
+                <%@ include file="pages/contato.jsp" %>  
                 <%@ include file="pages/construcao.jsp" %>
-                <%@ include file="pages/submissoes.jsp" %>
-                <%@ include file="pages/anais.jsp" %>
+                <%@ include file="pages/organizacao.jsp" %>
+                <%@ include file="pages/inscricao.jsp" %>
+                <%@ include file="pages/cadastro.jsp" %>
+                <%@ include file="pages/recuperacao.jsp" %>
 
+                <%@ include file="pages/alert_error_model.jsp" %>
+                <%@ include file="pages/alert_success_model.jsp" %>
             </section>
 
             <footer id="footer">
                 <p class="text-center">
-                    Desenvolvido por <a href="https://github.com/Hero-Code" target="_blank" style="display: inline; background-color: black; padding: 5px; font-family: WC_RoughTrad; border-radius: 5px; margin-left: 5px;"><strong>HeroCode</strong></a>
+                    Desenvolvido por <a title="Clique para ir para a página da HeroCode." href="https://github.com/Hero-Code" target="_blank" style="display: inline; background-color: black; padding: 5px; font-family: WC_RoughTrad; border-radius: 5px; margin-left: 5px;"><strong>HeroCode</strong></a>
                 </p>
             </footer>
         </div>
 
         <!-- Jquery Script -->
-        <script src="js/jquery-2.2.2.min.js"></script>
+        <script src="js/jquery-2.2.2.min.js" type="text/javascript"></script>
         <!-- Bootstrap JavaScript -->
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- Custom Script for this tamplate -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg"></script>
-        <script src="js/menu-controll-script.js"></script>
-        <script src="js/page-controll-script.js"></script>
-        <script src="js/organizacao-controll-script.js"></script>
-        <script src="js/programacao-table-controll-script.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS3zJXOooBXqk6jFZRRrF-N6RbpXikIzg" type="text/javascript"></script>
+        <script src="js/menu-controll-script.js" type="text/javascript"></script>
+        <script src="js/page-controll-script.js" type="text/javascript"></script>
+        <script src="js/organizacao-controll-script.js" type="text/javascript"></script>
+        <script src="js/programacao-table-controll-script.js" type="text/javascript"></script>
+        <script src="js/field_mask_validator.js" type="text/javascript"></script>
+
+        <script>
+            function show_error(textError) {
+                $('p#error-body').html(textError);
+                $('#errorModal').modal({
+                    show: 'true'
+                });
+            }
+
+            function show_success(textError) {
+                $('p#success-body').html(textError);
+                $('#successModal').modal({
+                    show: 'true'
+                });
+            }
+
+            $('#efetuar-login').click(function (e) {
+                e.preventDefault();
+
+                $.post('Login', $('#form-login').serialize(), function (response) {
+                    var error = response.error;
+
+                    if (error !== undefined) {
+                        
+                        if(error === "recover"){
+                            window.location.href = "aviso_participant_recover";
+                        }else{
+                            show_error(error);
+                        }
+                        
+                    } else {
+                        window.location.href = "ParticipantPanel";
+                    }
+                });
+
+            });
+
+            $('#efetuar-cadastro').click(function (e) {
+                e.preventDefault();
+
+                $.post('ParticipantRegister', $('#form-cadastro').serialize(), function (response) {
+                    var error = response.error;
+
+                    if (error !== undefined) {
+                        show_error(error);
+                    } else {
+                        window.location.href = "ParticipantPanel";
+                    }
+                });
+
+            });
+
+            $('#recuperar-senha').click(function (e) {
+                e.preventDefault();
+
+                $.post('RequestPasswordRecovery', $('#form-recuperacao').serialize(), function (response) {
+                    var success = response.success;
+                    var error = response.error;
+
+                    if (success !== undefined) {
+                        show_success(success);
+                    }else{
+                        show_error(error);
+                    }
+                });
+
+            });
+
+        </script>
     </body>
 </html>
 

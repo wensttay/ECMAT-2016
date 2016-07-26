@@ -26,7 +26,7 @@ function init() {
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(-6.889654, -38.544916),
         map: map,
-        title: 'IFPB'
+        title: 'IFPB - Campus Cajazeiras: \n\ - Rua José Dantas Nobres, 131 - Lot. Jardim Oasis, \n\ Cajazeiras - PB, 58900-000'
     });
 }
 
@@ -45,7 +45,14 @@ function myFunction() {
     var anchorElementAux = document.getElementById(anchorAux);
 
     if (anchorElementAux === null) {
-        anchor = oldAnchor;
+	var pathArray = window.location.pathname;
+
+        if (pathArray === "/anais") {
+            anchor = "#apresentacao";
+        } else {
+            anchor = oldAnchor;
+        }
+
     }
 
     if (window.top.location.hash !== "") {
@@ -55,12 +62,12 @@ function myFunction() {
     $(anchor + ' .off-load').each(function () {
         $(this).removeClass('off-load');
     });
-    
-    if(anchor === '#contato' && mapReady === 0){
+
+    if (anchor === '#contato' && mapReady === 0) {
         init();
         mapReady = 1;
     }
-    
+
     if (anchor === '#construcao') {
         var pageConstruct = document.getElementsByClassName('construcao-background');
         for (var i = pageConstruct.length - 1; i >= 0; i--) {

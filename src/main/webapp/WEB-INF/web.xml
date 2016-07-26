@@ -11,15 +11,55 @@
             <java-charset-name>UTF-8</java-charset-name> 
         </input-charset> 
     </charset-params>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/erro</location>
+    </error-page>
+    
+    <servlet>
+        <servlet-name>erro</servlet-name>
+        <jsp-file>/erro.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>erro</servlet-name>
+        <url-pattern>/erro</url-pattern>
+    </servlet-mapping>
     
     <servlet>
         <servlet-name>index</servlet-name>
         <jsp-file>/index.jsp</jsp-file>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
     
-    <error-page>
-        <error-code>404</error-code>
-        <location>/erro.html</location>
-    </error-page>
+    <servlet>
+        <servlet-name>aviso_participant_recover</servlet-name>
+        <jsp-file>/participant_recover_aviso.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>aviso_participant_recover</servlet-name>
+        <url-pattern>/aviso_participant_recover</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>painel_de_controle</servlet-name>
+        <jsp-file>/painel_de_controle.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>painel_de_controle</servlet-name>
+        <url-pattern>/painel_de_controle</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>anais</servlet-name>
+        <jsp-file>/anais.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>anais</servlet-name>
+        <url-pattern>/anais</url-pattern>
+    </servlet-mapping>
      
 </web-app>
