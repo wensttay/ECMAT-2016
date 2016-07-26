@@ -50,6 +50,9 @@ public class RequestParticipantRecovery extends HttpServlet {
 
                     request.setAttribute("is_valid", true);
                     request.setAttribute("token", token);
+                } else {
+
+                    request.setAttribute("is_valid", false);
                 }
             } catch (Exception ex) {
 
