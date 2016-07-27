@@ -17,6 +17,11 @@ public class DateUtils {
 
     public static LocalDate getLocalDateFromString(String sDate) {
 
+        if (sDate == null || sDate.trim().isEmpty()) {
+
+            return null;
+        }
+
         DateTimeFormatter dateTimeFormatter;
         LocalDate lDate = null;
 
@@ -42,7 +47,15 @@ public class DateUtils {
 
                         dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
                         lDate = LocalDate.parse(sDate, dateTimeFormatter);
-                    } catch (Exception ex) {
+                    } catch (Exception ex4) {
+
+                        try {
+                            
+                            dateTimeFormatter = DateTimeFormatter.ofPattern("ddMMyyyy");
+                            lDate = LocalDate.parse(sDate, dateTimeFormatter);
+                        } catch (Exception ex5) {
+
+                        }
                     }
                 }
             }

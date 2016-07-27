@@ -29,7 +29,7 @@ public enum ErrorMessages {
     INVALID_ID("Id inválido."),
     INVALID_NAME("É necessario informar o nome e sobrenome."),
     INVALID_PHONE("Este número de telefone é inválido"),
-    INVALID_BIRTH_DATE("Esta data de nascimento parece estar incorreta."),
+    INVALID_BIRTH_DATE("Esta data de nascimento parece estar incorreta, informe sua data de nascimento no formato dia/mês/ano"),
     
     TOO_LONG_CITY_NAME("Aparentemente a cidade informada não existe."),
     TOO_LONG_DISTRICT_NAME("Aparentemente o bairro informado não existe."),
