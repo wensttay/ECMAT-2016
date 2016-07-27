@@ -14,6 +14,7 @@ import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
 import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
 import io.github.herocode.ecmat.model.ParticipantValidator;
 import io.github.herocode.ecmat.persistence.ParticipantRecoverDao;
+import io.github.herocode.ecmat.utils.DateUtils;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
@@ -66,16 +67,7 @@ public class ParticipantRecoverUpdate extends HttpServlet {
 
             if (participantRecover.isValid()) {
 
-                DateTimeFormatter formartter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-                LocalDate bDate;
-
-                try {
-                    bDate = LocalDate.parse(birthDate, formartter);
-                } catch (Exception ex) {
-                    System.err.println(ex);
-                    ex.printStackTrace();
-                    bDate = LocalDate.now(ZoneId.of("America/Sao_Paulo"));
-                }
+                LocalDate bDate = DateUtils.getLocalDateFromString(birthDate);
 
                 Phone phone = new Phone(ddd, phoneNumber);
 
