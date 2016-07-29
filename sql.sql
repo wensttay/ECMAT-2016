@@ -59,3 +59,24 @@ CREATE TABLE participant_recover(
 	participant_email TEXT UNIQUE,
 	PRIMARY KEY (token)
 );
+
+CREATE TABLE short_course(
+
+	id SERIAL,
+	max_enrollment INT,
+	short_course_date TIMESTAMP,
+	title TEXT,
+	professor TEXT,
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE short_course_participant(
+
+	short_course_id INT,
+	participant_id INT,
+
+	FOREIGN KEY(short_course_id) REFERENCES short_course(id),
+	FOREIGN KEY(participant_id) REFERENCES participant(id),
+
+	PRIMARY KEY (short_course_id, participant_id)
+);
