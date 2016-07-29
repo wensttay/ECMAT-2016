@@ -7,6 +7,7 @@ package io.github.herocode.ecmat.interfaces;
 
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
+import java.sql.ResultSet;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -27,5 +28,9 @@ public interface ShortCourseDao extends Dao<ShortCourse, Integer> {
     public boolean isParticipantEnrolledToDate(Participant participant, LocalDate date);
 
     public boolean isParticipantEnrolledInThisShortCourse(Participant participant, ShortCourse shortCourse);
+    
+    public String getRelationWithParticipantTableName();
+    
+    public Participant fillParticipantObejct(ResultSet rs);
     
 }

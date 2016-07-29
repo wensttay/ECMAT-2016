@@ -15,7 +15,7 @@ import java.util.List;
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
 public interface ShortCourseBusiness {
-
+    
     boolean saveShortCourse(ShortCourse shortCourse);
 
     boolean updateShortCourse(ShortCourse shortCourse);
