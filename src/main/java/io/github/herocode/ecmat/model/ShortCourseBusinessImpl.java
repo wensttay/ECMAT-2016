@@ -13,6 +13,7 @@ import io.github.herocode.ecmat.enums.PaymentStatus;
 import io.github.herocode.ecmat.exceptions.EnrollingParticipantException;
 import java.util.List;
 import io.github.herocode.ecmat.interfaces.ShortCourseDao;
+import io.github.herocode.ecmat.persistence.ShortCourseDaoImpl;
 import java.util.Collections;
 
 /**
@@ -21,7 +22,24 @@ import java.util.Collections;
  */
 public class ShortCourseBusinessImpl implements ShortCourseBusiness {
 
+    private static ShortCourseBusinessImpl shortCourseBusinessImpl;
+
     private ShortCourseDao shortCourseDao;
+
+    private ShortCourseBusinessImpl() {
+        
+        shortCourseDao = new ShortCourseDaoImpl();
+    }
+    
+    public ShortCourseBusinessImpl getInstance(){
+        
+        if(shortCourseBusinessImpl == null){
+            
+            shortCourseBusinessImpl = new ShortCourseBusinessImpl();
+        }
+        
+        return shortCourseBusinessImpl;
+    }
 
     @Override
     public List<Participant> getShortCourseParticipants(ShortCourse shortCourse) {
@@ -46,34 +64,10 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness {
 
     @Override
     public synchronized boolean addParticipantInShortCourse(ShortCourse shortCourse, Participant participant) throws EnrollingParticipantException {
+        
+        //falta
 
-        if (participant.getPayment().getStatus().equals(PaymentStatus.COMPLETE.getCode())) {
-            
-            if (!shortCourseDao.isParticipantEnrolledInThisShortCourse(participant, shortCourse)) {
-                
-                if (getShortCourseCurrentEnrollment(shortCourse) < shortCourse.getMaxEnrollment()) {
-
-                    if (!shortCourseDao.isParticipantEnrolledToDate(participant, shortCourse.getDate())) {
-
-                        return shortCourseDao.addParticipant(shortCourse, participant);
-                    } else {
-
-                        throw new EnrollingParticipantException(ErrorMessages.PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE.getErrorMessage());
-                    }
-
-                } else {
-
-                    throw new EnrollingParticipantException(ErrorMessages.FILLED_SHORT_COURSE.getErrorMessage());
-                }
-            } else {
-
-                throw new EnrollingParticipantException(ErrorMessages.PARTICIPANT_ALREADY_REGISTERED.getErrorMessage());
-            }
-        }else{
-            
-                throw new EnrollingParticipantException(ErrorMessages.MISSING_PAYMENT.getErrorMessage());
-        }
-
+        return false;
     }
 
     @Override

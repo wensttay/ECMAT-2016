@@ -100,7 +100,7 @@ Author     : Wensttay, Victor Hugo
                         <li class="principal-list-item page-link item-bordered" >
                             <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#programacao">Programação</a>
                         </li>
-                        
+
 
                         <li class="principal-list-item menu-button-with-img" id="logo-central" >
                             <a title="Clique para voltar a página inicial." class="button-img default-low-opacity" href="#inicio">
@@ -214,13 +214,13 @@ Author     : Wensttay, Victor Hugo
                     var error = response.error;
 
                     if (error !== undefined) {
-                        
-                        if(error === "recover"){
+
+                        if (error === "recover") {
                             window.location.href = "aviso_participant_recover";
-                        }else{
+                        } else {
                             show_error(error);
                         }
-                        
+
                     } else {
                         window.location.href = "ParticipantPanel";
                     }
@@ -252,12 +252,30 @@ Author     : Wensttay, Victor Hugo
 
                     if (success !== undefined) {
                         show_success(success);
-                    }else{
+                    } else {
                         show_error(error);
                     }
                 });
 
             });
+
+        </script>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-81476902-1', 'auto');
+            ga('send', 'pageview');
 
         </script>
     </body>

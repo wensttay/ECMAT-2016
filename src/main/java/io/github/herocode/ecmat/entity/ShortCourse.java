@@ -5,7 +5,7 @@
  */
 package io.github.herocode.ecmat.entity;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -13,26 +13,26 @@ import java.time.LocalDate;
  */
 public class ShortCourse {
     
-    private int         id;
-    private int         maxEnrollment;
-    private LocalDate   date;
-    private String      title;
-    private String      professor;
+    private int             id;
+    private int             maxEnrollment;
+    private LocalDateTime   date;
+    private String          title;
+    private String          professor;
 
     public ShortCourse() { }
 
-    public ShortCourse(int id, LocalDate date, String title, String professor, int maxEnrollment) {
+    public ShortCourse(int id, LocalDateTime date, String title, String professor, int maxEnrollment) {
         this.date           = date;
         this.title          = title;
         this.professor      = professor;
         this.maxEnrollment  = maxEnrollment;
     }
 
-    public LocalDate getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
