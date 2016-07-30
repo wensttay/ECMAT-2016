@@ -36,11 +36,14 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
 
         try {
 
-            String sql = "INSERT INTO " + getTableName()
-                    + "(max_enrollment, short_course_start_date, short_course_end_date, title, description, professor, place, type, equipment_needed) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            StringBuilder sql = new StringBuilder("INSERT INTO ").
+                    append(getTableName()).
+                    append("(max_enrollment, short_course_start_date, short_course_end_date, ").
+                    append("title, description, professor, place, type, equipment_needed) ").
+                    append("VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
             connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
+            statement = connection.prepareCall(sql.toString());
 
             int count = 1;
 
@@ -78,10 +81,12 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
 
         try {
 
-            String sql = "DELETE FROM " + getTableName() + " WHERE id = ?";
+            StringBuilder sql = new StringBuilder("DELETE FROM ").
+                    append(getTableName()).
+                    append(" WHERE id = ?");
 
             connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
+            statement = connection.prepareCall(sql.toString());
 
             int count = 1;
 
@@ -109,12 +114,13 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
 
         try {
 
-            String sql = "UPDATE " + getTableName() + " SET "
-                    + "max_enrollment = ?, short_course_start_date = ?, short_course_end_date = ?, title = ?, description = ?, professor = ?, place = ?, type = ?, equipment_needed = ?"
-                    + " WHERE id = ?";
+            StringBuilder sql = new StringBuilder("UPDATE ").append(getTableName()).
+                    append(" SET max_enrollment = ?, short_course_start_date = ?, ").
+                    append("short_course_end_date = ?, title = ?, description = ?, professor = ?, ").
+                    append("place = ?, type = ?, equipment_needed = ? WHERE id = ?");
 
             connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
+            statement = connection.prepareCall(sql.toString());
 
             int count = 1;
 
@@ -152,10 +158,12 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
 
         try {
 
-            String sql = "SELECT * FROM " + getTableName() + " WHERE id = ?";
+            StringBuilder sql = new StringBuilder("SELECT * FROM ").
+                    append(getTableName()).
+                    append(" WHERE id = ?");
 
             connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
+            statement = connection.prepareCall(sql.toString());
 
             int count = 1;
 
@@ -191,10 +199,10 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
 
         try {
 
-            String sql = "SELECT * FROM " + getTableName();
+            StringBuilder sql = new StringBuilder("SELECT * FROM ").append(getTableName());
 
             connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
+            statement = connection.prepareCall(sql.toString());
 
             int count = 1;
 
@@ -261,10 +269,13 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
 
         try {
 
-            String sql = "SELECT * FROM " + getRelationWithParticipantTableName() + " scp JOIN participant p ON scp.participant_id = p.id WHERE scp.short_course_id = ?";
+            StringBuilder sql = new StringBuilder("SELECT * FROM ").
+                    append(getRelationWithParticipantTableName()).
+                    append(" scp JOIN participant p ON scp.participant_id = p.id").
+                    append(" WHERE scp.short_course_id = ?");
 
             connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
+            statement = connection.prepareCall(sql.toString());
 
             int count = 1;
 
@@ -300,10 +311,13 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
 
         try {
 
-            String sql = "SELECT COUNT(*) AS quantity FROM " + getRelationWithParticipantTableName() + " scp JOIN participant p ON scp.participant_id = p.id WHERE  scp.short_course_id = ?";
+            StringBuilder sql = new StringBuilder("SELECT COUNT(*) AS quantity FROM ").
+                    append(getRelationWithParticipantTableName()).
+                    append(" scp JOIN participant p ON scp.participant_id = p.id WHERE").
+                    append(" scp.short_course_id = ?");
 
             connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
+            statement = connection.prepareCall(sql.toString());
 
             int count = 1;
 
@@ -338,10 +352,12 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
 
         try {
 
-            String sql = "DELETE FROM " + getRelationWithParticipantTableName() + " WHERE short_course_id = ? AND participant_id = ?";
+            StringBuilder sql = new StringBuilder("DELETE FROM ").
+                    append(getRelationWithParticipantTableName()).
+                    append(" WHERE short_course_id = ? AND participant_id = ?");
 
             connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
+            statement = connection.prepareCall(sql.toString());
 
             int count = 1;
 
@@ -372,10 +388,11 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
 
         try {
 
-            String sql = "INSERT INTO " + getRelationWithParticipantTableName() + " VALUES(?, ?)";
+            StringBuilder sql = new StringBuilder("INSERT INTO ").
+                    append(getRelationWithParticipantTableName()).append(" VALUES(?, ?)");
 
             connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
+            statement = connection.prepareCall(sql.toString());
 
             int count = 1;
 
@@ -452,12 +469,15 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
 
         try {
 
-            String sql = "SELECT * FROM " 
-            + getRelationWithParticipantTableName() +
-            " scp JOIN "+ getTableName() +" sc ON scp.short_course_id = sc.id WHERE scp.participant_id = ?";
+            StringBuilder sql = new StringBuilder("SELECT * FROM ").
+                    append(getRelationWithParticipantTableName()).
+                    append(" scp JOIN ").
+                    append(getTableName()).
+                    append(" sc ON scp.short_course_id = sc.id ").
+                    append(" WHERE scp.participant_id = ?");
 
             connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
+            statement = connection.prepareCall(sql.toString());
 
             int count = 1;
 

@@ -6,8 +6,15 @@
 
 package io.github.herocode.ecmat.controller;
 
+import com.google.gson.Gson;
+import io.github.herocode.ecmat.entity.Participant;
+import io.github.herocode.ecmat.entity.ShortCourse;
+import io.github.herocode.ecmat.persistence.ShortCourseDaoImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,6 +40,36 @@ public class ShortCourseRegister extends HttpServlet{
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
+
+        ShortCourseDaoImpl courseDaoImpl    = new ShortCourseDaoImpl();
+        Integer shortCourseId               = Integer.parseInt(request.getParameter("ShortCourseId"));
+        Participant participant             = ( Participant ) request.getSession().getAttribute("participant");
+        ShortCourse shortCourse             = null;
+
+        try{
+            shortCourse = courseDaoImpl.searchById(shortCourseId);
+            
+            if ( shortCourse != null && participant != null ){
+                courseDaoImpl.addParticipant(shortCourse, participant);
+            }
+            
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/painel.jsp");
+            requestDispatcher.forward(request, response);
+            
+        } catch ( Exception ex ){
+
+            System.err.println(ex);
+            ex.printStackTrace();
+
+            Map<String, String> responseMap = new HashMap<>();
+            responseMap.put("error", ex.getMessage());
+
+            String json = new Gson().toJson(responseMap);
+
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write(json);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

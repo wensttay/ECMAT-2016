@@ -7,7 +7,7 @@ package io.github.herocode.ecmat.interfaces;
 
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
-import io.github.herocode.ecmat.exceptions.EnrollingParticipantException;
+import io.github.herocode.ecmat.exceptions.EnrollingShortCourseException;
 import java.util.List;
 
 /**
@@ -26,7 +26,7 @@ public interface ShortCourseBusiness {
 
     ShortCourse searchShortCourseById(Integer id);
 
-    boolean addParticipantInShortCourse(ShortCourse shortCourse, Participant participant) throws EnrollingParticipantException;
+    boolean addParticipantInShortCourse(ShortCourse shortCourse, Participant participant) throws EnrollingShortCourseException;
 
     int getShortCourseCurrentEnrollment(ShortCourse shortCourse);
 

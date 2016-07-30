@@ -47,7 +47,10 @@ public enum ErrorMessages {
     FILLED_SHORT_COURSE("O mini curso está com todas as vagas preenchidas."),
     PARTICIPANT_ALREADY_REGISTERED("O participante já está matriculado neste mini curso."),
     PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE("O participante ja está matriculado para"
-            + " um minicurso no mesmo horário"),
+            + " um minicurso no mesmo turno."),
+    SHORT_COURSE_IS_IN_PROGRESS_OR_ITS_OVER("O minicurso escolhido já terminou ou está em progresso"
+            + " no momento,"),
+    SHORT_COURSE_NOT_EXISTS("O minicurso escolhido não foi encontrado"),
     
     FAIL_LOGIN("Não foi encontrado este usuário em nosso sistema, verifique o "
             + "E-mail e senha e tente novamente."),
