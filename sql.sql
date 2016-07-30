@@ -64,9 +64,14 @@ CREATE TABLE short_course(
 
 	id SERIAL,
 	max_enrollment INT,
-	short_course_date TIMESTAMP,
+	short_course_start_date TIMESTAMP,
+	short_course_end_date TIMESTAMP,
 	title TEXT,
+	description TEXT,
 	professor TEXT,
+	place TEXT,
+	type TEXT,
+	equipment_needed TEXT,
 	PRIMARY KEY (id)
 );
 

@@ -73,6 +73,11 @@
 
                         <div class="body-list programacao-day-body" hidden> <!-- Open List box with hours -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 09:15 até 11:30</div>
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Minicursos</div>
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Oficinas</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 13:30 até 15:30</div>
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Minicursos</div>
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Oficinas</div>
@@ -130,8 +135,6 @@
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 09:15 até 11:30</div>
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Minicursos</div>
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Oficinas</div>
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Amostras de jogos</div>
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Outras atividades envolvendo Matemática</div>
                             </div> <!-- Close Hour-Box Event -->

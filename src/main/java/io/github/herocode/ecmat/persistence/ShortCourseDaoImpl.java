@@ -9,12 +9,12 @@ import br.com.uol.pagseguro.domain.Address;
 import br.com.uol.pagseguro.domain.Phone;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
+import io.github.herocode.ecmat.enums.ShortCourseType;
 import io.github.herocode.ecmat.interfaces.ShortCourseDao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -37,7 +37,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
         try {
 
             String sql = "INSERT INTO " + getTableName()
-                    + "(max_enrollment, short_course_date, title, professor VALUES (?, ?, ?, ?)";
+                    + "(max_enrollment, short_course_start_date, short_course_end_date, title, description, professor, place, type, equipment_needed) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql);
@@ -45,10 +45,15 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
             int count = 1;
 
             statement.setInt(count++, object.getMaxEnrollment());
-            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getDate()));
+            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getStartDate()));
+            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getEndDate()));
             statement.setString(count++, object.getTitle());
+            statement.setString(count++, object.getDescription());
             statement.setString(count++, object.getProfessor());
-
+            statement.setString(count++, object.getPlace());
+            statement.setString(count++, object.getShortCourseType().getTypeName());
+            statement.setString(count++, object.getEquipmentNeeded());
+            
             result = statement.executeUpdate();
 
             statement.close();
@@ -105,7 +110,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
         try {
 
             String sql = "UPDATE " + getTableName() + " SET "
-                    + "max_enrollment = ?, short_course_date = ?, title = ?, professor = ?"
+                    + "max_enrollment = ?, short_course_start_date = ?, short_course_end_date = ?, title = ?, description = ?, professor = ?, place = ?, type = ?, equipment_needed = ?"
                     + " WHERE id = ?";
 
             connection = ConnectionProvider.getInstance().getConnection();
@@ -114,9 +119,14 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
             int count = 1;
 
             statement.setInt(count++, object.getMaxEnrollment());
-            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getDate()));
+            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getStartDate()));
+            statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getEndDate()));
             statement.setString(count++, object.getTitle());
+            statement.setString(count++, object.getDescription());
             statement.setString(count++, object.getProfessor());
+            statement.setString(count++, object.getPlace());
+            statement.setString(count++, object.getShortCourseType().getTypeName());
+            statement.setString(count++, object.getEquipmentNeeded());
             statement.setInt(count++, object.getId());
 
             result = statement.executeUpdate();
@@ -217,10 +227,15 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
             shortCourse = new ShortCourse();
 
             shortCourse.setId(rs.getInt("id"));
-            shortCourse.setDate(rs.getTimestamp("short_course_date").toLocalDateTime());
             shortCourse.setMaxEnrollment(rs.getInt("max_enrollment"));
-            shortCourse.setProfessor(rs.getString("professor"));
+            shortCourse.setStartDate(rs.getTimestamp("short_course_start_date").toLocalDateTime());
+            shortCourse.setEndDate(rs.getTimestamp("short_course_end_date").toLocalDateTime());
             shortCourse.setTitle(rs.getString("title"));
+            shortCourse.setDescription(rs.getString("description"));
+            shortCourse.setProfessor(rs.getString("professor"));
+            shortCourse.setPlace(rs.getString("place"));
+            shortCourse.setShortCourseType(ShortCourseType.valueOf(rs.getString("type")));
+            shortCourse.setEquipmentNeeded(rs.getString("equipment_needed"));
 
         } catch (SQLException ex) {
 
@@ -281,7 +296,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
         PreparedStatement statement;
         ResultSet resultSet;
 
-        int currentEnrollment = 999;
+        int currentEnrollment = -1;
 
         try {
 
@@ -382,16 +397,6 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
     }
 
     @Override
-    public boolean isParticipantEnrolledToDate(Participant participant, LocalDate date) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean isParticipantEnrolledInThisShortCourse(Participant participant, ShortCourse shortCourse) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public String getRelationWithParticipantTableName() {
         return "short_course_participant";
     }
@@ -434,6 +439,47 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
         }
 
         return participant;
+    }
+
+    @Override
+    public List<ShortCourse> getParticipantShortCourses(Participant participant){
+        
+        Connection connection;
+        PreparedStatement statement;
+        ResultSet resultSet;
+
+        List<ShortCourse> shortCourses = new ArrayList<>();
+
+        try {
+
+            String sql = "SELECT * FROM " 
+            + getRelationWithParticipantTableName() +
+            " scp JOIN "+ getTableName() +" sc ON scp.short_course_id = sc.id WHERE scp.participant_id = ?";
+
+            connection = ConnectionProvider.getInstance().getConnection();
+            statement = connection.prepareCall(sql);
+
+            int count = 1;
+
+            statement.setInt(count++, participant.getId());
+
+            resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                shortCourses.add(fillObject(resultSet));
+            }
+
+            resultSet.close();
+            statement.close();
+            connection.close();
+
+        } catch (SQLException ex) {
+            System.err.println(ex);
+            ex.printStackTrace();
+            Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return shortCourses;
     }
 
 }

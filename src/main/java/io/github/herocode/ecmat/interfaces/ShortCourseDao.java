@@ -19,15 +19,13 @@ public interface ShortCourseDao extends Dao<ShortCourse, Integer> {
     
     List<Participant> getShortCourseParticipants(ShortCourse shortCourse);
     
+    List<ShortCourse> getParticipantShortCourses(Participant participant);
+    
     int getCurrentEnrollment(ShortCourse shortCourse);
     
     boolean removeParticipant(ShortCourse shortCourse, Participant participant);
     
     boolean addParticipant(ShortCourse shortCourse, Participant participant);
-
-    public boolean isParticipantEnrolledToDate(Participant participant, LocalDate date);
-
-    public boolean isParticipantEnrolledInThisShortCourse(Participant participant, ShortCourse shortCourse);
     
     public String getRelationWithParticipantTableName();
     
