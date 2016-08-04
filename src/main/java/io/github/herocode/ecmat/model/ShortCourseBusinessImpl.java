@@ -65,7 +65,7 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
 
     @Override
     public synchronized boolean addParticipantInShortCourse(ShortCourse newShortCourse, Participant participant) throws EnrollingShortCourseException{
-        boolean participanCanBeAdded = false;
+        boolean participantCanBeAdded = false;
         
         // Verify if the ShortCourse are in progress or is done
         LocalDateTime nowLocalDateTime = LocalDateTime.now();
@@ -78,7 +78,6 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
         if ( currentEnrollment < 0){
             throw new EnrollingShortCourseException(ErrorMessages.SHORT_COURSE_NOT_EXISTS.getErrorMessage());
         }
-        
         if(currentEnrollment == newShortCourse.getMaxEnrollment() ){
             throw new EnrollingShortCourseException(ErrorMessages.FILLED_SHORT_COURSE.getErrorMessage());
         }
@@ -92,18 +91,23 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
             throw new EnrollingShortCourseException(ErrorMessages.PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE.getErrorMessage());
         }
         
-        // Verify if the new ShortCourse's Shift not repeat on events where this user are registred
+        
         for ( ShortCourse course : allCoursesAddedList ){
+            // Verify if the new ShortCourse's Shift not repeat on events where this user are registred
             if ( newShortCourse.getShortCourseWorkShift().getShift()
                     .equals(course.getShortCourseWorkShift().getShift()) ){
                 throw new EnrollingShortCourseException(ErrorMessages.PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE.getErrorMessage());
             }
+            // Verify if participant are already registred on this new ShortCourse
+            if ( newShortCourse.getId() == course.getId()){
+                throw new EnrollingShortCourseException(ErrorMessages.PARTICIPANT_ALREADY_REGISTERED.getErrorMessage());
+            }
         }
         
         // Try save the new user ShortCourse's registry
-        participanCanBeAdded = shortCourseDao.addParticipant(newShortCourse, participant);
+        participantCanBeAdded = shortCourseDao.addParticipant(newShortCourse, participant);
         
-        return participanCanBeAdded;
+        return participantCanBeAdded;
     }
 
     @Override
