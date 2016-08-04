@@ -29,7 +29,9 @@
                     </a>
                 </div>
                 <div class="evento-info-box col-md-4 col-sm-4">
-                    <a title="Clique para conferir a página de inscrição." href="#inscricao" class="evento-link default-low-opacity">
+                    <a title="Clique para conferir a página de inscrição." href=<c:if test="${empty sessionScope.participant}">#inscricao</c:if>
+                        <c:if test="${!empty sessionScope.participant}">/ParticipantPanel</c:if>
+                        class="evento-link default-low-opacity">
                         <h3>Inscrições abertas !</h3>
                         <img width="150px" height="150px" alt="Representação ilustrativa de um papel de inscrição" class="evento-info-img medium-margin-bottom off-load" src="img/other/inscricao.png"/>
                     </a>

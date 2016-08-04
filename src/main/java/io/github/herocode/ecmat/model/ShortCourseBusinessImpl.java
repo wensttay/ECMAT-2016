@@ -14,6 +14,7 @@ import java.util.List;
 import io.github.herocode.ecmat.interfaces.ShortCourseDao;
 import io.github.herocode.ecmat.persistence.ShortCourseDaoImpl;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -32,7 +33,7 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
         shortCourseDao = new ShortCourseDaoImpl();
     }
 
-    public ShortCourseBusinessImpl getInstance(){
+    public static ShortCourseBusinessImpl getInstance(){
 
         if ( shortCourseBusinessImpl == null ){
 
@@ -68,7 +69,7 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
         boolean participantCanBeAdded = false;
         
         // Verify if the ShortCourse are in progress or is done
-        LocalDateTime nowLocalDateTime = LocalDateTime.now();
+        LocalDateTime nowLocalDateTime = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
         if ( nowLocalDateTime.isBefore(newShortCourse.getStartDate()) ){
             throw new EnrollingShortCourseException(ErrorMessages.SHORT_COURSE_IS_IN_PROGRESS_OR_ITS_OVER.getErrorMessage());
         }

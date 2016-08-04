@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<web-app xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-         version="3.0">
-    
-    <charset-params> 
-        <input-charset> 
-            <resource-path>/</resource-path> 
-            <java-charset-name>UTF-8</java-charset-name> 
-        </input-charset> 
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <charset-params>
+        <input-charset>
+            <resource-path>/</resource-path>
+            <java-charset-name>UTF-8</java-charset-name>
+        </input-charset>
     </charset-params>
-
     <error-page>
         <error-code>404</error-code>
         <location>/erro</location>
     </error-page>
-    
     <servlet>
         <servlet-name>erro</servlet-name>
         <jsp-file>/erro.jsp</jsp-file>
@@ -25,7 +18,6 @@
         <servlet-name>erro</servlet-name>
         <url-pattern>/erro</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>index</servlet-name>
         <jsp-file>/index.jsp</jsp-file>
@@ -34,7 +26,6 @@
         <servlet-name>index</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>aviso_participant_recover</servlet-name>
         <jsp-file>/participant_recover_aviso.jsp</jsp-file>
@@ -43,7 +34,6 @@
         <servlet-name>aviso_participant_recover</servlet-name>
         <url-pattern>/aviso_participant_recover</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>painel_de_controle</servlet-name>
         <jsp-file>/painel_de_controle.jsp</jsp-file>
@@ -52,7 +42,6 @@
         <servlet-name>painel_de_controle</servlet-name>
         <url-pattern>/painel_de_controle</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>anais</servlet-name>
         <jsp-file>/anais.jsp</jsp-file>
@@ -61,5 +50,24 @@
         <servlet-name>anais</servlet-name>
         <url-pattern>/anais</url-pattern>
     </servlet-mapping>
-     
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>io.github.herocode.ecmat.controller.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/painel.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>LogoutFilter</filter-name>
+        <filter-class>io.github.herocode.ecmat.controller.LogoutFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LogoutFilter</filter-name>
+        <url-pattern>/cadastro.jsp</url-pattern>
+        <url-pattern>/inscricao.jsp</url-pattern>
+        <url-pattern>/recuperacao.jsp</url-pattern>
+        <url-pattern>/redefinir.jsp</url-pattern>
+        <url-pattern>/redefinir_participant.jsp</url-pattern>
+    </filter-mapping>
 </web-app>
