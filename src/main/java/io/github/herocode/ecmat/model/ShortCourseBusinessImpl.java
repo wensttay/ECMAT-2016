@@ -17,6 +17,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Map;
 
 /**
  *
@@ -141,6 +142,12 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
         List<ShortCourse> allShortCourse = shortCourseDao.listAll();
 
         return Collections.unmodifiableList(allShortCourse);
+    }
+
+    @Override
+    public Map<Integer, Integer> getShortcoursersCurrentEnrollments() {
+        
+        return shortCourseDao.getShortcoursersCurrentEnrollments();
     }
 
 }
