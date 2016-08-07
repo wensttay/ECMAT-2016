@@ -16,7 +16,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -56,7 +58,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
             statement.setString(count++, object.getPlace());
             statement.setString(count++, object.getShortCourseType().getTypeName());
             statement.setString(count++, object.getEquipmentNeeded());
-            
+
             result = statement.executeUpdate();
 
             statement.close();
@@ -459,8 +461,8 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
     }
 
     @Override
-    public List<ShortCourse> getParticipantShortCourses(Participant participant){
-        
+    public List<ShortCourse> getParticipantShortCourses(Participant participant) {
+
         Connection connection;
         PreparedStatement statement;
         ResultSet resultSet;
@@ -500,6 +502,42 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
         }
 
         return shortCourses;
+    }
+
+    @Override
+    public Map<Integer, Integer> getShortcoursersCurrentEnrollments() {
+
+        Connection connection;
+        PreparedStatement statement;
+        ResultSet resultSet;
+
+        Map<Integer, Integer> currentEnrollments = new HashMap<>();
+
+        try {
+
+            String sql = "SELECT COUNT\n"
+                    + " (*) AS current_erollment, s.id\n"
+                    + " AS short_course_id FROM short_course_participant scp JOIN short_course s ON scp.short_course_id = s.id GROUP BY (s.id)";
+
+            connection = ConnectionProvider.getInstance().getConnection();
+            statement = connection.prepareCall(sql);
+
+            resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                currentEnrollments.put(resultSet.getInt("short_course_id"), resultSet.getInt("current_erollment"));
+            }
+
+            resultSet.close();
+            statement.close();
+            connection.close();
+
+        } catch (SQLException ex) {
+            System.err.println(ex);
+            ex.printStackTrace();
+        }
+
+        return currentEnrollments;
     }
 
 }

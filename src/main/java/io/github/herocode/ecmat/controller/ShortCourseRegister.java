@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package io.github.herocode.ecmat.controller;
 
 import com.google.gson.Gson;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
-import io.github.herocode.ecmat.persistence.ShortCourseDaoImpl;
+import io.github.herocode.ecmat.exceptions.EnrollingShortCourseException;
+import io.github.herocode.ecmat.interfaces.ShortCourseBusiness;
+import io.github.herocode.ecmat.model.ShortCourseBusinessImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
@@ -25,8 +25,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author wensttay
  */
-@WebServlet( name = "ShortCourseRegister", urlPatterns = { "/ShortCourseRegister" } )
-public class ShortCourseRegister extends HttpServlet{
+@WebServlet(name = "ShortCourseRegister", urlPatterns = {"/ShortCourseRegister"})
+public class ShortCourseRegister extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,24 +39,24 @@ public class ShortCourseRegister extends HttpServlet{
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+            throws ServletException, IOException {
 
-        ShortCourseDaoImpl courseDaoImpl    = new ShortCourseDaoImpl();
-        Integer shortCourseId               = Integer.parseInt(request.getParameter("ShortCourseId"));
-        Participant participant             = ( Participant ) request.getSession().getAttribute("participant");
-        ShortCourse shortCourse             = null;
+        ShortCourseBusiness shortCourseBusiness = ShortCourseBusinessImpl.getInstance();
+        Integer shortCourseId                   = Integer.parseInt(request.getParameter("ShortCourseId"));
+        Participant participant                 = (Participant) request.getSession().getAttribute("participant");
+        ShortCourse shortCourse                 = null;
 
-        try{
-            shortCourse = courseDaoImpl.searchById(shortCourseId);
+        try {
             
-            if ( shortCourse != null && participant != null ){
-                courseDaoImpl.addParticipant(shortCourse, participant);
+            shortCourse = shortCourseBusiness.searchShortCourseById(shortCourseId);
+
+            if (shortCourse != null && participant != null) {
+                shortCourseBusiness.addParticipantInShortCourse(shortCourse, participant);
             }
+
+            response.sendRedirect("/painel.jsp");
             
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/painel.jsp");
-            requestDispatcher.forward(request, response);
-            
-        } catch ( Exception ex ){
+        } catch (EnrollingShortCourseException ex) {
 
             System.err.println(ex);
             ex.printStackTrace();
@@ -84,7 +84,7 @@ public class ShortCourseRegister extends HttpServlet{
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -99,7 +99,7 @@ public class ShortCourseRegister extends HttpServlet{
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -109,7 +109,7 @@ public class ShortCourseRegister extends HttpServlet{
      * @return a String containing servlet description
      */
     @Override
-    public String getServletInfo(){
+    public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
 

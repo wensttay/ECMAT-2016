@@ -10,6 +10,7 @@ import io.github.herocode.ecmat.entity.ShortCourse;
 import java.sql.ResultSet;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -30,5 +31,7 @@ public interface ShortCourseDao extends Dao<ShortCourse, Integer> {
     public String getRelationWithParticipantTableName();
     
     public Participant fillParticipantObejct(ResultSet rs);
+    
+    Map<Integer, Integer> getShortcoursersCurrentEnrollments();
     
 }

@@ -9,6 +9,7 @@ import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import io.github.herocode.ecmat.exceptions.EnrollingShortCourseException;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -33,5 +34,7 @@ public interface ShortCourseBusiness {
     List<Participant> getShortCourseParticipants(ShortCourse shortCourse);
 
     boolean removeParticipantFromShortCourse(ShortCourse shortCourse, Participant participant);
+    
+    Map<Integer, Integer> getShortcoursersCurrentEnrollments();
 
 }
