@@ -8,6 +8,7 @@ package io.github.herocode.ecmat.controller;
 import com.google.gson.Gson;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
+import io.github.herocode.ecmat.enums.ErrorMessages;
 import io.github.herocode.ecmat.exceptions.EnrollingShortCourseException;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
 import io.github.herocode.ecmat.interfaces.ShortCourseBusiness;
@@ -47,23 +48,31 @@ public class ShortCourseRegister extends HttpServlet{
 
         Integer shortCourseId = Integer.parseInt(request.getParameter("ShortCourseId"));
         Participant participant = ( Participant ) request.getSession().getAttribute("participant");
-        
+
         if ( participant != null ){
             participant = participantBusiness.searchParticipantById(participant.getId());
         }
-
+        
         ShortCourse shortCourse = null;
 
         Map<String, String> responseMap = new HashMap<>();
+        
         try{
-
             shortCourse = shortCourseBusiness.searchShortCourseById(shortCourseId);
 
-            if ( shortCourse != null && participant != null ){
-                shortCourseBusiness.addParticipantInShortCourse(shortCourse, participant);
+            //Verify if Participant is not null
+            if ( participant == null ){
+                throw new EnrollingShortCourseException(ErrorMessages.DESLOGED_ACCOUNT.getErrorMessage());
             }
 
-            responseMap.put("success", "Sua inscrição no minicurso/oficina foi efetuada com sucesso!");
+            if ( shortCourse != null && participant != null ){
+                if ( !shortCourseBusiness.addParticipantInShortCourse(shortCourse, participant) ){
+                    throw new EnrollingShortCourseException(ErrorMessages.UNKNOW_ERROR.getErrorMessage());
+                }
+            }
+
+            responseMap.put("success", "Sua inscrição no minicurso/oficina foi efetuada com sucesso! </br>"
+                    + "Fique atento ao horário, local e matériais necessários, eles podem mudar sem aviso prévio.");
 
             String json = new Gson().toJson(responseMap);
 

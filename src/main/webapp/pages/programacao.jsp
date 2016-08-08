@@ -40,7 +40,7 @@
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 19:00 até 20:00</div>
-                                <div class="programacao-row-colum default-border-color default-low-color-white-transparence"><span class="glyphicon glyphicon-minus"></span> Solenidade de abertura</div>
+                                <div class="programacao-row-colum default-border-color default-low-color-white-transparence"><span class="glyphicon glyphicon-minus"></span> Apresentação Cultural</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 20:00 até 21:00</div>
@@ -74,9 +74,20 @@
                         <div class="body-list programacao-day-body" hidden> <!-- Open List box with hours -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <a href="Minicursos#morningShortCoursesHeader">
-                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 09:15 até 11:30</div>
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 07:00 até 9:00</div>
                                     <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Minicursos</div>
                                     <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Oficinas</div>
+                                </a>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 09:00 até 9:15</div>
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Coffee Break</div>
+                            </div> <!-- Close Hour-Box Event -->
+                            <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
+                                <a href="Minicursos#morningShortCoursesHeader">
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 09:15 até 11:15</div>
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Minicursos (Continuação)</div>
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Oficinas (Continuação)</div>
                                 </a>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
@@ -91,23 +102,29 @@
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Coffee Break</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
-                                <a href="Minicursos#nightShortCoursesHeader">
+                                <a href="Minicursos#aftermoonShortCoursesHeader">
                                     <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 15:45 até 17:45</div>
-                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Minicursos</div>
-                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Oficinas</div>
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Minicursos (Continuação)</div>
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Oficinas (Continuação)</div>
                                 </a>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 19:00 até 20:20</div>
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Mesas Redondas</div>
+                                <a href="Minicursos#nightShortCoursesHeader">
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 19:00 até 20:20</div>
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Minicursos</div>
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Oficinas</div>
+                                </a>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 20:20 até 20:40</div>
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Coffee Break</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 20:40 até 22:00</div>
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Mesas Redondas</div>
+                                <a href="Minicursos#nightShortCoursesHeader">
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 20:40 até 22:00</div>
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Minicursos (Continuação)</div>
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Oficinas (Continuação)</div>
+                                </a>
                             </div> <!-- Close Hour-Box Event -->
                         </div> <!-- Close List box with hours -->
                     </div> <!-- Close Program-Day-Box -->
@@ -133,7 +150,7 @@
                         <div class="body-list programacao-day-body" hidden> <!-- Open List box with hours -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 07:30 até 09:00</div>
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Palestra</div>
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Mesa Redonda</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 09:00 até 09:15</div>
@@ -141,6 +158,7 @@
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 09:15 até 11:30</div>
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Oficinas</div>
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Amostras de jogos</div>
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Outras atividades envolvendo Matemática</div>
                             </div> <!-- Close Hour-Box Event -->
@@ -149,15 +167,13 @@
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Apresentação de Trabalhos Orais</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 15:00 até 15:30</div>
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 15:00 até 15:45</div>
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Apresentação de Pôster</div>
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Apresentação Cultural</div>
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Coffe Brack</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 15:30 até 15:45</div>
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Coffee Break</div>
-                            </div> <!-- Close Hour-Box Event -->
-                            <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 15:45 até 16:15</div>
+                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 15:45 até 16:30</div>
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Cerimônia de entrega de premiação da Olimpíada Cajazeirense de
                                     Matemática</div>
                             </div> <!-- Close Hour-Box Event -->

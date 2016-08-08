@@ -120,10 +120,6 @@
             .shortcourse-div .shortcource-enrollment{
                 float: right; font-size: 20px; padding: 12px;
             }
-
-            .focus{
-                color: yellow;
-            }
         </style>
     </head>
 
@@ -166,7 +162,30 @@
             </header>
 
             <section>
+
                 <article class="big-margin-top">
+<!--                    <div class="container medium-margin-bottom"> 
+
+                        <p class="article-title default-border-color col-sm-12 default-low-color-white-transparence">Regras para inscrição e certificação das atividades</p>
+                        <span style="clear: both; content: ''; display: block; margin: 0;"></span>
+                        <ol class="focus" style="max-width: 900px; margin: 0 auto; text-align: left; font-size: 18px; font-family: WC_RoughTrad;" >
+                            <li>
+                                <p>Você só poderá efetuar a inscrição em minicursos e oficinas após a confirmação do pagamento;</p>
+                            </li>
+                            <li>
+                                <p>Você poderá se inscrever em um único minicurso ou oficina por turno. Assim, você poderá participar de até 3 minicursos ou oficinas;</p>
+                            </li>
+                            <li>
+                                <p>Você terá a certificação pela participação no evento, a qual será de 20 horas, e pela participação em minicursos/oficina, que terá a quantidade de horas equivalente a carga horária do minicursos/oficina;</p>
+                            </li>
+                            <li>
+                                <p>A certificação das atividades será feita logo após o término dos cinas;</p>
+                            </li>
+                            <li>
+                                <p>O certificado de participação no evento será disponibilizado em formato digitalna aba “Certificados” do site www.ecmat.com.br.</p>
+                            </li>
+                        </ol>
+                    </div>-->
                     <div class="container text-center">
 
                         <div id="morningShortCoursesHeader" class="row medium-margin-bottom">
@@ -174,7 +193,7 @@
                         </div>
 
                         <div class="container medium-margin-bottom">
-                            <p class="shortcourse-header-font-size">Turno da Manhã <span class="focus">( Dia 25/08 | Inicio: 9:15 )</span></p>
+                            <p class="shortcourse-header-font-size">Turno da Manhã <span class="focus">( Dia 25/08 | Inicio: 7:00 )</span></p>
 
                             <c:forEach items="${requestScope.morningShortCourseItems}" var="mSCI" varStatus="status">
 
@@ -186,12 +205,12 @@
 
                                     <div class="panel default-border 
                                          <c:if test="${!empty sessionScope.participant and mSCI.userIsRegistred}">
-                                        selected-course
-                                        </c:if>
-                                        <c:if test="${empty sessionScope.participant or !mSCI.userIsRegistred}">
-                                            background-clean
-                                        </c:if>
-                                        ">
+                                             selected-course
+                                         </c:if>
+                                         <c:if test="${empty sessionScope.participant or !mSCI.userIsRegistred}">
+                                             background-clean
+                                         </c:if>
+                                         ">
 
                                         <div class="background-clean shortcourse-div">  
                                             <a href="${mSCI.url}" class="shortcource-title" target="_blank">
@@ -207,9 +226,15 @@
                                                 <c:if test="${!mSCI.userIsRegistred}">
                                                     <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
                                                 </c:if>
-                                            </c:if>    
+                                            </c:if> 
+
+                                            <c:if test="${empty sessionScope.participant}">
+                                                <c:if test="${mSCI.currentEnrollment <  mSCI.maxEnrollment}">
+                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
+                                                </c:if>
+                                            </c:if>
                                             <p class="shortcource-enrollment">
-                                                Vagas: <span id="${mSCI.id}"></span>/${mSCI.maxEnrollment}</p>
+                                                Vagas Oculpadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                                         </div>
 
@@ -230,12 +255,12 @@
 
                                     <div class="panel default-border 
                                          <c:if test="${!empty sessionScope.participant and mSCI.userIsRegistred}">
-                                        selected-course
-                                        </c:if>
-                                        <c:if test="${empty sessionScope.participant or !mSCI.userIsRegistred}">
-                                            background-clean
-                                        </c:if>
-                                        ">
+                                             selected-course
+                                         </c:if>
+                                         <c:if test="${empty sessionScope.participant or !mSCI.userIsRegistred}">
+                                             background-clean
+                                         </c:if>
+                                         ">
 
                                         <div class="background-clean shortcourse-div"> 
                                             <a href="${mSCI.url}" class="shortcource-title" target="_blank">
@@ -251,9 +276,16 @@
                                                 <c:if test="${!mSCI.userIsRegistred}">
                                                     <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
                                                 </c:if>
-                                            </c:if>    
+                                            </c:if>
+
+                                            <c:if test="${empty sessionScope.participant}">
+                                                <c:if test="${mSCI.currentEnrollment <  mSCI.maxEnrollment}">
+                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
+                                                </c:if>
+                                            </c:if>
+
                                             <p class="shortcource-enrollment">
-                                                Vagas: <span id="${mSCI.id}"></span>/${mSCI.maxEnrollment}</p>
+                                                Vagas Oculpadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                                         </div>
 
@@ -263,19 +295,19 @@
                         </div>
 
                         <div class="container medium-margin-bottom">
-                            <p class="shortcourse-header-font-size">Turno da Noite <span class="focus">( Dia 25/08 | Inicio: 17:45 )</span></p>
+                            <p class="shortcourse-header-font-size">Turno da Noite <span class="focus">( Dia 25/08 | Inicio: 19:00 )</span></p>
 
                             <c:forEach items="${requestScope.nightShortCourseItems}" var="mSCI">
                                 <div class="panel-group col-lg-12 ">
 
                                     <div class="panel default-border 
                                          <c:if test="${!empty sessionScope.participant and mSCI.userIsRegistred}">
-                                        selected-course
-                                        </c:if>
-                                        <c:if test="${empty sessionScope.participant or !mSCI.userIsRegistred}">
-                                            background-clean
-                                        </c:if>
-                                        ">
+                                             selected-course
+                                         </c:if>
+                                         <c:if test="${empty sessionScope.participant or !mSCI.userIsRegistred}">
+                                             background-clean
+                                         </c:if>
+                                         ">
 
                                         <div class="background-clean shortcourse-div">   
                                             <a href="${mSCI.url}" class="shortcource-title" target="_blank">
@@ -291,17 +323,20 @@
                                                 <c:if test="${!mSCI.userIsRegistred}">
                                                     <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
                                                 </c:if>
-                                            </c:if>    
+                                            </c:if>
+
+                                            <c:if test="${empty sessionScope.participant}">
+                                                <c:if test="${mSCI.currentEnrollment <  mSCI.maxEnrollment}">
+                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
+                                                </c:if>
+                                            </c:if>
                                             <p class="shortcource-enrollment">
-                                                Vagas: <span id="${mSCI.id}"></span>/${mSCI.maxEnrollment}</p>
+                                                Vagas Oculpadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                                         </div>
                                     </div>
                                 </div>
                             </c:forEach>    
-                        </div>
-                        <div class="row notice">
-                            <p style="font-family: WC_RoughTrad;">* Os minicursos e as inscrições para os mesmos estarão disponíveis em breve, fique atento !</p>
                         </div>
                     </div>
                 </article>
@@ -313,11 +348,11 @@
                 </p>
             </footer>                               
         </div>
-        
+
         <script src="js/jquery-2.2.2.min.js" type="text/javascript"></script>
         <!-- Bootstrap JavaScript -->
         <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        
+
         <script type="text/javascript">
 
             function show_error(textError) {
@@ -334,29 +369,14 @@
                 });
             }
 
-            $('.unsub-course-btn').click(function (e) {
-                e.preventDefault();
-                alert(this.val());
-//                $.post('RequestPasswordRecovery', this., function (response) {
-//                    var success = response.success;
-//                    var error = response.error;
-//
-//                    if (success !== undefined) {
-//                        show_success(success);
-//                    } else {
-//                        show_error(error);
-//                    }
-//                });
-            });
-            
-            $('#input-success-modal').click(function (){
+            $('#input-success-modal').click(function () {
                 location.reload();
             });
-            
-            $('#input-error-modal').click(function (){
+
+            $('#input-error-modal').click(function () {
                 location.reload();
             });
-            
+
             $('.sub-course-btn').click(function (e) {
                 e.preventDefault();
                 var ShortCourseId = this.getAttribute("value");
@@ -368,15 +388,38 @@
                     success: function (response) {
                         var success = response.success;
                         var error = response.error;
-                        
+
                         if (success !== undefined) {
                             show_success(success);
                         } else {
                             show_error(error);
                         }
-                        
-                        
-                    },
+
+
+                    }
+                });
+            });
+
+            $('.unsub-course-btn').click(function (e) {
+                e.preventDefault();
+                var ShortCourseId = this.getAttribute("value");
+                var url = "ShortCourseUnsubscribe?ShortCourseId=" + ShortCourseId;
+                $.ajax({
+                    url: url,
+                    cache: false,
+                    type: "GET",
+                    success: function (response) {
+                        var success = response.success;
+                        var error = response.error;
+
+                        if (success !== undefined) {
+                            show_success(success);
+                        } else {
+                            show_error(error);
+                        }
+
+
+                    }
                 });
             });
         </script>

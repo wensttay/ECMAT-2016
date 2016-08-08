@@ -55,7 +55,7 @@ public class ShortCoursePageController extends HttpServlet{
 
         ShortCourseDaoImpl courseDaoImpl = new ShortCourseDaoImpl();
         List<ShortCourse> allCoursesAddedList = new ArrayList<>();
-        
+
         if ( participant != null ){
             allCoursesAddedList.addAll(courseDaoImpl.getParticipantShortCourses(participant));
         }
@@ -64,15 +64,17 @@ public class ShortCoursePageController extends HttpServlet{
 
         for ( ShortCourse course : courses ){
             boolean registred = allCoursesAddedList.contains(course);
+            int currentEnrollment = courseDaoImpl.getCurrentEnrollment(course);
+
             switch ( course.getShortCourseWorkShift() ){
                 case MORNING:
-                    morningShortCourseItems.add(new ShortCourseItemView(course, registred));
+                    morningShortCourseItems.add(new ShortCourseItemView(course, registred, currentEnrollment));
                     break;
                 case AFTERNOON:
-                    aftermoonShortCourseItems.add(new ShortCourseItemView(course, registred));
+                    aftermoonShortCourseItems.add(new ShortCourseItemView(course, registred, currentEnrollment));
                     break;
                 case NIGHT:
-                    nightShortCourseItems.add(new ShortCourseItemView(course, registred));
+                    nightShortCourseItems.add(new ShortCourseItemView(course, registred, currentEnrollment));
                     break;
                 default:
                     break;
@@ -95,7 +97,9 @@ public class ShortCoursePageController extends HttpServlet{
         request.setAttribute("aftermoonShortCourseItems", aftermoonShortCourseItems);
         request.setAttribute("nightShortCourseItems", nightShortCourseItems);
 
-        RequestDispatcher rd = request.getSession().getServletContext().getRequestDispatcher("/courses.jsp");
+        RequestDispatcher rd = request.getSession().
+                getServletContext().
+                getRequestDispatcher("/courses.jsp");
         rd.forward(request, response);
     }
 

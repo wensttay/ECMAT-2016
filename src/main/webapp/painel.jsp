@@ -63,10 +63,10 @@
                     <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;"
                        title="Clique para ir para a página da Organização." 
                        class="default-low-color-white-transparence" href="Logut">Sair</a>
-                       
-                       <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;"
+
+                    <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;"
                        title="Clique para ir para a página da Organização." 
-                       class="default-low-color-white-transparence" href="Minicursos">Minicursos</a>
+                       class="default-low-color-white-transparence" href="Minicursos">Minicursos e Oficinas</a>
                 </div>
             </header>
 
@@ -122,6 +122,11 @@
                                             <img src="img/other/pag-seguro-logo.png">
                                         </a>
                                     </div>
+                                </c:if>
+                                <c:if test="${sessionScope.participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.code)}">
+                                    <a href="Minicursos">
+                                        <h1 class="focus">Increva-se nos Minicursos e Oficinas</h1>
+                                    </a>
                                 </c:if>
                                 <!--<div class="col-xs-2"></div>-->
                             </div>
