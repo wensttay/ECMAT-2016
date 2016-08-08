@@ -91,9 +91,9 @@ public class ShortCoursePageController extends HttpServlet{
         Collections.sort(aftermoonShortCourseItems);
         Collections.sort(nightShortCourseItems);
 
-        request.getSession().setAttribute("morningShortCourseItems", morningShortCourseItems);
-        request.getSession().setAttribute("aftermoonShortCourseItems", aftermoonShortCourseItems);
-        request.getSession().setAttribute("nightShortCourseItems", nightShortCourseItems);
+        request.setAttribute("morningShortCourseItems", morningShortCourseItems);
+        request.setAttribute("aftermoonShortCourseItems", aftermoonShortCourseItems);
+        request.setAttribute("nightShortCourseItems", nightShortCourseItems);
 
         RequestDispatcher rd = request.getSession().getServletContext().getRequestDispatcher("/courses.jsp");
         rd.forward(request, response);

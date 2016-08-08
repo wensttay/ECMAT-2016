@@ -5,9 +5,10 @@
         <title>Tomcat WebSocket Chat</title>
         <script>
 
-            var host = location.origin.replace(/^http/, 'ws') + "/ShortCourseWebServlet";
+//            var host = location.origin.replace(/^http://www/, 'ws') + "/ShortCourseWebServlet";
 //            var host = "ws://localhost:8080/Ecmat2016/ShortCourseWebServlet";
-
+            
+                    var host = "ws://www.ecmat.com.br/ShortCourseWebServlet";
             var ws;
 
             if ('WebSocket' in window) {
@@ -19,7 +20,7 @@
             ws.onopen = function () {
             };
             ws.onmessage = function (message) {
-                document.getElementById("chatlog").textContent = message.data + "\n";
+                document.getElementById("chatlog").textContent += message.data + "\n";
             };
             function postToServer() {
                 ws.send(document.getElementById("msg").value);

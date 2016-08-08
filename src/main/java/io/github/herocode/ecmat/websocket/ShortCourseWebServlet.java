@@ -19,6 +19,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import javax.websocket.OnClose;
+import javax.websocket.OnError;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
@@ -33,7 +34,12 @@ import javax.websocket.server.ServerEndpoint;
 public class ShortCourseWebServlet implements ServletContextListener {
 
     private static final Set<Session> usersWs = new CopyOnWriteArraySet<>();
+    private static Timer timer = null;
 
+    @OnError
+    public void onError(Throwable throwable){
+    }
+    
     @OnOpen
     public void onConnect(Session session) {
         System.out.println("usuario conectado");
@@ -60,12 +66,14 @@ public class ShortCourseWebServlet implements ServletContextListener {
             try {
                 userWs.getBasicRemote().sendText(message);
             } catch (IOException ex) {
+                
                 usersWsIterator.remove();
                 try {
                     userWs.close();
                 } catch (IOException ex2) {
                 }
-            }
+                
+            }catch(Exception ex3){}
 
         }
 
@@ -80,18 +88,22 @@ public class ShortCourseWebServlet implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
 
-        System.out.println("iniciado task");
+        if (timer == null) {
 
-        TimerTask timerTask = new ShortCourseScheduler();
+            System.out.println("iniciado task");
 
-        Timer timer = new Timer();
-        timer.scheduleAtFixedRate(timerTask, 2000, 2000);
+            Timer timer = new Timer();
+
+            TimerTask timerTask = new ShortCourseScheduler();
+            timer.scheduleAtFixedRate(timerTask, 2000, 2000);
+
+        }
 
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-        System.out.println("\"D-E-S-T-R-U-I-D-O\"");
+        System.out.println("\"T-A-S-K--D-E-S-T-R-O-Y-E-D\"");
     }
 
     private class ShortCourseScheduler extends TimerTask {
@@ -109,11 +121,11 @@ public class ShortCourseWebServlet implements ServletContextListener {
         @Override
         public void run() {
 
-            if (usersWs.size() > 0) {
+//            if (usersWs.size() > 0) {
 
-                mapCurrentEnrollment = shortCourseBusiness.getShortcoursersCurrentEnrollments();
-                sendMessage(gSon.toJson(usersWs));
-            }
+//                mapCurrentEnrollment = shortCourseBusiness.getShortcoursersCurrentEnrollments();
+                sendMessage("olá :D");
+//            }
 
         }
 

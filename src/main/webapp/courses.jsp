@@ -176,7 +176,7 @@
                         <div class="container medium-margin-bottom">
                             <p class="shortcourse-header-font-size">Turno da Manhã <span class="focus">( Dia 25/08 | Inicio: 9:15 )</span></p>
 
-                            <c:forEach items="${morningShortCourseItems}" var="mSCI" varStatus="status">
+                            <c:forEach items="${requestScope.morningShortCourseItems}" var="mSCI" varStatus="status">
 
                                 <div 
                                     <c:if test="${status.last}">
@@ -221,7 +221,7 @@
                         <div class="container medium-margin-bottom">
                             <p class="shortcourse-header-font-size">Turno da Tarde <span class="focus">( Dia 25/08 | Inicio: 13:30 )</span></p>
 
-                            <c:forEach items="${aftermoonShortCourseItems}" var="mSCI" varStatus="status">
+                            <c:forEach items="${requestScope.aftermoonShortCourseItems}" var="mSCI" varStatus="status">
                                 <div 
                                     <c:if test="${status.last}">
                                         id="nightShortCoursesHeader"
@@ -265,7 +265,7 @@
                         <div class="container medium-margin-bottom">
                             <p class="shortcourse-header-font-size">Turno da Noite <span class="focus">( Dia 25/08 | Inicio: 17:45 )</span></p>
 
-                            <c:forEach items="${nightShortCourseItems}" var="mSCI">
+                            <c:forEach items="${requestScope.nightShortCourseItems}" var="mSCI">
                                 <div class="panel-group col-lg-12 ">
 
                                     <div class="panel default-border 
