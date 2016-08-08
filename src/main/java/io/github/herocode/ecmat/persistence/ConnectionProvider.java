@@ -54,7 +54,6 @@ public final class ConnectionProvider{
                 connectionPool.setDriverClassName("org.postgresql.Driver");
                 connectionPool.setUrl(dbUrl.toString());
 
-
             } catch ( IndexOutOfBoundsException | URISyntaxException ex ){
                 connectionPool.close();
                 return null;
