@@ -29,23 +29,23 @@ import java.util.logging.Logger;
  *
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
-public class ShortCourseDaoImpl implements ShortCourseDao{
+public class ShortCourseDaoImpl implements ShortCourseDao {
 
     @Override
-    public boolean save(ShortCourse object){
+    public boolean save(ShortCourse object) {
 
         Connection connection;
         PreparedStatement statement;
 
         int result = 0;
 
-        try{
-
+        try {
+           
             StringBuilder sql = new StringBuilder("INSERT INTO ").
                     append(getTableName()).
                     append("(max_enrollment, short_course_start_date, duration, ").
-                    append("title, description, professor, place, type, equipment_needed, url) ").
-                    append("VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    append("title, type, url) ").
+                    append("VALUES (?, ?, ?, ?, ?, ?)");
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql.toString());
@@ -56,11 +56,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getStartDate()));
             statement.setString(count++, object.getDuration());
             statement.setString(count++, object.getTitle());
-            statement.setString(count++, object.getDescription());
-            statement.setString(count++, object.getProfessor());
-            statement.setString(count++, object.getPlace());
             statement.setString(count++, object.getShortCourseType().getTypeName());
-            statement.setString(count++, object.getEquipmentNeeded());
             statement.setString(count++, object.getUrl());
 
             result = statement.executeUpdate();
@@ -68,7 +64,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.close();
             connection.close();
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
             System.err.println(ex);
             ex.printStackTrace();
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
@@ -78,14 +74,14 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
     }
 
     @Override
-    public boolean delete(ShortCourse object){
+    public boolean delete(ShortCourse object) {
 
         Connection connection;
         PreparedStatement statement;
 
         int result = 0;
 
-        try{
+        try {
 
             StringBuilder sql = new StringBuilder("DELETE FROM ").
                     append(getTableName()).
@@ -103,7 +99,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.close();
             connection.close();
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -111,19 +107,19 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
     }
 
     @Override
-    public boolean update(ShortCourse object){
+    public boolean update(ShortCourse object) {
 
         Connection connection;
         PreparedStatement statement;
 
         int result = 0;
 
-        try{
+        try {
 
             StringBuilder sql = new StringBuilder("UPDATE ").append(getTableName()).
                     append(" SET max_enrollment = ?, short_course_start_date = ?, ").
-                    append("duration = ?, title = ?, description = ?, professor = ?, ").
-                    append("place = ?, type = ?, equipment_needed = ?, url = ? WHERE id = ?");
+                    append("duration = ?, title = ? ").
+                    append("type = ?, url = ? WHERE id = ?");
 
             connection = ConnectionProvider.getInstance().getConnection();
             statement = connection.prepareCall(sql.toString());
@@ -134,11 +130,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getStartDate()));
             statement.setString(count++, object.getDuration());
             statement.setString(count++, object.getTitle());
-            statement.setString(count++, object.getDescription());
-            statement.setString(count++, object.getProfessor());
-            statement.setString(count++, object.getPlace());
             statement.setString(count++, object.getShortCourseType().getTypeName());
-            statement.setString(count++, object.getEquipmentNeeded());
             statement.setString(count++, object.getUrl());
             statement.setInt(count++, object.getId());
 
@@ -147,7 +139,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.close();
             connection.close();
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -155,7 +147,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
     }
 
     @Override
-    public ShortCourse searchById(Integer id){
+    public ShortCourse searchById(Integer id) {
 
         Connection connection;
         PreparedStatement statement;
@@ -163,7 +155,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
         ShortCourse shortCourse = null;
 
-        try{
+        try {
 
             StringBuilder sql = new StringBuilder("SELECT * FROM ").
                     append(getTableName()).
@@ -178,7 +170,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
             resultSet = statement.executeQuery();
 
-            if ( resultSet.next() ){
+            if (resultSet.next()) {
                 shortCourse = fillObject(resultSet);
             }
 
@@ -186,7 +178,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.close();
             connection.close();
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
             System.err.println(ex);
             ex.printStackTrace();
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
@@ -196,7 +188,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
     }
 
     @Override
-    public List<ShortCourse> listAll(){
+    public List<ShortCourse> listAll() {
 
         Connection connection;
         PreparedStatement statement;
@@ -204,7 +196,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
         List<ShortCourse> shortCourses = new ArrayList<>();
 
-        try{
+        try {
 
             StringBuilder sql = new StringBuilder("SELECT * FROM ").append(getTableName());
 
@@ -215,7 +207,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
             resultSet = statement.executeQuery();
 
-            while ( resultSet.next() ){
+            while (resultSet.next()) {
                 shortCourses.add(fillObject(resultSet));
             }
 
@@ -223,7 +215,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.close();
             connection.close();
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
             System.err.println(ex);
             ex.printStackTrace();
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
@@ -233,33 +225,29 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
     }
 
     @Override
-    public ShortCourse fillObject(ResultSet rs){
+    public ShortCourse fillObject(ResultSet rs) {
 
         ShortCourse shortCourse = null;
 
-        try{
+        try {
 
             shortCourse = new ShortCourse();
 
             shortCourse.setId(rs.getInt("id"));
             shortCourse.setMaxEnrollment(rs.getInt("max_enrollment"));
             Timestamp startDate = rs.getTimestamp("short_course_start_date");
-            
-            if ( startDate != null ){
+
+            if (startDate != null) {
                 shortCourse.setStartDate(startDate.toLocalDateTime());
             }
             
+            shortCourse.setUrl(rs.getString("url"));
             shortCourse.setDuration(rs.getString("duration"));
             shortCourse.setTitle(rs.getString("title"));
-            shortCourse.setDescription(rs.getString("description"));
-            shortCourse.setProfessor(rs.getString("professor"));
-            shortCourse.setPlace(rs.getString("place"));
             shortCourse.setShortCourseType(ShortCourseType.getShortCourseType(rs.getString("type")));
             shortCourse.setShortCourseWorkShift(ShortCourseWorkShift.getShift(shortCourse.getStartDate()));
-            shortCourse.setEquipmentNeeded(rs.getString("equipment_needed"));
-            shortCourse.setUrl(rs.getString("url"));
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
 
         }
 
@@ -268,12 +256,12 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
     }
 
     @Override
-    public String getTableName(){
+    public String getTableName() {
         return "short_course";
     }
 
     @Override
-    public List<Participant> getShortCourseParticipants(ShortCourse shortCourse){
+    public List<Participant> getShortCourseParticipants(ShortCourse shortCourse) {
 
         Connection connection;
         PreparedStatement statement;
@@ -281,7 +269,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
         List<Participant> participants = new ArrayList<>();
 
-        try{
+        try {
 
             StringBuilder sql = new StringBuilder("SELECT * FROM ").
                     append(getRelationWithParticipantTableName()).
@@ -297,7 +285,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
             resultSet = statement.executeQuery();
 
-            while ( resultSet.next() ){
+            while (resultSet.next()) {
                 participants.add(fillParticipantObejct(resultSet));
             }
 
@@ -305,7 +293,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.close();
             connection.close();
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
             System.err.println(ex);
             ex.printStackTrace();
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
@@ -315,7 +303,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
     }
 
     @Override
-    public int getCurrentEnrollment(ShortCourse shortCourse){
+    public int getCurrentEnrollment(ShortCourse shortCourse) {
 
         Connection connection;
         PreparedStatement statement;
@@ -323,7 +311,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
         int currentEnrollment = -1;
 
-        try{
+        try {
 
             StringBuilder sql = new StringBuilder("SELECT COUNT(*) AS quantity FROM ").
                     append(getRelationWithParticipantTableName()).
@@ -339,7 +327,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
             resultSet = statement.executeQuery();
 
-            if ( resultSet.next() ){
+            if (resultSet.next()) {
                 currentEnrollment = resultSet.getInt("quantity");
             }
 
@@ -347,7 +335,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.close();
             connection.close();
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
             System.err.println(ex);
             ex.printStackTrace();
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
@@ -357,14 +345,14 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
     }
 
     @Override
-    public boolean removeParticipant(ShortCourse shortCourse, Participant participant){
+    public boolean removeParticipant(ShortCourse shortCourse, Participant participant) {
 
         Connection connection;
         PreparedStatement statement;
 
         int changes = 0;
 
-        try{
+        try {
 
             StringBuilder sql = new StringBuilder("DELETE FROM ").
                     append(getRelationWithParticipantTableName()).
@@ -383,7 +371,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.close();
             connection.close();
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
             System.err.println(ex);
             ex.printStackTrace();
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
@@ -393,14 +381,14 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
     }
 
     @Override
-    public boolean addParticipant(ShortCourse shortCourse, Participant participant){
+    public boolean addParticipant(ShortCourse shortCourse, Participant participant) {
 
         Connection connection;
         PreparedStatement statement;
 
         int changes = 0;
 
-        try{
+        try {
 
             StringBuilder sql = new StringBuilder("INSERT INTO ").
                     append(getRelationWithParticipantTableName()).append(" VALUES(?, ?)");
@@ -418,7 +406,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.close();
             connection.close();
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
             System.err.println(ex);
             ex.printStackTrace();
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
@@ -428,16 +416,16 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
     }
 
     @Override
-    public String getRelationWithParticipantTableName(){
+    public String getRelationWithParticipantTableName() {
         return "short_course_participant";
     }
 
     @Override
-    public Participant fillParticipantObejct(ResultSet rs){
+    public Participant fillParticipantObejct(ResultSet rs) {
 
         Participant participant = null;
 
-        try{
+        try {
 
             participant = new Participant();
 
@@ -466,14 +454,14 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             participant.setPassword(rs.getString("password"));
             participant.setTitration(rs.getString("titration"));
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
         }
 
         return participant;
     }
 
     @Override
-    public List<ShortCourse> getParticipantShortCourses(Participant participant){
+    public List<ShortCourse> getParticipantShortCourses(Participant participant) {
 
         Connection connection;
         PreparedStatement statement;
@@ -481,7 +469,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
         List<ShortCourse> shortCourses = new ArrayList<>();
 
-        try{
+        try {
 
             StringBuilder sql = new StringBuilder("SELECT * FROM ").
                     append(getRelationWithParticipantTableName()).
@@ -499,7 +487,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
             resultSet = statement.executeQuery();
 
-            while ( resultSet.next() ){
+            while (resultSet.next()) {
                 shortCourses.add(fillObject(resultSet));
             }
 
@@ -507,7 +495,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.close();
             connection.close();
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
             System.err.println(ex);
             ex.printStackTrace();
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
@@ -517,7 +505,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
     }
 
     @Override
-    public Map<Integer, Integer> getShortcoursersCurrentEnrollments(){
+    public Map<Integer, Integer> getShortcoursersCurrentEnrollments() {
 
         Connection connection;
         PreparedStatement statement;
@@ -525,7 +513,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
         Map<Integer, Integer> currentEnrollments = new HashMap<>();
 
-        try{
+        try {
 
             String sql = "SELECT COUNT\n"
                     + " (*) AS current_erollment, s.id\n"
@@ -536,7 +524,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
 
             resultSet = statement.executeQuery();
 
-            while ( resultSet.next() ){
+            while (resultSet.next()) {
                 currentEnrollments.put(resultSet.getInt("short_course_id"), resultSet.getInt("current_erollment"));
             }
 
@@ -544,7 +532,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao{
             statement.close();
             connection.close();
 
-        } catch ( SQLException ex ){
+        } catch (SQLException ex) {
             System.err.println(ex);
             ex.printStackTrace();
         }
