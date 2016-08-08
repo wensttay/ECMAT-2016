@@ -77,7 +77,7 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
         int currentEnrollment = shortCourseDao.getCurrentEnrollment(shortCourse);
         if ( currentEnrollment < 0 ){
             throw new EnrollingShortCourseException(ErrorMessages.SHORT_COURSE_NOT_EXISTS.getErrorMessage());
-        }else if ( currentEnrollment = 0 ){
+        }else if ( currentEnrollment == 0 ){
             throw new EnrollingShortCourseException(ErrorMessages.UNKNOW_ERROR.getErrorMessage());
         }
         
