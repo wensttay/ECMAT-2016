@@ -18,29 +18,55 @@ public class ShortCourse{
     private int                     id;
     private int                     maxEnrollment;
     private LocalDateTime           startDate;
-    private LocalDateTime           endDate;
+    private String                  duration;
     private String                  title;
     private String                  description;
     private String                  professor;
     private String                  place;
     private String                  equipmentNeeded;
+    private String                  url;
     private ShortCourseType         shortCourseType;
     private ShortCourseWorkShift    shortCourseWorkShift;
-    
 
+    @Override
+    public int hashCode(){
+        int hash = 7;
+        hash = 97 * hash + this.id;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if ( this == obj ){
+            return true;
+        }
+        if ( obj == null ){
+            return false;
+        }
+        if ( getClass() != obj.getClass() ){
+            return false;
+        }
+        final ShortCourse other = ( ShortCourse ) obj;
+        if ( this.id != other.id ){
+            return false;
+        }
+        return true;
+    }
+    
     public ShortCourse(){
     }
 
-    public ShortCourse(int id, int maxEnrollment, LocalDateTime startDate, LocalDateTime endDate, String title, String description, String professor, String place, String equipmentNeeded, ShortCourseType shortCourseType){
+    public ShortCourse(int id, int maxEnrollment, LocalDateTime startDate, String duration, String title, String description, String professor, String place, String equipmentNeeded, String url, ShortCourseType shortCourseType){
         this.id                     = id;
         this.maxEnrollment          = maxEnrollment;
         this.startDate              = startDate;
-        this.endDate                = endDate;
+        this.duration               = duration;
         this.title                  = title;
         this.description            = description;
         this.professor              = professor;
         this.place                  = place;
         this.equipmentNeeded        = equipmentNeeded;
+        this.url                    = url;
         this.shortCourseType        = shortCourseType;
         this.shortCourseWorkShift   = ShortCourseWorkShift.getShift(startDate);
     }
@@ -70,12 +96,12 @@ public class ShortCourse{
         this.shortCourseWorkShift   = ShortCourseWorkShift.getShift(startDate);
     }
 
-    public LocalDateTime getEndDate(){
-        return endDate;
+    public String getDuration(){
+        return duration;
     }
 
-    public void setEndDate(LocalDateTime endDate){
-        this.endDate = endDate;
+    public void setDuration(String duration){
+        this.duration = duration;
     }
 
     public String getTitle(){
@@ -118,6 +144,14 @@ public class ShortCourse{
         this.equipmentNeeded = equipmentNeeded;
     }
 
+    public String getUrl(){
+        return url;
+    }
+
+    public void setUrl(String url){
+        this.url = url;
+    }
+
     public ShortCourseType getShortCourseType(){
         return shortCourseType;
     }
@@ -126,6 +160,10 @@ public class ShortCourse{
         this.shortCourseType = shortCourseType;
     }
 
+    public void setShortCourseWorkShift(ShortCourseWorkShift shortCourseWorkShift){
+        this.shortCourseWorkShift = shortCourseWorkShift;
+    }
+    
     public ShortCourseWorkShift getShortCourseWorkShift(){
         return shortCourseWorkShift;
     }
@@ -147,14 +185,16 @@ public class ShortCourse{
                 append(shortCourseWorkShift.getShift()).
                 append(" Start Date: ").
                 append(startDate).
-                append(" End Date: ").
-                append(endDate).
+                append(" Duration: ").
+                append(duration).
                 append(" Professor: ").
                 append(professor).
                 append(" Max Enrollment: ").
                 append(maxEnrollment).
                 append(" Equipament Needed: ").
-                append(equipmentNeeded);
+                append(equipmentNeeded).
+                append(" Url: ").
+                append(url);
         
         return sb.toString();
     }

@@ -123,26 +123,31 @@ Author     : Wensttay, Victor Hugo
 
                         <!--AQUI ENTRARIA UM IF-->
                         <li class="principal-list-item item-bordered principal-list-item-withsublist">
-                            <a href="#" class="default-low-color-white-transparence item-title list-item-withsublist-title">Minha Conta     <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                            <a href="#" class="default-low-color-white-transparence item-title list-item-withsublist-title">Inscrição     <span class="glyphicon glyphicon-triangle-bottom"></span></a>
                             <ul class="drop-menu default-border-color blackboard-background">
                                 <c:if test="${empty sessionScope.participant}">
                                     <li class="drop-menu-item default-border-color page-link" >
-                                        <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#inscricao">Inscrições</a>
+                                        <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#login">Login</a>
+                                    </li>
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#cadastro">Cadastro</a>
+                                    </li>
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Minicursos">Minicursos</a>
                                     </li>
                                 </c:if>
 
                                 <c:if test="${!empty sessionScope.participant}">
                                     <li class="drop-menu-item default-border-color page-link" >
-                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="ParticipantPanel">Principal</a>
+                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="ParticipantPanel">Painel Principal</a>
                                     </li>
                                     <li class="drop-menu-item default-border-color page-link" >
                                         <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Logut">Sair</a>
                                     </li>
-                                    <!--                                    <li class="drop-menu-item default-border-color page-link" >
-                                                                            <a title="Clique para ir para a página da Programação." class="default-low-color-white-transparence" href="#construcao">Editar Dados</a>
-                                                                        </li>-->
+                                    <li class="drop-menu-item default-border-color page-link" >
+                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Minicursos">Minicursos</a>
+                                    </li>
                                 </c:if>
-
                             </ul>
                         </li>
                         <!--AQUI ENTRARIA UM IF-->
@@ -165,7 +170,7 @@ Author     : Wensttay, Victor Hugo
                 <%@ include file="pages/contato.jsp" %>  
                 <%@ include file="pages/construcao.jsp" %>
                 <%@ include file="pages/organizacao.jsp" %>
-                <%@ include file="pages/inscricao.jsp" %>
+                <%@ include file="pages/login.jsp" %>
                 <%@ include file="pages/cadastro.jsp" %>
                 <%@ include file="pages/recuperacao.jsp" %>
 

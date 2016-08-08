@@ -6,7 +6,7 @@
 
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<article class="container-base" id="inscricao">
+<article class="container-base" id="login">
     <div class="container text-center">
         <div class="row">
             <div class="col-md-3"></div>

@@ -1,7 +1,11 @@
 
+import java.sql.Timestamp;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
+import javafx.util.converter.LocalDateTimeStringConverter;
 import org.apache.commons.codec.digest.DigestUtils;
 
 /*
@@ -17,11 +21,15 @@ public class teste {
 
     public static void main(String[] args) {
 
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy");
-        String d1 = "21061994";
+//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy");
+//        String d1 = "21061994";
+//
+//        LocalDate d = LocalDate.parse(d1, dtf);
+//        System.out.println(d);
 
-        LocalDate d = LocalDate.parse(d1, dtf);
-        System.out.println(d);
+        LocalDateTime dateTime = LocalDateTime.of(2016, Month.AUGUST, 25, 15, 45);
+        Timestamp valueOf = java.sql.Timestamp.valueOf(dateTime);
+        System.out.println(valueOf.toString());
     }
 
 }

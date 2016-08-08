@@ -1,7 +1,3 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="java.util.List"%>
-<%@page import="io.github.herocode.ecmat.model.ShortCourseBusinessImpl"%>
-<%@page import="io.github.herocode.ecmat.entity.ShortCourse"%>
 <!DOCTYPE html>
 <!-- 
     Document   : redefinir.jsp
@@ -10,6 +6,7 @@
 -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page import="io.github.herocode.ecmat.enums.PaymentStatus"%>
+<%@page import="io.github.herocode.ecmat.entity.ShortCourseItemView"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="pt">
     <head>
@@ -58,6 +55,10 @@
             .selected-course{
                 background-color: rgba(255,255,255,0.2);
             }
+            .full-enrollment{
+                background-color: rgba(255,0,0, 0.2); 
+            }
+
             .shortcource-title{
                 text-align: left;
             }
@@ -82,6 +83,7 @@
                 float: right; 
                 font-size: 20px;
                 padding: 10px 10px 5px 10px;
+                cursor: pointer;
             }
 
             .sub-course-btn{
@@ -95,10 +97,39 @@
                 background-color: rgba(107,142,35, 0.8);
                 color: rgba(255,255,255, 1);
             }
+
+            .big-margin-top{
+                margin-top: 150px;
+            }
+
+            .shortcourse-header-font-size{
+                font-size: 24px;
+            }
+
+            .shortcourse-div{
+                padding: 16px 20px;
+            }
+
+            .shortcourse-div .shortcource-name{
+                float: left;
+                font-size: 16px;
+                margin-top: 15px;
+                max-width: 700px;
+            }
+
+            .shortcourse-div .shortcource-enrollment{
+                float: right; font-size: 20px; padding: 12px;
+            }
+
+            .focus{
+                color: yellow;
+            }
         </style>
     </head>
 
     <body>
+        <%@ include file="pages/alert_error_model.jsp" %>
+        <%@ include file="pages/alert_success_model.jsp" %> 
         <div id="container-fullpage">
             <div class="background blackboard-background"></div>
 
@@ -107,107 +138,168 @@
                     <div class="erro-header-item">
                         <img class="erro-logo default-low-opacity" src="img/logo/logo-ecmat2016-75x75.png">
                     </div>
-                </a> 
-                <div>
-                    <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;" title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Logut">Sair</a>
-                </div>
+                </a>
+                <c:if test="${!empty sessionScope.participant}">
+                    <div>
+                        <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;" 
+                           title="Clique para ir para a página da Organização." 
+                           class="default-low-color-white-transparence" href="Logut">Sair</a>
+                    </div>
+                    <div>
+                        <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;" 
+                           title="Clique para ir para a página da Organização." 
+                           class="default-low-color-white-transparence" href="ParticipantPanel">Painel Principal</a>
+                    </div>
+                </c:if>
+                <c:if test="${empty sessionScope.participant}">
+                    <div>
+                        <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;" 
+                           title="Clique para ir para a página da Organização." 
+                           class="default-low-color-white-transparence" href="/#cadastro">Cadastro</a>
+                    </div>
+                    <div>
+                        <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;" 
+                           title="Clique para ir para a página da Organização." 
+                           class="default-low-color-white-transparence" href="/#login">Login</a>
+                    </div>
+                </c:if>
             </header>
 
-
             <section>
-                <article style="margin-top: 150px;">
+                <article class="big-margin-top">
                     <div class="container text-center">
 
-                        <div class="row medium-margin-bottom">
+                        <div id="morningShortCoursesHeader" class="row medium-margin-bottom">
                             <p class="article-title default-border-color default-low-color-white-transparence col-lg-12 ">Minicursos e Oficinas</p> 
                         </div>
-                        
+
                         <div class="container medium-margin-bottom">
-                            <p style="font-size: 24px;">Turno da Manhã (Inicio: 7:00)</p>
-                            <div class="panel-group col-lg-12 " id="accordion">
-                                <div class="panel default-border selected-course">
-                                    <a href="#" class="shortcource-title">
-                                        <div class="background-clean" style="padding: 16px 20px;">                                          
-                                            <p class="panel-title" style="float: left; font-size: 16px; margin-top: 15px;">Nome do Minicurso (Duração)</p>
-                                            
-                                            <!--<div class="course-btn sub-course-btn">Participar</div>-->
-                                            <button class="course-btn unsub-course-btn">Cancelar</button>
-                                            
-                                            <p style="float: right; font-size: 20px; padding: 12px;">Vagas: 10/30</p>
+                            <p class="shortcourse-header-font-size">Turno da Manhã <span class="focus">( Dia 25/08 | Inicio: 9:15 )</span></p>
+
+                            <c:forEach items="${morningShortCourseItems}" var="mSCI" varStatus="status">
+
+                                <div 
+                                    <c:if test="${status.last}">
+                                        id="aftermoonShortCoursesHeader"
+                                    </c:if>
+                                    class="panel-group col-lg-12 ">
+
+                                    <div class="panel default-border 
+                                         <c:if test="${!empty sessionScope.participant and mSCI.userIsRegistred}">
+                                        selected-course
+                                        </c:if>
+                                        <c:if test="${empty sessionScope.participant or !mSCI.userIsRegistred}">
+                                            background-clean
+                                        </c:if>
+                                        ">
+
+                                        <div class="background-clean shortcourse-div">  
+                                            <a href="${mSCI.url}" class="shortcource-title" target="_blank">
+                                                <p class="panel-title shortcource-name">
+                                                    <span class="focus">${mSCI.shortCourseType.typeName}:</span> ${mSCI.title} 
+                                                    </br><span class="focus">Duração:</span> ${mSCI.duration}
+                                                    </br><span class="focus">---> CLIQUE PARA VER MAIS <---</span></p>
+                                            </a>
+                                            <c:if test="${!empty sessionScope.participant}">
+                                                <c:if test="${mSCI.userIsRegistred}">
+                                                    <button class="course-btn unsub-course-btn" name="shortCourseId" value="${mSCI.id}">Cancelar</button>
+                                                </c:if>
+                                                <c:if test="${!mSCI.userIsRegistred}">
+                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
+                                                </c:if>
+                                            </c:if>    
+                                            <p class="shortcource-enrollment">
+                                                Vagas: <span id="${mSCI.id}"></span>/${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                                         </div>
-                                    </a>
+
+                                    </div>
                                 </div>
-                                <div class="panel default-border background-clean">
-                                    <a href="#" class="shortcource-title">
-                                        <div class="background-clean" style="padding: 16px 20px;">                                          
-                                            <p class="panel-title" style="float: left; font-size: 16px; margin-top: 15px;">Nome do Minicurso (Duração)</p>
-                                            
-                                            <div class="course-btn sub-course-btn">Participar</div>
-                                            <!--<button class="course-btn unsub-course-btn">Cancelar</button>-->
-                                            
-                                            <p style="float: right; font-size: 20px; padding: 12px;">Vagas: 10/30</p>
-                                            <span style="clear: both; content: ''; display: block; margin: 0;"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                            </c:forEach>    
                         </div>
 
                         <div class="container medium-margin-bottom">
-                            <p style="font-size: 24px;">Turno da Tarde (Inicio: 14:00)</p>
-                            <div class="panel-group col-lg-12 " id="accordion">
-                                <div class="panel default-border selected-course">
-                                    <a href="#" class="shortcource-title">
-                                        <div class="background-clean" style="padding: 16px 20px;">                                          
-                                            <p class="panel-title" style="float: left; font-size: 16px; margin-top: 15px;">Nome do Minicurso (Duração)</p>
+                            <p class="shortcourse-header-font-size">Turno da Tarde <span class="focus">( Dia 25/08 | Inicio: 13:30 )</span></p>
 
-                                            <button class="course-btn unsub-course-btn" >Cancelar</button>
-                                            <p style="float: right; font-size: 20px; padding: 12px;">Vagas: 10/30</p>
+                            <c:forEach items="${aftermoonShortCourseItems}" var="mSCI" varStatus="status">
+                                <div 
+                                    <c:if test="${status.last}">
+                                        id="nightShortCoursesHeader"
+                                    </c:if>
+                                    class="panel-group col-lg-12 ">
+
+                                    <div class="panel default-border 
+                                         <c:if test="${!empty sessionScope.participant and mSCI.userIsRegistred}">
+                                        selected-course
+                                        </c:if>
+                                        <c:if test="${empty sessionScope.participant or !mSCI.userIsRegistred}">
+                                            background-clean
+                                        </c:if>
+                                        ">
+
+                                        <div class="background-clean shortcourse-div"> 
+                                            <a href="${mSCI.url}" class="shortcource-title" target="_blank">
+                                                <p class="panel-title shortcource-name">
+                                                    <span class="focus">${mSCI.shortCourseType.typeName}:</span> ${mSCI.title} 
+                                                    </br><span class="focus">Duração:</span> ${mSCI.duration}
+                                                    </br><span class="focus">---> CLIQUE PARA VER MAIS <---</span></p>
+                                            </a>
+                                            <c:if test="${!empty sessionScope.participant}">
+                                                <c:if test="${mSCI.userIsRegistred}">
+                                                    <button class="course-btn unsub-course-btn" name="shortCourseId" value="${mSCI.id}">Cancelar</button>
+                                                </c:if>
+                                                <c:if test="${!mSCI.userIsRegistred}">
+                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
+                                                </c:if>
+                                            </c:if>    
+                                            <p class="shortcource-enrollment">
+                                                Vagas: <span id="${mSCI.id}"></span>/${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                                         </div>
-                                    </a>
+
+                                    </div>
                                 </div>
-                                <div class="panel default-border background-clean">
-                                    <a href="#" class="shortcource-title">
-                                        <div class="background-clean" style="padding: 16px 20px;">                                          
-                                            <p class="panel-title" style="float: left; font-size: 16px; margin-top: 15px;">Nome do Minicurso (Duração)</p>
-                                            <div class="course-btn sub-course-btn">Participar</div>
-                                            <p style="float: right; font-size: 20px; padding: 12px;">Vagas: 10/30</p>
-                                            <span style="clear: both; content: ''; display: block; margin: 0;"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                            </c:forEach>    
                         </div>
 
                         <div class="container medium-margin-bottom">
-                            <p style="font-size: 24px;">Turno da Noite (Inicio: 19:00)</p>
-                            <div class="panel-group col-lg-12 " id="accordion">
-                                <div class="panel default-border selected-course">
-                                    <a href="#" class="shortcource-title">
-                                        <div class="background-clean" style="padding: 16px 20px;">                                          
-                                            <p class="panel-title" style="float: left; font-size: 16px; margin-top: 15px;">Nome do Minicurso (Duração)</p>
+                            <p class="shortcourse-header-font-size">Turno da Noite <span class="focus">( Dia 25/08 | Inicio: 17:45 )</span></p>
 
-                                            <button class="course-btn unsub-course-btn" >Cancelar</button>
-                                            <p style="float: right; font-size: 20px; padding: 12px;">Vagas: 10/30</p>
+                            <c:forEach items="${nightShortCourseItems}" var="mSCI">
+                                <div class="panel-group col-lg-12 ">
+
+                                    <div class="panel default-border 
+                                         <c:if test="${!empty sessionScope.participant and mSCI.userIsRegistred}">
+                                        selected-course
+                                        </c:if>
+                                        <c:if test="${empty sessionScope.participant or !mSCI.userIsRegistred}">
+                                            background-clean
+                                        </c:if>
+                                        ">
+
+                                        <div class="background-clean shortcourse-div">   
+                                            <a href="${mSCI.url}" class="shortcource-title" target="_blank">
+                                                <p class="panel-title shortcource-name">
+                                                    <span class="focus">${mSCI.shortCourseType.typeName}:</span> ${mSCI.title} 
+                                                    </br><span class="focus">Duração:</span> ${mSCI.duration}
+                                                    </br><span class="focus">---> CLIQUE PARA VER MAIS <---</span></p>
+                                            </a>
+                                            <c:if test="${!empty sessionScope.participant}">
+                                                <c:if test="${mSCI.userIsRegistred}">
+                                                    <button class="course-btn unsub-course-btn" name="shortCourseId" value="${mSCI.id}">Cancelar</button>
+                                                </c:if>
+                                                <c:if test="${!mSCI.userIsRegistred}">
+                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
+                                                </c:if>
+                                            </c:if>    
+                                            <p class="shortcource-enrollment">
+                                                Vagas: <span id="${mSCI.id}"></span>/${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="panel default-border background-clean">
-                                    <a href="#" class="shortcource-title">
-                                        <div class="background-clean" style="padding: 16px 20px;">                                          
-                                            <p class="panel-title" style="float: left; font-size: 16px; margin-top: 15px;">Nome do Minicurso (Duração)</p>
-                                            <div class="course-btn sub-course-btn">Participar</div>
-                                            <p style="float: right; font-size: 20px; padding: 12px;">Vagas: 10/30</p>
-                                            <span style="clear: both; content: ''; display: block; margin: 0;"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                            </c:forEach>    
                         </div>
-
                         <div class="row notice">
                             <p style="font-family: WC_RoughTrad;">* Os minicursos e as inscrições para os mesmos estarão disponíveis em breve, fique atento !</p>
                         </div>
@@ -215,17 +307,79 @@
                 </article>
             </section>
 
-
-            <!--<div class="row">-->
-            <!--</div>--> 
             <footer id="footer">
                 <p class="text-center">
                     Desenvolvido por <a href="https://github.com/Hero-Code" target="_blank" style="display: inline; background-color: black; padding: 5px; font-family: WC_RoughTrad; border-radius: 5px; margin-left: 5px;"><strong>HeroCode</strong></a>
                 </p>
-            </footer>
-            <script src="js/jquery-2.2.2.min.js" type="text/javascript"></script>
-            <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+            </footer>                               
         </div>
+        
+        <script src="js/jquery-2.2.2.min.js" type="text/javascript"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+
+            function show_error(textError) {
+                $('p#error-body').html(textError);
+                $('#errorModal').modal({
+                    show: 'true'
+                });
+            }
+
+            function show_success(textError) {
+                $('p#success-body').html(textError);
+                $('#successModal').modal({
+                    show: 'true'
+                });
+            }
+
+            $('.unsub-course-btn').click(function (e) {
+                e.preventDefault();
+                alert(this.val());
+//                $.post('RequestPasswordRecovery', this., function (response) {
+//                    var success = response.success;
+//                    var error = response.error;
+//
+//                    if (success !== undefined) {
+//                        show_success(success);
+//                    } else {
+//                        show_error(error);
+//                    }
+//                });
+            });
+            
+            $('#input-success-modal').click(function (){
+                location.reload();
+            });
+            
+            $('#input-error-modal').click(function (){
+                location.reload();
+            });
+            
+            $('.sub-course-btn').click(function (e) {
+                e.preventDefault();
+                var ShortCourseId = this.getAttribute("value");
+                var url = "ShortCourseRegister?ShortCourseId=" + ShortCourseId;
+                $.ajax({
+                    url: url,
+                    cache: false,
+                    type: "GET",
+                    success: function (response) {
+                        var success = response.success;
+                        var error = response.error;
+                        
+                        if (success !== undefined) {
+                            show_success(success);
+                        } else {
+                            show_error(error);
+                        }
+                        
+                        
+                    },
+                });
+            });
+        </script>
     </body>
 </html>
 

@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
  */
 public enum ShortCourseWorkShift{
     MORNING("Manhã", 12),
-    AFTERNOON("Tarde", 16),
+    AFTERNOON("Tarde", 15),
     NIGHT("Noite", 24);
 
     private String shift;

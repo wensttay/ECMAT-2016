@@ -60,7 +60,13 @@
                     </div>
                 </a> 
                 <div>
-                    <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;" title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Logut">Sair</a>
+                    <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;"
+                       title="Clique para ir para a página da Organização." 
+                       class="default-low-color-white-transparence" href="Logut">Sair</a>
+                       
+                       <a style="font-size: 18px; font-weight: bold;float:right; margin-right: 50px; margin-top: 60px;"
+                       title="Clique para ir para a página da Organização." 
+                       class="default-low-color-white-transparence" href="Minicursos">Minicursos</a>
                 </div>
             </header>
 

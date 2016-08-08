@@ -9,12 +9,13 @@ import com.google.gson.Gson;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import io.github.herocode.ecmat.exceptions.EnrollingShortCourseException;
+import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
 import io.github.herocode.ecmat.interfaces.ShortCourseBusiness;
+import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
 import io.github.herocode.ecmat.model.ShortCourseBusinessImpl;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,8 +26,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author wensttay
  */
-@WebServlet(name = "ShortCourseRegister", urlPatterns = {"/ShortCourseRegister"})
-public class ShortCourseRegister extends HttpServlet {
+@WebServlet( name = "ShortCourseRegister", urlPatterns = { "/ShortCourseRegister" } )
+public class ShortCourseRegister extends HttpServlet{
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,29 +40,42 @@ public class ShortCourseRegister extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException{
 
         ShortCourseBusiness shortCourseBusiness = ShortCourseBusinessImpl.getInstance();
-        Integer shortCourseId                   = Integer.parseInt(request.getParameter("ShortCourseId"));
-        Participant participant                 = (Participant) request.getSession().getAttribute("participant");
-        ShortCourse shortCourse                 = null;
+        ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
 
-        try {
-            
+        Integer shortCourseId = Integer.parseInt(request.getParameter("ShortCourseId"));
+        Participant participant = ( Participant ) request.getSession().getAttribute("participant");
+        
+        if ( participant != null ){
+            participant = participantBusiness.searchParticipantById(participant.getId());
+        }
+
+        ShortCourse shortCourse = null;
+
+        Map<String, String> responseMap = new HashMap<>();
+        try{
+
             shortCourse = shortCourseBusiness.searchShortCourseById(shortCourseId);
 
-            if (shortCourse != null && participant != null) {
+            if ( shortCourse != null && participant != null ){
                 shortCourseBusiness.addParticipantInShortCourse(shortCourse, participant);
             }
 
-            response.sendRedirect("/painel.jsp");
-            
-        } catch (EnrollingShortCourseException ex) {
+            responseMap.put("success", "Sua inscrição no minicurso/oficina foi efetuada com sucesso!");
+
+            String json = new Gson().toJson(responseMap);
+
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write(json);
+
+        } catch ( EnrollingShortCourseException ex ){
 
             System.err.println(ex);
             ex.printStackTrace();
 
-            Map<String, String> responseMap = new HashMap<>();
             responseMap.put("error", ex.getMessage());
 
             String json = new Gson().toJson(responseMap);
@@ -84,7 +98,7 @@ public class ShortCourseRegister extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException{
         processRequest(request, response);
     }
 
@@ -99,7 +113,7 @@ public class ShortCourseRegister extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException{
         processRequest(request, response);
     }
 
@@ -109,7 +123,7 @@ public class ShortCourseRegister extends HttpServlet {
      * @return a String containing servlet description
      */
     @Override
-    public String getServletInfo() {
+    public String getServletInfo(){
         return "Short description";
     }// </editor-fold>
 
