@@ -63,11 +63,6 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
     @Override
     public boolean removeParticipantFromShortCourse(ShortCourse shortCourse, Participant participant){
         
-        //Verify if Participant is not null
-        if ( participant == null ){
-            throw new EnrollingShortCourseException(ErrorMessages.DESLOGED_ACCOUNT.getErrorMessage());
-        }
-        
         //Verify if the Payment has complete
         if ( !participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.getCode()) ){
             throw new EnrollingShortCourseException(ErrorMessages.PAYMENT_NOT_COMPLETE.getErrorMessage());
@@ -109,11 +104,6 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
     @Override
     public synchronized boolean addParticipantInShortCourse(ShortCourse newShortCourse, Participant participant) throws EnrollingShortCourseException{
         boolean participantCanBeAdded = false;
-
-        //Verify if Participant is not null
-        if ( participant == null ){
-            throw new EnrollingShortCourseException(ErrorMessages.DESLOGED_ACCOUNT.getErrorMessage());
-        }
 
         //Verify if the Payment has complete
         if ( !participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.getCode()) ){

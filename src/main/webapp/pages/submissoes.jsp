@@ -38,6 +38,7 @@
                             <p><span class="destaque">Anexar o arquivo de submissão.</span></p>
                         </li>
                     </ul>
+                    <h3 class="focus">O ENCERRAMENTO DAS SUBMISSÕES SERÁ DIA 10 DE AGOSTO DE 2016.</h3>
                 </div>
             </div>
             <div class="col-lg-1"></div>
@@ -65,12 +66,12 @@
                              title="Representação ilustrativa do númeiro 3 em algarismos romanos (Terceiro item)" class="off-load numeracao-criterio" src="img/numbers/terceiro.png">
                         O texto da modalidade <span class="destaque"><strong>PÔSTER</strong></span> pode versar sobre resultados parciais ou finais de pesquisa, bem como de relatos de experiências sobre Matemática, Matemática Aplicada ou Educação Matemática. O pôster deverá ser confeccionado com dimensões 90 cm por 120 cm e deverá apresentar qualidades estéticas e atrativas aos participantes. Deve ter entre 4 e 6 páginas do título às referências. Cada trabalho deve ter no máximo 4 membros (1 autor e 3 coautores).
                     </p>
-<!--                    <p class="default-low-color-white-transparence">
-                        <img width="100px" height="100px" alt="Representação ilustrativa do númeiro 4 em algarismos romanos (Quarto item)"
-                             title="Representação ilustrativa do númeiro 4 em algarismos romanos (Quarto item)"
-                             class="off-load numeracao-criterio" src="img/numbers/quarto.png">
-                        O texto da modalidade <span class="destaque"><strong>MINICURSO</strong></span> enfatiza certo tópico relativo à Matemática, Matemática Aplicada ou Educação Matemática, com possibilidade de maior interação e espaço para discussão, organizado/coordenado pelo(s) ministrante(s). Conforme programação, os minicursos terão duração de 4 horas. Alguns serão oferecidos no dia 25 de agosto (quinta-feira) das 13h30 as 17h45 e outros no dia 26 de agosto (sexta-feira) das 7h30 as 11h45, com um intervalo de 15 minutos. Dependendo da quantidade de minicursos aceitos, alguns podem ser repetidos nos dois dias. é importante que o(s) proponente(s) indique(m) a necessidade de utilização de laboratório de informática para que a comissão organizadora verifique a disponibilidade da infraestrutura necessária. Deve ter entre 5 e 7 páginas do título às referências. Cada trabalho deve ter no máximo 4 membros (1 autor e 3 coautores).
-                    </p>-->
+                    <!--                    <p class="default-low-color-white-transparence">
+                                            <img width="100px" height="100px" alt="Representação ilustrativa do númeiro 4 em algarismos romanos (Quarto item)"
+                                                 title="Representação ilustrativa do númeiro 4 em algarismos romanos (Quarto item)"
+                                                 class="off-load numeracao-criterio" src="img/numbers/quarto.png">
+                                            O texto da modalidade <span class="destaque"><strong>MINICURSO</strong></span> enfatiza certo tópico relativo à Matemática, Matemática Aplicada ou Educação Matemática, com possibilidade de maior interação e espaço para discussão, organizado/coordenado pelo(s) ministrante(s). Conforme programação, os minicursos terão duração de 4 horas. Alguns serão oferecidos no dia 25 de agosto (quinta-feira) das 13h30 as 17h45 e outros no dia 26 de agosto (sexta-feira) das 7h30 as 11h45, com um intervalo de 15 minutos. Dependendo da quantidade de minicursos aceitos, alguns podem ser repetidos nos dois dias. é importante que o(s) proponente(s) indique(m) a necessidade de utilização de laboratório de informática para que a comissão organizadora verifique a disponibilidade da infraestrutura necessária. Deve ter entre 5 e 7 páginas do título às referências. Cada trabalho deve ter no máximo 4 membros (1 autor e 3 coautores).
+                                        </p>-->
                 </div>
             </div>
             <div class="col-lg-1"></div>

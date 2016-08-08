@@ -44,13 +44,13 @@ public class ShortCourseUnsubscribe extends HttpServlet{
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
-        
+
         ShortCourseBusiness shortCourseBusiness = ShortCourseBusinessImpl.getInstance();
         ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
 
         Integer shortCourseId = Integer.parseInt(request.getParameter("ShortCourseId"));
         Participant participant = ( Participant ) request.getSession().getAttribute("participant");
-        
+
         if ( participant != null ){
             participant = participantBusiness.searchParticipantById(participant.getId());
         }
@@ -60,10 +60,15 @@ public class ShortCourseUnsubscribe extends HttpServlet{
         Map<String, String> responseMap = new HashMap<>();
         try{
 
+            //Verify if Participant is not null
+            if ( participant == null ){
+                throw new EnrollingShortCourseException(ErrorMessages.DESLOGED_ACCOUNT.getErrorMessage());
+            }
+
             shortCourse = shortCourseBusiness.searchShortCourseById(shortCourseId);
 
             if ( shortCourse != null && participant != null ){
-                if(!shortCourseBusiness.removeParticipantFromShortCourse(shortCourse, participant)){
+                if ( !shortCourseBusiness.removeParticipantFromShortCourse(shortCourse, participant) ){
                     throw new EnrollingShortCourseException(ErrorMessages.UNKNOW_ERROR.getErrorMessage());
                 }
             }
@@ -90,7 +95,7 @@ public class ShortCourseUnsubscribe extends HttpServlet{
             response.setCharacterEncoding("UTF-8");
             response.getWriter().write(json);
         }
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

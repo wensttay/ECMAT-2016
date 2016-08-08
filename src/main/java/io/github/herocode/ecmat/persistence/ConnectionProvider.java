@@ -5,6 +5,8 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.apache.commons.dbcp2.BasicDataSource;
 
 /**
@@ -35,29 +37,25 @@ public final class ConnectionProvider{
 
             try{
 
-//                URI dbUri = new URI(System.getenv("DATABASE_URL"));
-//                String username = dbUri.getUserInfo().split(":")[0];
-//                String password = dbUri.getUserInfo().split(":")[1];
-//
-//                StringBuilder dbUrl = new StringBuilder();
-//                dbUrl.append("jdbc:postgresql://").
-//                        append(dbUri.getHost()).
-//                        append(':').
-//                        append(dbUri.getPort()).
-//                        append(dbUri.getPath());
+                URI dbUri = new URI(System.getenv("DATABASE_URL"));
+                String username = dbUri.getUserInfo().split(":")[0];
+                String password = dbUri.getUserInfo().split(":")[1];
+
+                StringBuilder dbUrl = new StringBuilder();
+                dbUrl.append("jdbc:postgresql://").
+                        append(dbUri.getHost()).
+                        append(':').
+                        append(dbUri.getPort()).
+                        append(dbUri.getPath());
 
                 connectionPool = new BasicDataSource();
-//                connectionPool.setUsername(username);
-//                connectionPool.setPassword(password);
-//                connectionPool.setDriverClassName("org.postgresql.Driver");
-//                connectionPool.setUrl(dbUrl.toString());
-
-                connectionPool.setUsername("postgres");
-                connectionPool.setPassword("12345");
+                connectionPool.setUsername(username);
+                connectionPool.setPassword(password);
                 connectionPool.setDriverClassName("org.postgresql.Driver");
-                connectionPool.setUrl("jdbc:postgresql://localhost:5432/Ecmat");
+                connectionPool.setUrl(dbUrl.toString());
 
-            } catch ( IndexOutOfBoundsException ex ){
+
+            } catch ( IndexOutOfBoundsException | URISyntaxException ex ){
                 connectionPool.close();
                 return null;
             }

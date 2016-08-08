@@ -28,20 +28,20 @@ import javax.websocket.server.ServerEndpoint;
  *
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
-@WebListener
-@ServerEndpoint(value = "/ShortCourseWebServlet")
+//@WebListener
+//@ServerEndpoint(value = "/ShortCourseWebServlet")
 public class ShortCourseWebServlet implements ServletContextListener {
 
     private static final Set<Session> usersWs = new CopyOnWriteArraySet<>();
 
-    @OnOpen
+//    @OnOpen
     public void onConnect(Session session) {
         System.out.println("usuario conectado");
 
         usersWs.add(session);
     }
 
-    @OnClose
+//    @OnClose
     public void onDisconnect(Session session) {
 
         usersWs.remove(session);

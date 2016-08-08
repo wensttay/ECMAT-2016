@@ -286,9 +286,11 @@ public class ParticipantDaoImpl implements ParticipantDao {
             participant.setTitration(rs.getString("titration"));
 
         } catch (SQLException ex) {
+            return null;
         }
 
         return participant;
+        
     }
 
     @Override

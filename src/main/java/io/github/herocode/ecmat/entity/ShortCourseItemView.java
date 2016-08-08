@@ -17,6 +17,7 @@ import java.io.Serializable;
 public class ShortCourseItemView implements Comparable<ShortCourseItemView>, Serializable{
 
     private int                     id;
+    private int                     currentEnrollment;
     private int                     maxEnrollment;
     private String                  duration;
     private String                  title;
@@ -28,8 +29,9 @@ public class ShortCourseItemView implements Comparable<ShortCourseItemView>, Ser
     public ShortCourseItemView(){
     }
 
-    public ShortCourseItemView(int id, int maxEnrollment, String duration, String title, String url, ShortCourseType shortCourseType, ShortCourseWorkShift shortCourseWorkShift, boolean userIsRegistred){
+    public ShortCourseItemView(int id, int currentEnrollment, int maxEnrollment, String duration, String title, String url, ShortCourseType shortCourseType, ShortCourseWorkShift shortCourseWorkShift, boolean userIsRegistred){
         this.id                     = id;
+        this.currentEnrollment      = currentEnrollment;
         this.maxEnrollment          = maxEnrollment;
         this.duration               = duration;
         this.title                  = title;
@@ -39,7 +41,7 @@ public class ShortCourseItemView implements Comparable<ShortCourseItemView>, Ser
         this.userIsRegistred        = userIsRegistred;
     }
 
-    public ShortCourseItemView(ShortCourse course, boolean userIsRegistred){
+    public ShortCourseItemView(ShortCourse course, boolean userIsRegistred, int currentEnrollment){
         this.id                     = course.getId();
         this.maxEnrollment          = course.getMaxEnrollment();
         this.duration               = course.getDuration();
@@ -48,6 +50,7 @@ public class ShortCourseItemView implements Comparable<ShortCourseItemView>, Ser
         this.shortCourseType        = course.getShortCourseType();
         this.shortCourseWorkShift   = course.getShortCourseWorkShift();
         this.userIsRegistred        = userIsRegistred;
+        this.currentEnrollment      = currentEnrollment;
     }
 
     public int getId(){
@@ -114,15 +117,23 @@ public class ShortCourseItemView implements Comparable<ShortCourseItemView>, Ser
         this.userIsRegistred = userIsRegistred;
     }
 
+    public int getCurrentEnrollment(){
+        return currentEnrollment;
+    }
+
+    public void setCurrentEnrollment(int currentEnrollment){
+        this.currentEnrollment = currentEnrollment;
+    }
+    
     @Override
     public int compareTo(ShortCourseItemView o){
 
-        if ( this.userIsRegistred ){
-            return -1;
-        }
-        if ( o.isUserIsRegistred() ){
-            return 1;
-        }
+//        if ( this.userIsRegistred ){
+//            return -1;
+//        }
+//        if ( o.isUserIsRegistred() ){
+//            return 1;
+//        }
         
         return this.getTitle().compareTo(o.getTitle());
     }

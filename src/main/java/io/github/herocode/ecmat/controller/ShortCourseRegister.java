@@ -48,24 +48,29 @@ public class ShortCourseRegister extends HttpServlet{
 
         Integer shortCourseId = Integer.parseInt(request.getParameter("ShortCourseId"));
         Participant participant = ( Participant ) request.getSession().getAttribute("participant");
-        
+
         if ( participant != null ){
             participant = participantBusiness.searchParticipantById(participant.getId());
         }
-
+        
         ShortCourse shortCourse = null;
 
         Map<String, String> responseMap = new HashMap<>();
+        
         try{
-
             shortCourse = shortCourseBusiness.searchShortCourseById(shortCourseId);
 
+            //Verify if Participant is not null
+            if ( participant == null ){
+                throw new EnrollingShortCourseException(ErrorMessages.DESLOGED_ACCOUNT.getErrorMessage());
+            }
+
             if ( shortCourse != null && participant != null ){
-                if(!shortCourseBusiness.addParticipantInShortCourse(shortCourse, participant)){
+                if ( !shortCourseBusiness.addParticipantInShortCourse(shortCourse, participant) ){
                     throw new EnrollingShortCourseException(ErrorMessages.UNKNOW_ERROR.getErrorMessage());
                 }
             }
-            
+
             responseMap.put("success", "Sua inscrição no minicurso/oficina foi efetuada com sucesso! </br>"
                     + "Fique atento ao horário, local e matériais necessários, eles podem mudar sem aviso prévio.");
 

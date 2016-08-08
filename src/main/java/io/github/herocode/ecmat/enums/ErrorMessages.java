@@ -43,7 +43,7 @@ public enum ErrorMessages{
             + "E-mail e senha e tente novamente."),
     
     DESLOGED_ACCOUNT("É necessário efetuar o login efetuar essa operação. </br>"
-            + "Crie uma conta ou entre na sua conta no site principal."),
+            + "Entre na sua conta ou crie uma agora mesmo no site principal na aba de \"Inscrição\"."),
     PAYMENT_NOT_COMPLETE("Para se efetuar essa operação é necessário que a inscrição e o pagamento"
             + " estejam totalmente concluidos!</br> Visite o Painel Principal para mais informações. "),
     FILLED_SHORT_COURSE("O mini curso está com todas as vagas preenchidas. </br>"
