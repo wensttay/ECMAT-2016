@@ -34,7 +34,7 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
         shortCourseDao = new ShortCourseDaoImpl();
     }
 
-    public static ShortCourseBusinessImpl getInstance(){
+    public static synchronized ShortCourseBusinessImpl getInstance(){
 
         if ( shortCourseBusinessImpl == null ){
 
