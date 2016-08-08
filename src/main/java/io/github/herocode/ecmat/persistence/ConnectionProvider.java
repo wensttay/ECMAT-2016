@@ -54,11 +54,6 @@ public final class ConnectionProvider{
                 connectionPool.setDriverClassName("org.postgresql.Driver");
                 connectionPool.setUrl(dbUrl.toString());
 
-//                connectionPool.setUsername("postgres");
-//                connectionPool.setPassword("12345");
-//                connectionPool.setDriverClassName("org.postgresql.Driver");
-//                connectionPool.setUrl("jdbc:postgresql://localhost:5432/Ecmat");
-
             } catch ( IndexOutOfBoundsException | URISyntaxException ex ){
                 connectionPool.close();
                 return null;
