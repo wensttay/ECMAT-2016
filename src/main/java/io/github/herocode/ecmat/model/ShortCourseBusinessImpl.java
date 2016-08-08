@@ -9,6 +9,7 @@ import io.github.herocode.ecmat.interfaces.ShortCourseBusiness;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import io.github.herocode.ecmat.enums.ErrorMessages;
+import io.github.herocode.ecmat.enums.PaymentStatus;
 import io.github.herocode.ecmat.exceptions.EnrollingShortCourseException;
 import java.util.List;
 import io.github.herocode.ecmat.interfaces.ShortCourseDao;
@@ -69,21 +70,31 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
     public synchronized boolean addParticipantInShortCourse(ShortCourse newShortCourse, Participant participant) throws EnrollingShortCourseException{
         boolean participantCanBeAdded = false;
         
-        // Verify if the ShortCourse are in progress or is done
-        LocalDateTime nowLocalDateTime = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
-        if ( nowLocalDateTime.isBefore(newShortCourse.getStartDate()) ){
-            throw new EnrollingShortCourseException(ErrorMessages.SHORT_COURSE_IS_IN_PROGRESS_OR_ITS_OVER.getErrorMessage());
-        }
+        //Verify if Participant is not null
+        if (participant == null)
+            throw new EnrollingShortCourseException(ErrorMessages.DESLOGED_ACCOUNT.getErrorMessage());
         
+        //Verify if the Payment has complete
+        if ( !participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.getCode()) ){
+            System.out.println("PAGAMENTO ESTATUS: " + participant.getPaymentStatus());
+            throw new EnrollingShortCourseException(ErrorMessages.PAYMENT_NOT_COMPLETE.getErrorMessage());
+        }
+
         // Verify if the ShortCourse exist and If the same are not full
         int currentEnrollment = shortCourseDao.getCurrentEnrollment(newShortCourse);
-        if ( currentEnrollment < 0){
+        if ( currentEnrollment < 0 ){
             throw new EnrollingShortCourseException(ErrorMessages.SHORT_COURSE_NOT_EXISTS.getErrorMessage());
         }
-        if(currentEnrollment == newShortCourse.getMaxEnrollment() ){
+        if ( currentEnrollment == newShortCourse.getMaxEnrollment() ){
             throw new EnrollingShortCourseException(ErrorMessages.FILLED_SHORT_COURSE.getErrorMessage());
         }
-        
+
+        // Verify if the ShortCourse are in progress or is done
+        LocalDateTime nowLocalDateTime = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
+        if ( nowLocalDateTime.isAfter(newShortCourse.getStartDate()) ){
+            throw new EnrollingShortCourseException(ErrorMessages.SHORT_COURSE_IS_IN_PROGRESS_OR_ITS_OVER.getErrorMessage());
+        }
+
         // Search the ShortCourses where this user are registred
         List<ShortCourse> allCoursesAddedList = new ArrayList<>();
         allCoursesAddedList.addAll(shortCourseDao.getParticipantShortCourses(participant));
@@ -92,8 +103,7 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
         if ( allCoursesAddedList.size() == 3 ){
             throw new EnrollingShortCourseException(ErrorMessages.PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE.getErrorMessage());
         }
-        
-        
+
         for ( ShortCourse course : allCoursesAddedList ){
             // Verify if the new ShortCourse's Shift not repeat on events where this user are registred
             if ( newShortCourse.getShortCourseWorkShift().getShift()
@@ -101,14 +111,14 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
                 throw new EnrollingShortCourseException(ErrorMessages.PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE.getErrorMessage());
             }
             // Verify if participant are already registred on this new ShortCourse
-            if ( newShortCourse.getId() == course.getId()){
+            if ( newShortCourse.getId() == course.getId() ){
                 throw new EnrollingShortCourseException(ErrorMessages.PARTICIPANT_ALREADY_REGISTERED.getErrorMessage());
             }
         }
-        
+
         // Try save the new user ShortCourse's registry
         participantCanBeAdded = shortCourseDao.addParticipant(newShortCourse, participant);
-        
+
         return participantCanBeAdded;
     }
 
@@ -145,8 +155,8 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
     }
 
     @Override
-    public Map<Integer, Integer> getShortcoursersCurrentEnrollments() {
-        
+    public Map<Integer, Integer> getShortcoursersCurrentEnrollments(){
+
         return shortCourseDao.getShortcoursersCurrentEnrollments();
     }
 

@@ -44,6 +44,9 @@ public enum ErrorMessages {
     
     DIFFERENT_PASSWORDS("As senhas inseridas são diferentes, elas devem ser iguais."),
     
+    DESLOGED_ACCOUNT("É necessário efetuar o login para se inscrever em um minicurso"),
+    PAYMENT_NOT_COMPLETE("Para se inscrever no minicurso é necessário que a inscrição e o pagamento"
+            + " estejam totalmente concluidos!</br> Visite o Painel Principal para mais informações. "),
     FILLED_SHORT_COURSE("O mini curso está com todas as vagas preenchidas."),
     PARTICIPANT_ALREADY_REGISTERED("O participante já está matriculado neste mini curso."),
     PARTICIPANT_IS_ENROLLED_IN_ANOTHER_SHORT_COURSE("O participante ja está matriculado para"
@@ -53,10 +56,7 @@ public enum ErrorMessages {
     SHORT_COURSE_NOT_EXISTS("O minicurso escolhido não foi encontrado"),
     
     FAIL_LOGIN("Não foi encontrado este usuário em nosso sistema, verifique o "
-            + "E-mail e senha e tente novamente."),
-    
-    MISSING_PAYMENT("É necessário efetuar o pagamento da inscrição para registrar-se em"
-            + " um minicurso.");
+            + "E-mail e senha e tente novamente.");
 
     String errorMessage;
 

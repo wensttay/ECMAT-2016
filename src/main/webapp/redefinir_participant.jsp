@@ -205,7 +205,7 @@
                                                            $('#input-success-modal').click(function (e) {
                                                                e.preventDefault();
 
-                                                               window.location.replace("/#inscricao");
+                                                               window.location.replace("/#login");
 
                                                            });
 

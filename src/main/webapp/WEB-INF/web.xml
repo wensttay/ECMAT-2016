@@ -65,7 +65,7 @@
     <filter-mapping>
         <filter-name>LogoutFilter</filter-name>
         <url-pattern>/cadastro.jsp</url-pattern>
-        <url-pattern>/inscricao.jsp</url-pattern>
+        <url-pattern>/login.jsp</url-pattern>
         <url-pattern>/recuperacao.jsp</url-pattern>
         <url-pattern>/redefinir.jsp</url-pattern>
         <url-pattern>/redefinir_participant.jsp</url-pattern>
