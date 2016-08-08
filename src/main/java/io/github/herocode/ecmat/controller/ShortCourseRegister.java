@@ -8,6 +8,7 @@ package io.github.herocode.ecmat.controller;
 import com.google.gson.Gson;
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
+import io.github.herocode.ecmat.enums.ErrorMessages;
 import io.github.herocode.ecmat.exceptions.EnrollingShortCourseException;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
 import io.github.herocode.ecmat.interfaces.ShortCourseBusiness;
@@ -60,10 +61,13 @@ public class ShortCourseRegister extends HttpServlet{
             shortCourse = shortCourseBusiness.searchShortCourseById(shortCourseId);
 
             if ( shortCourse != null && participant != null ){
-                shortCourseBusiness.addParticipantInShortCourse(shortCourse, participant);
+                if(!shortCourseBusiness.addParticipantInShortCourse(shortCourse, participant)){
+                    throw new EnrollingShortCourseException(ErrorMessages.UNKNOW_ERROR.getErrorMessage());
+                }
             }
-
-            responseMap.put("success", "Sua inscrição no minicurso/oficina foi efetuada com sucesso!");
+            
+            responseMap.put("success", "Sua inscrição no minicurso/oficina foi efetuada com sucesso! </br>"
+                    + "Fique atento ao horário, local e matériais necessários, eles podem mudar sem aviso prévio.");
 
             String json = new Gson().toJson(responseMap);
 

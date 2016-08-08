@@ -142,10 +142,10 @@ Author     : Wensttay, Victor Hugo
                                         <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="ParticipantPanel">Painel Principal</a>
                                     </li>
                                     <li class="drop-menu-item default-border-color page-link" >
-                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Logut">Sair</a>
+                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Minicursos">Minicursos</a>
                                     </li>
                                     <li class="drop-menu-item default-border-color page-link" >
-                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Minicursos">Minicursos</a>
+                                        <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Logut">Sair</a>
                                     </li>
                                 </c:if>
                             </ul>

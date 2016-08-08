@@ -62,21 +62,61 @@ public class ShortCourseBusinessImpl implements ShortCourseBusiness{
 
     @Override
     public boolean removeParticipantFromShortCourse(ShortCourse shortCourse, Participant participant){
-
+        
+        //Verify if Participant is not null
+        if ( participant == null ){
+            throw new EnrollingShortCourseException(ErrorMessages.DESLOGED_ACCOUNT.getErrorMessage());
+        }
+        
+        //Verify if the Payment has complete
+        if ( !participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.getCode()) ){
+            throw new EnrollingShortCourseException(ErrorMessages.PAYMENT_NOT_COMPLETE.getErrorMessage());
+        }
+        
+        // Verify if the ShortCourse exists
+        int currentEnrollment = shortCourseDao.getCurrentEnrollment(shortCourse);
+        if ( currentEnrollment < 0 ){
+            throw new EnrollingShortCourseException(ErrorMessages.SHORT_COURSE_NOT_EXISTS.getErrorMessage());
+        }else if ( currentEnrollment = 0 ){
+            throw new EnrollingShortCourseException(ErrorMessages.UNKNOW_ERROR.getErrorMessage());
+        }
+        
+        // Verify if the ShortCourse are in progress or is done
+        LocalDateTime nowLocalDateTime = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
+        if ( nowLocalDateTime.isAfter(shortCourse.getStartDate()) ){
+            throw new EnrollingShortCourseException(ErrorMessages.SHORT_COURSE_IS_IN_PROGRESS_OR_ITS_OVER.getErrorMessage());
+        }
+        
+        // Search the ShortCourses where this user are registred
+        List<ShortCourse> allCoursesAddedList = new ArrayList<>();
+        allCoursesAddedList.addAll(shortCourseDao.getParticipantShortCourses(participant));
+        
+        // Verify if participant aren't already registred on this new ShortCourse
+        boolean isRegistred = false;
+        for ( ShortCourse course : allCoursesAddedList ){
+            if (shortCourse.getId() == course.getId() ){
+                isRegistred = true;
+                break;
+            }
+        }
+        if(!isRegistred){
+            throw new EnrollingShortCourseException(ErrorMessages.PARTICIPANT_NOT_ALREADY_REGISTRED.getErrorMessage());  
+        }
+        
         return shortCourseDao.removeParticipant(shortCourse, participant);
     }
 
     @Override
     public synchronized boolean addParticipantInShortCourse(ShortCourse newShortCourse, Participant participant) throws EnrollingShortCourseException{
         boolean participantCanBeAdded = false;
-        
+
         //Verify if Participant is not null
-        if (participant == null)
+        if ( participant == null ){
             throw new EnrollingShortCourseException(ErrorMessages.DESLOGED_ACCOUNT.getErrorMessage());
-        
+        }
+
         //Verify if the Payment has complete
         if ( !participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.getCode()) ){
-            System.out.println("PAGAMENTO ESTATUS: " + participant.getPaymentStatus());
             throw new EnrollingShortCourseException(ErrorMessages.PAYMENT_NOT_COMPLETE.getErrorMessage());
         }
 

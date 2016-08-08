@@ -300,9 +300,6 @@
                                 </div>
                             </c:forEach>    
                         </div>
-                        <div class="row notice">
-                            <p style="font-family: WC_RoughTrad;">* Os minicursos e as inscrições para os mesmos estarão disponíveis em breve, fique atento !</p>
-                        </div>
                     </div>
                 </article>
             </section>
@@ -333,21 +330,6 @@
                     show: 'true'
                 });
             }
-
-            $('.unsub-course-btn').click(function (e) {
-                e.preventDefault();
-                alert(this.val());
-//                $.post('RequestPasswordRecovery', this., function (response) {
-//                    var success = response.success;
-//                    var error = response.error;
-//
-//                    if (success !== undefined) {
-//                        show_success(success);
-//                    } else {
-//                        show_error(error);
-//                    }
-//                });
-            });
             
             $('#input-success-modal').click(function (){
                 location.reload();
@@ -376,7 +358,30 @@
                         }
                         
                         
-                    },
+                    }
+                });
+            });
+            
+            $('.unsub-course-btn').click(function (e) {
+                e.preventDefault();
+                var ShortCourseId = this.getAttribute("value");
+                var url = "ShortCourseUnsubscribe?ShortCourseId=" + ShortCourseId;
+                $.ajax({
+                    url: url,
+                    cache: false,
+                    type: "GET",
+                    success: function (response) {
+                        var success = response.success;
+                        var error = response.error;
+                        
+                        if (success !== undefined) {
+                            show_success(success);
+                        } else {
+                            show_error(error);
+                        }
+                        
+                        
+                    }
                 });
             });
         </script>
