@@ -43,7 +43,7 @@
                                 <div class="programacao-row-colum default-border-color default-low-color-white-transparence"><span class="glyphicon glyphicon-minus"></span> Apresentação Cultural</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
-                                <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgMG5wZFNoVll3WTQ/view?usp=sharing" target="_blank">
+                                <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgT2JpdGVXbDNVakE/view?usp=sharing" target="_blank">
                                     <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 20:00 até 21:00</div>
                                     <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Palestra de Abertura</div>
                                 </a>

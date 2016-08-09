@@ -114,7 +114,7 @@
                 float: left;
                 font-size: 16px;
                 margin-top: 15px;
-                max-width: 700px;
+                max-width: 600px;
             }
 
             .shortcourse-div .shortcource-enrollment{
@@ -230,10 +230,9 @@
                                             </c:if> 
 
                                             <c:if test="${empty sessionScope.participant}">
-                                                <c:if test="${mSCI.currentEnrollment <  mSCI.maxEnrollment}">
-                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
-                                                </c:if>
+                                                <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
                                             </c:if>
+                                                
                                             <p class="shortcource-enrollment">
                                                 Vagas Oculpadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
