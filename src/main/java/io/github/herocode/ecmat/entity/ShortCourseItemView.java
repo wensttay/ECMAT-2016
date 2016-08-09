@@ -24,12 +24,13 @@ public class ShortCourseItemView implements Comparable<ShortCourseItemView>, Ser
     private String                  url;
     private ShortCourseType         shortCourseType;
     private ShortCourseWorkShift    shortCourseWorkShift;
+    private String                  place;
     private boolean                 userIsRegistred;
 
     public ShortCourseItemView(){
     }
 
-    public ShortCourseItemView(int id, int currentEnrollment, int maxEnrollment, String duration, String title, String url, ShortCourseType shortCourseType, ShortCourseWorkShift shortCourseWorkShift, boolean userIsRegistred){
+    public ShortCourseItemView(int id, int currentEnrollment, int maxEnrollment, String duration, String title, String url, ShortCourseType shortCourseType, ShortCourseWorkShift shortCourseWorkShift, boolean userIsRegistred, String place){
         this.id                     = id;
         this.currentEnrollment      = currentEnrollment;
         this.maxEnrollment          = maxEnrollment;
@@ -39,6 +40,7 @@ public class ShortCourseItemView implements Comparable<ShortCourseItemView>, Ser
         this.shortCourseType        = shortCourseType;
         this.shortCourseWorkShift   = shortCourseWorkShift;
         this.userIsRegistred        = userIsRegistred;
+        this.place                  = place;
     }
 
     public ShortCourseItemView(ShortCourse course, boolean userIsRegistred, int currentEnrollment){
@@ -51,6 +53,7 @@ public class ShortCourseItemView implements Comparable<ShortCourseItemView>, Ser
         this.shortCourseWorkShift   = course.getShortCourseWorkShift();
         this.userIsRegistred        = userIsRegistred;
         this.currentEnrollment      = currentEnrollment;
+        this.place                  = course.getPlace();
     }
 
     public int getId(){
@@ -105,6 +108,14 @@ public class ShortCourseItemView implements Comparable<ShortCourseItemView>, Ser
         return shortCourseWorkShift;
     }
 
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+    
     public void setShortCourseWorkShift(ShortCourseWorkShift shortCourseWorkShift){
         this.shortCourseWorkShift = shortCourseWorkShift;
     }

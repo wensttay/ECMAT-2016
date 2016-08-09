@@ -244,6 +244,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
             shortCourse.setUrl(rs.getString("url"));
             shortCourse.setDuration(rs.getString("duration"));
             shortCourse.setTitle(rs.getString("title"));
+            shortCourse.setPlace(rs.getString("place"));
             shortCourse.setShortCourseType(ShortCourseType.getShortCourseType(rs.getString("type")));
             shortCourse.setShortCourseWorkShift(ShortCourseWorkShift.getShift(shortCourse.getStartDate()));
 

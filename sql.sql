@@ -113,3 +113,24 @@ CREATE TABLE short_course_participant(
 
 	PRIMARY KEY (short_course_id, participant_id)
 );
+
+
+UPDATE short_course SET place = 'Laboratório 4 de Informática' WHERE title ~* 'Introdução ao Latex';
+UPDATE short_course SET place = 'Sala 06' WHERE title ~* 'Trigonometria';
+UPDATE short_course SET place = 'Sala 07' WHERE title ~* 'As coordenadas polares e algumas de suas funções especiais: representações geométricas e algébricas';
+UPDATE short_course SET place = 'Laboratório 02 de Informática' WHERE title ~* 'Introdução ao uso do R';
+UPDATE short_course SET place = 'Núcleo de artes' WHERE title ~* 'Aplicação do Origami no ensino de Geometria: modelagem dos poliedros de Platão de faces triangulares';
+UPDATE short_course SET place = 'Sala 01' WHERE title ~* 'Contagem de elementos de um conjunto: definição formal e o cuidado com o infinito';
+UPDATE short_course SET place = 'Sala 02' WHERE title ~* 'Recorrências Lineares de primeira ordem: um estudo através da resolução de um problema clássico';
+UPDATE short_course SET place = 'Sala 05' WHERE title ~* 'Uma abordagem teórica sobre testes estatísticos não paramétricos';
+UPDATE short_course SET place = 'Sala 06' WHERE title ~* 'Aplicação clássica da programação linear: o problema de transporte';
+UPDATE short_course SET place = 'Sala 07' WHERE title ~* 'A importância das desigualdades das médias aritmética e geométrica e de cauchy-schuarz na resolução de alguns problemas de matemática.';
+UPDATE short_course SET place = 'Sala 07' WHERE title ~* 'Como elaborar um artigo científico';
+UPDATE short_course SET place = 'Sala 11' WHERE title ~* 'ENTRE CONJECTURAS E TEOREMAS - UM PASSEIO PELAS PRINCIPAIS TÉCNICAS DE DEMONSTRAÇÃO NA MATEMÁTICA';
+UPDATE short_course SET place = 'Sala 12' WHERE title ~* 'O ENSINO DA MATEMÁTICA PARA ALUNOS COM DEFICIÊNCIA VISUAL: POSSIBILIDADES E DESAFIOS';
+UPDATE short_course SET place = 'Sala 13' WHERE title ~* 'A ÁLGEBRA BABILÔNICA: UMA DISCUSSÃO A PARTIR DA ANÁLISE DA TÁBUA PLIMPTON 322';
+UPDATE short_course SET place = 'Sala 14' WHERE title ~* 'CRITÉRIOS DE DIVISIBILIDADE PARA NÚMEROS PRIMOS MENORES QUE 100';
+UPDATE short_course SET place = 'Sala 15' WHERE title ~* 'AS BARRAS DE NAPIER NA RESOLÇÃO DAS OPERAÇÕES DE MULTIPLICAÇÃO, DIVISÃO E RADICIAÇÃO: CONTEXTO HISTÓRICO, CONSTRUÇÃO E UTILIZAÇÃO';
+UPDATE short_course SET place = 'Sala 17' WHERE title ~* 'Desmistificando o uso da Calculadora Científica';
+UPDATE short_course SET place = 'Sala 18' WHERE title ~* 'COMO ELABORAR UM ARTIGO CIENTÍFICO: O PROBLEMA DE TRANSPORTE';
+

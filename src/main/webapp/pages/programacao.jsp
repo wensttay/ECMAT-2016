@@ -151,8 +151,10 @@
 
                         <div class="body-list programacao-day-body" hidden> <!-- Open List box with hours -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 07:30 até 09:00</div>
-                                <div class="programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Mesa Redonda</div>
+                                <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgRGdYdDlwUjZOX2M/view?usp=sharing" target="_blank">
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 07:30 até 09:00</div>
+                                    <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Mesa Redonda</div>
+                                </a>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
                                 <div class="programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 09:00 até 09:15</div>

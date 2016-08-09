@@ -217,6 +217,7 @@
                                                 <p class="panel-title shortcource-name">
                                                     <span class="focus">${mSCI.shortCourseType.typeName}:</span> ${mSCI.title} 
                                                     </br><span class="focus">Duração:</span> ${mSCI.duration}
+                                                    </br><span class="focus">Local:</span> ${mSCI.place}
                                                     </br><span class="focus">---> CLIQUE PARA VER MAIS <---</span></p>
                                             </a>
                                             <c:if test="${!empty sessionScope.participant}">
@@ -267,6 +268,7 @@
                                                 <p class="panel-title shortcource-name">
                                                     <span class="focus">${mSCI.shortCourseType.typeName}:</span> ${mSCI.title} 
                                                     </br><span class="focus">Duração:</span> ${mSCI.duration}
+                                                    </br><span class="focus">Local:</span> ${mSCI.place}
                                                     </br><span class="focus">---> CLIQUE PARA VER MAIS <---</span></p>
                                             </a>
                                             <c:if test="${!empty sessionScope.participant}">
@@ -314,6 +316,7 @@
                                                 <p class="panel-title shortcource-name">
                                                     <span class="focus">${mSCI.shortCourseType.typeName}:</span> ${mSCI.title} 
                                                     </br><span class="focus">Duração:</span> ${mSCI.duration}
+                                                    </br><span class="focus">Local:</span> ${mSCI.place}
                                                     </br><span class="focus">---> CLIQUE PARA VER MAIS <---</span></p>
                                             </a>
                                             <c:if test="${!empty sessionScope.participant}">
