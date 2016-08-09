@@ -164,7 +164,7 @@
             <section>
 
                 <article class="big-margin-top">
-<!--                    <div class="container medium-margin-bottom"> 
+                    <div class="container medium-margin-bottom"> 
 
                         <p class="article-title default-border-color col-sm-12 default-low-color-white-transparence">Regras para inscrição e certificação das atividades</p>
                         <span style="clear: both; content: ''; display: block; margin: 0;"></span>
@@ -179,13 +179,13 @@
                                 <p>Você terá a certificação pela participação no evento, a qual será de 20 horas, e pela participação em minicursos/oficina, que terá a quantidade de horas equivalente a carga horária do minicursos/oficina;</p>
                             </li>
                             <li>
-                                <p>A certificação das atividades será feita logo após o término dos cinas;</p>
+                                <p>A certificação das atividades será feita logo após o término de cada minicurso/oficina;</p>
                             </li>
                             <li>
-                                <p>O certificado de participação no evento será disponibilizado em formato digitalna aba “Certificados” do site www.ecmat.com.br.</p>
+                                <p>O certificado de participação no evento será disponibilizado em formato digital na aba “Certificados” do site www.ecmat.com.br</p>
                             </li>
                         </ol>
-                    </div>-->
+                    </div>
                     <div class="container text-center">
 
                         <div id="morningShortCoursesHeader" class="row medium-margin-bottom">

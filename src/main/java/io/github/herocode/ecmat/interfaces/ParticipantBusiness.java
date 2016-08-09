@@ -17,9 +17,9 @@ import java.util.Map;
  */
 public interface ParticipantBusiness {
 
-    boolean saveParticipant(Participant participant, String paymentId);
+    Participant saveParticipant(Participant participant, String paymentId);
     
-    boolean saveParticipant(Participant participant, Payment payment);
+    Participant saveParticipant(Participant participant, Payment payment);
 
     boolean updateParticipant(Participant participant);
 

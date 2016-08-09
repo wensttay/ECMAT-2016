@@ -18,9 +18,9 @@ public interface ParticipantDao extends Dao<Participant, Integer> {
 
     List<ShortCourse> getRegisteredShortCourse(Participant participant);
 
-    boolean save(Participant participant, String paymentId);
+    Participant save(Participant participant, String paymentId);
     
-    boolean save(Participant participant, Payment payment);
+    Participant save(Participant participant, Payment payment);
     
     boolean existsEmail(String email);
     

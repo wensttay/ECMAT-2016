@@ -34,7 +34,7 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
     }
 
     @Override
-    public boolean saveParticipant(Participant participant, String paymentId) {
+    public Participant saveParticipant(Participant participant, String paymentId) {
 
         return participantDao.save(participant, paymentId);
     }
@@ -120,7 +120,7 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
     }
 
     @Override
-    public boolean saveParticipant(Participant participant, Payment payment) {
+    public Participant saveParticipant(Participant participant, Payment payment) {
         
         return participantDao.save(participant, payment);
     }

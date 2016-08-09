@@ -81,7 +81,7 @@ public class PaymentNotification extends HttpServlet {
 
                 String participantEmail = p.getEmailFromPaymentReference(payment.getReference());
 
-                String emailMessage = "Recebemos o pagamento de sua inscrição, agora você inscrever-se nos minicursos do evento.";
+                String emailMessage = "Recebemos o pagamento de sua inscrição, agora você pode inscrever-se nos minicursos do evento.";
 
                 EmailClient.sendEmail("Ecmat - Inscrição", participantEmail, emailMessage, EmailClient.defaultSender);
             }

@@ -16,6 +16,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -32,25 +33,27 @@ public class ParticipantDaoImpl implements ParticipantDao {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Deprecated
     @Override
-    public boolean save(Participant participant, Payment payment) {
+    public Participant save(Participant participant, Payment payment) {
 
         save(participant);
 
         if (payment != null) {
 
             Dao<Payment, String> paymentDao = new PaymentDao();
-            return paymentDao.save(payment);
+//            return paymentDao.save(payment);
         }
 
-        return false;
+        return null;
     }
 
     @Override
-    public boolean save(Participant object, String participantId) {
-        System.out.println("entrei");
+    public Participant save(Participant object, String participantId) {
+
         Connection connection;
         PreparedStatement statement;
+        ResultSet generatedKeys;
 
         int result = 0;
 
@@ -63,7 +66,7 @@ public class ParticipantDaoImpl implements ParticipantDao {
                     + "?, ?, ?, ?, ?)";
 
             connection = ConnectionProvider.getInstance().getConnection();
-            statement = connection.prepareCall(sql);
+            statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             int count = 1;
 
@@ -87,6 +90,16 @@ public class ParticipantDaoImpl implements ParticipantDao {
             System.out.println("antes do update");
             result = statement.executeUpdate();
 
+            generatedKeys = statement.getGeneratedKeys();
+
+            if (generatedKeys.next()) {
+                try {
+                    object.setId(generatedKeys.getInt(1));
+                } catch (Exception ex) {
+                }
+            }
+
+            generatedKeys.close();
             statement.close();
             connection.close();
 
@@ -96,7 +109,13 @@ public class ParticipantDaoImpl implements ParticipantDao {
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        return result != 0;
+        if (result == 0) {
+            return null;
+        } else {
+
+            return object;
+        }
+        
     }
 
     @Override
@@ -290,7 +309,7 @@ public class ParticipantDaoImpl implements ParticipantDao {
         }
 
         return participant;
-        
+
     }
 
     @Override
@@ -379,13 +398,13 @@ public class ParticipantDaoImpl implements ParticipantDao {
 
     @Override
     public String getEmailFromPaymentReference(String paymentReference) {
-        
+
         Connection connection;
         PreparedStatement statement;
         ResultSet resultSet;
 
         String result = "";
-        
+
         try {
 
             String sql = "SELECT email FROM " + getTableName() + " WHERE payment_id = ?";
@@ -400,9 +419,9 @@ public class ParticipantDaoImpl implements ParticipantDao {
             resultSet = statement.executeQuery();
 
             resultSet.next();
-            
+
             result = resultSet.getString("email");
-            
+
             resultSet.close();
             statement.close();
             connection.close();

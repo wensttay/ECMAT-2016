@@ -88,7 +88,7 @@ public class ParticipantRegister extends HttpServlet {
 
             paymentDao.save(payment);
 
-            participantBusiness.saveParticipant(participant, paymentReference);
+            participant = participantBusiness.saveParticipant(participant, paymentReference);
 
             request.getSession().setAttribute("participant", participant);
             response.sendRedirect("ParticipantPanel");

@@ -43,7 +43,7 @@
                                 <div class="programacao-row-colum default-border-color default-low-color-white-transparence"><span class="glyphicon glyphicon-minus"></span> Apresentação Cultural</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
-                                <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgMG5wZFNoVll3WTQ/view?usp=sharing" target="_blanck">
+                                <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgMG5wZFNoVll3WTQ/view?usp=sharing" target="_blank">
                                     <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 20:00 até 21:00</div>
                                     <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Palestra de Abertura</div>
                                 </a>
@@ -180,7 +180,7 @@
                                     Matemática</div>
                             </div> <!-- Close Hour-Box Event -->
                             <div class="default-row default-border-color default-low-color-white-transparence"> <!-- Open Hour-Box Event -->
-                                <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgSUFzZ3M2azd4TlU/view?usp=sharing" target="_blanck">
+                                <a href="https://drive.google.com/file/d/0Bwx-SPHSFVqgSUFzZ3M2azd4TlU/view?usp=sharing" target="_blank">
                                     <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-time"></span> 16:15 até 18:00</div>
                                     <div class="focus programacao-row-colum"><span class="glyphicon glyphicon-minus"></span> Palestra de Encerramento</div>
                                 </a>
