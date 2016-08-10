@@ -12,7 +12,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="description" content="Encontro Cajazeirense de Matemática">
         <meta name="author" content="Wensttay">
         <meta name="author" content="Victor Hugo">
@@ -232,9 +232,9 @@
                                             <c:if test="${empty sessionScope.participant}">
                                                 <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
                                             </c:if>
-                                                
-                                            <p class="shortcource-enrollment">
-                                                Vagas Oculpadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
+
+                                                <p class="shortcource-enrollment">
+                                                Vagas Ocupadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                                         </div>
 
@@ -280,13 +280,11 @@
                                             </c:if>
 
                                             <c:if test="${empty sessionScope.participant}">
-                                                <c:if test="${mSCI.currentEnrollment <  mSCI.maxEnrollment}">
-                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
-                                                </c:if>
+                                                <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
                                             </c:if>
 
                                             <p class="shortcource-enrollment">
-                                                Vagas Oculpadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
+                                                Vagas Ocupadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                                         </div>
 
@@ -328,12 +326,10 @@
                                             </c:if>
 
                                             <c:if test="${empty sessionScope.participant}">
-                                                <c:if test="${mSCI.currentEnrollment <  mSCI.maxEnrollment}">
-                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
-                                                </c:if>
+                                                <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
                                             </c:if>
                                             <p class="shortcource-enrollment">
-                                                Vagas Oculpadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
+                                                Vagas Ocupadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                                         </div>
                                     </div>
