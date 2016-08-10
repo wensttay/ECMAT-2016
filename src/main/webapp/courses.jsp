@@ -233,7 +233,7 @@
                                                 <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
                                             </c:if>
 
-                                            <p class="shortcource-enrollment">
+                                                <p class="shortcource-enrollment">
                                                 Vagas Ocupadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
                                         </div>
