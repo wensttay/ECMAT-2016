@@ -4,7 +4,7 @@
 
     <groupId>io.github.ecmat</groupId>
     <artifactId>Ecmat2016</artifactId>
-    <version>3.0.3</version>
+    <version>3.0.4</version>
     <packaging>war</packaging>
 
     <name>Ecmat2016</name>
