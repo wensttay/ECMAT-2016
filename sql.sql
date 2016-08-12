@@ -92,6 +92,7 @@ VALUES
 (30, '2016-08-25 13:30:', '4 Horas', 'UMA ABORDAGEM TEÓRICA SOBRE TESTES ESTATÍSTICOS NÃO PARAMÉTRICOS', 'Minicurso', 'https://drive.google.com/file/d/0Bwx-SPHSFVqgSWQ1aENLTG14N0E/view?usp=sharing'),
 (30, '2016-08-25 13:30:', '4 Horas', 'COMO ELABORAR UM ARTIGO CIENTÍFICO', 'Oficina', 'https://drive.google.com/file/d/0Bwx-SPHSFVqgVXk1TzRvZ0tFbjQ/view?usp=sharing'),
 (20, '2016-08-25 13:30:', '4 Horas', 'APLICAÇÃO DO ORIGAMI NO ENSINO DE GEOMETRIA: MODELAGEM DOS POLIEDROS DE PLATÃO DE FACES TRIANGULARESO', 'Oficina', 'https://drive.google.com/file/d/0Bwx-SPHSFVqgcTViQkw5T25xdTQ/view?usp=sharing'),
+(20, '2016-08-25 13:30:', '4 Horas', 'TRIGONOMETRIA NA CIRCUNFERÊNCIA E AS RAZÕES TRIGONOMÉTRICAS DE: SENO, COSSENO, TANGENTE, COTANGENTE, SECANTE E COSSECANTE', 'Laboratório de Matemática', 'Oficina', 'https://drive.google.com/file/d/0Bwx-SPHSFVqgd0d1cnM5S2ZVRWM/view?usp=sharing')
 
 
 (30, '2016-08-25 19:00:', '3 Horas', 'CONTAGEM DE ELEMENTOS DE UM CONJUNTO: DEFINIÇÃO FORMAL E O CUIDADO COM O INFINITO', 'Minicurso', 'https://drive.google.com/file/d/0Bwx-SPHSFVqgcGFNZUsyRFd5bXM/view?usp=sharing'),

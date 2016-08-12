@@ -38,7 +38,7 @@
                             <p><span class="destaque">Anexar o arquivo de submissão.</span></p>
                         </li>
                     </ul>
-                    <h3 class="focus">O ENCERRAMENTO DAS SUBMISSÕES SERÁ DIA 10 DE AGOSTO DE 2016.</h3>
+                    <h3 class="focus">PRORROGADO! ENCERRAMENTO DAS SUBMISSÕES AGORA NO DIA 14 DE AGOSTO DE 2016.</h3>
                 </div>
             </div>
             <div class="col-lg-1"></div>
