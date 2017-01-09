@@ -109,7 +109,7 @@ Author     : Wensttay, Victor Hugo
                         </li>
 
                         <li class="principal-list-item page-link item-bordered" >
-                            <a title="Clique para ir para a página de Anais." class="default-low-color-white-transparence item-title" href="anais">Anais</a>
+                            <a title="Clique para ir para a página de Anais." class="default-low-color-white-transparence item-title" href="anais#edicao-atual">Anais</a>
                         </li>
 
                         <li class="principal-list-item page-link item-bordered" >
@@ -128,9 +128,6 @@ Author     : Wensttay, Victor Hugo
                                 <c:if test="${empty sessionScope.participant}">
                                     <li class="drop-menu-item default-border-color page-link" >
                                         <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#login">Login</a>
-                                    </li>
-                                    <li class="drop-menu-item default-border-color page-link" >
-                                        <a title="Clique para ir para a página de Sobre." class="default-low-color-white-transparence" href="#cadastro">Cadastro</a>
                                     </li>
                                     <li class="drop-menu-item default-border-color page-link" >
                                         <a title="Clique para ir para a página da Organização." class="default-low-color-white-transparence" href="Minicursos">Minicursos</a>
@@ -171,7 +168,6 @@ Author     : Wensttay, Victor Hugo
                 <%@ include file="pages/construcao.jsp" %>
                 <%@ include file="pages/organizacao.jsp" %>
                 <%@ include file="pages/login.jsp" %>
-                <%@ include file="pages/cadastro.jsp" %>
                 <%@ include file="pages/recuperacao.jsp" %>
 
                 <%@ include file="pages/alert_error_model.jsp" %>
@@ -226,21 +222,6 @@ Author     : Wensttay, Victor Hugo
                             show_error(error);
                         }
 
-                    } else {
-                        window.location.href = "ParticipantPanel";
-                    }
-                });
-
-            });
-
-            $('#efetuar-cadastro').click(function (e) {
-                e.preventDefault();
-
-                $.post('ParticipantRegister', $('#form-cadastro').serialize(), function (response) {
-                    var error = response.error;
-
-                    if (error !== undefined) {
-                        show_error(error);
                     } else {
                         window.location.href = "ParticipantPanel";
                     }

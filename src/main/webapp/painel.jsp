@@ -114,26 +114,20 @@
                                 <c:if test="${!sessionScope.participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.code)}">
                                     <div class="col-md-12">
                                         <p>
-                                            parece que você ainda não concluiu sua inscrição,
-                                            realize o pagamento da mesma e tenha acesso aos Minicursos que ocorrerão no evento !
+                                            Infelizmente as inscrições e os pagamentos das mesmas já foram encerradas.
                                         </p>
-                                        <br>
-                                        <a href="${sessionScope.participant.getPaymentUrl()}" target="_blank">
-                                            <img src="img/other/pag-seguro-logo.png">
-                                        </a>
                                     </div>
                                 </c:if>
                                 <c:if test="${sessionScope.participant.getPaymentStatus().equals(PaymentStatus.COMPLETE.code)}">
-                                    <a href="Minicursos">
-                                        <h1 class="focus">Increva-se nos Minicursos e Oficinas</h1>
-                                    </a>
+                                    <div class="col-md-12">
+                                        <p>
+                                            As inscrições dos minicursos já foram ecerradas !
+                                        </p>
+                                    </div>
                                 </c:if>
                                 <!--<div class="col-xs-2"></div>-->
                             </div>
                             <div class="col-md-3"></div>
-                        </div>
-                        <div class="row notice">
-                            <p style="font-family: WC_RoughTrad;">* Os minicursos e as inscrições para os mesmos estarão disponíveis em breve, fique atento !</p>
                         </div>
                     </div>
                 </article>

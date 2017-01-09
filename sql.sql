@@ -84,7 +84,7 @@ VALUES
 (30, '2016-08-25 07:00:', '4 Horas', 'AS COORDENADAS POLARES E ALGUMAS DE SUAS FUNÇÕES ESPECIAIS: REPRESENTAÇÕES GEOMÉTRICAS E ALGÉBRICAS', 'Minicurso', 'https://drive.google.com/file/d/0Bwx-SPHSFVqgRFlqemlwOGZyeFE/view?usp=sharing'),
 (30, '2016-08-25 07:00:', '4 Horas', 'DESMISTIFICANDO O USO DA CALCULADORA CIENTÍFICA', 'Minicurso', 'https://drive.google.com/file/d/0Bwx-SPHSFVqgU1hQeWxkMW9SeWM/view?usp=sharing'),
 (20, '2016-08-25 07:00:', '4 Horas', 'INTRODUÇÃO AO USO DO R', 'Minicurso', 'https://drive.google.com/file/d/0Bwx-SPHSFVqgRmRVNTE0VDllc3c/view?usp=sharing'),
-
+(30, '2016-08-25 07:00:', '4 Horas', 'CONSTRUÇÕES DAS FUNÇÕES TRIGONOMÉTRICAS COM O GEOGEBRA', 'Minicurso', 'https://drive.google.com/file/d/0Bwx-SPHSFVqgRU96eUlnclc3clU/view?usp=sharing'),
 
 
 (30, '2016-08-25 13:30:', '4 Horas', 'ENTRE CONJECTURAS E TEOREMAS - UM PASSEIO PELAS PRINCIPAIS TÉCNICAS DE DEMONSTRAÇÃO NA MATEMÁTICA', 'Minicurso', 'https://drive.google.com/file/d/0Bwx-SPHSFVqgOTl0Y1piUE5XOWc/view?usp=sharing'),
@@ -134,4 +134,5 @@ UPDATE short_course SET place = 'Sala 14' WHERE title ~* 'CRITÉRIOS DE DIVISIBI
 UPDATE short_course SET place = 'Sala 15' WHERE title ~* 'AS BARRAS DE NAPIER NA RESOLÇÃO DAS OPERAÇÕES DE MULTIPLICAÇÃO, DIVISÃO E RADICIAÇÃO: CONTEXTO HISTÓRICO, CONSTRUÇÃO E UTILIZAÇÃO';
 UPDATE short_course SET place = 'Sala 17' WHERE title ~* 'Desmistificando o uso da Calculadora Científica';
 UPDATE short_course SET place = 'Sala 18' WHERE title ~* 'COMO ELABORAR UM ARTIGO CIENTÍFICO: O PROBLEMA DE TRANSPORTE';
+UPDATE short_course SET place = 'Sala 03' WHERE title ~* 'CONSTRUÇÕES DAS FUNÇÕES TRIGONOMÉTRICAS COM O GEOGEBRA';
 

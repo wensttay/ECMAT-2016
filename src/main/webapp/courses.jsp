@@ -221,17 +221,11 @@
                                                     </br><span class="focus">---> CLIQUE PARA VER MAIS <---</span></p>
                                             </a>
                                             <c:if test="${!empty sessionScope.participant}">
-                                                <c:if test="${mSCI.userIsRegistred}">
-                                                    <button class="course-btn unsub-course-btn" name="shortCourseId" value="${mSCI.id}">Cancelar</button>
-                                                </c:if>
-                                                <c:if test="${!mSCI.userIsRegistred}">
-                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
-                                                </c:if>
+                                                
+                                               
                                             </c:if> 
 
-                                            <c:if test="${empty sessionScope.participant}">
-                                                <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
-                                            </c:if>
+                                            
 
                                                 <p class="shortcource-enrollment">
                                                 Vagas Ocupadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
@@ -271,17 +265,10 @@
                                                     </br><span class="focus">---> CLIQUE PARA VER MAIS <---</span></p>
                                             </a>
                                             <c:if test="${!empty sessionScope.participant}">
-                                                <c:if test="${mSCI.userIsRegistred}">
-                                                    <button class="course-btn unsub-course-btn" name="shortCourseId" value="${mSCI.id}">Cancelar</button>
-                                                </c:if>
-                                                <c:if test="${!mSCI.userIsRegistred}">
-                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
-                                                </c:if>
+                                                
                                             </c:if>
 
-                                            <c:if test="${empty sessionScope.participant}">
-                                                <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
-                                            </c:if>
+                                           
 
                                             <p class="shortcource-enrollment">
                                                 Vagas Ocupadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
@@ -317,17 +304,10 @@
                                                     </br><span class="focus">---> CLIQUE PARA VER MAIS <---</span></p>
                                             </a>
                                             <c:if test="${!empty sessionScope.participant}">
-                                                <c:if test="${mSCI.userIsRegistred}">
-                                                    <button class="course-btn unsub-course-btn" name="shortCourseId" value="${mSCI.id}">Cancelar</button>
-                                                </c:if>
-                                                <c:if test="${!mSCI.userIsRegistred}">
-                                                    <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
-                                                </c:if>
+                                                
                                             </c:if>
 
-                                            <c:if test="${empty sessionScope.participant}">
-                                                <div class="course-btn sub-course-btn" name="shortCourseId" value="${mSCI.id}">Participar</div>
-                                            </c:if>
+                                            
                                             <p class="shortcource-enrollment">
                                                 Vagas Ocupadas: <span id="${mSCI.id}">${mSCI.currentEnrollment}</span> / ${mSCI.maxEnrollment}</p>
                                             <span style="clear: both; content: ''; display: block; margin: 0;"></span>
