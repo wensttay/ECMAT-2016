@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package io.github.herocode.ecmat.controller;
 
 import io.github.herocode.ecmat.entity.Participant;
 import io.github.herocode.ecmat.entity.ShortCourse;
 import io.github.herocode.ecmat.entity.ShortCourseItemView;
-import io.github.herocode.ecmat.enums.ShortCourseType;
-import io.github.herocode.ecmat.enums.ShortCourseWorkShift;
-import io.github.herocode.ecmat.interfaces.ShortCourseDao;
 import io.github.herocode.ecmat.model.ShortCourseBusinessImpl;
 import io.github.herocode.ecmat.persistence.ShortCourseDaoImpl;
 import java.io.IOException;
@@ -27,10 +18,12 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author wensttay
+ * @version 3.1
+ * @author Wensttay de Sousa Alencar <yattsnew@gmail.com>
+ * @date 08/01/2017 - 12:01:31
  */
-@WebServlet( name = "Minicursos", urlPatterns = { "/Minicursos" } )
-public class ShortCoursePageController extends HttpServlet{
+@WebServlet(name = "Minicursos", urlPatterns = {"/Minicursos"})
+public class ShortCoursePageController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -43,7 +36,7 @@ public class ShortCoursePageController extends HttpServlet{
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+            throws ServletException, IOException {
 
         List<ShortCourseItemView> morningShortCourseItems = new ArrayList<>();
         List<ShortCourseItemView> aftermoonShortCourseItems = new ArrayList<>();
@@ -51,22 +44,22 @@ public class ShortCoursePageController extends HttpServlet{
 
         ShortCourseBusinessImpl shortCourseBusinessImpl = ShortCourseBusinessImpl.getInstance();
 
-        Participant participant = ( Participant ) request.getSession().getAttribute("participant");
+        Participant participant = (Participant) request.getSession().getAttribute("participant");
 
         ShortCourseDaoImpl courseDaoImpl = new ShortCourseDaoImpl();
         List<ShortCourse> allCoursesAddedList = new ArrayList<>();
 
-        if ( participant != null ){
+        if (participant != null) {
             allCoursesAddedList.addAll(courseDaoImpl.getParticipantShortCourses(participant));
         }
 
         List<ShortCourse> courses = shortCourseBusinessImpl.listAllShortCourse();
 
-        for ( ShortCourse course : courses ){
+        for (ShortCourse course : courses) {
             boolean registred = allCoursesAddedList.contains(course);
             int currentEnrollment = courseDaoImpl.getCurrentEnrollment(course);
 
-            switch ( course.getShortCourseWorkShift() ){
+            switch (course.getShortCourseWorkShift()) {
                 case MORNING:
                     morningShortCourseItems.add(new ShortCourseItemView(course, registred, currentEnrollment));
                     break;
@@ -115,7 +108,7 @@ public class ShortCoursePageController extends HttpServlet{
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -130,7 +123,7 @@ public class ShortCoursePageController extends HttpServlet{
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -140,7 +133,7 @@ public class ShortCoursePageController extends HttpServlet{
      * @return a String containing servlet description
      */
     @Override
-    public String getServletInfo(){
+    public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
 

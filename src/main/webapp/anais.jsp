@@ -1,8 +1,10 @@
 <%-- 
-    Document   : index.jsp
+    Document   : anais.jsp
     Created on : 14/05/2016, 03:11:11
-    Author     : Wensttay, Victor Hugo
+    Author     : Wensttay de Sousa Alencar <yattsnew@gmail.com> , Victor Hugo
 --%>
+
+<!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html lang="pt">
     <head>

@@ -1,3 +1,8 @@
+
+/**
+ * @author Wensttay de Sousa Alencar <yattsnew@gmail.com> 
+ */
+
 $('.scroll-button-right').click(function () {
     var leftScroll = $(this).parent().find('.organization-box .organization-list').scrollLeft();
     var peopleBoxWidth = $(this).parent().find('.organization-box .organization-list .people-box:first-child').width();

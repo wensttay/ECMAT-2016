@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.persistence;
 
 import io.github.herocode.ecmat.entity.Payment;
@@ -44,7 +39,7 @@ public class PaymentDao implements Dao<Payment, String> {
             int count = 1;
             LocalDateTime now = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
             java.sql.Timestamp timestamp = java.sql.Timestamp.valueOf(now);
-            
+
             statement.setTimestamp(count++, timestamp);
             statement.setTimestamp(count++, timestamp);
             statement.setString(count++, object.getReference());
@@ -170,12 +165,12 @@ public class PaymentDao implements Dao<Payment, String> {
 
     @Override
     public List<Payment> listAll() {
-        
+
         Connection connection;
         PreparedStatement statement;
         ResultSet resultSet;
 
-        List<Payment> payments = new ArrayList<>(); 
+        List<Payment> payments = new ArrayList<>();
 
         try {
 

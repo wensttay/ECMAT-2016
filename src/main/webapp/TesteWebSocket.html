@@ -4,33 +4,6 @@
         <meta charset=UTF-8>
         <title>Tomcat WebSocket Chat</title>
         <script>
-
-<<<<<<< HEAD
-//            var host = location.origin.replace(/^http://www/, 'ws') + "/ShortCourseWebServlet";
-//            var host = "ws://localhost:8080/Ecmat2016/ShortCourseWebServlet";
-            
-                    var host = "ws://www.ecmat.com.br/ShortCourseWebServlet";
-            var ws;
-
-            if ('WebSocket' in window) {
-                ws = new WebSocket(host);
-            } else if ('MozWebSocket' in window) {
-                ws = new MozWebSocket(host);
-            }
-
-            ws.onopen = function () {
-            };
-            ws.onmessage = function (message) {
-                document.getElementById("chatlog").textContent += message.data + "\n";
-            };
-            function postToServer() {
-                ws.send(document.getElementById("msg").value);
-                document.getElementById("msg").value = "";
-            }
-            function closeConnect() {
-                ws.close();
-            }
-=======
 //            var host = location.origin.replace(/^http/, 'ws') + "/ShortCourseWebServlet";
 //            var host = "ws://localhost:8080/Ecmat2016/ShortCourseWebServlet";
 
@@ -54,7 +27,6 @@
 //            function closeConnect() {
 //                ws.close();
 //            }
->>>>>>> 7a5bc3f92885574eb6e70075d3ef3631db79cab4
         </script>
     </head>
     <body>

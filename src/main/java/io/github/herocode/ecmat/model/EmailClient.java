@@ -1,21 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.model;
 
 import com.sendgrid.*;
 import java.io.IOException;
-import java.util.Properties;
-import javax.mail.Address;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 
 /**
  *
@@ -31,7 +17,7 @@ public class EmailClient {
 
             @Override
             public void run() {
-                
+
                 Email from = new Email(sender);
                 Email to = new Email(receiver);
                 Content content = new Content("text/plain", message);

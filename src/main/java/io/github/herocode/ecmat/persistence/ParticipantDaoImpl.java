@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.persistence;
 
 import br.com.uol.pagseguro.domain.Address;
@@ -115,7 +110,7 @@ public class ParticipantDaoImpl implements ParticipantDao {
 
             return object;
         }
-        
+
     }
 
     @Override

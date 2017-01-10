@@ -1,7 +1,7 @@
 <%-- 
-    Document   : programacao2
+    Document   : programacao.jsp
     Created on : 17/05/2016, 03:49:18
-    Author     : Wensttay
+    Author     : Wensttay de Sousa Alencar <yattsnew@gmail.com>
 --%>
 
 <!DOCTYPE html>

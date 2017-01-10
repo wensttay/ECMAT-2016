@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.interfaces;
 
 import io.github.herocode.ecmat.entity.Participant;
@@ -19,13 +14,13 @@ public interface ParticipantDao extends Dao<Participant, Integer> {
     List<ShortCourse> getRegisteredShortCourse(Participant participant);
 
     Participant save(Participant participant, String paymentId);
-    
+
     Participant save(Participant participant, Payment payment);
-    
+
     boolean existsEmail(String email);
-    
+
     boolean existsCpf(String cpf);
-    
+
     String getEmailFromPaymentReference(String paymentReference);
 
 }

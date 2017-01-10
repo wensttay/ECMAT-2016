@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package io.github.herocode.ecmat.controller;
 
 import com.google.gson.Gson;
@@ -16,7 +10,6 @@ import io.github.herocode.ecmat.interfaces.ShortCourseBusiness;
 import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
 import io.github.herocode.ecmat.model.ShortCourseBusinessImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.ServletException;
@@ -27,10 +20,12 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author wensttay
+ * @version 3.1
+ * @author Wensttay de Sousa Alencar <yattsnew@gmail.com>
+ * @date 08/01/2017 - 12:01:31
  */
-@WebServlet( name = "ShortCourseUnsubscribe", urlPatterns = { "/ShortCourseUnsubscribe" } )
-public class ShortCourseUnsubscribe extends HttpServlet{
+@WebServlet(name = "ShortCourseUnsubscribe", urlPatterns = {"/ShortCourseUnsubscribe"})
+public class ShortCourseUnsubscribe extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -43,32 +38,32 @@ public class ShortCourseUnsubscribe extends HttpServlet{
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+            throws ServletException, IOException {
 
         ShortCourseBusiness shortCourseBusiness = ShortCourseBusinessImpl.getInstance();
         ParticipantBusiness participantBusiness = new ParticipantBusinessImpl();
 
         Integer shortCourseId = Integer.parseInt(request.getParameter("ShortCourseId"));
-        Participant participant = ( Participant ) request.getSession().getAttribute("participant");
+        Participant participant = (Participant) request.getSession().getAttribute("participant");
 
-        if ( participant != null ){
+        if (participant != null) {
             participant = participantBusiness.searchParticipantById(participant.getId());
         }
 
         ShortCourse shortCourse = null;
 
         Map<String, String> responseMap = new HashMap<>();
-        try{
+        try {
 
             //Verify if Participant is not null
-            if ( participant == null ){
+            if (participant == null) {
                 throw new EnrollingShortCourseException(ErrorMessages.DESLOGED_ACCOUNT.getErrorMessage());
             }
 
             shortCourse = shortCourseBusiness.searchShortCourseById(shortCourseId);
 
-            if ( shortCourse != null && participant != null ){
-                if ( !shortCourseBusiness.removeParticipantFromShortCourse(shortCourse, participant) ){
+            if (shortCourse != null && participant != null) {
+                if (!shortCourseBusiness.removeParticipantFromShortCourse(shortCourse, participant)) {
                     throw new EnrollingShortCourseException(ErrorMessages.UNKNOW_ERROR.getErrorMessage());
                 }
             }
@@ -82,7 +77,7 @@ public class ShortCourseUnsubscribe extends HttpServlet{
             response.setCharacterEncoding("UTF-8");
             response.getWriter().write(json);
 
-        } catch ( EnrollingShortCourseException ex ){
+        } catch (EnrollingShortCourseException ex) {
 
             System.err.println(ex);
             ex.printStackTrace();
@@ -110,7 +105,7 @@ public class ShortCourseUnsubscribe extends HttpServlet{
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -125,7 +120,7 @@ public class ShortCourseUnsubscribe extends HttpServlet{
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -135,7 +130,7 @@ public class ShortCourseUnsubscribe extends HttpServlet{
      * @return a String containing servlet description
      */
     @Override
-    public String getServletInfo(){
+    public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
 

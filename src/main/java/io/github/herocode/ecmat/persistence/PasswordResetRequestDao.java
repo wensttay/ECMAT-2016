@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.persistence;
 
 import io.github.herocode.ecmat.entity.PasswordResetRequest;
@@ -43,7 +38,7 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
             statement.setBoolean(count++, object.isValid());
             statement.setTimestamp(count++, java.sql.Timestamp.valueOf(object.getCreationDate()));
             statement.setString(count++, object.getParticipantEmail());
-            
+
             result = statement.executeUpdate();
 
             statement.close();
@@ -89,7 +84,7 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
 
     @Override
     public boolean update(PasswordResetRequest object) {
-        
+
         Connection connection;
         PreparedStatement statement;
 
@@ -111,7 +106,7 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
 
             statement.close();
             connection.close();
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(PaymentDao.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -121,7 +116,7 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
 
     @Override
     public PasswordResetRequest searchById(Integer id) {
-        
+
         Connection connection;
         PreparedStatement statement;
         ResultSet resultSet;
@@ -158,12 +153,12 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
 
     @Override
     public List<PasswordResetRequest> listAll() {
-        
+
         Connection connection;
         PreparedStatement statement;
         ResultSet resultSet;
 
-        List<PasswordResetRequest> resetRequests = new ArrayList<>(); 
+        List<PasswordResetRequest> resetRequests = new ArrayList<>();
 
         try {
 
@@ -193,7 +188,7 @@ public class PasswordResetRequestDao implements Dao<PasswordResetRequest, Intege
 
     @Override
     public PasswordResetRequest fillObject(ResultSet rs) {
-        
+
         PasswordResetRequest resetRequest = null;
 
         try {

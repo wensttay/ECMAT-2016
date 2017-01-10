@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<!-- 
-    Document   : redefinir.jsp
+<%-- 
+    Document   : courses.jsp
     Created on : 14/05/2016, 03:11:11
-    Author     : Wensttay, Victor Hugo
--->
+    Author     : Wensttay de Sousa Alencar <yattsnew@gmail.com>, Victor Hugo
+--%>
+
+<!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page import="io.github.herocode.ecmat.enums.PaymentStatus"%>
 <%@page import="io.github.herocode.ecmat.entity.ShortCourseItemView"%>

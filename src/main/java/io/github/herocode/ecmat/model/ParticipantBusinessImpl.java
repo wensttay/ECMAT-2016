@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.model;
 
 import io.github.herocode.ecmat.entity.Participant;
@@ -28,7 +23,7 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
     private ParticipantRecoverDao recoverDao;
 
     public ParticipantBusinessImpl() {
-        
+
         this.participantDao = new ParticipantDaoImpl();
         this.recoverDao = new ParticipantRecoverDao();
     }
@@ -95,7 +90,7 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
             Participant participant = searchParticipantByAttribute("email", email).get(0);
             return participant;
         } catch (Exception ex) {
-            System.err.println("Email invalido - "+email);
+            System.err.println("Email invalido - " + email);
             throw new IllegalArgumentException(ErrorMessages.INVALID_EMAIL.getErrorMessage());
 
         }
@@ -104,36 +99,36 @@ public class ParticipantBusinessImpl implements ParticipantBusiness {
 
     @Override
     public Participant login(String email, String password) throws IllegalArgumentException {
-        
-        Map<String,String> map = new HashMap<>();
-        
+
+        Map<String, String> map = new HashMap<>();
+
         map.put("email", email);
         map.put("password", password);
-        
+
         List<Participant> participants = searchParticipantByAttributes(map);
-        
-        if(participants.isEmpty()){
+
+        if (participants.isEmpty()) {
             throw new IllegalArgumentException(ErrorMessages.FAIL_LOGIN.getErrorMessage());
         }
-        
+
         return participants.get(0);
     }
 
     @Override
     public Participant saveParticipant(Participant participant, Payment payment) {
-        
+
         return participantDao.save(participant, payment);
     }
 
     @Override
     public String getEmailFromPaymentReference(String paymentReference) {
-        
+
         return participantDao.getEmailFromPaymentReference(paymentReference);
     }
 
     @Override
     public boolean existsEmail(String email) {
-        
+
         return participantDao.existsEmail(email);
     }
 

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.model;
 
 import io.github.herocode.ecmat.entity.PasswordResetRequest;
@@ -59,25 +54,25 @@ public class PasswordResetBusinessImpl implements PasswordResetBusiness {
 
     @Override
     public boolean isPasswordResetRequestValid(PasswordResetRequest resetRequest) {
-        
-        if(resetRequest.isValid()){
-           
+
+        if (resetRequest.isValid()) {
+
             LocalDateTime creationDate = resetRequest.getCreationDate();
             creationDate = creationDate.plusMinutes(30);
-            
+
             LocalDateTime currentDate = LocalDateTime.now(ZoneId.of("America/Sao_Paulo"));
-            
+
             boolean isValid = creationDate.isAfter(currentDate);
-            
+
             return isValid;
         }
-        
+
         return false;
     }
 
     @Override
     public boolean updatePasswordResetRequest(PasswordResetRequest resetRequest) {
-        
+
         return dao.update(resetRequest);
     }
 

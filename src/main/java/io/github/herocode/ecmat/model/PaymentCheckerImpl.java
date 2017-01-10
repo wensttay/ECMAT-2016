@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.model;
 
 import io.github.herocode.ecmat.enums.CheckoutData;
@@ -29,7 +24,7 @@ import org.xml.sax.SAXException;
 public class PaymentCheckerImpl implements PaymentChecker {
 
     @Override
-    public Map<String,String> checkPayment(String notificationCode) throws DOMException, IOException, ParserConfigurationException, SAXException {
+    public Map<String, String> checkPayment(String notificationCode) throws DOMException, IOException, ParserConfigurationException, SAXException {
 
         StringBuilder urlBuilder = new StringBuilder();
         urlBuilder.append("https://ws.pagseguro.uol.com.br/v3/transactions/notifications/").
@@ -57,19 +52,19 @@ public class PaymentCheckerImpl implements PaymentChecker {
 
         Element eElement = (Element) node;
 
-        String date             = eElement.getElementsByTagName("date").item(0).getTextContent();
-        String lastEventDate    = eElement.getElementsByTagName("lastEventDate").item(0).getTextContent();
-        String code             = eElement.getElementsByTagName("code").item(0).getTextContent();
-        String reference        = eElement.getElementsByTagName("reference").item(0).getTextContent();
-        String status           = eElement.getElementsByTagName("status").item(0).getTextContent();
+        String date = eElement.getElementsByTagName("date").item(0).getTextContent();
+        String lastEventDate = eElement.getElementsByTagName("lastEventDate").item(0).getTextContent();
+        String code = eElement.getElementsByTagName("code").item(0).getTextContent();
+        String reference = eElement.getElementsByTagName("reference").item(0).getTextContent();
+        String status = eElement.getElementsByTagName("status").item(0).getTextContent();
 
-        Map<String,String> map = new HashMap<>();
+        Map<String, String> map = new HashMap<>();
         map.put("date", date);
         map.put("lastEventDate", lastEventDate);
         map.put("code", code);
         map.put("reference", reference);
         map.put("status", status);
-        
+
         return map;
     }
 

@@ -1,41 +1,38 @@
-
 package io.github.herocode.ecmat.persistence;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.apache.commons.dbcp2.BasicDataSource;
 
 /**
  *
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
-public final class ConnectionProvider{
+public final class ConnectionProvider {
 
     private static ConnectionProvider connectionProvider;
 
     private BasicDataSource connectionPool;
 
-    private ConnectionProvider(){
+    private ConnectionProvider() {
     }
 
-    public static synchronized ConnectionProvider getInstance(){
+    public static synchronized ConnectionProvider getInstance() {
 
-        if ( connectionProvider == null ){
+        if (connectionProvider == null) {
             connectionProvider = new ConnectionProvider();
         }
 
         return connectionProvider;
     }
 
-    public Connection getConnection() throws SQLException{
+    public Connection getConnection() throws SQLException {
 
-        if ( connectionPool == null || connectionPool.isClosed() ){
+        if (connectionPool == null || connectionPool.isClosed()) {
 
-            try{
+            try {
 
                 URI dbUri = new URI(System.getenv("DATABASE_URL"));
                 String username = dbUri.getUserInfo().split(":")[0];
@@ -54,7 +51,7 @@ public final class ConnectionProvider{
                 connectionPool.setDriverClassName("org.postgresql.Driver");
                 connectionPool.setUrl(dbUrl.toString());
 
-            } catch ( IndexOutOfBoundsException | URISyntaxException ex ){
+            } catch (IndexOutOfBoundsException | URISyntaxException ex) {
                 connectionPool.close();
                 return null;
             }

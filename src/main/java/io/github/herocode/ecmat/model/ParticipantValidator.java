@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.model;
 
 import br.com.uol.pagseguro.domain.Address;
@@ -30,7 +25,7 @@ public class ParticipantValidator {
         validateTitration(participant.getTitration());
         validatePhone(participant.getPhone());
         validatePassword(participant.getPassword());
-        
+
     }
 
     private static void validateAddress(Address address) throws IllegalArgumentException {

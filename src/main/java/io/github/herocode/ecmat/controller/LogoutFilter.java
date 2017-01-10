@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.controller;
 
 import java.io.IOException;
@@ -19,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
-public class LogoutFilter implements Filter{
+public class LogoutFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -27,20 +22,20 @@ public class LogoutFilter implements Filter{
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        
-        HttpServletRequest httpRequest      = (HttpServletRequest) request;
-        HttpServletResponse httpResponse    = (HttpServletResponse) response;
-        
-        if(httpRequest.getSession().getAttribute("participant") != null){
+
+        HttpServletRequest httpRequest = (HttpServletRequest) request;
+        HttpServletResponse httpResponse = (HttpServletResponse) response;
+
+        if (httpRequest.getSession().getAttribute("participant") != null) {
             httpResponse.sendRedirect("/");
         }
-        
+
         chain.doFilter(request, response);
-        
+
     }
 
     @Override
     public void destroy() {
     }
-    
+
 }

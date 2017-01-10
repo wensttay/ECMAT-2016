@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.controller;
 
 import com.google.gson.Gson;
@@ -82,10 +77,10 @@ public class RequestPasswordRecovery extends HttpServlet {
         Map<String, String> responseMap = new HashMap<>();
 
         if (error.trim().isEmpty()) {
-            
+
             responseMap.put("success", "Dentro de alguns minutos um E-mail será enviado com as instruções de recuperação.");
-        }else{
-            
+        } else {
+
             responseMap.put("error", error);
         }
 

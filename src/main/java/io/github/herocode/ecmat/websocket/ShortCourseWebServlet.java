@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.websocket;
 
 import com.google.gson.Gson;
@@ -17,13 +12,7 @@ import java.util.TimerTask;
 import java.util.concurrent.CopyOnWriteArraySet;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
-import javax.websocket.OnClose;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
 import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
 
 /**
  *
@@ -37,9 +26,9 @@ public class ShortCourseWebServlet implements ServletContextListener {
     private static Timer timer = null;
 
 //    @OnError
-    public void onError(Throwable throwable){
+    public void onError(Throwable throwable) {
     }
-    
+
 //    @OnOpen
     public void onConnect(Session session) {
         System.out.println("usuario conectado");
@@ -66,14 +55,15 @@ public class ShortCourseWebServlet implements ServletContextListener {
             try {
                 userWs.getBasicRemote().sendText(message);
             } catch (IOException ex) {
-                
+
                 usersWsIterator.remove();
                 try {
                     userWs.close();
                 } catch (IOException ex2) {
                 }
-                
-            }catch(Exception ex3){}
+
+            } catch (Exception ex3) {
+            }
 
         }
 
@@ -122,9 +112,8 @@ public class ShortCourseWebServlet implements ServletContextListener {
         public void run() {
 
 //            if (usersWs.size() > 0) {
-
 //                mapCurrentEnrollment = shortCourseBusiness.getShortcoursersCurrentEnrollments();
-                sendMessage("olá :D");
+            sendMessage("olá :D");
 //            }
 
         }

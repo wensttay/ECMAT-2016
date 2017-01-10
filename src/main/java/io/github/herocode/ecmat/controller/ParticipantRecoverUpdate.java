@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.controller;
 
 import br.com.uol.pagseguro.domain.Phone;
@@ -16,10 +11,7 @@ import io.github.herocode.ecmat.model.ParticipantValidator;
 import io.github.herocode.ecmat.persistence.ParticipantRecoverDao;
 import io.github.herocode.ecmat.utils.DateUtils;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.ServletException;
@@ -55,7 +47,7 @@ public class ParticipantRecoverUpdate extends HttpServlet {
         String ddd = request.getParameter("ddd");
         String phoneNumber = request.getParameter("phone");
         String password = request.getParameter("password");
-        
+
         String token = request.getParameter("token");
         String error = "";
 
@@ -84,7 +76,7 @@ public class ParticipantRecoverUpdate extends HttpServlet {
 
                     ParticipantValidator.validateParticipant(participant);
                     participant.setPassword(DigestUtils.sha1Hex(password));
-                    
+
                     participantBusiness.updateParticipant(participant);
 
                     participantRecover.setIsValid(false);

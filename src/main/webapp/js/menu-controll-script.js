@@ -1,4 +1,8 @@
 
+/**
+ * @author Wensttay de Sousa Alencar <yattsnew@gmail.com> 
+ */
+
 $('a[href^="#"]').bind('click', function (evento) {
     var destino = $(this).attr('href'), $destino = $(destino);
 

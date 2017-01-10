@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.interfaces;
 
 import io.github.herocode.ecmat.persistence.ConnectionProvider;
@@ -59,7 +54,7 @@ public interface Dao<T, I> {
             sqlBuilder.append(getTableName()).
                     append(" WHERE ");
 
-            Set<String> keys    = map.keySet();
+            Set<String> keys = map.keySet();
             Iterator<String> it = keys.iterator();
 
             String key;
@@ -93,13 +88,11 @@ public interface Dao<T, I> {
 
             ps.close();
             connection.close();
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(Dao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        
-        
         return results;
     }
 

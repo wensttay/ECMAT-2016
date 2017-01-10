@@ -1,11 +1,11 @@
 <%-- 
-    Document   : erro
-    Created on : , 08:04:56
+    Document   : erro.jsp
+    Created on : 14/05/2016, 03:11:11
     Author     : Victor Hugo <victor.hugo.origins@gmail.com>
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
         <meta charset="utf-8">

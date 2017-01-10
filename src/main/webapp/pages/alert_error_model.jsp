@@ -1,3 +1,10 @@
+<%-- 
+    Document   : alert_error_model.jsp
+    Created on : 14/05/2016, 03:20:57
+    Author     : Wensttay de Sousa Alencar <yattsnew@gmail.com>
+--%>
+
+<!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="modal fade" id="errorModal" role="dialog">
   <div class="modal-dialog">

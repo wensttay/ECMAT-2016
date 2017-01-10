@@ -1,4 +1,8 @@
 
+/**
+ * @author Wensttay de Sousa Alencar <yattsnew@gmail.com> 
+ */
+
 function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions

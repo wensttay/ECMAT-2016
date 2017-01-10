@@ -1,11 +1,11 @@
 <%-- 
-    Document   : submissoes
+    Document   : submissoes.jsp
     Created on : 28/05/2016, 15:25:38
     Author     : Victor Hugo
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <article class="container-base invisivel" id="submissoes">
     <div class="container">
         <div class="row medium-margin-bottom"> 

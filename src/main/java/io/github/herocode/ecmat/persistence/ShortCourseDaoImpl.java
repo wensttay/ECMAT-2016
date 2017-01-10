@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.persistence;
 
 import br.com.uol.pagseguro.domain.Address;
@@ -17,7 +12,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -40,7 +34,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
         int result = 0;
 
         try {
-           
+
             StringBuilder sql = new StringBuilder("INSERT INTO ").
                     append(getTableName()).
                     append("(max_enrollment, short_course_start_date, duration, ").
@@ -240,7 +234,7 @@ public class ShortCourseDaoImpl implements ShortCourseDao {
             if (startDate != null) {
                 shortCourse.setStartDate(startDate.toLocalDateTime());
             }
-            
+
             shortCourse.setUrl(rs.getString("url"));
             shortCourse.setDuration(rs.getString("duration"));
             shortCourse.setTitle(rs.getString("title"));

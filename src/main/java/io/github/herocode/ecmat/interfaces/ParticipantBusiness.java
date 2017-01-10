@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.interfaces;
 
 import io.github.herocode.ecmat.entity.Participant;
@@ -18,31 +13,31 @@ import java.util.Map;
 public interface ParticipantBusiness {
 
     Participant saveParticipant(Participant participant, String paymentId);
-    
+
     Participant saveParticipant(Participant participant, Payment payment);
 
     boolean updateParticipant(Participant participant);
 
     boolean deleteParticipant(Participant participant);
-    
+
     boolean existsEmail(String email);
-    
+
     boolean needRecover(String email);
 
     List<Participant> listAllParticipants();
 
     Participant searchParticipantById(int id) throws IllegalArgumentException;
-    
+
     Participant login(String email, String password) throws IllegalArgumentException;
-    
+
     Participant searchParticipantByEmail(String email) throws IllegalArgumentException;
-    
+
     List<ShortCourse> getRegisteredShortCourse(Participant participant);
-    
+
     List<Participant> searchParticipantByAttribute(String key, String value);
-    
+
     List<Participant> searchParticipantByAttributes(Map<String, String> map);
-    
+
     String getEmailFromPaymentReference(String paymentReference);
-    
+
 }

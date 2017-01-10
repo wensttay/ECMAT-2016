@@ -1,4 +1,8 @@
 
+/**
+ * @author Wensttay de Sousa Alencar <yattsnew@gmail.com> 
+ */
+
 $(".programacao-day-box .programacao-day-img").click(function () {
     $(this).css('display', 'none');
     $(this).parent().find('.programacao-day-body').slideDown();

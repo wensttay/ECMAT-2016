@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.interfaces;
 
 import io.github.herocode.ecmat.entity.Participant;
@@ -16,7 +11,7 @@ import java.util.Map;
  * @author Victor Hugo <victor.hugo.origins@gmail.com>
  */
 public interface ShortCourseBusiness {
-    
+
     boolean saveShortCourse(ShortCourse shortCourse);
 
     boolean updateShortCourse(ShortCourse shortCourse);
@@ -34,7 +29,7 @@ public interface ShortCourseBusiness {
     List<Participant> getShortCourseParticipants(ShortCourse shortCourse);
 
     boolean removeParticipantFromShortCourse(ShortCourse shortCourse, Participant participant);
-    
+
     Map<Integer, Integer> getShortcoursersCurrentEnrollments();
 
 }

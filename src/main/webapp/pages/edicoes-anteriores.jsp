@@ -1,7 +1,7 @@
 <%-- 
-    Document   : edicoes-anteriores
+    Document   : edicoes-anteriores.jsp
     Created on : 29/05/2016, 16:48:23
-    Author     : wensttay
+    Author     : Wensttay de Sousa Alencar <yattsnew@gmail.com>
 --%>
 
 <!DOCTYPE html>

@@ -1,12 +1,11 @@
 <%-- 
-    Document   : sobre
+    Document   : apresentacao.jsp
     Created on : 14/05/2016, 03:21:22
-    Author     : Wensttay
+    Author     : Wensttay de Sousa Alencar <yattsnew@gmail.com>
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <article class="container-base invisivel" id="apresentacao">
     <div class="container">
         <div class="row"> 

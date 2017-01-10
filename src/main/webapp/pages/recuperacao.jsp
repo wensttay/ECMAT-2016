@@ -1,7 +1,7 @@
 <%-- 
-    Document   : inicio
+    Document   : recuperacao.jsp
     Created on : 14/05/2016, 03:20:57
-    Author     : Wensttay
+    Author     : Wensttay de Sousa Alencar <yattsnew@gmail.com>
 --%>
 
 <!DOCTYPE html>

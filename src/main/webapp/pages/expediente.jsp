@@ -1,17 +1,18 @@
 <%-- 
-    Document   : expediente
+    Document   : expediente.jsp
     Created on : 29/05/2016, 16:48:23
-    Author     : wensttay
+    Author     : Wensttay de Sousa Alencar <yattsnew@gmail.com>
 --%>
 
+
+<!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <style>
     .expediente-text{
         font-family: WC_RoughTrad;
         font-size: 16px;
     }
 </style>
-<!DOCTYPE html>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <article class="container-base invisivel " id="expediente">
     <div class="container">
 

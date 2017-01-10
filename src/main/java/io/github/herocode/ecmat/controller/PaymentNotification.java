@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.controller;
 
 import io.github.herocode.ecmat.entity.Payment;
@@ -76,7 +71,7 @@ public class PaymentNotification extends HttpServlet {
             paymentBusiness.update(payment);
 
             if (payment.getStatus().equals(PaymentStatus.COMPLETE.getCode())) {
-                
+
                 ParticipantBusiness p = new ParticipantBusinessImpl();
 
                 String participantEmail = p.getEmailFromPaymentReference(payment.getReference());

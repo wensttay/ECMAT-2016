@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.github.herocode.ecmat.controller;
 
 import com.google.gson.Gson;
 import io.github.herocode.ecmat.entity.Participant;
-import io.github.herocode.ecmat.interfaces.CheckoutCreator;
 import io.github.herocode.ecmat.interfaces.ParticipantBusiness;
-import io.github.herocode.ecmat.model.CheckoutCreatorImpl;
-import io.github.herocode.ecmat.model.ParticipantBuilder;
 import io.github.herocode.ecmat.model.ParticipantBusinessImpl;
 import java.io.IOException;
 import java.util.HashMap;

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package io.github.herocode.ecmat.entity;
 
 import io.github.herocode.ecmat.enums.ShortCourseType;
@@ -12,7 +6,9 @@ import java.io.Serializable;
 
 /**
  *
- * @author wensttay
+ * @version 3.1
+ * @author Wensttay de Sousa Alencar <yattsnew@gmail.com>
+ * @date 08/01/2017 - 12:01:31
  */
 public class ShortCourseItemView implements Comparable<ShortCourseItemView>, Serializable{
 

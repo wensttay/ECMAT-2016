@@ -1,5 +1,5 @@
 <%-- 
-    Document   : Organizacao
+    Document   : organizacao.jsp
     Created on : 16/05/2016, 18:52:45
     Author     : Victor Hugo
 --%>

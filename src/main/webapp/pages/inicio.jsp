@@ -1,7 +1,7 @@
 <%-- 
-    Document   : inicio
+    Document   : inicio.jsp
     Created on : 14/05/2016, 03:20:57
-    Author     : Wensttay
+    Author     : Wensttay de Sousa Alencar <yattsnew@gmail.com>
 --%>
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@
                     <a class="disabled" title="Clique para conferir a página de inscrição." href=<c:if test="${empty sessionScope.participant}">#inicio</c:if>
                         <c:if test="${!empty sessionScope.participant}">/ParticipantPanel</c:if>
                         class="evento-link default-low-opacity">
-                        <h3 style="color: red;">Inscrições encerradas !</h3>
+                        <h3>Inscrições encerradas !</h3>
                         <img class="default-low-opacity" width="150px" height="150px" alt="Representação ilustrativa de um papel de inscrição" class="evento-info-img medium-margin-bottom off-load" src="img/other/inscricao.png"/>
                     </a>
                 </div>
